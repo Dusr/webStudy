@@ -12,6 +12,10 @@
 
 
 <!-- JAVASCRIPT -->
+sadas
+asd
+sad
+asd
 
 
 <?php include("include/inc_2_head_final.php") ?> 
