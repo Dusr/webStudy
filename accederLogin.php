@@ -14,6 +14,8 @@
 <!-- JAVASCRIPT -->
 
 
+asd
+
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?> 
@@ -71,7 +73,7 @@
                     <p>Acceso</p>
                 </div>
                 <div id="formLogin">
-                    <form action="php/validarUsuario.php" method="POST">
+                    <form action="areaprivada/validarUsuario.php" method="POST">
                         <div id="camposLogin">
                             <div>
                                 <label for="login">Correo electrónico:</label>
