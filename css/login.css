@@ -1,0 +1,141 @@
+#mainContainer{
+	margin-top: 30px;
+}
+
+
+#imgPrincipal{
+	float:left;
+	width:66%;	
+	position:relative;
+}
+
+/* Texto y boton sobre imagen */
+.textoRegistro {
+
+}
+.textoRegistro p{
+	position:absolute;
+	z-index:10;
+	color:white;
+	top:15px;
+	left:30px;
+	font-weight:bold;
+	font-size: 1.4em;
+	width: 44%;
+}
+
+.botonRegistro{
+	cursor:pointer;
+}
+
+.texto_boton{
+	position:absolute;
+	z-index:5;
+	top:65px;
+	left:330px;
+	color:white;
+	background-color: salmon;
+	padding:10px;
+	font-weight: bold;
+	font-size: 1em;
+
+}
+
+/* Fin texto y boton sobre imagen */
+
+#login{
+	float:left;
+	width:32%;
+	margin-left: 14px;
+}
+
+#cabAcceso, #cabRegistro{
+	background: none repeat scroll 0 0 salmon;
+    padding: 12px 15px 35px;
+    width: 100%;
+}	
+
+#cabAcceso img{
+	float:left;
+	
+}
+
+#cabAcceso p, #cabRegistro p{
+	float:left;
+	padding-left:6px;
+	padding-top:4px;
+	text-transform: uppercase;
+	font-weight: bold;	
+}
+
+#mainContainer{
+	min-width: 1024px;
+}
+
+#formLogin input{
+	width:100%;
+}
+
+#camposLogin{
+	margin-left:10px;
+}
+
+.boton_enviar input{
+	margin-top:35px;
+	background: salmon;
+	border:none;
+	color:white;
+}
+
+
+#formRegister{
+	display:none; /* Para el boton de registro */
+	margin-top: 30px;
+	width:66%;
+}
+
+#formRegister input{
+	width:100%;
+	margin-top:10px;
+}
+
+#camposRegistro label{
+	display: block;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 66%;
+}
+
+.boton_enviar{
+	clear:both;
+	float:right;
+}
+
+.left{
+	float:left;
+	margin-top:20px;
+	padding-left: 15px;
+	width:210px;
+}
+
+.inputs{
+	margin-top:28px;
+	float:right;
+	width:465px;
+}
+
+
+input[type="checkbox"]{
+	float:left;
+	width:10px !important;
+}
+
+#politica{
+	float:left;
+	width:100%;
+}
+#politica p{
+	float: left;
+    padding-left: 17px;
+    padding-top: 9px;
+}

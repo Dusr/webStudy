@@ -1,0 +1,31 @@
+.main{
+	width:80%;
+}
+
+.row{
+	width:100%;
+}
+
+.faqs dt{
+	width:100%;
+	margin: 30px;
+	border-bottom: solid 0.1px;
+	border-color:#CCCCCC;
+	color:#0099CC;
+	cursor:pointer;
+}
+
+.encabezado_faqs{
+	font-size:1.3em;
+	color:#0099CC;
+	margin-top: 6px;
+}
+
+
+/* Iconos */
+
+.flechaAbajo{
+	float:right;
+	display:block;
+	padding-right:4%;
+}

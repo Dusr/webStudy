@@ -1,0 +1,115 @@
+.info-box.row > ul {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.info-box.row li {
+    float: left;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    padding:10px;
+    background: #ccc;
+    padding: 13px 0;
+}
+.entradilla{
+    font-size: 1.3em;
+    font-weight: normal;
+    width: 70%;
+    margin:0 auto;
+}
+
+.contenedorFila {
+  border-bottom: 1px solid #ccc;
+  clear: both;
+  margin: 40px;
+  padding-bottom: 5px;
+}
+.circulo {
+  float: left;
+  width: 25%;
+}
+.circulo > div {
+  margin: 0 auto;
+  width: 31%;
+}
+.circulo > h4{
+    font-size: 1em;
+    padding: 5px 37px;
+}
+.contenidoCirculoDerecha {
+  float: left;
+  width: 75%;  
+}
+.contenidoCirculoDerecha p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.contenidoCirculoDerecha > ul {
+   margin: 10px 30px;
+   
+}
+.contenidoCirculoDerecha > ul li {
+   margin-bottom: 5px;
+   font-size: 1em;
+}
+
+.contenidoCirculoDerecha ul li:before {
+    content: "- ";
+
+}
+#tab1, #tab2{
+   height: auto;
+}
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  color:olive;
+}
+
+.pestana2{
+  outline: solid 3px #fff;
+}
+
+#current {
+  background: #e2efe6;
+
+}
+
+/*Caja de envio a contacto*/
+
+.caja_gris {
+  background: #ccc;
+  width: 100%;
+  padding: 3%;
+  position: relative;
+}
+.inner-block-alternative .caja_gris p {
+  width: 50%;
+}
+.boton_consulta {
+    bottom: 30px;
+    float: right;
+    left: 260px;
+    position: relative;
+    width: 50%;
+}
+
+.boton {
+  border: 2px solid #999933;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  padding: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 200px;
+}
+
+a.boton:hover {
+  background:#999933; 
+  color:#fff;
+}

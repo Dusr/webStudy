@@ -1,0 +1,249 @@
+/********************************
+*  BLOQUE DE ICONOS CIRCULOS
+********************************/
+
+.contenedor.top-block .info-box ul li{
+	float: left;
+	width: 20%;
+}
+
+.iconoImg > img {
+    margin: 0 auto;
+}
+
+.contenedor.top-block .info-box ul li a .texto_down h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.contenedor.top-block .info-box ul li a .texto_down > p {
+    padding: 0 10%;
+    text-align: center;
+}
+
+.contenedor.top-block .info-box ul li a:hover{
+	opacity: 0.7;
+}
+.main.inner-block > h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+p.centrado {
+	text-align: center;
+}
+
+/*Caja de estadisticas */
+.cajaEstadisticas{
+	margin-top: 40px;
+}
+
+.cajaEstadisticas ul{
+	display: table;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cajaEstadisticas ul li{
+	display: table-cell;
+	width: 30%;
+	background: red;
+	height: auto;
+	border-right: 1px solid #fff;
+}
+
+.cajaEstadisticas ul li h3 {
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 15px 0 10px 0;
+}
+
+.cajaEstadisticas ul li p {
+	font-size: 1em; /*15px*/
+	text-align: center;
+	color: #fff;
+	padding: 5px 0 10px 0;
+}
+
+
+/* Bloque Nuestros cursos*/
+.main.inner-block .info-box h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.3em;
+	margin: 20px 0 20px;
+}
+
+.cursoPresentacion {
+    float: left;
+    width: 30%;
+    margin: 10px 0 20px;
+}
+
+/*Colores para los diferentes cursos*/
+
+.presenciales {
+	color: #cc6633;
+}
+
+.online {
+	color: #ff3300;
+}
+
+.personalizados {
+	color: #ffcc00;
+}
+
+.main.inner-block .info-box > .cursoPresentacion {
+    margin-left: 3%;
+}
+
+.cursoPresentacion h3{
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.imagenUp {
+    width: 95%;
+    margin-top: 5px;
+}
+
+.infoCurso {
+	/*background-color: yellow; */
+	width: 95%;
+}
+.cursoPresentacion .infoCurso .textoSinfecha {
+	float:left;
+	width: 100%;
+	padding: 5%;
+}
+.cursoPresentacion .infoCurso .texto {
+	float:left;
+	width: 60%;
+	padding: 5%;
+}
+
+.cursoPresentacion .infoCurso a {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 10px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso{
+	float:left;
+	width: 40%;
+	background-color: #666;
+	padding: 5%;
+	text-align: center;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso p, 
+.cursoPresentacion .infoCurso .fechaCurso h4, 
+.cursoPresentacion .infoCurso .fechaCurso span{
+	color:#fff;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso p {
+	font-size:0.7em;
+	line-height: 125%;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso h4 {
+	font-size:1.3em;
+	line-height: 125%;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso span {
+	font-size:0.9em;
+	font-weight: bold;
+}
+
+/*Bloque Proximamente en nuestro centro*/
+
+.main.inner-block-alternative .info-box h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.3em;
+	margin: 60px 0 20px;
+} 
+
+.formularioIndex h3 , .asesoramientoDcha h3{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.formularioIndex{
+	float: left;
+    margin:0 0 0 3%;
+    width: 47%;
+}
+.formularioIndex label{
+	text-transform: uppercase;
+}
+
+
+.formularioIndex input#nombreCurso {
+	width: 92%;
+}
+
+.contenedor_Izq , .contenedor_Drcha {
+	float: left;
+	width: 50%;
+}
+
+.formularioIndex input[type="submit"]{
+	margin-top: 44px;
+	float: right;
+	margin-right: 8%;
+	background: none repeat scroll 0 0 #fff;
+}
+
+.formularioIndex input[type="submit"]:hover{
+	color:#fff;
+	background: #cc6633;
+}
+
+
+.asesoramientoDcha{
+	float: left;
+    margin:0 3% 0 0;
+    width: 47%;
+}
+
+.asesoramientoDcha .bloqueIzq , .asesoramientoDcha .bloqueDcha {
+	float: left;
+	width: 48.5%;
+}
+
+.asesoramientoDcha .bloqueIzq a:hover, .asesoramientoDcha .bloqueDcha a:hover {
+	opacity: 0.7;
+}
+
+.asesoramientoDcha .bloqueIzq{
+	margin:0 3% 0 0;
+}
+.asesoramientoDcha img {
+	width: 100%;
+	position: relative;
+	left:0;
+	top: 0;
+}
+
+.asesoramientoDcha .textoDown {
+	position: relative;
+	right: 0;
+	bottom: 30px;
+	background: none repeat scroll 0 0 #000;
+	padding: 5px 10px 15px 10px;
+	opacity: 0.7;
+	
+}
+
+.asesoramientoDcha .textoDown p {
+	color:#fff;
+	font-weight: bold;
+}

@@ -1,0 +1,134 @@
+p.texto_grande {
+	font-size:1em;
+	text-align: center;
+}
+
+p.texto_grande + p {
+ text-align: center;
+}
+
+
+
+fieldset {
+    border-style: none;
+    margin-top: 40px;
+    width: 100%;
+}
+
+legend {
+    font-size: 1em;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+fieldset p{
+	margin-bottom: 2%;
+}
+.fila_form {
+    float: left;
+    margin-top: 14px;
+    width: 100%;
+}
+
+.fila_form label {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 0.938em;
+    padding-right: 2%;
+    text-align: right;
+    text-transform: none;
+    width: 20%;
+}
+
+.fila_form textarea {
+    float: left;
+    height: 20em;
+    width: 60%;
+}
+
+.fila_form p {
+	clear: both;
+    float: left;
+    font-size: 0.938em;
+    padding: 2% 0 0 0;
+    width: 80%;
+    text-align: right;
+}
+
+.fila_form input {
+    width: 60%;
+    float: left;
+}
+
+.contenedorContacto {
+	width: 60%;
+	float: left;
+}
+
+.contenedorContacto .columna_izq {
+	width: 30%;
+	float: left;
+}
+
+.contenedorContacto .columna_izq input {
+	width: 100%;
+	float: left;
+}
+
+.contenedorContacto .columna_drcha {
+	width: 70%;
+	float: left;
+}
+
+.contenedorContacto .columna_drcha label {
+	width: 40%;
+	float: left;
+}
+
+.contenedorContacto .columna_drcha input {
+	width: 60%;
+	float: left;
+}
+
+.texto_legal {
+	margin: 0 auto;
+    width: 60%;
+}
+
+.fila_form .texto_legal p {
+	text-align: left;
+}
+
+.fila_form input.checkboxCss {
+	clear: both;
+	float: left;
+	width: auto;
+
+}
+
+.fila_form label.labelCss {
+	clear: none;
+	float: left;
+	width: auto;
+	margin: 0 0 0 2%;
+}
+
+.fila_form .boton_enviar.contacto {
+	clear: both;
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+   
+
+}
+
+.fila_form .boton_enviar.contacto input{
+
+	 border:2px solid #cc6666 ;
+}
+
+.fila_form label.labelCss > span.texto_subrayado a {
+	text-decoration: underline;
+}
