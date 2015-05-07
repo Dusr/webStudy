@@ -1,0 +1,74 @@
+.info-box.row > ul {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.info-box.row li {
+    float: left;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    padding:10px;
+    background: #ccc;
+    padding: 13px 0;
+}
+
+#tab1, #tab2,#tab3{
+   height: auto;
+}
+
+#tabs a{
+    color:#801A1A;
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  color:#999933;
+}
+
+.pestana2{
+  outline: 3px #fff;
+}
+
+.pestana3{
+  outline: 3px #fff;
+}
+
+#current {
+  background: #FFFFFF;
+}
+
+/*Bloque izquierdo*/
+
+.bloqueIzq{
+    width:75%;
+}
+
+.headerMod{
+    margin-top:10px;
+    background-color: #801A1A;
+    font-weight:bold;
+    height:40px;
+}
+
+.headerMod p{
+    padding:15px 0px 0px 15px;
+    color:#fff;
+}
+
+.imagenMod{
+    display:block;
+    float:left;
+    padding:25px;
+    
+}
+
+.botonAcceder{
+    display:none;
+}
+
+.moduloUno:hover{
+    display:block;
+}
