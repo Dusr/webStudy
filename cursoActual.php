@@ -84,7 +84,7 @@
             </div>
     </div>
     
-<div id="content">
+
     <div class="main inner-block" id="mainContainer">
         <div id="tab1" class="main inner-block">
             <a href="miPerfil.php" title="tab1"></a>
@@ -178,6 +178,6 @@
     </div>
 
 </div>
-</div>
+
 <!-- pie de página -->
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/webStudy/include/inc_6_footer_template.php') ?>
