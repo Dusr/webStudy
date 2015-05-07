@@ -6,7 +6,7 @@
 	
 	<!-- METAS de la pagina -->
 	<meta name="description" content=''/>
-    <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
+  <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
     <!-- LINK hojas de CSS -->
  	
@@ -21,7 +21,7 @@
 				<li class="item-2">
    					<a title="Ir a conocenós" href="../conocenos.php">Conócenos</a>
     			</li>
-				<li class="item-3" >
+				<li class="item-3 activo" >
   					<a title="Ir a nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>		
   				</li>
 				<li class="item-4">
