@@ -30,7 +30,7 @@
 
 #nombreUser{
     background: none repeat scroll 0 0 grey;
-    margin: 0 auto;
+    margin-bottom: 10px;
     padding: 40px 20px;
     width: 1024px;
 }
