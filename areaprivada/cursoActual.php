@@ -80,28 +80,68 @@
 			</div>
 
 		</div>
+
+	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->        
+    <div class="main inner-block">
+        <p>Curso de xxxx y xxxxx</p>
+                
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
 <div class="main inner-block" id="mainContainer">
     
        
-        <div class="bloqueIzq">
-            <div class="headerMod">
-                <p> Modulos del curso </p>
-            </div>
-            <div class="moduloUno">
-                <div class="imagenMod">
-                    <img src=""/>
-                </div>
-
-                <div class="textoMod">
-
-                </div>
-                <div class="botonAcceder">
-                    <input type="button" name="acceder">
-                </div>
-            </div>
+<div class="bloqueIzq">
+            
+        <div class="headerMod">
+            <p> Modulos del curso </p>
         </div>
     
+        <div class="tablaModulos">    
+                <div class="moduloUno">
+                    <div class="imagenMod">
+                        <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                    </div>
+
+                    <p>MÓDULO 0: Presentación.</p>
+
+                    <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
+                </div>
+
+                <div class="moduloDos">
+                    <div class="imagenMod">
+                        <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                    </div>
+                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
+
+                    <div class="botonAcceder">
+                         <input type="button" name="acceder">
+                    </div>
+                </div>
+
+                <div class="moduloTres">
+                    <div class="imagenMod">
+                        <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                    </div>
+                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
+
+                    <div class="botonAcceder">
+                         <input type="button" name="acceder">
+                    </div>
+                </div>
+
+                <div class="moduloCuatro">
+                    <div class="imagenMod">
+                        <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                    </div>
+                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
+
+                    <div class="botonAcceder">
+                         <input type="button" name="acceder">
+                    </div>
+                </div>
+        </div>
+</div>
+    
+</div>
 </div>
 <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
 <?php include("../include/inc_6_footer_template_subcarpeta.php") ?>

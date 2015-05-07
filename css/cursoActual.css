@@ -56,19 +56,37 @@
 .headerMod p{
     padding:15px 0px 0px 15px;
     color:#fff;
+    font-weight:bold;
+}
+
+.tablaModulos div:not(.imagenMod){
+    height:auto;
+    border-bottom: solid #801A1A;
+}
+
+
+.moduloDos{
+   padding-top:5px;
 }
 
 .imagenMod{
     display:block;
     float:left;
-    padding:25px;
-    
+    padding-top:18px;
+    padding-right:40px;
+}
+
+.tablaModulos p{
+   color:#801A1A;
+   padding: 50px 0px 50px 50px;
 }
 
 .botonAcceder{
-    display:none;
+    opacity:0;
+    padding-top:px;
+    float:right;
 }
 
-.moduloUno:hover{
-    display:block;
+.moduloUno:hover .botonAcceder{
+    opacity:1;
 }
