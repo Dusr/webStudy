@@ -13,6 +13,17 @@
 
 <!-- JAVASCRIPT -->
 
+ <?php
+ if(isset($_GET['insert'])){
+    if($_GET['insert']==0){
+        ?>
+            <script>
+                alert('Usuario no se ha creado');
+            </script>
+        <?php
+    }
+ }
+?>
 
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
@@ -25,13 +36,13 @@
         <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>		
     </li>
     <li class="item-4">
-        <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+        <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
     </li>
     <li class="item-5">
         <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
     </li>
     <li class="item-6">
-        <a title="Ir a Contactanos" href="contacto.php"> Contactanós </a>
+        <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
     </li>
     <li class="menuLogin">
         <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
@@ -70,38 +81,45 @@
                     <img src="img/login/icon_acceso.png">
                     <p>Acceso</p>
                 </div>
-                <div id="formLogin">
-                    <form action="areaprivada/validarUsuario.php" method="POST">
-                        <div id="camposLogin">
-                            <div>
-                                <label for="login">Correo electrónico:</label>
-                                <input type="text" id="email" name="login"/>
-                            </div>
-                            <div>
-                                <label for="pass" >Contraseña:</label>
-                                <input type="password" id="pass" name="pass"/>
-                            </div>
-                            <div class="boton_enviar">
-                                <input type="submit" name="enviar" value="ACCEDER">
-                            </div>
-                            <?php
-                            
-                            if (isset($_GET['incorrect'])) {
-                                ?>
-                                    <br>
-                                    <span style="color:red">El usuario es incorrecto</span>
+                <?php if(!isset($_SESSION['logged']) === TRUE){?>
+                    <div id="formLogin">
+                        <form action="areaprivada/validarUsuario.php?login=1" method="POST">
+                            <div id="camposLogin">
+                                <div>
+                                    <label for="login">Correo electrónico:</label>
+                                    <input type="text" id="email" name="login"/>
+                                </div>
+                                <div>
+                                    <label for="pass" >Contraseña:</label>
+                                    <input type="password" id="pass" name="pass"/>
+                                </div>
+                                <div class="boton_enviar">
+                                    <input type="submit" name="enviar" value="ACCEDER">
+                                </div>
                                 <?php
-                            }
-                            ?>
-                        </div>
-                    </form>
-                </div>
+
+                                if (isset($_GET['incorrect'])) {
+                                    ?>
+                                        <br>
+                                        <span style="color:red">El usuario es incorrecto</span>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </form>
+                    </div>
+                <?php }else{ ?>
+                    <div>
+                        Bienvenido <?php echo $_SESSION['nombre']?>
+                    </div>    
+                
+                <?php } ?>
             </div>
         </div>	
 
         <div class="row">
             <div id="formRegister">
-                <form action="" method="">
+                <form action="areaprivada/validarUsuario.php" method="POST">
                     <div id="cabRegistro">
                         <p>nuevo registro</p>
                     </div>
@@ -110,16 +128,19 @@
                             <label for="nombre">Nombre*:</label>
                             <label for="apellidos">Apellidos*:</label>
                             <label for="correo">Correo electrónico*:</label>
+                            <label for="password">Contraseña*:</label>
+                            <label for="rpassword">Repita su contraseña*:</label>
                         </div>
                         <div class="inputs">
-                            <input id="correo">
-                            <input id="nombre">
-                            <input id="apellidos">
+                            <input type="text" id="nombre" name="nombre"/>
+                            <input type="text" id="apellidos" name="apellidos"/>
+                            <input type="text" id="correo" name="login"/>
+                            <input type="password" id="password" name="pass"/>
+                            <input type="password" id="rpassword" name="rpass"/>
                             <div id="politica" class="row">
                                 <input type="checkbox">
                                 <p>Acepto y entiendo Politica de Privacidad.</p>
                             </div>
-
                         </div>
 
                         <div class="boton_enviar">

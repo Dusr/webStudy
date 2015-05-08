@@ -13,10 +13,10 @@
 <!-- SCRIPT de las tabs-->
 	<script type="text/javascript">
 		$(document).ready(function() {
-	        $("#tab1").hide();
+                    $("#tab1").hide();
 		    $("#tab2").hide();
-	        $("#tabs li:first").attr("id","current");
-	        $("#content div:first").fadeIn();
+                    $("#tabs li:first").attr("id","current");
+                    $("#content div:first").fadeIn();
  
 		    $('#tabs a').click(function(e) {
 		        e.preventDefault();

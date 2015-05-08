@@ -18,7 +18,9 @@
 }
 
 #tabs a{
-    color:#801A1A;
+    color: #801a1a;
+    display: block;
+    margin: 0 auto;
 }
 
 #tabs a:hover,
