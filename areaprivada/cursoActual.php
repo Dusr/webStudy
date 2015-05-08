@@ -96,49 +96,90 @@
         </div>
     
         <div class="tablaModulos">    
-                <div class="moduloUno">
+                <div class="moduloUno modulo">
                     <div class="imagenMod">
                         <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                     </div>
 
-                    <p>MÓDULO 0: Presentación.</p>
-
-                    <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
+                    <div class="texto">
+                        <p >MÓDULO 0: Presentación.</p>
+                    </div>
+                    
+                    <div>
+                        <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
+                    </div>
                 </div>
-
-                <div class="moduloDos">
+            
+                <div class="moduloDos modulo">
                     <div class="imagenMod">
                         <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                     </div>
-                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
 
-                    <div class="botonAcceder">
-                         <input type="button" name="acceder">
+                    <div class="texto">
+                        <p >MÓDULO 0: Presentación.</p>
                     </div>
+                    
+                    <div>
+                        <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
+                    </div>
+                                    
+<!-- A partir de aquí se hará el php para, dependiendo del curso, mostrar uno u otro -->
+                    <?php 
+                        
+                    ?>
                 </div>
-
-                <div class="moduloTres">
+                
+                <div class="moduloTres modulo">
                     <div class="imagenMod">
                         <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                     </div>
-                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
 
-                    <div class="botonAcceder">
-                         <input type="button" name="acceder">
+                    <div class="texto">
+                        <p >MÓDULO 0: Presentación.</p>
+                    </div>
+                    
+                    <div>
+                        <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
                     </div>
                 </div>
-
-                <div class="moduloCuatro">
+            
+                <div class="moduloCuatro modulo">
                     <div class="imagenMod">
                         <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                     </div>
-                    <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
 
-                    <div class="botonAcceder">
-                         <input type="button" name="acceder">
+                    <div class="texto">
+                        <p >MÓDULO 0: Presentación.</p>
                     </div>
-                </div>
+                    
+                    <div>
+                        <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
+                    </div>
+                </div>            
         </div>
+</div>
+
+<div class="bloqueDcha">
+    <div class="headerDcha">
+            <p> Modulos del curso </p>
+    </div>
+    
+    <div class="descargaPdf">
+        <img alt="Descarga PDF" src="#"/>
+    </div>
+    <p class="textoDcha">Temario para descargar</p> 
+    <div class="descargaEj">
+        <img alt="Descarga de Ejercicios" src="#"/>
+    </div>
+    <p class="textoDcha">Descarga de ejercicios </p>
+    
+    <p>Formulario de envío de ejercicios.</p>
+    
+    <form>
+        <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre'];?>"/>
+        <input type="text"/>
+        <input type="file" name="fichero" class="subirFichero"><p> Subir ficheros</p>
+    </form>
 </div>
     
 </div>
