@@ -28,7 +28,7 @@
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?> 
-<ul>
+
     <li class="item-2">
         <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>    				
     </li>
