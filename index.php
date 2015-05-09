@@ -184,39 +184,56 @@
 				<h2>Proximamente en nuestro centro</h2>
 				<div class="formularioIndex">
 					<h3>Encuentra los cursos</h3>
-					<form>
-						<label class="sr-only" for="nombreCurso">Nombre del curso</label>
-						<input type="text" id="nombreCurso" value="Nombre del curso">
-						<div class="contenedor_Izq">
-							<label for="modalidad">Modalidad</label>
-							<select id="modalidad" class="">
-			                    <option>Personalizados</option>
-			                    <option>Online</option>
-			                    <option>Presenciales</option>
-			                    <option>Seminarios</option>
-	                		</select>
-                		</div>
-                		<div class="contenedor_drcha">
-						<label for="fechas">Fechas</label>
-						<select id="fechas" class="">
-		                    <option>Enero</option>
-		                    <option>Febrero</option>
-		                    <option>Marzo</option>
-		                    <option>Abril</option>
-		                    <option>Mayo</option>
-		                    <option>Junio</option>
-		                    <option>Julio</option>
-		                    <option>Agosto</option>
-		                    <option>Septiembre</option>
-		                    <option>Octubre</option>
-		                    <option>Noviembre</option>
-		                    <option>Diciembre</option>
-                		</select>
-                	</div>
-						<input type="submit" value="Buscar" name="enviar">
-
-					</form>
-				</div>
+					<form action="index.php" method="post" name="form_buscador">
+                                            <label class="sr-only" for="nombreCurso">Nombre del curso</label>
+                                            <input type="text" id="nombreCurso" name="nombreCurso" value="Nombre del curso">
+                                            <div class="contenedor_Izq">
+                                                <label for="modalidad">Modalidad</label>
+						<select id="modalidad" name="modalidad" class="">
+                                                    <option value=""> Elige la modalidad</option>
+                                                    <option value="personalizado">Personalizado</option>
+                                                    <option value="online">Online</option>
+                                                    <option value="presencial">Presencial</option>
+                                                    <option value="seminario">Seminario</option>
+                                                </select>
+                                            </div>
+                                            <div class="contenedor_drcha">
+                                                <label for="fechas">Fechas</label>
+                                                <select id="mes" class="" name="mes_Select">
+                                                    <option value="">Elige el mes</option>
+                                                    <option value="enero">Enero</option>
+                                                    <option value="febrero">Febrero</option>
+                                                    <option value="marzo">Marzo</option>
+                                                    <option value="abril">Abril</option>
+                                                    <option value="mayo">Mayo</option>
+                                                    <option value="junio">Junio</option>
+                                                    <option value="julio">Julio</option>
+                                                    <option value="agosto">Agosto</option>
+                                                    <option value="Septiembre">Septiembre</option>
+                                                    <option value="octubre">Octubre</option>
+                                                    <option value="noviembre">Noviembre</option>
+                                                    <option value="diciembre">Diciembre</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="Buscar" name="buscadorInput">
+                                             <?php 
+                                     include '/areaprivada/openDB.php'; // conexion
+                                     // consultas
+                                  ///  if ($nomCurso!="" && $nomCurso!="Nombre del curso")
+                                  //  {
+                                  //       echo'<p>'.$nomCurso.'</p>';
+                                  //    $busquedaSql=mysql_query("select * from curso where nombre like '".$nomCurso."'");
+                                  //  }
+                                     
+                                  //  if ($mesFecha!="")
+                                  //    {
+                                  //     echo'<p>'.$mesFecha.'</p>';
+                                  //    $busquedaSql=mysql_query("select * from curso where duracion like '".$mesFecha."' ");
+                                 //     }
+                                      ?>
+                                      </form>
+                                     
+             	</div>
 				<div class="asesoramientoDcha">
 					<h3>Asesoramiento web sobre...</h3>
 					<div class="bloqueIzq">
@@ -238,6 +255,58 @@
 				</div>
 			</div>
 		</div>
+
+     <div class="main inner-block-alternative">
+			<div class="info-box row">
+				<h2>Resultado de la busqueda</h2>   
+                                
+                               <table class="resultados_tabla"> 
+                                    <tr> 
+                                      <th>Curso</th> 
+                                      <th>Modalidad</th> 
+                                      <th>Comienzo curso</th> 
+                                      <th>Enlace al curso</th> 
+                                    </tr> 
+                                <?php 
+                                        $busquedaSql=" "; 
+                                        $resultado="";
+                                        $nomCurso=$_POST['nombreCurso'];
+                                       // $modali_Curso=$_POST['modalidad'];
+                                        $mesFecha=$_POST['mes_Select'];
+                                     include '/areaprivada/openDB.php'; // conexion
+                                     // consultas
+                                    if ($nomCurso!="" && $nomCurso!="Nombre del curso")
+                                    {
+                                         echo'<p>'.$nomCurso.'</p>';
+                                      $busquedaSql=mysql_query("select * from curso where nombre like '".$nomCurso."'");
+                                    }
+//                                     
+                                    if ($mesFecha!="")
+                                      {
+                                       echo'<p>'.$mesFecha.'</p>';
+                                      $busquedaSql=mysql_query("select * from curso where duracion like '".$mesFecha."' ");
+                                      }
+                                       
+                                while ($resultado = mysql_fetch_array($busquedaSql)){ 
+                                echo ' 
+                                    <tr> 
+                                      <td>'.$resultado['nombre'].'</td> 
+                                      <td>'.$resultado['modalidad'].'</td> 
+                                      <td>'.$resultado['duracion'].'</td> 
+                                      <td> hola</td> 
+
+                                    </tr> 
+                                '; 
+                                } 
+                                //include('areaprivada/logout.php'); 
+                                ?> 
+                                   </table>
+                                   
+                        </div>
+                </div>
+                           
+           
+			
 		<!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
 <?php include("include/inc_6_footer_template.php") ?>
 		
