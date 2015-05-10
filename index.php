@@ -184,7 +184,7 @@
 				<h2>Proximamente en nuestro centro</h2>
 				<div class="formularioIndex">
 					<h3>Encuentra los cursos</h3>
-					<form action="index.php" method="post" name="form_buscador">
+					<form action="index.php" method="get" name="form_buscador">
                                             <label class="sr-only" for="nombreCurso">Nombre del curso</label>
                                             <input type="text" id="nombreCurso" name="nombreCurso" value="Nombre del curso">
                                             <div class="contenedor_Izq">
@@ -217,7 +217,9 @@
                                             </div>
                                             <input type="submit" value="Buscar" name="buscadorInput">
                                              <?php 
+                                            
                                      include '/areaprivada/openDB.php'; // conexion
+                                    
                                      // consultas
                                   ///  if ($nomCurso!="" && $nomCurso!="Nombre del curso")
                                   //  {
@@ -257,10 +259,9 @@
 		</div>
 
      <div class="main inner-block-alternative">
-			<div class="info-box row">
-				<h2>Resultado de la busqueda</h2>   
-                                
+			<div class="info-box row">                                
                                <table class="resultados_tabla"> 
+                                   <caption>Resultado de la busqueda</caption>
                                     <tr> 
                                       <th>Curso</th> 
                                       <th>Modalidad</th> 
@@ -269,21 +270,23 @@
                                     </tr> 
                                 <?php 
                                         $busquedaSql=" "; 
-                                        $resultado="";
-                                        $nomCurso=$_POST['nombreCurso'];
+                                        $resultado=" ";
+                                        $nomCurso=" ";
+                                        $mesFecha=" ";
+                                        $nomCurso=$_GET['nombreCurso'];
                                        // $modali_Curso=$_POST['modalidad'];
-                                        $mesFecha=$_POST['mes_Select'];
+                                        $mesFecha=$_GET['mes_Select'];
                                      include '/areaprivada/openDB.php'; // conexion
                                      // consultas
                                     if ($nomCurso!="" && $nomCurso!="Nombre del curso")
                                     {
-                                         echo'<p>'.$nomCurso.'</p>';
+                                         //echo'<p>'.$nomCurso.'</p>';
                                       $busquedaSql=mysql_query("select * from curso where nombre like '".$nomCurso."'");
                                     }
 //                                     
                                     if ($mesFecha!="")
                                       {
-                                       echo'<p>'.$mesFecha.'</p>';
+                                       //echo'<p>'.$mesFecha.'</p>';
                                       $busquedaSql=mysql_query("select * from curso where duracion like '".$mesFecha."' ");
                                       }
                                        
@@ -293,7 +296,7 @@
                                       <td>'.$resultado['nombre'].'</td> 
                                       <td>'.$resultado['modalidad'].'</td> 
                                       <td>'.$resultado['duracion'].'</td> 
-                                      <td> hola</td> 
+                                      <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver el curso </a></td> 
 
                                     </tr> 
                                 '; 
