@@ -1,49 +1,9 @@
-<?php
-    session_start();
+<?php include("../include/inc_1_head_inicio_subcarpeta.php")?>
 
-    if ($_SESSION['logged'] == TRUE) {
-
-        include 'openDB.php';
-
-        /*Consulta de mysql con la que indicamos que necesitamos que seleccione
-        **solo los campos que tenga como nombre_administrador el que el formulario
-        **le ha enviado*/
-        $result = mysql_query("SELECT * "
-                             ."FROM alumno "
-                             ."WHERE login = '".$_SESSION['correo']."' "
-                             ."AND password= '".$_SESSION['pass']."'",
-                             $con);
-
-        //Validamos si el nombre del administrador existe en la base de datos o es correcto
-        if(mysql_num_rows($result) == 1){
-            $row = mysql_fetch_array($result);
-
-            //Si el usuario es correcto ahora validamos su contraseña
-            if($row["password"] == $pass) {
-                //Creamos sesión
-                session_start();  
-
-                //Almacenamos los datos de usuario en variables de sesión
-                $_SESSION['idAlumno'] = $row['idAlumno'];
-                $_SESSION['nombre'] = $row['nombre'];
-                $_SESSION['apellidos'] = $row['apellidos'];
-                $_SESSION['correo'] = $row['login'];
-                $_SESSION['direccion'] = $row['direccion'];
-                $_SESSION['avatar'] = $row['avatar'];
-                $_SESSION['pass'] = $row['password'];
-                $_SESSION['logged'] = TRUE;
-
-
-
-                //Redireccionamos a la pagina: Perfil del usuario
-                header("Location: perfilAlumno.php");  
-            }
-        }//end IF
-    }
+<?php 
+    //INICIAMOS LA SESION
+        session_start();
 ?>
-
-<?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
-
 
 <title>Modulos del curso | área privada | Webstudy.com</title>
 
@@ -89,7 +49,7 @@ if (isset($_GET['insert'])) {
     <a title="Ir a Soporte - Faq´s" href="../soporteFaqs.php"> Soporte/Faq´s </a>
 </li>
 <li class="item-6">
-    <a title="Ir a Contactanós" href="../contacto.php"> Contactanós </a>
+    <a title="Ir a Contactanós" href="../contacto.php"> Contáctanos </a>
 </li>
 <li class="menuLogin">
     <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
@@ -110,7 +70,9 @@ if (isset($_GET['insert'])) {
             <img alt="Volver atrás" src="../images/left-white-arrow.png">
         </a>
     </div>
+    
     <h2>Bienvenido <?php echo $_SESSION['nombre']?></h2>
+    
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
     <!-- Estructura del Menu secundario. -->
 
@@ -135,7 +97,7 @@ if (isset($_GET['insert'])) {
     <!-- MI PERFIL -->
     <div class="content">
         <div id="tab1" class="main inner-block">
-            <form action="validarUsuario.php?update=1" method="POST">
+            <form action="actualizarUsuario.php" method="POST">
                 <div id="colIzq">
                     <div id="userData">
                         <div id="cabRegistro">
@@ -155,8 +117,8 @@ if (isset($_GET['insert'])) {
                                 <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos'];?>" />
                                 <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo'];?>" />
                                 <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion'];?>" />
-                                <input type="password" id="pass" name="pass" value="<?php echo $_SESSION['pass']?>"/>
-                                <input type="password" id="rpass" name="rpass"/>
+                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass'];?>"/>
+                                <input type="password" id="rpass" name="newpass"/>
                             </div>
 
                             <div class="boton_enviar">
@@ -165,12 +127,20 @@ if (isset($_GET['insert'])) {
                         </div>
                     </div>
                 </div>
-
+<?php
+                if(isset($_SESSION['modified'])){
+?>                    
+                    <br>
+                    <span style="color:#00cc00; font-weight: bold;">Se han modificado los datos</span>
+<?php                    
+                }
+?>
                 <div id="colDcha">
                     <div id="avatar">
                         <img src=""/>
                     </div>    
                     <div class="avatar">
+                            <?php echo $_SESSION['avatar'];?>
     <!--                    <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
                         <p>Cambiar avatar</p>
                     </div>

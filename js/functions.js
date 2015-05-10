@@ -28,6 +28,7 @@
 // 	desplegarMenu();
 // 	cerrarMenu();
 // });
+
 /* Desplegable FAQ*/
 $(document).ready(function () {
 		
@@ -94,12 +95,34 @@ $(document).ready(function() {
 		        $('#' + $(this).attr('name')).fadeIn();
 		    });
 		})();
-                
-              
+
 $( ".texto_boton" ).click(function() {
        
     document.getElementById("buscador").setAttribute("class", "resultados_tabla");
 });
- 
+                
+/* Validar correo */
+function validarEmail( e ) {
+    expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if ( !expr.test(e.value) ){
+        e.setAttribute('placeholder', 'Ej. de correo: mariaperez@hotmail.com');
+        e.value='';
+    }
+}
 
- 
+/* validar longitud contraseña */
+
+function validarContrasena(){
+    var pass = document.getElementById('password');
+    var rpass = document.getElementById('rpassword');
+    if(pass.value.length < 6) {
+       pass.value='';
+       pass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
+    }
+    if(rpass.value.length>0){
+        if(rpass.value.length < 6) {
+            rpass.value='';
+            rpass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
+        }
+    }
+}

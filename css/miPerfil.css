@@ -34,6 +34,12 @@
     padding: 40px 20px;
     width: 1024px;
 }*/
+#userData #camposRegistro .left label{
+        display: block;
+        margin-bottom: 23px;
+        margin-top: 17px;
+        width: 66%;
+}
 
 #colIzq{
    float: left;
@@ -48,7 +54,7 @@
 }
 label{
     float:left;
-    margin-bottom:27px !important;
+  
 }
 
 .inputs {
