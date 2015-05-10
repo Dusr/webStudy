@@ -94,3 +94,12 @@ $(document).ready(function() {
 		        $('#' + $(this).attr('name')).fadeIn();
 		    });
 		})();
+                
+              
+$( ".texto_boton" ).click(function() {
+       
+    document.getElementById("buscador").setAttribute("class", "resultados_tabla");
+});
+ 
+
+ 

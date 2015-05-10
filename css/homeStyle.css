@@ -250,14 +250,25 @@ p.centrado {
 
 
 /*Resultados de la busqueda*/
-
 table {
-     border: 2px solid #ececec;
+   // display: none;
+    border: 2px solid #ececec;
     border-spacing: 0;
     clear: both;
     margin: 0 auto 35px;
     padding: 5px;
     width: 94%;
+}
+table.resultados_tabla {
+    //display: block;
+     
+    border: 2px solid #ececec;
+    border-spacing: 0;
+    clear: both;
+    margin: 0 auto 35px;
+    padding: 5px;
+    width: 94%;
+    
 }
 table caption {
      background: none repeat scroll 0 0 #f9b300;
@@ -292,4 +303,7 @@ table tr td {
     padding: 10px;
     vertical-align: middle;
     text-align: center;
+}
+#formRegister {
+    display: none;
 }

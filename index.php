@@ -5,7 +5,7 @@
     <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
     <!-- LINK hojas de CSS -->
- 	<link href="css/homeStyle.css" rel="stylesheet">
+ <link href="css/homeStyle.css" rel="stylesheet">
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?>
@@ -215,23 +215,12 @@
                                                     <option value="diciembre">Diciembre</option>
                                                 </select>
                                             </div>
-                                            <input type="submit" value="Buscar" name="buscadorInput">
+                                            <input type="submit" value="Buscar" name="buscadorInput" class="texto_boton">
                                              <?php 
                                             
                                      include '/areaprivada/openDB.php'; // conexion
-                                    
-                                     // consultas
-                                  ///  if ($nomCurso!="" && $nomCurso!="Nombre del curso")
-                                  //  {
-                                  //       echo'<p>'.$nomCurso.'</p>';
-                                  //    $busquedaSql=mysql_query("select * from curso where nombre like '".$nomCurso."'");
-                                  //  }
-                                     
-                                  //  if ($mesFecha!="")
-                                  //    {
-                                  //     echo'<p>'.$mesFecha.'</p>';
-                                  //    $busquedaSql=mysql_query("select * from curso where duracion like '".$mesFecha."' ");
-                                 //     }
+                                     include 'buscadorPHP.php'; // buscador
+                                 
                                       ?>
                                       </form>
                                      
@@ -259,8 +248,9 @@
 		</div>
 
      <div class="main inner-block-alternative">
-			<div class="info-box row">                                
-                               <table class="resultados_tabla"> 
+			<div class="info-box row"> 
+                            <div id="formRegister">
+                               <table id="buscador"> 
                                    <caption>Resultado de la busqueda</caption>
                                     <tr> 
                                       <th>Curso</th> 
@@ -269,42 +259,37 @@
                                       <th>Enlace al curso</th> 
                                     </tr> 
                                 <?php 
-                                        $busquedaSql=" "; 
-                                        $resultado=" ";
-                                        $nomCurso=" ";
-                                        $mesFecha=" ";
-                                        $nomCurso=$_GET['nombreCurso'];
-                                       // $modali_Curso=$_POST['modalidad'];
-                                        $mesFecha=$_GET['mes_Select'];
-                                     include '/areaprivada/openDB.php'; // conexion
-                                     // consultas
-                                    if ($nomCurso!="" && $nomCurso!="Nombre del curso")
-                                    {
-                                         //echo'<p>'.$nomCurso.'</p>';
-                                      $busquedaSql=mysql_query("select * from curso where nombre like '".$nomCurso."'");
-                                    }
-//                                     
-                                    if ($mesFecha!="")
-                                      {
-                                       //echo'<p>'.$mesFecha.'</p>';
-                                      $busquedaSql=mysql_query("select * from curso where duracion like '".$mesFecha."' ");
-                                      }
-                                       
-                                while ($resultado = mysql_fetch_array($busquedaSql)){ 
-                                echo ' 
-                                    <tr> 
-                                      <td>'.$resultado['nombre'].'</td> 
-                                      <td>'.$resultado['modalidad'].'</td> 
-                                      <td>'.$resultado['duracion'].'</td> 
-                                      <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver el curso </a></td> 
+//                            
+                                if($busquedaSql)
+                                {
+                                   while ($resultado = mysql_fetch_array($busquedaSql))
+                                   { 
+                                    echo ' 
+                                        <tr> 
+                                          <td>'.$resultado['nombre'].'</td> 
+                                          <td>'.$resultado['modalidad'].'</td> 
+                                          <td>'.$resultado['duracion'].'</td> 
+                                          <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver el curso </a></td> 
 
-                                    </tr> 
-                                '; 
-                                } 
-                                //include('areaprivada/logout.php'); 
+                                        </tr>
+                                         
+                                    '; 
+                                   } 
+                                }
+                                else
+                                {
+                                   echo ' 
+                                        <tr> 
+                                          <td colspan="4">No hay resultados en la busqueda</td> 
+                                        </tr>
+                                         
+                                    '; 
+                                }
+                               
                                 ?> 
-                                   </table>
+                                </table>
                                    
+                        </div>
                         </div>
                 </div>
                            
