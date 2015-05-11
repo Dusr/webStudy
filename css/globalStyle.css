@@ -440,20 +440,6 @@ nav.menu_principal_historias::after {
 
 /*Colores para los enlaces de las paginas en la navegación*/
 /*Conocenos*/
-.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
-    padding-left:20px !important;
-    
-}
-.item-1{
-    padding-right:16px !important;
-}
-.menuLogin{
-    padding-right:40px !important;
-}
-nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
-  background: none repeat scroll 0 0 grey;
-}
-
 nav.menu_principal ul > li.item-2:hover, nav.menu_principal ul > li.item-2.activo {
   background: none repeat scroll 0 0 #6699cc;
 }
