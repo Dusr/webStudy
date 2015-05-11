@@ -48,11 +48,13 @@
                     $_SESSION['modified'] = TRUE;
                     $_SESSION['logged'] = TRUE;
 
-                    header("Location: perfilAlumno.php");
+                    header("Location: perfilAlumno.php?modified=1");
                 }    
         }else{
             echo "Error updating record: " . mysql_error($con);
         }
+    }else{
+         header("Location: perfilAlumno.php?errormodificar=1");
     }
 //CERRAMOS BASE DATOS
     mysql_close();

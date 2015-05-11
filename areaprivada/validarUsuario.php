@@ -35,6 +35,9 @@ if(mysql_num_rows($result) == 1){
         
         //Redireccionamos a la pagina: Perfil del usuario
         header("Location: perfilAlumno.php");
+}else{
+    //SI NO ESTA EN LA BASE DE DATOS
+    header("Location: ../accederLogin.php?errorlogin=1");
 }
 
 //CERRAMOS BASE DATOS
