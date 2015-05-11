@@ -93,13 +93,13 @@ if (isset($_GET['insert'])) {
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul id="tabs">
-                <li class="">
+                <li class="activa">
                     <a title="Ir a tu perfil" name="tab1" href="#">Tu perfil</a>
                 </li>
                 <li class="">
                     <a title="Ir al curso actual" name="tab2" href="/">Curso actual</a>
                 </li>
-                <li class="activa cursos_online">
+                <li class="">
                     <a title="Mis cursos" name="tab3" href="/">Mis cursos</a>
                 </li>
             </ul>
@@ -123,40 +123,40 @@ if (isset($_GET['insert'])) {
                                 <label for="apellidos">Apellidos:</label>
                                 <label for="correo">Email:</label>
                                 <label for="direccion">Dirección:</label>
-                                <label for="direccion">Contraseña Antigua:</label>
-                                <label for="direccion">Contraseña Nueva:</label>
+<!--                                <label for="direccion">Contraseña Antigua:</label>
+                                <label for="direccion">Contraseña Nueva:</label>-->
                             </div>
                             <div class="inputs">
                                 <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>"/>
                                 <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" />
                                 <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo']; ?>" />
                                 <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion']; ?>" />
-                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
-                                <input type="password" id="rpass" name="newpass"/>
+<!--                                <input type="password" id="pass" name="oldpass" value=""/>
+                                <input type="password" id="rpass" name="newpass"/>-->
                             </div>
-
+                            <dl class="faqs">
+                                <dt class="pregunta">Cambiar contraseña.
+                                    <div class="flechaAbajo">
+                                        <img class="flecha" src="../img/iconos/flechaAbajo.png">
+                                    </div>
+                                </dt>
+                                <div id="cambiarContrasena">
+                                        <div class="left">
+                                            <label for="direccion">Contraseña Antigua:</label>
+                                            <label for="direccion">Contraseña Nueva:</label>
+                                        </div>
+                                        <div class="inputs2">
+                                            <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
+                                            <input type="password" id="rpass" name="newpass" value="<?php echo $_SESSION['pass']; ?>"/>
+                                        </div>
+                                </div>
+                            </dl>
                             <div class="boton_enviar">
                                 <input type="submit" name="Guardar" value="Guardar">
                             </div>
                         </div>
                     </div>
-                    <div class="faqs">
-                        <dt class="pregunta">Cambiar contraseña.
-                            <div class="flechaAbajo">
-                                <img class="flecha" src="../img/iconos/flechaAbajo.png">
-                            </div>
-                        </dt>
-                        <dd>
-                            <div class="left">
-                                <label for="direccion">Contraseña Antigua:</label>
-                                <label for="direccion">Contraseña Nueva:</label>
-                            </div>
-                            <div class="inputs">
-                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
-                                <input type="password" id="rpass" name="newpass"/>
-                            </div>    
-                        </dd>
-                    </div>
+                         
                 </div>
                 <?php
                 if (isset($_GET['modified'])) {
@@ -198,7 +198,7 @@ if (isset($_GET['insert'])) {
                         <p> Modulos del curso </p>
                     </div>
                     <div class="tablaModulos">    
-                        <div class="moduloUno">
+                        <div class="modulo">
                             <div class="imagenMod">
                                 <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                             </div>
@@ -207,7 +207,7 @@ if (isset($_GET['insert'])) {
 
                             <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
                         </div>
-                        <div class="moduloDos">
+                        <div class="modulo">
                             <div class="imagenMod">
                                 <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                             </div>
@@ -217,7 +217,7 @@ if (isset($_GET['insert'])) {
                                 <input type="button" name="acceder">
                             </div>
                         </div>
-                        <div class="moduloTres">
+                        <div class="modulo">
                             <div class="imagenMod">
                                 <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                             </div>
@@ -227,7 +227,7 @@ if (isset($_GET['insert'])) {
                                 <input type="button" name="acceder">
                             </div>
                         </div>
-                        <div class="moduloCuatro">
+                        <div class="modulo">
                             <div class="imagenMod">
                                 <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
                             </div>
