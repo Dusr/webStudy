@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php include("include/inc_1_head_inicio.php") ?>
 
 
@@ -12,23 +13,39 @@
 
 
 <!-- JAVASCRIPT -->
+<script type="text/javascript" src="js/functions.js"></script>
 
- <?php
- if(isset($_GET['insert'])){
-    if($_GET['insert']==0){
+<script>
+    window.onload = document.getElementById('formRegister').style.display = 'block';
+</script>
+<!------------------------ Si la contraseña no es correcta ----------------------------------->
+<?php
+if (isset($_SESSION['nosamepass'])) {
+    ?>
+    <script>
+        document.getElementById('formRegister').style.display = 'block';
+    </script>
+    <?php
+}
+?>
+<!------------------------------------------------------------------------------->
+<?php
+if (isset($_GET['insert'])) {
+    if ($_GET['insert'] == 0) {
         ?>
-            <script>
-                alert('Usuario no se ha creado');
-            </script>
+        <script>
+            alert('Usuario no se ha creado');
+        </script>
         <?php
     }
- }
+}
 ?>
+<!------------------------------------------------------------------------------->
 
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?> 
-
+<ul>
     <li class="item-2">
         <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>    				
     </li>
@@ -81,9 +98,9 @@
                     <img src="img/login/icon_acceso.png">
                     <p>Acceso</p>
                 </div>
-                <?php if(!isset($_SESSION['logged']) === TRUE){?>
+                <?php if (!isset($_SESSION['logged']) === TRUE) { ?>
                     <div id="formLogin">
-                        <form action="areaprivada/validarUsuario.php?login=1" method="POST">
+                        <form action="areaprivada/validarUsuario.php" method="POST">
                             <div id="camposLogin">
                                 <div>
                                     <label for="login">Correo electrónico:</label>
@@ -97,50 +114,51 @@
                                     <input type="submit" name="enviar" value="ACCEDER">
                                 </div>
                                 <?php
-
-                                if (isset($_GET['incorrect'])) {
+                                if (isset($_GET['errorlogin'])) {
                                     ?>
-                                        <br>
-                                        <span style="color:red">El usuario es incorrecto</span>
+                                    <br>
+                                    <span style="color:red">El usuario es incorrecto</span>
                                     <?php
                                 }
                                 ?>
                             </div>
                         </form>
                     </div>
-                <?php }else{ ?>
+                <?php } else { ?>
                     <div>
-                        Bienvenido <?php echo $_SESSION['nombre']?>
+                        Bienvenido <?php echo $_SESSION['nombre'] ?>
                     </div>    
-                
+
                 <?php } ?>
             </div>
         </div>	
 
         <div class="row">
             <div id="formRegister">
-                <form action="areaprivada/validarUsuario.php" method="POST">
+                <form action="areaprivada/registrarUsuario.php" method="POST">
                     <div id="cabRegistro">
                         <p>nuevo registro</p>
                     </div>
                     <div id="camposRegistro">
                         <div class="left">
-                            <label for="nombre">Nombre*:</label>
-                            <label for="apellidos">Apellidos*:</label>
-                            <label for="correo">Correo electrónico*:</label>
-                            <label for="password">Contraseña*:</label>
-                            <label for="rpassword">Repita su contraseña*:</label>
+                            <label for="nombre">*Nombre:</label>
+                            <label for="apellidos">Apellidos:</label>
+                            <label for="correo">*Correo electrónico:</label>
+                            <label for="password">*Contraseña:</label>
+                            <label for="rpassword">*Repita su contraseña:</label>
                         </div>
                         <div class="inputs">
-                            <input type="text" id="nombre" name="nombre"/>
+                            <input type="text" id="nombre" name="nombre" required/>
                             <input type="text" id="apellidos" name="apellidos"/>
-                            <input type="text" id="correo" name="login"/>
-                            <input type="password" id="password" name="pass"/>
-                            <input type="password" id="rpassword" name="rpass"/>
+                            <input type="text" id="correo" name="login" required onblur="validarEmail(this);"/>
+                            <input type="password" id="password" name="pass" required onblur="validarContrasena();"/>
+                            <input type="password" id="rpassword" name="rpass" required onblur="validarContrasena();"/>
+                            <br>
                             <div id="politica" class="row">
-                                <input type="checkbox">
-                                <p>Acepto y entiendo Politica de Privacidad.</p>
+                                <input type="checkbox" required>
+                                <p>Acepto y entiendo la Política de Privacidad.</p>
                             </div>
+
                         </div>
 
                         <div class="boton_enviar">
@@ -148,6 +166,21 @@
                         </div>
                     </div>
                 </form>
+                <?php
+                if (isset($_GET['nosamepass'])) {
+                    ?>
+                        <script>document.getElementById('formRegister').style.display = 'block';</script>
+                        <br>
+                        <span class="alerta" style="color:red">Las contraseñas no coinciden.</span>
+                    <?php
+                } else if (isset($_GET['nocorrectdata'])) {
+                    ?>
+                        <script>document.getElementById('formRegister').style.display = 'block';</script>
+                        <br>
+                        <span class="alerta" style="color:red">Los datos introducidos no son admitidos.</span>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
