@@ -190,7 +190,7 @@
                                             <div class="contenedor_Izq">
                                                 <label for="modalidad">Modalidad</label>
 						<select id="modalidad" name="modalidad" class="">
-                                                    <option value=""> Elige la modalidad</option>
+                                                    <option value="todas"> Elige la modalidad</option>
                                                     <option value="personalizado">Personalizado</option>
                                                     <option value="online">Online</option>
                                                     <option value="presencial">Presencial</option>
@@ -200,7 +200,7 @@
                                             <div class="contenedor_drcha">
                                                 <label for="fechas">Fechas</label>
                                                 <select id="mes" class="" name="mes_Select">
-                                                    <option value="">Elige el mes</option>
+                                                    <option value="todos">Elige el mes</option>
                                                     <option value="enero">Enero</option>
                                                     <option value="febrero">Febrero</option>
                                                     <option value="marzo">Marzo</option>
@@ -216,12 +216,9 @@
                                                 </select>
                                             </div>
                                             <input type="submit" value="Buscar" name="buscadorInput" class="texto_boton">
-                                             <?php 
-                                            
-                                     include '/areaprivada/openDB.php'; // conexion
-                                     include 'buscadorPHP.php'; // buscador
-                                 
-                                      ?>
+                                             <?php
+                                            include 'buscadorPHP.php'; // buscador
+                                            ?>
                                       </form>
                                      
              	</div>
@@ -259,7 +256,7 @@
                                       <th>Enlace al curso</th> 
                                     </tr> 
                                 <?php 
-//                            
+                                 //include 'buscadorPHP.php'; // buscador
                                 if($busquedaSql)
                                 {
                                    while ($resultado = mysql_fetch_array($busquedaSql))
