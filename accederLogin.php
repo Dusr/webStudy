@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php include("include/inc_1_head_inicio.php") ?>
 
 
@@ -113,7 +114,7 @@ if (isset($_GET['insert'])) {
                                     <input type="submit" name="enviar" value="ACCEDER">
                                 </div>
                                 <?php
-                                if (isset($_GET['incorrect'])) {
+                                if (isset($_GET['errorlogin'])) {
                                     ?>
                                     <br>
                                     <span style="color:red">El usuario es incorrecto</span>

@@ -1,11 +1,11 @@
-<?php include("../include/inc_1_head_inicio_subcarpeta.php")?>
+<?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
-<?php 
-    //INICIAMOS LA SESION
-        session_start();
+<?php
+//INICIAMOS LA SESION
+session_start();
 ?>
 
-<title>Modulos del curso | área privada | Webstudy.com</title>
+<title>Perfil de usuario | Área privada | Webstudy.com</title>
 
 
 <!-- METAS de la pagina -->
@@ -36,33 +36,47 @@ if (isset($_GET['insert'])) {
 
 <?php include("../include/inc_3_headerTemplate_subcarpeta.php") ?>
 <?php include("../include/inc_4_nav_inicio_subcarpeta.php") ?> 
-<li class="item-2">
-    <a title="Ir a conocenós" href="../conocenos.php">Conócenos</a>
-</li>
-<li class="item-3 activo" >
-    <a title="Ir a nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>		
-</li>
-<li class="item-4">
-    <a title="Ir a asesoramiento" href="../asesoramiento.php"> Asesoramiento </a>
-</li>
-<li class="item-5">
-    <a title="Ir a Soporte - Faq´s" href="../soporteFaqs.php"> Soporte/Faq´s </a>
-</li>
-<li class="item-6">
-    <a title="Ir a Contactanós" href="../contacto.php"> Contáctanos </a>
-</li>
-<li class="menuLogin">
-    <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
-</li>
+
+    <li class="item-2">
+        <a title="Ir a conocenós" href="../conocenos.php">Conócenos</a>
+    </li>
+    <li class="item-3" >
+        <a title="Ir a nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>		
+    </li>
+    <li class="item-4">
+        <a title="Ir a asesoramiento" href="../asesoramiento.php"> Asesoramiento </a>
+    </li>
+    <li class="item-5">
+        <a title="Ir a Soporte - Faq´s" href="../soporteFaqs.php"> Soporte/Faq´s </a>
+    </li>
+    <li class="item-6">
+        <a title="Ir a Contáctanos" href="../contacto.php"> Contáctanos </a>
+    </li>
+<?php
+            if (!isset($_SESSION['logged'])) {
+?>
+                    <li class="menuLogin activo">
+                        <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
+                    </li>
+<?php
+            }else{
+?>
+                    <li class="menuLogin activo">
+                        <a title="Ir a mi Perfil" href="perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    </li>   
+<?php
+            }
+?>
 <?php include("../include/inc_5_nav_final.php") ?>
 
 <?php include("../include/inc_opcional_breadcrumb_Inicio_subcarpeta.php") ?>
-<li>
-    <a title="Nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>
-</li>
-<li>
-    <a title="Cursos presenciales" href="../cursosPresenciales.php">Cursos presenciales</a>
-</li>
+<ul>
+    <li>
+        <a title="Nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>
+    </li>
+    <li>
+        <a title="Cursos presenciales" href="../cursosPresenciales.php">Cursos presenciales</a>
+    </li>
 </ul>
 <div class="header">
     <div class="image">
@@ -70,9 +84,9 @@ if (isset($_GET['insert'])) {
             <img alt="Volver atrás" src="../images/left-white-arrow.png">
         </a>
     </div>
-    
-    <h2>Bienvenido <?php echo $_SESSION['nombre']?></h2>
-    
+
+    <h2>Bienvenido <?php echo $_SESSION['nombre'] ?></h2>
+
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
     <!-- Estructura del Menu secundario. -->
 
@@ -91,7 +105,7 @@ if (isset($_GET['insert'])) {
             </ul>
         </div>
     </div>
-    
+
     <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
 
     <!-- MI PERFIL -->
@@ -113,11 +127,11 @@ if (isset($_GET['insert'])) {
                                 <label for="direccion">Contraseña Nueva:</label>
                             </div>
                             <div class="inputs">
-                                <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre'];?>"/>
-                                <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos'];?>" />
-                                <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo'];?>" />
-                                <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion'];?>" />
-                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass'];?>"/>
+                                <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>"/>
+                                <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" />
+                                <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo']; ?>" />
+                                <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion']; ?>" />
+                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
                                 <input type="password" id="rpass" name="newpass"/>
                             </div>
 
@@ -126,25 +140,50 @@ if (isset($_GET['insert'])) {
                             </div>
                         </div>
                     </div>
+                    <div class="faqs">
+                        <dt class="pregunta">Cambiar contraseña.
+                            <div class="flechaAbajo">
+                                <img class="flecha" src="../img/iconos/flechaAbajo.png">
+                            </div>
+                        </dt>
+                        <dd>
+                            <div class="left">
+                                <label for="direccion">Contraseña Antigua:</label>
+                                <label for="direccion">Contraseña Nueva:</label>
+                            </div>
+                            <div class="inputs">
+                                <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
+                                <input type="password" id="rpass" name="newpass"/>
+                            </div>    
+                        </dd>
+                    </div>
                 </div>
-<?php
-                if(isset($_SESSION['modified'])){
-?>                    
-                    <br>
-                    <span style="color:#00cc00; font-weight: bold;">Se han modificado los datos</span>
-<?php                    
+                <?php
+                if (isset($_GET['modified'])) {
+                    ?> 
+                    <script>alert('Se han modificado los datos del usuario')</script>
+                    <!--<span style="color:#00cc00; font-weight: bold;">Se han modificado los datos</span>-->
+                    <?php
                 }
-?>
+                ?><?php
+                if (isset($_GET['errormodificar'])) {
+                    ?> 
+                    <script>alert('La contraseña antigua no es correcta')</script>
+                    <!--<span style="color:#00cc00; font-weight: bold;">Se han modificado los datos</span>-->
+                    <?php
+                }
+                ?>
                 <div id="colDcha">
                     <div id="avatar">
                         <img src=""/>
                     </div>    
                     <div class="avatar">
-                            <?php echo $_SESSION['avatar'];?>
+                        <?php echo $_SESSION['avatar']; ?>
     <!--                    <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
                         <p>Cambiar avatar</p>
                     </div>
                     <input class="guarda" name="avatar" type="file"/>
+                    
                 </div>
             </form>
         </div>
