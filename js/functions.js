@@ -88,8 +88,9 @@ function validarContrasena() {
             rpass.value = '';
             rpass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
         }
-    }              
+    } 
+    
 
- 
+
 
  
