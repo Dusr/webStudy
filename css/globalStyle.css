@@ -716,3 +716,21 @@ select {
     font-weight: bold;
     width: 200px;
 }
+
+/*Cambios DAVID*/
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
+    padding-left:20px !important;
+    
+}
+.item-1{
+    padding-right:16px !important;
+}
+.menuLogin{
+    padding-right:40px !important;
+}
+nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
+  background: none repeat scroll 0 0 grey;
+}
+*{
+    font-family: 'Titillium Web', sans-serif !important;
+}
