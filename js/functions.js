@@ -1,34 +1,3 @@
-// funcion para desplegar el submenu de Nuestros cursos
-
-// function desplegarMenu(){
-
-// 	var ulOculto= $("#contenedor_menu_principal ul li ul");
-
-// 	$(ulOculto).addClass("active-on");
-
-// };
-
-
-// function desplegarMenu(){
-// 	$( "#contenedor_menu_principal ul li a" ).mouseover(function() {
-// 	$(this).next().css( "display", "block" );
-// 	});
-// }
-
-// function cerrarMenu(){
-// 	$( "#contenedor_menu_principal ul li a" ).mouseout(function() {
-// 	$(this).next().css( "display", "block" );
-// 	});
-// }
-
-
-
-
-// $(function(){
-// 	desplegarMenu();
-// 	cerrarMenu();
-// });
-
 /* Desplegable FAQ*/
 $(document).ready(function () {
 
@@ -62,10 +31,6 @@ $(document).ready(function () {
     
 /*Boton de registro */
 
-//    $(".texto_boton").click(function () {
-//
-//        document.getElementById("buscador").setAttribute("class", "resultados_tabla");
-//    });
 
     $(".texto_boton").click(function () {
         $("#formRegister").show(600);
