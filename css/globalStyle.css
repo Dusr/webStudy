@@ -369,17 +369,17 @@ nav.menu_principal ul {
     width: 100%;
 }
 
-nav.menu_principal ul li:first-child {
+/*nav.menu_principal ul li:first-child {
     padding: 0;
     text-align: left;
-}
+}*/
 
 nav.menu_principal ul li {
     display: table-cell;
     font-size: 0.8em;  /*11.2px*/
     line-height: 40px;
     list-style: outside none none;
-    padding:0 20px 0 5px;
+    padding:0 5px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -414,8 +414,6 @@ nav.menu_principal ul li.menuLogin{
     background: none repeat scroll 0 0 #000;
     padding: 0;
     position: relative;
-    text-align: right;
-    
 }
 
 nav.menu_principal .menuLogin a {
@@ -439,7 +437,10 @@ nav.menu_principal_historias::after {
 }
 
 /*Colores para los enlaces de las paginas en la navegación*/
-/*Conocenos*/
+nav.menu_principal ul > li.item-2:hover, nav.menu_principal ul > li.item-1.activo {
+  background: none repeat scroll 0 0 #a4a2a2;
+}
+
 nav.menu_principal ul > li.item-2:hover, nav.menu_principal ul > li.item-2.activo {
   background: none repeat scroll 0 0 #6699cc;
 }
@@ -570,7 +571,7 @@ nav.menu_principal .submenu_principal li p{
 
 .breadcrumb h2 {
     float: left;
-    font-size: 1.85em;
+    font-size: 2.85em;
     line-height: 1.2;
     margin: 0;
     text-align: left;
@@ -718,7 +719,7 @@ select {
 }
 
 /*Cambios DAVID*/
-.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
+/*.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
     padding-left:20px !important;
     
 }
@@ -730,7 +731,7 @@ select {
 }
 nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
   background: none repeat scroll 0 0 grey;
-}
-*{
+}*/
+/**{
     font-family: 'Titillium Web', sans-serif !important;
-}
+}*/

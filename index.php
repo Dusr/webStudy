@@ -17,22 +17,22 @@
                 <a title="Home" href="index.php">Home</a>
             </li>
 
-    <li class="item-2">
-        <a title="Ir a conócenos" href="conocenos.php">Conócenos</a>
+            <li class="item-2">
+                <a title="Ir a conócenos" href="conocenos.php">Conócenos</a>
 
-    </li>
-    <li class="item-3" >
-        <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>
-    </li>
-    <li class="item-4">
-        <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
-    </li>
-    <li class="item-5">
-        <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
-    </li>
-    <li class="item-6">
-        <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
-    </li>
+            </li>
+            <li class="item-3" >
+                <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>
+            </li>
+            <li class="item-4">
+                <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+            </li>
+            <li class="item-5">
+                <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
+            </li>
+            <li class="item-6">
+                <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
+            </li>
 
 <?php
             if (!isset($_SESSION['logged'])) {
