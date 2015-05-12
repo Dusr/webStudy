@@ -88,6 +88,7 @@ function validarContrasena() {
             rpass.value = '';
             rpass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
         }
+<<<<<<< HEAD
     } 
     
 
@@ -99,6 +100,10 @@ function validarContrasena() {
  }
 }              
 >>>>>>> origin/master
+=======
+    }              
+>>>>>>> parent of ca07316... jjjjjjjjjjjjjjjjjjjjjjjjjjjj
 
+ 
 
  
