@@ -1,11 +1,13 @@
 <?php session_start() ?>
 <?php include("include/inc_1_head_inicio.php") ?>
 
-	<meta name="description" content=''/>
-    <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
+<meta name="description" content=''/>
+<meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
     <!-- LINK hojas de CSS -->
- <link href="css/homeStyle.css" rel="stylesheet">
+<link href="css/homeStyle.css" rel="stylesheet">
+
+
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <nav class="menu_principal">

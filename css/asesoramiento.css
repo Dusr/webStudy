@@ -20,7 +20,7 @@
 }
 
 .contenedorFila {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
   clear: both;
   margin: 40px;
   padding-bottom: 5px;
@@ -83,7 +83,7 @@
 .caja_gris {
   background: #ccc;
   width: 100%;
-  padding: 3%;
+  padding: 19px 18px 27px;
   position: relative;
 }
 .inner-block-alternative .caja_gris p {
@@ -107,9 +107,16 @@
   text-transform: uppercase;
   font-weight: bold;
   width: 200px;
+  margin-left:32px;
+  
 }
 
 a.boton:hover {
   background:#999933; 
   color:#fff;
+}
+
+.contenedorFila.row {
+    background: none repeat scroll 0 0 white;
+    padding-top: 15px;
 }

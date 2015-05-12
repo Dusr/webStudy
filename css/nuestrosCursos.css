@@ -150,3 +150,12 @@
 .info{
 	color:#FFFFFF;
 }
+
+/*DAVID*/
+
+.inner-block.fondoBlanco {
+    padding-bottom: 25px;
+    margin-top: 10px;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    -moz-box-shadow: 2px 2px 5px #999;
+}
