@@ -1,4 +1,4 @@
-
+﻿
 /* Desplegable FAQ*/
 $(document).ready(function () {
 		
@@ -66,7 +66,6 @@ function validarEmail(e) {
     
     if (!expr.test(e.value)) {
         e.setAttribute('placeholder', 'Ej. de correo: mariaperez@hotmail.com');
-        e.value='';
         e.value = '';
     }
 }
@@ -82,6 +81,7 @@ function validarContrasena() {
         pass.value = '';
         pass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
     }
+<<<<<<< HEAD
     
     if (rpass.value.length > 0) {
         if (rpass.value.length < 6) {
@@ -91,6 +91,14 @@ function validarContrasena() {
     } 
     
 
+=======
+
+   if (rpass.value.length < 6) {
+       rpass.value = '';
+       rpass.setAttribute('placeholder', 'La contraseña debe tener minimo 6 caracteres.');
+ }
+}              
+>>>>>>> origin/master
 
 
  
