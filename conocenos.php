@@ -50,7 +50,7 @@
 
     <?php include("include/inc_5_nav_final.php") ?>
     <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
-<ul>
+
     <li>
         <a title="Conócenos" href="nuestrosCursos.php">Conócenos</a>
     </li>

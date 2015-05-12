@@ -88,6 +88,9 @@ header {
     padding: 0;
     overflow: hidden;
     position: relative;
+/*   -webkit-box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);
+-moz-box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);
+box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);*/
 }
 
 .inner-block {
@@ -96,6 +99,7 @@ header {
     padding: 40px 0 0 0;
     overflow: hidden;
     position: relative;
+    
 }
 
 .inner-block-alternative {
@@ -254,11 +258,7 @@ a:hover {
     margin: 0;
     padding: 0;
 }    
-/*.caja_redes_sociales ul li {
-    float: left;
-    margin-left: 2px;
-    margin-top: 1px !important;
-}*/
+
 .caja_redes_sociales ul li {
     display: table-cell;
     float: none;
@@ -369,11 +369,6 @@ nav.menu_principal ul {
     width: 100%;
 }
 
-/*nav.menu_principal ul li:first-child {
-    padding: 0;
-    text-align: left;
-}*/
-
 nav.menu_principal ul li {
     display: table-cell;
     font-size: 0.8em;  /*11.2px*/
@@ -437,7 +432,7 @@ nav.menu_principal_historias::after {
 }
 
 /*Colores para los enlaces de las paginas en la navegación*/
-nav.menu_principal ul > li.item-2:hover, nav.menu_principal ul > li.item-1.activo {
+nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
   background: none repeat scroll 0 0 #a4a2a2;
 }
 
@@ -571,7 +566,7 @@ nav.menu_principal .submenu_principal li p{
 
 .breadcrumb h2 {
     float: left;
-    font-size: 2.85em;
+    font-size: 2.1em;
     line-height: 1.2;
     margin: 0;
     text-align: left;
@@ -612,6 +607,7 @@ nav.menu_principal .submenu_principal li p{
 
 .info-box {
     background-color: #ffffff;
+    
 }
 
 .info-box >.row {
