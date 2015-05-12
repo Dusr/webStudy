@@ -62,10 +62,10 @@ $(document).ready(function () {
     
 /*Boton de registro */
 
-    $(".texto_boton").click(function () {
-
-        document.getElementById("buscador").setAttribute("class", "resultados_tabla");
-    });
+//    $(".texto_boton").click(function () {
+//
+//        document.getElementById("buscador").setAttribute("class", "resultados_tabla");
+//    });
 
     $(".texto_boton").click(function () {
         $("#formRegister").show(600);
