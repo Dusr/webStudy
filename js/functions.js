@@ -32,7 +32,7 @@ $(document).ready(function () {
      
 
 $( ".texto_boton" ).click(function() {
-  $( "#formRegister" ).show(600) 
+  $( "#formRegister" ).show();
 });
 
 /*Fin boton de registro */
