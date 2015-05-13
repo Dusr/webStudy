@@ -1,107 +1,107 @@
 #colIzq .contenedorFila , #colDcha .contenedorFila{
-	padding: 25px;
+    padding: 25px;
 }
 
 #colIzq{
-  width:60%;
-	float:left;
-	background: white;
+    width:60%;
+    float:left;
+    background: white;
 }
 
 #colIzq .contenedorFila .circulo{
-	float: left;
-	width: 20%;
-	padding-right: 10px;
+    float: left;
+    width: 20%;
+    padding-right: 10px;
 }
 
 
 
- #colDcha .contenedorFila .circulo{
-	float: left;
-	width: 30%;
-	padding-right: 10px;
+#colDcha .contenedorFila .circulo{
+    float: left;
+    width: 30%;
+    padding-right: 10px;
 }
 
 .circulo h3{
-	font-size:1em;
-	text-align: center;
-	text-transform: uppercase;
+    font-size:1em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
- .circulo img {
- 	margin: 0 auto;
- }
+.circulo img {
+    margin: 0 auto;
+}
 
 #colIzq .contenedorFila .contenidoTexto {
-	float: left;
-	width: 80%;
-	border-left: 2px solid #e9e9e9;
-	padding: 1em 1.5em 2em 3em;
+    float: left;
+    width: 80%;
+    border-left: 2px solid #e9e9e9;
+    padding: 1em 1.5em 2em 3em;
 }
 #colIzq .contenedorFila .contenidoTexto p {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 #colIzq .contenedorFila .contenidoTexto {}
 #colDcha .contenedorFila .contenidoTexto {
-	float: left;
-	width: 70%;
-	border-left: 2px solid #e9e9e9;
-	padding: 1em 1em 2em 2em;
+    float: left;
+    width: 70%;
+    border-left: 2px solid #e9e9e9;
+    padding: 1em 1em 2em 2em;
 }
 
 #colDcha{
-  width:40%;
-  float:left;
-  
+    width:40%;
+    float:left;
+
 }
 
 
 #colDcha .contenedorFila {
-	width: 95%;
-	float: right;
-	background: #6799cc;
-	margin-bottom: 15px;
+    width: 95%;
+    float: right;
+    background: #6799cc;
+    margin-bottom: 15px;
 }
 #colDcha .contenedorFila.row .contenidoTexto p {
-	color:#fff;
+    color:#fff;
 }
 .contenedorFila .bloqSuperior h4,
 .contenedorFila .bloqInferior h4 {
-	font-size: 1em;
-	color: #fff;
-	text-align: center;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
 }
 .contenedorFila .bloqInferior{
-	border-top: 2px solid #fff;
-	padding: 20px 0 5px;
-	margin-top: 20px;
-        
+    border-top: 2px solid #fff;
+    padding: 20px 0 5px;
+    margin-top: 20px;
+
 }
 .contenedorFila .bloqSuperior p, 
 .contenedorFila .bloqSuperior p > a,
 .contenedorFila .bloqInferior p
 {
-	color:#fff;
-	font-size: 1em;
+    color:#fff;
+    font-size: 1em;
 }
 
 .contenedorFila .bloqSuperior p,
 .contenedorFila .bloqInferior p {
-	margin: 5px 0;
+    margin: 5px 0;
 }
 
- #colDcha .contenedorFila.mapa {
+#colDcha .contenedorFila.mapa {
     padding: 0px;
     background: transparent;
 }
 
 .contenedorFila .contenidoTexto ul.listaFlechas {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .contenedorFila .contenidoTexto ul.listaFlechas li {
-	background: url("../css/img/flechaAzul.png") no-repeat scroll 1% 1px transparent;
+    background: url("../css/img/flechaAzul.png") no-repeat scroll 1% 1px transparent;
     display: block;
     padding-left: 2em;
     margin-bottom: 0.4em;

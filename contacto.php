@@ -30,27 +30,27 @@
     <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
 </li>
 <?php
-            if (!isset($_SESSION['logged'])) {
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
-                    </li>
-<?php
-            }else{
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
-                    </li>
-<?php
-            }
+if (!isset($_SESSION['logged'])) {
+    ?>
+    <li class="menuLogin">
+        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
+    </li>
+    <?php
+} else {
+    ?>
+    <li class="menuLogin">
+        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+    </li>
+    <?php
+}
 ?>
 
 <?php include("include/inc_5_nav_final.php") ?>
 <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
 
-    <li>
-        <a title="Contáctanos" href="contacto.php">Contáctanos</a>
-    </li>
+<li>
+    <a title="Contáctanos" href="contacto.php">Contáctanos</a>
+</li>
 </ul>
 <div class="header">
     <div class="image">
@@ -78,7 +78,6 @@
                     <textarea cols="1" rows="1" id="mensaje"> </textarea>
                     <p>Max. 500 caracteres</p>
                 </div>
-
             </fieldset>
 
             <fieldset>

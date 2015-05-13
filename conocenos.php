@@ -14,46 +14,46 @@
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?>
 
-    <li class="item-2 activo">
-        <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>
-    </li>
-    <li class="item-3" >
-        <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>				
-    </li>
-    <li class="item-4">
-        <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
-    </li>
-    <li class="item-5">
-        <a title="Ir a Soporte - Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
-    </li>
-    <li class="item-6">
-        <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
-    </li>
-    
+<li class="item-2 activo">
+    <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>
+</li>
+<li class="item-3" >
+    <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>				
+</li>
+<li class="item-4">
+    <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+</li>
+<li class="item-5">
+    <a title="Ir a Soporte - Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
+</li>
+<li class="item-6">
+    <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
+</li>
+
 <?php
-            if (!isset($_SESSION['logged'])) {
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
-                    </li>
-                
-<?php
-            }else{
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
-                    </li>
-                    
-<?php
-            }
+if (!isset($_SESSION['logged'])) {
+    ?>
+    <li class="menuLogin">
+        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
+    </li>
+
+    <?php
+} else {
+    ?>
+    <li class="menuLogin">
+        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+    </li>
+
+    <?php
+}
 ?>
 
-    <?php include("include/inc_5_nav_final.php") ?>
-    <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
+<?php include("include/inc_5_nav_final.php") ?>
+<?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
 
-    <li>
-        <a title="Conócenos" href="nuestrosCursos.php">Conócenos</a>
-    </li>
+<li>
+    <a title="Conócenos" href="nuestrosCursos.php">Conócenos</a>
+</li>
 </ul>   
 <div class="header">
     <div class="image">
