@@ -714,6 +714,22 @@ select {
     width: 200px;
 }
 
+/*Pongo esto aquí cris. Sino no tengo manera de hacerlo en todas a la vez sorry*/  
+
+.header > ul {
+    left: 730px;
+    position: relative;
+    top: -19px;
+}
+
+.header .dropdown-menu li {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.hide{
+    display:none;
+}
+
 /*Cambios DAVID*/
 /*.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
     padding-left:20px !important;

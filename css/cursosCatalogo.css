@@ -293,3 +293,20 @@ ol.lista_numeros li {
 	margin-bottom: 1em;
 	font-size: 1.1em;
 }
+
+/*DAVID*/
+.paddingLeft{
+    padding-left:40px;
+    font-size: 0.8em !important;
+}
+
+
+.inscrito{
+    background:darkseagreen;
+    color:white;
+}
+
+.dropdown-menu{
+    display:none;
+}
+

@@ -34,7 +34,7 @@ if(mysql_num_rows($result) == 1){
         $_SESSION['logged'] = TRUE;
         
         //Redireccionamos a la pagina: Perfil del usuario
-        header("Location: perfilAlumno.php");
+        header("Location: ../index.php");
 }else{
     //SI NO ESTA EN LA BASE DE DATOS
     header("Location: ../accederLogin.php?errorlogin=1");

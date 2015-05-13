@@ -9,6 +9,14 @@
 
 <!-- LINK hojas de CSS --> 	
 <link rel="stylesheet" href="css/conocenos.css">
+<script>
+    $(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("fast").end();
+        });
+    });
+</script>
+
 
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
@@ -41,7 +49,7 @@ if (!isset($_SESSION['logged'])) {
 } else {
     ?>
     <li class="menuLogin">
-        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
     </li>
 
     <?php
@@ -62,7 +70,19 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Conócenos</h2>
+    <ul>
+        <li>
+            <ul class="dropdown-menu" role="menu">
+                <a href="../areaprivada/perfilAlumno.php">
+                    <li>Ir a mi perfil</li>
+                </a>
 
+                <a href="../areaprivada/logout.php">
+                    <li>Cerrar sesion</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
     <?php include("include/inc_opcional_slider_Inicio.php") ?>
@@ -88,7 +108,7 @@ if (!isset($_SESSION['logged'])) {
                         <p>Nuestra máxima es y seguirá siendo que el alumno, cuando acabe el periodo lectivo, maneje a la perfección las técnicas impartidas en el curso, la inmensa mayoría ya se han incorporado al mercado de trabajo o han mejorado sus condiciones laborales o conocimientos.</p>
                     </div>
                 </div>
-                <div class="contenedorFila row">
+                <div class="contenedorFila row margenTop">
                     <div class="circulo">
                         <div>
                             <img src="img/iconos/conocenos/icono_conocenos3_78x78.png" alt=""/>
@@ -118,7 +138,7 @@ if (!isset($_SESSION['logged'])) {
                         <h3>A quién se dirige</h3>
                     </div>
                     <div class="contenidoTexto">
-                        <p>Estamos especializados en programacion, sobretodo, en la web. Si necesitas aprender por razones laborales nosotros somos lo que buscas. Si necesitas reciclarte, o estás empezando en este mundillo, preguntanos!!! </p>
+                        <p>Estamos especializados en programacion, sobretodo, en la web. Si necesitas aprender por razones laborales, nosotros somos lo que buscas. Si necesitas reciclarte, o estás empezando en este mundillo, pregúntanos!!! </p>
                     </div>
                 </div>
                 <div class="contenedorFila row">

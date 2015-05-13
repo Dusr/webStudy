@@ -8,6 +8,14 @@
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
 <link href="css/contacto.css" rel="stylesheet">
+<script>
+    $(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("fast").end();
+        });
+    });
+</script>
+
 
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
@@ -39,7 +47,7 @@ if (!isset($_SESSION['logged'])) {
 } else {
     ?>
     <li class="menuLogin">
-        <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
     </li>
     <?php
 }
@@ -59,7 +67,19 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Contáctanos</h2>
+    <ul>
+        <li>
+            <ul class="dropdown-menu" role="menu">
+                <a href="../areaprivada/perfilAlumno.php">
+                    <li>Ir a mi perfil</li>
+                </a>
 
+                <a href="../areaprivada/logout.php">
+                    <li>Cerrar sesion</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
     <!-- CONTENIDO DE  LA PáGINA -->

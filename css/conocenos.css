@@ -5,7 +5,9 @@
 #colIzq{
     width:60%;
     float:left;
-    background: white;
+}
+#colIzq .contenedorFila{
+    background:white;
 }
 
 #colIzq .contenedorFila .circulo{
@@ -163,5 +165,8 @@
 }
 
 iframe{
-    height:294px;
+    height:308px;
+}
+.margenTop{
+    margin-top:15px;
 }

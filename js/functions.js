@@ -7,6 +7,8 @@ $(document).ready(function () {
         $(this).next().slideToggle('fast');
         $(this).next().$('dd').slideToggle('fast');
     });
+    
+    
 
     /* Rotacion de la flecha en el FAQ */
     var rotation = 0;
@@ -35,6 +37,10 @@ $(document).ready(function () {
     });
 
     /*Fin boton de registro */
+    
+    $(".menuLogin").hover(function(){
+        $(".menuLogin ul li").show();
+    });
 
 });
 
@@ -90,8 +96,9 @@ function validarContrasena() {
 
 }
 
-
-
-
-
+$(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("slow").end();
+        });
+    });
 

@@ -6,6 +6,13 @@
 
 <!-- LINK hojas de CSS -->
 <link href="css/homeStyle.css" rel="stylesheet">
+<script>
+    $(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("fast").end();
+        });
+    });
+</script>
 
 
 <?php include("include/inc_2_head_final.php") ?> 
@@ -45,7 +52,7 @@
             } else {
                 ?>
                 <li class="menuLogin">
-                    <a title="Ir a mi Perfil" href="areaprivada/perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
                 </li>
 
                 <?php

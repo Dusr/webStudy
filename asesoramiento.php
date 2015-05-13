@@ -12,6 +12,14 @@
 
 <link href="css/asesoramiento.css" rel="stylesheet">
 <!-- SCRIPT de las tabs-->
+<script>
+    $(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("fast").end();
+        });
+    });
+</script>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $("#tab1").hide();
@@ -50,29 +58,28 @@
     <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
 </li>
 <?php
-            if (!isset($_SESSION['logged'])) {
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
-                    </li>
-                
-<?php
-            }else{
-?>
-                    <li class="menuLogin">
-                        <a title="Ir a mi Perfil" href="../perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
-                    </li>
-                   
-<?php
-            }
+if (!isset($_SESSION['logged'])) {
+    ?>
+    <li class="menuLogin">
+        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
+    </li>
+
+    <?php
+} else {
+    ?>
+    <li class="menuLogin">
+        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+    </li>
+    <?php
+}
 ?>
 
 <?php include("include/inc_5_nav_final.php") ?>
 <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
 
-    <li>
-        <a title="Asesoramiento" href="asesoramiento.php">Asesoramiento</a>
-    </li>
+<li>
+    <a title="Asesoramiento" href="asesoramiento.php">Asesoramiento</a>
+</li>
 </ul>
 <div class="header">
     <div class="image">
@@ -81,7 +88,19 @@
         </a>
     </div>
     <h2>Asesoramiento</h2>
+    <ul>
+        <li>
+            <ul class="dropdown-menu" role="menu">
+                <a href="../areaprivada/perfilAlumno.php">
+                    <li>Ir a mi perfil</li>
+                </a>
 
+                <a href="../areaprivada/logout.php">
+                    <li>Cerrar sesion</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
     <?php include("include/inc_opcional_slider_Inicio.php") ?>

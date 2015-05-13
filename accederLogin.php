@@ -18,6 +18,14 @@
 <script>
     window.onload = document.getElementById('formRegister').style.display = 'block';
 </script>
+<script>
+    $(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("fast").end();
+        });
+    });
+</script>
+
 <!------------------------ Si la contraseña no es correcta ----------------------------------->
 <?php
 if (isset($_SESSION['nosamepass'])) {
@@ -46,30 +54,42 @@ if (isset($_GET['insert'])) {
 <?php include("include/inc_3_headerTemplate.php") ?>
 <?php include("include/inc_4_nav_inicio.php") ?> 
 
-    <li class="item-2">
-        <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>    				
-    </li>
-    <li class="item-3" >
-        <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>		
-    </li>
-    <li class="item-4">
-        <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
-    </li>
-    <li class="item-5">
-        <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
-    </li>
-    <li class="item-6">
-        <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
-    </li>
+<li class="item-2">
+    <a title="Ir a conocenos" href="conocenos.php">Conócenos</a>    				
+</li>
+<li class="item-3" >
+    <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>		
+</li>
+<li class="item-4">
+    <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+</li>
+<li class="item-5">
+    <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
+</li>
+<li class="item-6">
+    <a title="Ir a Contáctanos" href="contacto.php"> Contáctanos </a>
+</li>
+<?php
+if (!isset($_SESSION['logged'])) {
+    ?>
     <li class="menuLogin">
         <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
     </li>
-
-    <?php include("include/inc_5_nav_final.php") ?>
-    <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
-    <li>
-        <a title="Acceder - registro" href="accederLogin.php">Acceder - Registro</a>
+    <?php
+} else {
+    ?>
+    <li class="menuLogin">
+        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?> </a>
     </li>
+    <?php
+}
+?>
+
+<?php include("include/inc_5_nav_final.php") ?>
+<?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
+<li>
+    <a title="Acceder - registro" href="accederLogin.php">Acceder - Registro</a>
+</li>
 </ul>
 <div class="header">
     <div class="image">
@@ -78,6 +98,19 @@ if (isset($_GET['insert'])) {
         </a>
     </div>
     <h2>Acceso a tu área privada</h2>
+    <ul>
+        <li>
+            <ul class="dropdown-menu" role="menu">
+                <a href="../areaprivada/perfilAlumno.php">
+                    <li>Ir a mi perfil</li>
+                </a>
+
+                <a href="../areaprivada/logout.php">
+                    <li>Cerrar sesion</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
 
@@ -121,13 +154,23 @@ if (isset($_GET['insert'])) {
                                     <?php
                                 }
                                 ?>
+
+                                <?php
+                                if (isset($_GET['nologgeduser'])) {
+                                    ?>
+                                    <br>
+                                    <span style="color:#ffcc00">Debe iniciar sesión para inscribirse en un curso.</span>
+                                    <?php
+                                }
+                                ?>
+
                             </div>
                         </form>
                     </div>
                 <?php } else { ?>
-                    <div>
-                        Bienvenido <?php echo $_SESSION['nombre'] ?>
-                    </div>    
+                    <li class="menuLogin">
+                        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    </li>  
 
                 <?php } ?>
             </div>
@@ -169,15 +212,15 @@ if (isset($_GET['insert'])) {
                 <?php
                 if (isset($_GET['nosamepass'])) {
                     ?>
-                        <script>document.getElementById('formRegister').style.display = 'block';</script>
-                        <br>
-                        <span class="alerta" style="color:red">Las contraseñas no coinciden.</span>
+                    <script>document.getElementById('formRegister').style.display = 'block';</script>
+                    <br>
+                    <span class="alerta" style="color:red">Las contraseñas no coinciden.</span>
                     <?php
                 } else if (isset($_GET['nocorrectdata'])) {
                     ?>
-                        <script>document.getElementById('formRegister').style.display = 'block';</script>
-                        <br>
-                        <span class="alerta" style="color:red">Los datos introducidos no son admitidos.</span>
+                    <script>document.getElementById('formRegister').style.display = 'block';</script>
+                    <br>
+                    <span class="alerta" style="color:red">Los datos introducidos no son admitidos.</span>
                     <?php
                 }
                 ?>
