@@ -86,7 +86,7 @@ if (!isset($_SESSION['logged'])) {
     
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
-    <div class="main inner-block">
+   <div class="main inner-block">
         <dl class="faqs">
             <dt class="pregunta">¿Existen unos requerimientos técnicos para la realización del curso?
             <div class="flechaAbajo">
@@ -116,52 +116,51 @@ if (!isset($_SESSION['logged'])) {
                 Los certificados de superación son emitidos por Miríada X y cuentan con el respaldo de la universidad, cuya imagen aparece en el diploma correspondiente, y del equipo docente, del que se incluye una firma también en el diploma.</dd>
 
 
-            <dt class="pregunta">If the previous was the first question this must be the second one. Isn't it?
+            <dt class="pregunta">¿Dónde puedo encontrar una referencia de la sintaxis de los lenguajes de programación?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </dd>
+            <dd>Cada lenguaje tiene su propia interfaz de programación de aplicaciones (API:Application Programming Interface)las cuales definen todas las herramientas y caracteristicas de su libreria. Las API pueden ser una guia muy útil al momento de estudiar nuevos lenguajes o, simplemente, como una buena referencia a tener a mano cuando se necesite.  </dd>
 
 
-            <dt class="pregunta">And what about the third question?
+            <dt class="pregunta">¿Cuesta dinero usar webStudy?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Nam eget dui. Etiam rhoncus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </dd>
+            <dd>webStudy es gratis y siempre lo será.</dd>
 
 
-            <dt class="pregunta">If the previous was the first question this must be the second one. Isn't it?
+            <dt class="pregunta">¿Qué edad tengo que tener para registrarme en webStudy?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </dd>
+            <dd>Nunca se es demasiado joven para aprender ni demasiado viejo para cambiar, es por ello que no nos importa la edad. ¡Vámos a aprender!</dd>
 
-
-            <dt class="pregunta">And what about the third question?
+            <dt class="pregunta">¿Cómo cambio mi dirección de correo electrónico?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Nam eget dui. Etiam rhoncus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </dd>
+            <dd>Se puede cambiar desde la zona "Mi perfil"</dd>
 
 
-            <dt class="pregunta">If the previous was the first question this must be the second one. Isn't it?
+            <dt class="pregunta">¿Puedo cambiar mi nombre de usuario?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </dd>
+            <dd></dd>
 
 
-            <dt class="pregunta">And what about the third question?
+            <dt class="pregunta">¿Puedo obtener un certificado despues de terminar un curso?
             <div class="flechaAbajo">
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Nam eget dui. Etiam rhoncus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</dd>
+            <dd></dd>
         </dl>
     </div>
 
