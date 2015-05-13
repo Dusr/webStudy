@@ -7,11 +7,7 @@
 <!-- LINK hojas de CSS -->
 <link href="css/homeStyle.css" rel="stylesheet">
 <script>
-    $(document).ready(function () {
-        $('.menuLogin').click(function (e) {
-            $(".header").find('.dropdown-menu').slideToggle("fast").end();
-        });
-    });
+  
 </script>
 
 
@@ -52,7 +48,21 @@
             } else {
                 ?>
                 <li class="menuLogin">
-                    <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    <a title="Ir a mi perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    <div class="header">
+                        <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="../areaprivada/perfilAlumno.php">
+                                        Ir a mi perfil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../areaprivada/logout.php">
+                                        Cerrar sesión
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
                 </li>
 
                 <?php
@@ -244,9 +254,9 @@
                                     <option value="diciembre">Diciembre</option>
                                 </select>
                             </div>
-                            <input type="submit" value="Buscar" name="buscadorInput" class="texto_boton">
+                            <input type="submit" value="Buscar" class="texto_boton">
                             <?php
-                            include 'buscadorPHP.php'; // buscador
+                            include 'include/buscador/buscadorPHP.php'; // buscador
                             ?>
                         </form>
 

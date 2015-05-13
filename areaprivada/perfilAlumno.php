@@ -20,7 +20,7 @@ session_start();
 <link href="../css/cursoActual.css" rel="stylesheet">
 
 <!-- JAVASCRIPT -->
-<script src="../js/functions.js"></script>
+
 
 <?php
 if (isset($_GET['insert'])) {
@@ -61,9 +61,23 @@ if (!isset($_SESSION['logged'])) {
     <?php
 } else {
     ?>
-    <li class="menuLogin activo">
-        <a title="Ir a mi Perfil" href="perfilAlumno.php"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
-    </li>   
+    <li class="menuLogin">
+                    <a title="Ir a mi perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+                    <div class="header">
+                        <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="../areaprivada/perfilAlumno.php">
+                                        Ir a mi perfil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../areaprivada/logout.php">
+                                        Cerrar sesión
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </li>  
     <?php
 }
 ?>

@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php 
+session_start();
+header("Content-Type: text/html;charset=utf-8");
+?>
 <?php include("include/inc_1_head_inicio.php") ?>
 
 
@@ -10,11 +13,11 @@
 <!-- LINK hojas de CSS --> 	
 <link rel="stylesheet" href="css/conocenos.css">
 <script>
-    $(document).ready(function () {
-        $('.menuLogin').click(function (e) {
-            $(".header").find('.dropdown-menu').slideToggle("fast").end();
-        });
-    });
+   // $(document).ready(function () {
+    //    $('.menuLogin').click(function (e) {
+    //        $(".header").find('.dropdown-menu').slideToggle("fast").end();
+     //   });
+   // });
 </script>
 
 
@@ -49,7 +52,21 @@ if (!isset($_SESSION['logged'])) {
 } else {
     ?>
     <li class="menuLogin">
-        <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <a title="Ir a mi perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <div class="header">
+            <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="../areaprivada/perfilAlumno.php">
+                            Ir a mi perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../areaprivada/logout.php">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+        </div>
     </li>
 
     <?php
@@ -70,24 +87,12 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Conócenos</h2>
-    <ul>
-        <li>
-            <ul class="dropdown-menu" role="menu">
-                <a href="../areaprivada/perfilAlumno.php">
-                    <li>Ir a mi perfil</li>
-                </a>
-
-                <a href="../areaprivada/logout.php">
-                    <li>Cerrar sesion</li>
-                </a>
-            </ul>
-        </li>
-    </ul>
+       
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
     <?php include("include/inc_opcional_slider_Inicio.php") ?>
 
-    <img alt="" src="img/imgSlider/conocenos.jpg">
+    <img alt="" src="img/imgSlider/conocenos_1.jpg">
 
     <?php include("include/inc_opcional_slider_Final.php") ?>
 

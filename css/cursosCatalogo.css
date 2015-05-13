@@ -306,7 +306,26 @@ ol.lista_numeros li {
     color:white;
 }
 
-.dropdown-menu{
+/*nav.menu_principal ul ul.dropdown-menu{
     display:none;
+    position: absolute;
+    top:40px;
+    background-color: #ccc;
+    width: 100%;
 }
 
+nav.menu_principal ul ul.dropdown-menu li:before{
+    content: " > "; 
+    color: #fff;
+}
+
+nav.menu_principal ul ul.dropdown-menu li{
+    margin: 0;
+    width: 100%;    
+}
+
+nav.menu_principal ul ul.dropdown-menu li a{
+    background: none;
+    padding: 0 5px;
+    
+}*/

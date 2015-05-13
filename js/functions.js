@@ -42,11 +42,21 @@ $(document).ready(function () {
         $(".menuLogin ul li").show();
     });
 
-});
+//});
+
+/*funcion del despleglable del Acceso-login*/
+//$(document).ready(function () {
+        $('.menuLogin').click(function (e) {
+            $(".header").find('.dropdown-menu').slideToggle("slow");
+        });
+  //  })();
+
+
+
 
 /* Function tabs */
 
-$(document).ready(function () {
+//$(document).ready(function () {
     $("#tab1").show();
     $("#tab2").hide();
     $("#tab3").hide();
@@ -95,10 +105,4 @@ function validarContrasena() {
     }
 
 }
-
-$(document).ready(function () {
-        $('.menuLogin').click(function (e) {
-            $(".header").find('.dropdown-menu').slideToggle("slow").end();
-        });
-    });
 

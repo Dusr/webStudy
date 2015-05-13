@@ -351,7 +351,7 @@ a:hover {
 nav {
  background: none repeat scroll 0 50% #333;
     float: left;
-    overflow: hidden;
+   /* overflow: hidden;*/
     width: 100%;
 }
 
@@ -402,7 +402,7 @@ nav.menu_principal .menuLogin::after {
     left: 100%;
     position: absolute;
     top: 0;
-    width: 1000%;
+   /* width: 1000%;*/
 }
 
 nav.menu_principal ul li.menuLogin{
@@ -420,7 +420,7 @@ nav.menu_principal .menuLogin a {
     
 }
 
-nav.menu_principal_historias::after {
+/*nav.menu_principal_historias::after {
     background: none repeat scroll 0 0 #1f2326;
     content: " ";
     display: block;
@@ -429,7 +429,7 @@ nav.menu_principal_historias::after {
     position: absolute;
     top: 0;
     width: 2000px;
-}
+}*/
 
 /*Colores para los enlaces de las paginas en la navegación*/
 nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
@@ -458,6 +458,33 @@ nav.menu_principal ul > li.item-6:hover, nav.menu_principal ul > li.item-6.activ
 
 nav.menu_principal ul > li.menuLogin:hover, nav.menu_principal ul > li.menuLogin.activo {
   background: none repeat scroll 0 0 #66cccc;
+}
+
+
+/*DESPLEGLABLE cd estas logado*/
+
+nav.menu_principal ul ul.dropdown-menu{
+    display:none;
+    position: absolute;
+    top:40px;
+    background-color: #ccc;
+    width: 100%;
+}
+
+nav.menu_principal ul ul.dropdown-menu li:before{
+    content: " > "; 
+    color: #fff;
+}
+
+nav.menu_principal ul ul.dropdown-menu li{
+    margin: 0;
+    width: 100%;    
+}
+
+nav.menu_principal ul ul.dropdown-menu li a{
+    background: none;
+    padding: 0 5px;
+    
 }
 
 /*++++ Submenu principal para nuestros cursos +++++*/

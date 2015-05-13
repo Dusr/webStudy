@@ -24,11 +24,7 @@ header("Content-Type: text/html;charset=utf-8");
 
 <!-- JAVASCRIPT -->
 <script>
-    $(document).ready(function () {
-        $('.menuLogin').click(function (e) {
-            $(".header").find('.dropdown-menu').slideToggle("fast").end();
-        });
-    });
+
 </script>
 
 
@@ -53,13 +49,28 @@ header("Content-Type: text/html;charset=utf-8");
 if (!isset($_SESSION['logged'])) {
     ?>
     <li class="menuLogin">
-        <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
+        <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
+         
     </li>
     <?php
 } else {
     ?>
     <li class="menuLogin">
         <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <div class="header">
+            <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="../areaprivada/perfilAlumno.php">
+                            Ir a mi perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../areaprivada/logout.php">
+                            Cerrar sesion
+                        </a>
+                    </li>
+                </ul>
+        </div>
     </li>
 
                 <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>-->
@@ -85,19 +96,20 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Cursos online</h2>
-    <ul>
-        <li>
-            <ul class="dropdown-menu" role="menu">
-                <a href="../areaprivada/perfilAlumno.php">
-                    <li>Ir a mi perfil</li>
-                </a>
-
-                <a href="../areaprivada/logout.php">
-                    <li>Cerrar sesion</li>
-                </a>
-            </ul>
-        </li>
-    </ul>
+    
+<!--            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="../areaprivada/perfilAlumno.php">
+                        Ir a mi perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="../areaprivada/logout.php">
+                        Cerrar sesion
+                    </a>
+                </li>
+            </ul>-->
+       
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
     <!-- Estructura del Menu secundario. -->
 
