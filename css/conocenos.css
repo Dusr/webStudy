@@ -73,9 +73,10 @@
 	text-align: center;
 }
 .contenedorFila .bloqInferior{
-	border-top: 1px solid #fff;
-	padding: 5px 0;
+	border-top: 2px solid #fff;
+	padding: 20px 0 5px;
 	margin-top: 20px;
+        
 }
 .contenedorFila .bloqSuperior p, 
 .contenedorFila .bloqSuperior p > a,
@@ -159,4 +160,8 @@
     margin: 1% 0 0;
     text-align: left;
     text-transform: uppercase;
+}
+
+iframe{
+    height:294px;
 }

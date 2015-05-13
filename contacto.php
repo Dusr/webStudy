@@ -3,7 +3,7 @@
 
 
 
-<title>Contactanós | Webstudy.com</title>	
+<title>Contáctanos | Webstudy.com</title>	
 <meta name="description" content=''/>
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
@@ -15,13 +15,13 @@
 
 
 <li class="item-2">
-    <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>    				
+    <a title="Ir a Conócenos" href="conocenos.php">Conócenos</a>    				
 </li>
 <li class="item-3" >
-    <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>
+    <a title="Ir a Nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>
 </li>
 <li class="item-4">
-    <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+    <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
 </li>
 <li class="item-5">
     <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
@@ -49,7 +49,7 @@
 <?php include("include/inc_opcional_breadcrumb_Inicio.php") ?>
 
     <li>
-        <a title="Contactanós" href="contacto.php">Contactanós</a>
+        <a title="Contáctanos" href="contacto.php">Contáctanos</a>
     </li>
 </ul>
 <div class="header">
@@ -58,14 +58,14 @@
             <img alt="Volver atrás" src="images/left-white-arrow.png"/>
         </a>
     </div>
-    <h2>Contactanós</h2>
+    <h2>Contáctanos</h2>
 
     <?php include("include/inc_opcional_breadcrumb_final.php") ?>
 
     <!-- CONTENIDO DE  LA PáGINA -->
     <div class="main inner-block">
-        <p class="texto_grande">Te asesoramos, cuentanos que buscas y nos ponemos en contacto contigo</p>
-        <p>Los campos marcados con * son obligatorios.</p>
+        <p class="texto_grande">Te asesoramos, cuentanos qué buscas y nos pondremos en contacto contigo</p>
+        <p>Los campos marcados con (*) son obligatorios.</p>
     </div>
 
     <div class="main inner-block">
@@ -82,7 +82,7 @@
             </fieldset>
 
             <fieldset>
-                <legend>tus datos personales</legend>
+                <legend>Tus datos personales</legend>
                 <p>Envianos tus datos para poder responderte</p>
                 <div class="fila_form">
                     <label for="nombre">Nombre*:</label>
@@ -97,7 +97,7 @@
                     <input id="segundoApellido"/>
                 </div>
                 <div class="fila_form">
-                    <label for="correo">Tu correo electrónico*:</label>
+                    <label for="correo">Correo electrónico*:</label>
                     <input id="correo"/>
                 </div>
                 <div class="fila_form">

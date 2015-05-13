@@ -124,7 +124,7 @@
                 <div class="contenedorFila row">
                     <div class="bloqSuperior">
                         <h4>Nuestras oficinas</h4>
-                        <p><strong>Dirección</strong>: Calle Luna 9A, bajo 28001 Madrid</p>
+                        <p><strong>Dirección</strong>: C/ Luna 9ºA, Bajo, 28001 Madrid</p>
                         <p><strong>Teléfono</strong>: 
                             <a href="tel:91564654"> 91 564 654</a>
                         </p>	
