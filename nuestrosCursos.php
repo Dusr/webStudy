@@ -53,12 +53,12 @@ if (!isset($_SESSION['logged'])) {
         <div class="header">
             <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="../areaprivada/perfilAlumno.php">
+                        <a href="areaprivada/perfilAlumno.php">
                             Ir a mi perfil
                         </a>
                     </li>
                     <li>
-                        <a href="../areaprivada/logout.php">
+                        <a href="areaprivada/logout.php">
                             Cerrar sesión
                         </a>
                     </li>

@@ -81,7 +81,7 @@
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/webStudy/include/inc_5_nav_final.php") ?>
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/webStudy/include/inc_opcional_breadcrumb_Inicio.php") ?>
     <li>
-        <a title="Acceder - registro" href="../accederLogin.php">Acceder - Registro</a>
+        <a title="Acceder - registro" href="accederLogin.php">Acceder - Registro</a>
     </li>
 </ul>
 <div class="header">
@@ -94,11 +94,11 @@
     <ul>
         <li>
             <ul class="dropdown-menu" role="menu">
-                <a href="../areaprivada/perfilAlumno.php">
+                <a href="areaprivada/perfilAlumno.php">
                     <li>Ir a mi perfil</li>
                 </a>
 
-                <a href="../areaprivada/logout.php">
+                <a href="areaprivada/logout.php">
                     <li>Cerrar sesion</li>
                 </a>
             </ul>
