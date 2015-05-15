@@ -73,7 +73,37 @@ $(document).ready(function () {
         $(this).parent().attr("id", "current");
         $('#' + $(this).attr('name')).fadeIn();
     });
+    
+    
+  /* Tabs Modulos */
+
+    $("#tab1d").show();
+    $("#tab2d").hide();
+    $("#tab3d").hide();
+    $("#tab4d").hide();
+    $("#tab5d").hide();
+    
+    $(".modulo input:first").parent().attr("id", "currentd");
+    
+    $("#contentd div:first").fadeIn();
+
+    $('.modulo input').click(function (e) {
+        e.preventDefault();
+        $("#tab1d").hide();
+        $("#tab2d").hide();
+        $("#tab3d").hide();
+        $("#tab4d").hide();
+        $("#tab5d").hide();
+        
+        $(".modulo input").parent().attr("id", "");
+        $(this).parent().attr("id", "currentd");
+        $('#' + $(this).attr('name')).fadeIn();
+    });
+    
 })();
+
+
+
 
 /* Validar correo */
 

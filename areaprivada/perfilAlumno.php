@@ -64,22 +64,22 @@ if (!isset($_SESSION['logged'])) {
 } else {
     ?>
     <li class="menuLogin activo">
-                    <a title="Ir a mi perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
-                    <div class="header">
-                        <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="../areaprivada/perfilAlumno.php">
-                                        Ir a mi perfil
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../areaprivada/logout.php">
-                                        Cerrar sesión
-                                    </a>
-                                </li>
-                            </ul>
-                    </div>
-                </li>  
+        <a title="Ir a mi perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
+        <div class="header">
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="../areaprivada/perfilAlumno.php">
+                        Ir a mi perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="../areaprivada/logout.php">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>  
     <?php
 }
 ?>
@@ -110,7 +110,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="contenedor_menu_secundario">
             <ul id="tabs">
                 <li class="activa">
-                    <a title="Ir a tu perfil" name="tab1" href="#">Tu perfil</a>
+                    <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                 </li>
                 <li class="">
                     <a title="Ir al curso actual" name="tab2" href="/">Curso actual</a>
@@ -208,54 +208,58 @@ if (!isset($_SESSION['logged'])) {
         <div id="tab2" class="main inner-block">
             <div class="main inner-block" id="mainContainer">
 
-
+                <!-- CARGA EL CURSO EN MEMORIA -->
+                <?php include("../include/cargarCursos/cargarHtml.php") ?>
+                <div class="headerMod">
+                    <h3><?php echo $_SESSION['nombreCurso']; ?></h3>
+                    <h4 class="paddingLeft"><?php echo $_SESSION['descripcion']; ?></h4>
+                </div>
                 <div class="bloqueIzq">
-                    <div class="headerMod">
-                        <p> Modulos del curso </p>
-                    </div>
-                    <div class="tablaModulos">    
-                        <div class="modulo">
-                            <div class="imagenMod">
-                                <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
-                            </div>
+                    <div class="tablaModulos paddingLeft">   
+                        <?php
+                        if (mysql_num_rows($modulos) > 0) {
+                            $controlModulo=1;
+                            while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                ?>  
+                                <li>
+                                    <div class="modulo">
+                                        <div class="imagenMod">
+                                            <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                                        </div>
 
-                            <p>MÓDULO 0: Presentación.</p>
-
-                            <input class="botonAcceder" type="button" name="acceder" value="ACCEDER">
-                        </div>
-                        <div class="modulo">
-                            <div class="imagenMod">
-                                <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
-                            </div>
-                            <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
-
-                            <div class="botonAcceder">
-                                <input type="button" name="acceder">
-                            </div>
-                        </div>
-                        <div class="modulo">
-                            <div class="imagenMod">
-                                <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
-                            </div>
-                            <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
-
-                            <div class="botonAcceder">
-                                <input type="button" name="acceder">
-                            </div>
-                        </div>
-                        <div class="modulo">
-                            <div class="imagenMod">
-                                <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
-                            </div>
-                            <p>MÓDULO 1: HTML: Conceptos básicos, conceptos avanzados.</p>
-
-                            <div class="botonAcceder">
-                                <input type="button" name="acceder">
-                            </div>
-                        </div>
+                                        <p><?php echo $rowmodulo['nombre']; ?></p>
+                                        <input class="botonAcceder" type="button" name="tab<?php echo $controlModulo?>d" value="Mostrar módulo"/>
+                                    </div> 
+                                </li>
+                                <?php
+                                $controlModulo= $controlModulo+1;
+                            }//end_while
+                        } else {
+                            //SI NO ESTA EN LA BASE DE DATOS
+                            header("Location: ../cursosOnline.php");
+                        }
+                        ?>
                     </div>
                 </div>
-
+                <div class="bloqueDcha">
+                    <div class="contentd">
+                        <div id="tab1d" class="descripcionModulo">
+                           1 
+                        </div>
+                        <div id="tab2d" class="descripcionModulo">
+                            2
+                        </div>
+                        <div id="tab3d" class="descripcionModulo">
+                            3
+                        </div>
+                        <div id="tab4d" class="descripcionModulo">
+                            4
+                        </div>
+                        <div id="tab5d" class="descripcionModulo">
+                            5
+                        </div>
+                    </div>    
+                </div>
             </div>    
         </div>
     </div>
