@@ -20,9 +20,7 @@ session_start();
 <link href="../css/cursoActual.css" rel="stylesheet">
 
 <!-- JAVASCRIPT -->
-<script>
-    $('#tabs li a').click.addClass('activa');
-</script>
+
 
 <?php
 if (isset($_GET['insert'])) {
@@ -109,7 +107,7 @@ if (!isset($_SESSION['logged'])) {
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul id="tabs">
-                <li class="activa">
+                <li class="">
                     <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                 </li>
                 <li class="">
