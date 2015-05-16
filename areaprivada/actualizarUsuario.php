@@ -11,7 +11,13 @@
     $direccion = $_POST['direccion'];
     $oldpassword = $_POST['oldpass'];
     $newpassword = $_POST['newpass'];
-    $avatar = $_POST['avatar'];
+    if(isset($_POST['Guardar'])){
+        move_uploaded_file($_FILES['avatar']['tmp_name'],"avatares/".$_FILES['avatar']['name']);
+        $sql = "UPDATE alumno "
+             . "SET avatar='".$_FILES['avatar']['name']."' "
+              . "WHERE login='".$_SESSION['correo']."' "
+              . "AND password='".$oldpassword."'";
+    }
 
     if($oldpassword == $_SESSION['pass']){
         $sql = "UPDATE alumno "

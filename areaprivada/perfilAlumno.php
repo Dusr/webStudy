@@ -30,6 +30,8 @@ if (isset($_GET['insert'])) {
     </script>
     <?php
 }
+
+
 ?>  
 
 
@@ -125,7 +127,7 @@ if (!isset($_SESSION['logged'])) {
     <!-- MI PERFIL -->
     <div class="content">
         <div id="tab1" class="main inner-block">
-            <form action="actualizarUsuario.php" method="POST">
+            <form action="actualizarUsuario.php" method="POST" enctype="multipart/form-data">
                 <div id="colIzq">
                     <div id="userData">
                         <div id="cabRegistro">
@@ -188,16 +190,30 @@ if (!isset($_SESSION['logged'])) {
                 }
                 ?>
                 <div id="colDcha">
+                   
                     <div id="avatar">
-                        <img src=""/>
+                        <?php 
+                           $con = mysqli_connect('localhost','project','project','webstudy');
+                           $query = mysqli_query($con,"SELECT * from alumno");
+                           while($row = mysqli_fetch_assoc($query)){
+                               if($row['avatar'] == ""){
+                                   echo "<img src='avatares/1.jpg' alt='Imagen por defecto'>";
+                            }else{
+                                echo "<img src='avatares/".$row['avatar']."' alt='Avatar'>";
+                            }
+                           }
+                        ?>
+                        <img src="avatares/<?php ?>">
                     </div>    
                     <div class="avatar">
-                        <?php echo $_SESSION['avatar']; ?>
-    <!--                    <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
+                         <?php echo $_SESSION['avatar']; ?>
+    <!--                   <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
                         <p>Cambiar avatar</p>
                     </div>
+                    <form method="post" action="actualizarUsuario.php" enctype="multipart/form-data">
                     <input class="guarda" name="avatar" type="file"/>
-
+                    </form>
+                    
                 </div>
             </form>
         </div>
