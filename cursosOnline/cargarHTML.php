@@ -10,18 +10,16 @@ $result = mysql_query("SELECT * "
 $row = mysql_fetch_array($result);
 
 //Validamos si el curso existe en la base de datos
-if (mysql_num_rows($result) == 1) {
-    //Si el curso es correcto
+if (mysql_num_rows($result) == 1) { //Si esta inscrito
   
+        
     //Almacenamos los datos del curso en variables de sesión
-    $_SESSION['idCurso'] = $row['idCurso'];
-    $_SESSION['nombreCurso'] = $row['nombre'];
-    $_SESSION['lenguaje'] = $row['lenguaje'];
-    $_SESSION['duracion'] = $row['duracion'];
-    $_SESSION['descripcion'] = $row['descripcion'];
-} else {
-    //SI NO ESTA EN LA BASE DE DATOS
-    header("Location: ../cursosOnline.php?curso");
+    $idCurso = $row['idCurso'];    
+    $nombreCurso = $row['nombre'];
+    $lenguaje = $row['lenguaje'];
+    $duracion = $row['duracion'];
+    $descripcion = $row['descripcion'];
+    $_SESSION['inscribed'] = TRUE;
 }
 
 //CONSULTA MODULOS DEL CURSO

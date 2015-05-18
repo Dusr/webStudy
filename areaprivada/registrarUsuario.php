@@ -9,10 +9,15 @@
     $login = $_POST['login'];
     $password = $_POST['pass'];
     $rpassword = $_POST['rpass'];
+    $profesor = 0;
+    
+    if(isset($_POST['profesor'])){
+        $profesor = 1;
+    }
     
     if($password == $rpassword){
-        $sql = "INSERT INTO alumno(idAlumno, login, password, nombre, apellidos, avatar) ".
-               "VALUES(default,'".$login."', '".$password."', '".$nombre."', '".$apellidos."',null)";
+        $sql = "INSERT INTO usuario(idAlumno, login, password, nombre, apellidos, avatar, profesor) ".
+               "VALUES(default,'".$login."', '".$password."', '".$nombre."', '".$apellidos."',null,".$profesor.")";
 
         $result = mysql_query($sql, $con);    
         
@@ -32,14 +37,15 @@
                 $_SESSION['correo'] = $row['login'];
                 $_SESSION['direccion'] = $row['direccion'];
                 $_SESSION['avatar'] = $row['avatar'];
+                $_SESSION['profesor'] = $row['profesor'];
                 $_SESSION['registered'] = TRUE;
                 $_SESSION['logged'] = TRUE;
 
             //LIBERAMOS LA MEMORIA EMPLEADA PARA HACER LA CONSULTA
                 mysql_free_result($result);
                 
-            //REDIRECCIONAMOS A perfilAlumno.php
-                header("Location: perfilAlumno.php");
+            //REDIRECCIONAMOS A perfilUsuario.php
+                header("Location: perfilUsuario.php");
                 
     }else{
             //SI NO INTRODUCE LOS DATOS CORRECTAMENTE REDIRECCIONAMOS A accederLogin.php

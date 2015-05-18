@@ -165,3 +165,47 @@ input{
     margin-top:-8px;
 }
 
+#tituloModulo{
+    background: #993333 none repeat scroll 0 0;
+    color: white;
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    padding: 12px 30px;
+    width: 100%;
+}
+
+.modulo > a {
+    float: left;
+    font-weight: bold;
+    padding-left: 19px;
+    padding-top: 44px;
+}
+
+
+
+#formularioEjercicios input{
+    width: 250px;
+    margin: 0 auto;
+    margin-top:25px;
+    padding:7px;
+}
+#formularioEjercicios input[type='submit']{
+    margin-right: 23px;
+    width: 68px;
+}
+#formularioEjercicios{
+    margin-top:25px;
+}
+#formularioEjercicios p{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.letraGrande{
+    font-size: 1.3em;
+}
+
+#contenedorDescripcion{
+    margin-top:30px;
+}

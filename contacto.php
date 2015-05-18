@@ -47,7 +47,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="header">
             <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="areaprivada/perfilAlumno.php">
+                        <a href="areaprivada/perfilUsuario.php">
                             Ir a mi perfil
                         </a>
                     </li>

@@ -6,19 +6,17 @@ if (isset($_SESSION['logged'])) {
 
     $idCurso = $_POST['id'];
 
-    $sql = "INSERT into alumno_has_curso VALUES (" . $_SESSION['idAlumno'] . "," . $idCurso . ")";
+    $sql = "INSERT into alumno_has_curso VALUES (" . $_SESSION['idAlumno'] . "," . $idCurso . ",0)";
 
     //INSERTAMOS 
     $result = mysql_query($sql, $con);
 
 
     if ($result) {
-        //REDIRECCIONAMOS AL CURSO OTRA VEZ perfilAlumno.php
-
+        //REDIRECCIONAMOS AL CURSO OTRA VEZ perfilUsuario.php
         header("Location: ../cursosOnline/cursoHtmlBasico.php?inscribed");
     } else {
         //SI NO INTRODUCE LOS DATOS CORRECTAMENTE REDIRECCIONAMOS A accederLogin.php
-
         header("Location: ../cursosOnline/cursoHtmlBasico.php?notinscribed");
     }
 } else {

@@ -79,7 +79,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="header">
             <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="areaprivada/perfilAlumno.php">
+                        <a href="areaprivada/perfilUsuario.php">
                             Ir a mi perfil
                         </a>
                     </li>
@@ -196,6 +196,10 @@ if (!isset($_SESSION['logged'])) {
                             <div id="politica" class="row">
                                 <input type="checkbox" required>
                                 <p>Acepto y entiendo la Política de Privacidad.</p>
+                            </div>
+                            <div id="politica" class="row">
+                                <input type="checkbox" name="profesor" id="profesor"/>
+                                <p>Quiero ser profesor</p>
                             </div>
 
                         </div>

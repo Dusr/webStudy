@@ -94,7 +94,7 @@
     <ul>
         <li>
             <ul class="dropdown-menu" role="menu">
-                <a href="../areaprivada/perfilAlumno.php">
+                <a href="../areaprivada/perfilUsuario.php">
                     <li>Ir a mi perfil</li>
                 </a>
 

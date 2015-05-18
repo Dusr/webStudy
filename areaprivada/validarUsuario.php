@@ -9,7 +9,7 @@ $pass = $_POST['pass'];
 
 //CONSULTA
 $result = mysql_query("SELECT * "
-                     ."FROM alumno "
+                     ."From usuario "
                      ."WHERE login = '".$login."' "
                      ."AND password= '".$pass."'",
                      $con);
@@ -62,7 +62,7 @@ if(mysql_num_rows($result) == 1){
 //    $avatar = $_POST['avatar'];
 //    
 //    if($password == $_SESSION['pass'] && $password==$rpassword){
-//        $sql = "UPDATE alumno SET login=".$login.", ".
+//        $sql = "UPDATE usuario SET login=".$login.", ".
 //                                  "password=".$password.", ".
 //                                  "nombre=".$nombre.", ".
 //                                  "apellidos=".$apellidos.", ".

@@ -60,7 +60,7 @@
 			<div class="contenedor_menu_secundario">
 				<ul>
 					<li class="">
-						<a title="Ir a tu perfil" href="perfilAlumno.php">Tu perfil</a>
+						<a title="Ir a tu perfil" href="perfilUsuario.php">Tu perfil</a>
 					</li>
 					<li class="">
 						<a title="Ir al curso actual" href="cursoActual.php">Curso actual</a>

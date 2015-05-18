@@ -1,16 +1,17 @@
 <?php
-session_start();
-header("Content-Type: text/html;charset=utf-8");
+    session_start();
+    header("Content-Type: text/html;charset=utf-8");
 ?>
-
-<!--Sacamos asi toda la informacion del curso y sus modulos de la base de datos-->
-<?php include("../include/cargarCursos/cargarHtml.php") ?>
-
 
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
+<!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
+<?php include("../cursosOnline/cargarHTML.php") ?>
 
-<title> <?php echo $_SESSION['nombreCurso']; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
+
+
+
+<title> <?php echo $nombreCurso; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
 
 
 <!-- METAS de la pagina -->
@@ -60,7 +61,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="header">
             <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="../areaprivada/perfilAlumno.php">
+                        <a href="../areaprivada/perfilUsuario.php">
                             Ir a mi perfil
                         </a>
                     </li>
@@ -73,7 +74,7 @@ if (!isset($_SESSION['logged'])) {
         </div>
     </li>
 
-                <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>-->
+                <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $nombre; ?></a>-->
 
     <?php
 }
@@ -96,19 +97,6 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Cursos online</h2>
-    
-<!--            <ul class="dropdown-menu" role="menu">
-                <li>
-                    <a href="../areaprivada/perfilAlumno.php">
-                        Ir a mi perfil
-                    </a>
-                </li>
-                <li>
-                    <a href="../areaprivada/logout.php">
-                        Cerrar sesion
-                    </a>
-                </li>
-            </ul>-->
        
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
     <!-- Estructura del Menu secundario. -->
@@ -136,34 +124,33 @@ if (!isset($_SESSION['logged'])) {
             <a title="Ir a Cursos Online" href="../cursosOnline.php">
                 <img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
             </a>
-            <h3><?php echo $_SESSION['nombreCurso']; ?></h3>
+            <h3><?php echo $nombreCurso; ?></h3>
 
             <!-- BOTON INSCRIBIRSE -->
-            <?php if (!isset($_GET['inscribed'])) { ?>
+             <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
+            <?php if (isset($_SESSION['logged'])) { 
 
-            <?php } ?> 
-
-            <?php
-            //CONSULTA
             $result = mysql_query("SELECT * "
                     . "FROM alumno_has_curso "
-                    . "WHERE Curso_idCurso = '" . $_SESSION['idCurso'] . "' "
+                    . "WHERE Curso_idCurso = '" . $idCurso . "' "
                     . "AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "'", $con);
 
-            if (mysql_num_rows($result) == 1) {
-                //Si ya esta inscrito
+            if (mysql_num_rows($result) == 1) { // SI YA ESTÁ INSCRITO APARECERÁ EN VERDE
+                
                 ?>
-                <input class="inscrito" type="submit" value="inscrito"/>
+                        <input class="inscrito" type="submit" value="inscrito"/>
                 <?php
-            } else {
+            } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                 ?>
-                <form action="../areaprivada/inscribirseHTML.php" method="POST">
-                    <input class="hide" id="id" name="id" type="text" value="<?php echo $_SESSION['idCurso']; ?>"/>
-                    <input type="submit" value="Inscribirse"/>
-                </form>
+                        <form action="../areaprivada/inscribirseHTML.php" method="POST">
+                            <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
+                            <input type="submit" value="Inscribirse"/>
+                        </form>
                 <?php
             }
-            ?>
+            
+            } ?> 
+            
 
         </div>
 
