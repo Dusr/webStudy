@@ -1,0 +1,13 @@
+IMG tipo BLOB
+
+https://www.youtube.com/watch?v=i0P2slvSUe0	PART 1
+https://www.youtube.com/watch?v=Jz6WyTBOS2M	PART 2
+
+------------------------------------------------------------
+
+GRAVATAR, imagenes de usuario en PHP
+'subir imagenes a otra pagina y cogerlas de ahí'
+
+https://www.youtube.com/watch?v=SYJbbJhGC0A
+
+http://es.gravatar.com/
