@@ -24,20 +24,20 @@
      // consultas
     if ($nomCurso!="" && $nomCurso!="Nombre del curso")
     {
-      echo'<p>'.$nomCurso.'</p>';
+      //echo'<p>'.$nomCurso.'</p>';
       $busquedaSql=mysql_query("select * from curso where nombre like '".mysql_real_escape_string($nomCurso)."'")or die (mysql_error());
     }
 //                                     
     if ($mesFecha!="" && $mesFecha!="todos")
     {
-       echo'<p>'.$mesFecha.'</p>';
-      $busquedaSql=mysql_query("select * from curso where duracion like '".mysql_real_escape_string($mesFecha)."'") or die (mysql_error());
+       //echo'<p>'.$mesFecha.'</p>';
+      $busquedaSql=mysql_query("select * from curso where comienzoCurso like '".mysql_real_escape_string($mesFecha)."'") or die (mysql_error());
       
     }
     
     if ($modali_Curso!="" && $modali_Curso!="todas")
     {
-       echo'<p>'.$modali_Curso.'</p>';
+      // echo'<p>'.$modali_Curso.'</p>';
       $busquedaSql=mysql_query("select * from curso where modalidad like '".mysql_real_escape_string($modali_Curso)."'") or die (mysql_error());
       
     }

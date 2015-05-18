@@ -144,7 +144,7 @@ if (!isset($_SESSION['logged'])) {
                 ?>
                         <form action="../areaprivada/inscribirseHTML.php" method="POST">
                             <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
-                            <input type="submit" value="Inscribirse"/>
+                            <input class="botonIncribir" type="submit" value="Inscribirse"/>
                         </form>
                 <?php
             }

@@ -7,8 +7,8 @@
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
 <!-- LINK hojas de CSS -->
-<link href="css/homeStyle.css" rel="stylesheet">
-<link href="css/cursoActual.css" rel="stylesheet">
+<link href="css/homeStyle-OBSOLETO.css" rel="stylesheet">
+<link href="css/cursoActual-obsoleto.css" rel="stylesheet">
 <!-- SCRIPT de las Tabs --> 
 <script type="text/javascript">
     $(document).ready(function () {

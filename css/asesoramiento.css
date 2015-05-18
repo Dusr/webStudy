@@ -3,7 +3,7 @@
     float: left;
     width: 100%;
 }
-.info-box.row li {
+.info-box.row #tabs li {
     float: left;
     text-align: center;
     width: 50%;

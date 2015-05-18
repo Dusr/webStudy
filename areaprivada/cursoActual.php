@@ -11,7 +11,7 @@
     <!-- LINK hojas de CSS -->
  	
     <link href="../css/cursosCatalogo.css" rel="stylesheet">
-    <link href="../css/cursoActual.css" rel="stylesheet">
+  <link href="../css/areaPrivada.css" rel="stylesheet">
 
     <!-- JAVASCRIPT -->
 

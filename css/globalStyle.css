@@ -47,7 +47,9 @@ ul, ol {
   list-style: none outside none;
 }
 
-/*reset responsive*/
+/********************************
+*  RESET para RESPONSIVE
+********************************/
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -88,9 +90,6 @@ header {
     padding: 0;
     overflow: hidden;
     position: relative;
-/*   -webkit-box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);
--moz-box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);
-box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);*/
 }
 
 .inner-block {
@@ -98,8 +97,7 @@ box-shadow: -5px -4px 5px 0px rgba(8,8,8,0.75);*/
     margin: auto;
     padding: 40px 0 0 0;
     overflow: hidden;
-    position: relative;
-    
+    position: relative;    
 }
 
 .inner-block-alternative {
@@ -170,8 +168,7 @@ h1 {
     padding: 0;
     text-align: center;
     text-transform: uppercase;
-    width: 100%;
-   
+    width: 100%;   
 }
 
 h2 {
@@ -179,8 +176,7 @@ h2 {
     font-size: 2em;
     margin: 10px auto;
     text-align: center;
-    width: 100%;
-   
+    width: 100%;   
     font-weight: normal;
 }
 
@@ -188,8 +184,7 @@ h3 {
     font-size: 1.8em;
 }
 
-h4 {
-    
+h4 {    
     font-size: 1.6em;
     text-align: center;
     text-transform: uppercase;
@@ -204,14 +199,11 @@ p, li {
     color: #666666;
 }
 
-/*p > strong {
-    font-family: "Open Sans bold","Helvetica Neue bold",Helvetica,Arial,sans-serif;
-}*/
-
 a:hover {
     color: #333;
     text-decoration: none;
 }
+
 /********************************
 *  CONTENIDO Cabecera
 ********************************/
@@ -241,6 +233,7 @@ a:hover {
     right: 0;
     width: 400px;
 }
+
 .caja_redes_sociales {
     float: right;
     padding: 0;
@@ -290,8 +283,10 @@ a:hover {
     vertical-align: top;
     width: 100%;
 }
+/********************************
+*  iconos de las redes sociales
+********************************/
 
-/*iconos de las redes sociales y sus hover*/
 /*icono me gusta*/
 .caja_redes_sociales a.ico_like {
     display: block;
@@ -318,6 +313,7 @@ a:hover {
     top: 0;
     width: 39px;
 }
+
 .caja_redes_sociales a.ico_facebook img {
     position: relative;
     top: 0;
@@ -344,6 +340,7 @@ a:hover {
 .caja_redes_sociales ul li a.ico_twitter:hover img, .caja_redes_sociales ul li a.ico_twitter:focus img {
     top: -37px;
 }
+
 /********************************
 *  CONTENIDO NAVEGACION
 ********************************/
@@ -377,13 +374,11 @@ nav.menu_principal ul li {
     padding:0 5px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
-   /* border-right:1px solid #fff;*/
+    font-weight: bold;   
 }
 
 nav.menu_principal ul li a {
-    color: #fff;
-    /*vertical-align: middle;*/
+    color: #fff;    
 }
 
 nav.menu_principal ul li span.v {
@@ -401,8 +396,7 @@ nav.menu_principal .menuLogin::after {
     height: 100%;
     left: 100%;
     position: absolute;
-    top: 0;
-   /* width: 1000%;*/
+    top: 0;  
 }
 
 nav.menu_principal ul li.menuLogin{
@@ -420,18 +414,10 @@ nav.menu_principal .menuLogin a {
     
 }
 
-/*nav.menu_principal_historias::after {
-    background: none repeat scroll 0 0 #1f2326;
-    content: " ";
-    display: block;
-    height: 100%;
-    left: 100%;
-    position: absolute;
-    top: 0;
-    width: 2000px;
-}*/
 
-/*Colores para los enlaces de las paginas en la navegación*/
+/********************************
+*  Colores de la navegación
+********************************/
 nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
   background: none repeat scroll 0 0 #a4a2a2;
 }
@@ -461,7 +447,9 @@ nav.menu_principal ul > li.menuLogin:hover, nav.menu_principal ul > li.menuLogin
 }
 
 
-/*DESPLEGLABLE cd estas logado*/
+/********************************
+*  Desplegable cuando estás logado
+********************************/
 
 nav.menu_principal ul ul.dropdown-menu{
     display:none;
@@ -483,11 +471,12 @@ nav.menu_principal ul ul.dropdown-menu li{
 
 nav.menu_principal ul ul.dropdown-menu li a{
     background: none;
-    padding: 0 5px;
-    
+    padding: 0 5px;    
 }
 
-/*++++ Submenu principal para nuestros cursos +++++*/
+/********************************
+*  MENU SECUNDARIO NUESTROS CURSOS
+********************************/
 .menu_principal ul li ul {
   height: auto;
   left: 0;
@@ -508,10 +497,6 @@ nav.menu_principal ul li a + ul.submenu_principal {
   display: none; 
 }
 
-/*nav.menu_principal ul li a + ul.noActivo {
-    display: none; 
-}*/
-
 nav.menu_principal ul li ul li {
     display: block;
     float: left;
@@ -521,6 +506,7 @@ nav.menu_principal ul li ul li {
     width: 23%;
     font-size: 0.9em;
 }
+
 nav.menu_principal .submenu_principal li {
     min-width: 20%;
     overflow: hidden;
@@ -533,13 +519,12 @@ nav.menu_principal .submenu_principal li p{
     line-height: 20px;
     text-transform: uppercase;
 
-    }
+}
+
+
 /********************************
 *  CONTENIDO titulo de la pagina y breamcrumb
 ********************************/
-
-
-
 .breadcrumb_title{
     background-color: #fff;
 }
@@ -555,14 +540,12 @@ nav.menu_principal .submenu_principal li p{
     display: inline-block;
 }
 
-
 .breadcrumb .location ul {
     font-size: 0.8em;
     font-weight: bold;
     overflow: hidden;
     text-align: left;
 }
-
 
 .breadcrumb .location li:first-child::before {
     content: " ";
@@ -578,12 +561,10 @@ nav.menu_principal .submenu_principal li p{
     float: left;
 }
 
-
 .breadcrumb .location a {
     color: #404040;
     display: inline-block;
-    margin-right: 6px;
-    
+    margin-right: 6px;    
 }
 
 .breadcrumb .image {
@@ -623,18 +604,13 @@ nav.menu_principal .submenu_principal li p{
 .destacado_principal .destacado .imagen img {
     width: 100%;
 }
-/*.slider {
-    width: 100%;
-}*/
-
 
 /********************************
 *  Contenedor debajo del slider
 ********************************/
 
 .info-box {
-    background-color: #ffffff;
-    
+    background-color: #ffffff;    
 }
 
 .info-box >.row {
@@ -650,7 +626,6 @@ nav.menu_principal .submenu_principal li p{
     overflow: hidden;
     padding: 40px 0;
     width: 1024px;
-
 }
 
 .footer_cajas {
@@ -658,7 +633,6 @@ nav.menu_principal .submenu_principal li p{
     margin: 0;
     width: 33%;
 }
-
 
 .footer_cajas p {
     color: #6699cc;
@@ -668,14 +642,8 @@ nav.menu_principal .submenu_principal li p{
     margin-bottom: 10px;
 }
 
-
 .footer_cajas ul {
     width: 80%;
-}
-
-
-.footer_cajas ul li {
-    
 }
 
 .footer_cajas ul li a {
@@ -693,7 +661,6 @@ nav.menu_principal .submenu_principal li p{
 
 .copyright span{
     color: #fff;
-
 }
 
 /********************************
@@ -743,34 +710,309 @@ select {
 
 /*Pongo esto aquí cris. Sino no tengo manera de hacerlo en todas a la vez sorry*/  
 
-.header > ul {
-    left: 730px;
-    position: relative;
-    top: -19px;
-}
-
-.header .dropdown-menu li {
+/*.header .dropdown-menu li {
     font-size: 1em;
     margin-bottom: 10px;
-}
+}*/
 .hide{
     display:none;
 }
 
-/*Cambios DAVID*/
-/*.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .menuLogin{
-    padding-left:20px !important;
-    
+/********************************
+*                HOME
+********************************/
+
+/**** BLOQUE DE ICONOS CIRCULOS******/
+
+.contenedor.top-block .info-box ul li{
+    float: left;
+    width: 20%;
 }
-.item-1{
-    padding-right:16px !important;
+
+.iconoImg > img {
+    margin: 0 auto;
 }
-.menuLogin{
-    padding-right:40px !important;
+
+.contenedor.top-block .info-box ul li a .texto_down h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
-  background: none repeat scroll 0 0 grey;
-}*/
-/**{
-    font-family: 'Titillium Web', sans-serif !important;
-}*/
+
+.contenedor.top-block .info-box ul li a .texto_down > p {
+    padding: 0 10%;
+    text-align: center;
+}
+
+.contenedor.top-block .info-box ul li a:hover{
+    opacity: 0.7;
+}
+.main.inner-block > h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+p.centrado {
+    text-align: center;
+}
+
+/*Caja de estadisticas */
+.cajaEstadisticas{
+    margin-top: 40px;
+}
+
+.cajaEstadisticas ul{
+	display: table;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cajaEstadisticas ul li{
+    display: table-cell;
+    width: 30%;
+    background: red;
+    height: auto;
+    border-right: 1px solid #fff;
+}
+
+.cajaEstadisticas ul li h3 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 0 10px 0;
+}
+
+.cajaEstadisticas ul li p {
+    font-size: 1em; /*15px*/
+    text-align: center;
+    color: #fff;
+    padding: 5px 0 10px 0;
+}
+
+/**** BLOQUE DE NUESTROS CURSOS******/
+.main.inner-block .info-box h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 20px 0 20px;
+}
+
+.cursoPresentacion {
+    float: left;
+    width: 30%;
+    margin: 10px 0 20px;
+}
+
+.presenciales {
+    color: #cc6633;
+}
+
+.online {
+    color: #ff3300;
+}
+
+.personalizados {
+    color: #ffcc00;
+}
+
+.main.inner-block .info-box > .cursoPresentacion {
+    margin-left: 3%;
+}
+
+.cursoPresentacion h3{
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.imagenUp {
+    width: 95%;
+    margin-top: 5px;
+}
+
+.infoCurso {
+    width: 95%;
+}
+.cursoPresentacion .infoCurso .textoSinfecha {
+    float:left;
+    width: 100%;
+    padding: 5%;
+}
+.cursoPresentacion .infoCurso .texto {
+    float:left;
+    width: 60%;
+    padding: 5%;
+}
+
+.cursoPresentacion .infoCurso a {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 10px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso{
+    float:left;
+    width: 40%;
+    background-color: #666;
+    padding: 5%;
+    text-align: center;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso p, 
+.cursoPresentacion .infoCurso .fechaCurso h4, 
+.cursoPresentacion .infoCurso .fechaCurso span{
+    color:#fff;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso p {
+    font-size:0.7em;
+    line-height: 125%;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso h4 {
+    font-size:1.3em;
+    line-height: 125%;
+}
+
+.cursoPresentacion .infoCurso .fechaCurso span {
+    font-size:0.9em;
+    font-weight: bold;
+}
+
+/**** BLOQUE DE proximamente******/
+
+.main.inner-block-alternative .info-box h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 60px 0 20px;
+} 
+
+.formularioIndex h3 , .asesoramientoDcha h3{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.formularioIndex{
+    float: left;
+    margin:0 0 0 3%;
+    width: 47%;
+}
+.formularioIndex label{
+    text-transform: uppercase;
+}
+
+.formularioIndex input#nombreCurso {
+    width: 92%;
+}
+
+.contenedor_Izq , .contenedor_Drcha {
+    float: left;
+    width: 50%;
+}
+
+.formularioIndex input[type="submit"]{
+    margin-top: 44px;
+    float: right;
+    margin-right: 8%;
+    background: none repeat scroll 0 0 #fff;
+}
+
+.formularioIndex input[type="submit"]:hover{
+    color:#fff;
+    background: #cc6633;
+}
+
+.asesoramientoDcha{
+    float: left;
+    margin:0 3% 0 0;
+    width: 47%;
+}
+
+.asesoramientoDcha .bloqueIzq , .asesoramientoDcha .bloqueDcha {
+    float: left;
+    width: 48.5%;
+}
+
+.asesoramientoDcha .bloqueIzq a:hover, .asesoramientoDcha .bloqueDcha a:hover {
+    opacity: 0.7;
+}
+
+.asesoramientoDcha .bloqueIzq{
+    margin:0 3% 0 0;
+}
+.asesoramientoDcha img {
+    width: 100%;
+    position: relative;
+    left:0;
+    top: 0;
+}
+
+.asesoramientoDcha .textoDown {
+    position: relative;
+    right: 0;
+    bottom: 30px;
+    background: none repeat scroll 0 0 #000;
+    padding: 5px 10px 15px 10px;
+    opacity: 0.7;	
+}
+
+.asesoramientoDcha .textoDown p {
+	color:#fff;
+	font-weight: bold;
+}
+
+/**** BLOQUE DE resultados de la busqueda******/
+table {
+   // display: none;
+    border: 2px solid #ececec;
+    border-spacing: 0;
+    clear: both;
+    margin: 0 auto 35px;
+    padding: 5px;
+    width: 94%;
+}
+table.resultados_tabla {
+    border: 2px solid #ececec;
+    border-spacing: 0;
+    clear: both;
+    margin: 0 auto 35px;
+    padding: 5px;
+    width: 94%;   
+}
+
+table caption {
+    background: none repeat scroll 0 0 #f9b300;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+table th {
+     border-bottom: 12px solid #ffffff;
+    font-style: italic;
+    height: 40px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table tr {
+    background: none repeat scroll 0 0 #f1f2f4;
+    border-bottom: 2px solid #ececec;
+}
+
+table tr td {
+    border-bottom: 2px solid #ececec;
+    min-width: 40px;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+

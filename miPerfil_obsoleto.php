@@ -9,7 +9,7 @@
 
 <!-- LINK hojas de CSS -->
 <link href="css/login.css" rel="stylesheet">
-<link href="css/miPerfil.css" rel="stylesheet">
+<link href="css/areaPrivada.css" rel="stylesheet">
 
 
 <!-- JAVASCRIPT -->

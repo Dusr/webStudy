@@ -40,7 +40,7 @@
 }
 
 .derecha ul{
-	list-style-image: url("img/bulletRojo.png");
+    list-style-image: url("img/bulletRojo.png");
     margin-left: 30px;
     width: 80%;
 }

@@ -1,0 +1,457 @@
+/*********************************/
+/*LOGIN */
+/**********************************/
+
+#mainContainer{
+    margin-top: 30px;
+}
+
+#imgPrincipal{
+    float:left;
+    width:66%;	
+    position:relative;
+}
+
+/* Texto y boton sobre imagen */
+
+.textoRegistro p{
+    position:absolute;
+    z-index:10;
+    color:white;
+    top:15px;
+    left:30px;
+    font-weight:bold;
+    font-size: 1.4em;
+    width: 44%;
+}
+
+.botonRegistro{
+    cursor:pointer;
+}
+
+.texto_boton{
+    position:absolute;
+    z-index:5;
+    top:65px;
+    left:330px;
+    color:white;
+    background-color: #993333;
+    padding:10px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Fin texto y boton sobre imagen */
+
+#login{
+    float:left;
+    width:32%;
+    margin-left: 14px;
+}
+
+#cabAcceso, #cabRegistro{
+    background: none repeat scroll 0 0 #993333;
+    padding: 6px 15px 28px;
+    width: 100%;
+}	
+
+#cabAcceso img{
+    float:left;
+	
+}
+
+#cabAcceso p, #cabRegistro p{
+    float:left;
+    padding-left:6px;
+    padding-top:4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:white;
+}
+
+#mainContainer{
+    min-width: 1024px;
+}
+
+#formLogin input{
+    width:100%;
+}
+
+#camposLogin{
+    margin-left:10px;
+}
+
+.boton_enviar input{
+    margin-top:35px;
+    background: #993333;
+    border:none;
+    color:white;
+}
+
+#formRegister{
+    display:none; /* Para el boton de registro */
+    margin-top: 30px;
+    width:66%;
+}
+
+#formRegister input{
+    width:100%;
+    margin-top:10px;
+}
+
+#camposRegistro label{
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    width: 66%;
+}
+
+.boton_enviar{
+    clear:both;
+    float:right;
+}
+
+.left{
+    float:left;
+    margin-top:20px;
+    padding-left: 15px;
+    width:210px;
+}
+
+.left > label {
+    font-size: 0.96em;
+}
+
+.inputs{
+    margin-top:28px;
+    float:right;
+    width:465px;
+}
+
+
+input[type="checkbox"]{
+    float:left;
+    width:10px !important;
+}
+
+#politica{
+    float:left;
+    width:100%;
+}
+#politica p{
+    float: left;
+    padding-left: 17px;
+    padding-top: 9px;
+}
+.alerta{
+    color: red;
+    float: left;
+    margin-left: 214px;
+    margin-top: 16px;
+}
+/*********************************/
+/*AREA PRIVADA / MI PERFIL*/
+/**********************************/
+
+.info-box.row > ul {
+    display: block;
+    float: left;
+    width: 101%;
+    margin-top:0;
+    margin-bottom:20px;
+}
+.info-box.row li {
+    float: left;
+    text-align: center;
+    width: 33%;
+    text-transform: uppercase;
+    padding:10px;
+    background: #ccc;
+    padding: 13px 0;
+}
+.top-block{
+    width:100%;
+}
+
+.location{
+    margin-bottom:30px;
+}
+
+#margen{
+    border-style: none solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+/*#nombreUser{
+    background: none repeat scroll 0 0 grey;
+    margin-bottom: 10px;
+    padding: 40px 20px;
+    width: 1024px;
+}*/
+#userData #camposRegistro .left label{
+        display: block;
+        margin-bottom: 23px;
+        margin-top: 17px;
+        width: 66%;
+}
+
+#colIzq{
+   float: left;
+   margin: 40px 0;
+   width: 70%;
+}
+
+#colDcha{
+    float:right;
+    width:30%;
+    margin: 40px 0;
+}
+label{
+    float:left;
+  
+}
+
+.inputs {
+    float: left;
+    margin-top: 28px;
+    width: 393px;
+   
+}
+.inputs2{
+    margin-top:20px;
+}
+
+
+.inputs2 input{
+    width:67%;
+    float:right;
+}
+
+input{
+    margin-bottom:20px;
+    width:480px;
+}
+
+.boton_enviar{
+    margin-right: 20px;
+}
+
+.boton_enviar input{
+    background: none repeat scroll 0 0 transparent;
+    border: 3px solid #993333;
+    color: black;
+    margin-top:5px;
+}
+
+#avatar{
+    width: 240px;
+    height: 240px;
+    background:#993333;
+    float:right;
+    display:block;
+}
+
+.avatar{
+    background: none repeat scroll 0 0 #993333;
+    //border: 3px solid salmon;
+    float: right;
+    margin-top: 10px;
+    padding: 4px 4px 4px 40px;
+    width: 240px;
+}
+
+.avatar p{
+    display: block;
+    font-weight: bold;
+    padding: 5px 15px 5px;
+    text-transform: uppercase;
+    width: 200px;
+    color:white;
+}
+
+.left{
+     width: 30%;
+}
+
+.guarda{
+    background: transparent;
+    border: 3px solid #993333;
+    float: right;
+    margin-top: 27px;
+    width: 240px;
+    padding:8px;
+}
+
+.inner-block{
+    padding:0;
+}
+
+.menu_secundario{
+    border-bottom: solid 3px #993333;
+}
+
+#tabs > li {
+    width: 30%;
+}
+
+#tabs a{
+    display:block;
+}
+
+.faqs {
+    border: 3px solid #993333;
+    float: left;
+    margin-left: 13px;
+    padding: 5px 5px 5px 15px;
+    width: 683px;
+    font-weight: bold;
+    margin-top:3px;
+}
+
+.flechaAbajo{
+    float: right;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+
+#cambiarContrasena .left{
+    width:33%;
+    margin-top:-8px;
+}
+
+#tituloModulo{
+    background: #993333 none repeat scroll 0 0;
+    color: white;
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    padding: 12px 30px;
+    width: 100%;
+}
+
+.modulo > a {
+    float: left;
+    font-weight: bold;
+    padding-left: 19px;
+    padding-top: 44px;
+}
+
+
+
+#formularioEjercicios input{
+    width: 250px;
+    margin: 0 auto;
+    margin-top:25px;
+    padding:7px;
+}
+#formularioEjercicios input[type='submit']{
+    margin-right: 23px;
+    width: 68px;
+}
+#formularioEjercicios{
+    margin-top:25px;
+}
+#formularioEjercicios p{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.letraGrande{
+    font-size: 1.3em;
+}
+
+#contenedorDescripcion{
+    margin-top:30px;
+}
+
+
+/*********************************/
+/*AREA PRIVADA / CURSO ACTUAL*/
+/**********************************/
+
+.modulo *{
+    float:left;
+}
+
+.modulo p{
+    margin: 47px 35px;
+    font-size: 1.3em;
+}
+
+.modulo{
+    border-bottom: 3px solid #993333;
+    display: inline-block;
+    margin-bottom: -2px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.modulo input{
+    float: right;
+    margin-top: 45px;
+    padding: 7px;
+    width: 114px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.headerMod h3{
+    padding-top:15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.headerMod h4{
+    text-transform: none;
+    text-align: initial;
+}
+
+
+.tablaModulos{
+    margin-top:25px;
+   
+}
+
+.tablaModulos li:first-child{
+    border-top:solid 3px #993333;
+   
+}
+.imagenMod > img{
+    padding:15px 0;
+}
+
+.bloqueIzq{
+    float:left;
+    width:65%;
+}
+
+.bloqueDcha{
+    border-left: 3px solid #993333;
+    border-right: 3px solid #993333;
+    float: left;
+    height: 606px;
+    margin: 25px 24px;
+    width: 30%;
+}
+
+// DESCRIPCION MODULO
+
+.descripcionModulo{
+    width:100%;
+    height:620px;
+    display: none;
+}
+
+#currentd{
+    background: #cccccc;
+    border-top:solid 2px #cccccc;
+}
+
+#current{
+    background: #cccccc;
+    
+}
+

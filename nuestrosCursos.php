@@ -10,7 +10,7 @@
 
 <!-- LINK hojas de CSS -->
 <link href="css/cursosCatalogo.css" rel="stylesheet">
-<link href="css/nuestrosCursos.css" rel="stylesheet">
+<!--<link href="css/nuestrosCursos.css" rel="stylesheet">-->
 <!-- JAVASCRIPT -->
 <script>
     
@@ -96,7 +96,7 @@ if (!isset($_SESSION['logged'])) {
                 <li>
                     <a title="Cursos Personalizados" href="cursosPersonalizados.php">Cursos <br />personalizados</a>
                 </li>
-                <li class="activa_presenciales">
+                <li class="">
                     <a title="Cursos presenciales" href="cursosPresenciales.php">Cursos <br />presenciales</a>					
                 </li>
                 <li>

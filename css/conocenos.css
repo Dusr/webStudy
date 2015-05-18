@@ -107,6 +107,8 @@
     display: block;
     padding-left: 2em;
     margin-bottom: 0.4em;
+    clear: both;
+    width: 100%;
 }
 
 
