@@ -97,13 +97,11 @@ if (!isset($_SESSION['logged'])) {
 <?php include("../include/inc_5_nav_final.php") ?>
 
 <?php include("../include/inc_opcional_breadcrumb_Inicio_subcarpeta.php") ?>
-<ul>
+
     <li>
-        <a title="Nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>
+        <a title="Area privada" href="../accederLogin.php.php">Area privada</a>
     </li>
-    <li>
-        <a title="Cursos presenciales" href="../cursosPresenciales.php">Cursos presenciales</a>
-    </li>
+    
 </ul>
 <div class="header">
     <div class="image">
@@ -111,10 +109,10 @@ if (!isset($_SESSION['logged'])) {
             <img alt="Volver atrás" src="../images/left-white-arrow.png">
         </a>
     </div>
-
+   
     <h2>Bienvenido <?php echo $_SESSION['nombre'] ?></h2>
-
-    <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
+ <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
+    
     <!-- Estructura del Menu secundario. -->
 
     <div class="menu_secundario">
@@ -264,7 +262,7 @@ if (!isset($_SESSION['logged'])) {
                     </div>
 
                     <div class="bloqueIzq">
-
+                        <div class="info-box">
                         <div class="tablaModulos paddingLeft"> 
                             <span id="tituloModulo" class="letraGrande">Módulos del curso</span>
                             <?php
@@ -292,6 +290,7 @@ if (!isset($_SESSION['logged'])) {
                             ?>
                         </div>
                     </div>
+                    </div>
 
 
 
@@ -314,16 +313,16 @@ if (!isset($_SESSION['logged'])) {
                                         <div id="contenedorDescripcion">
                                             <div class="modulo" style="border:none;">
                                                 <div class="imagenMod">
-                                                    <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                                                    <img src="../img/iconos/cursosCatalogo/modulo_pdf76x76.png"/>
                                                 </div>
 
-                                                <a href="../pdf/HTMLBasico/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Temario para descargar</a>
+                                                <a target="_blank" href="../pdf/HTMLBasico/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Temario para descargar</a>
                                             </div> 
 
 
                                             <div class="modulo" style="border:none;">
                                                 <div class="imagenMod">
-                                                    <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                                                    <img src="../img/iconos/cursosCatalogo/modulo_ejercicios76x76.png"/>
                                                 </div>
 
                                                 <a href="../pdf/HTMLBasico/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
@@ -332,8 +331,8 @@ if (!isset($_SESSION['logged'])) {
                                             <div id="formularioEjercicios">
                                                 <form method="POST" action="">
                                                     <p>Formulario de envio</p>
-                                                    <input type="text" name="nombreModuloCorreo" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
-                                                    <input type="text" name="nombreAlumnoCorreo" required value="<?php echo $_SESSION['nombre']; ?>"/>
+                                                    <input type="text" disabled="" name="nombreModuloCorreo" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
+                                                    <input type="text" disabled="" name="nombreAlumnoCorreo" required value="<?php echo $_SESSION['nombre']; ?>"/>
                                                     <input type="file" name="archivoCorreo"/>
                                                     <input type="submit" style="float:right" value="Enviar ejercicios"/>
                                                 </form>

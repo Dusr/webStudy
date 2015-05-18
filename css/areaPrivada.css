@@ -1,5 +1,5 @@
 /*********************************/
-/*LOGIN */
+/*LOGIN para que no me de problemas el area privada*/
 /**********************************/
 
 #mainContainer{
@@ -56,8 +56,7 @@
 }	
 
 #cabAcceso img{
-    float:left;
-	
+    float:left;	
 }
 
 #cabAcceso p, #cabRegistro p{
@@ -120,6 +119,7 @@
 
 .left > label {
     font-size: 0.96em;
+     float:left;
 }
 
 .inputs{
@@ -169,13 +169,6 @@ input[type="checkbox"]{
     background: #ccc;
     padding: 13px 0;
 }
-.top-block{
-    width:100%;
-}
-
-.location{
-    margin-bottom:30px;
-}
 
 #margen{
     border-style: none solid;
@@ -183,23 +176,17 @@ input[type="checkbox"]{
     border-width: 2px;
 }
 
-/*#nombreUser{
-    background: none repeat scroll 0 0 grey;
-    margin-bottom: 10px;
-    padding: 40px 20px;
-    width: 1024px;
-}*/
 #userData #camposRegistro .left label{
-        display: block;
-        margin-bottom: 23px;
-        margin-top: 17px;
-        width: 66%;
+    display: block;
+    margin-bottom: 23px;
+    margin-top: 17px;
+    width: 70%;
 }
 
 #colIzq{
-   float: left;
-   margin: 40px 0;
-   width: 70%;
+    float: left;
+    margin: 40px 0;
+    width: 70%;
 }
 
 #colDcha{
@@ -207,16 +194,13 @@ input[type="checkbox"]{
     width:30%;
     margin: 40px 0;
 }
-label{
-    float:left;
-  
-}
+
 
 .inputs {
     float: left;
     margin-top: 28px;
     width: 393px;
-   
+
 }
 .inputs2{
     margin-top:20px;
@@ -224,8 +208,8 @@ label{
 
 
 .inputs2 input{
-    width:67%;
-    float:right;
+    float: left;
+    width: 60%;
 }
 
 input{
@@ -234,148 +218,157 @@ input{
 }
 
 .boton_enviar{
-    margin-right: 20px;
+margin-right: 20px;
 }
 
 .boton_enviar input{
-    background: none repeat scroll 0 0 transparent;
-    border: 3px solid #993333;
-    color: black;
-    margin-top:5px;
+background: none repeat scroll 0 0 transparent;
+border: 3px solid #993333;
+color: black;
+margin-top:5px;
+}
+
+.boton_enviar input:hover{
+background: #993333;
+border: 3px solid #993333;
+color: #fff;
+margin-top:5px;
 }
 
 #avatar{
-    width: 240px;
-    height: 240px;
-    background:#993333;
-    float:right;
-    display:block;
+width: 240px;
+height: 240px;
+background:#993333;
+float:right;
+display:block;
 }
 
 .avatar{
-    background: none repeat scroll 0 0 #993333;
-    //border: 3px solid salmon;
-    float: right;
-    margin-top: 10px;
-    padding: 4px 4px 4px 40px;
-    width: 240px;
+background: none repeat scroll 0 0 #993333;
+//border: 3px solid salmon;
+float: right;
+margin-top: 10px;
+padding: 4px 4px 4px 40px;
+width: 240px;
 }
 
 .avatar p{
-    display: block;
-    font-weight: bold;
-    padding: 5px 15px 5px;
-    text-transform: uppercase;
-    width: 200px;
-    color:white;
+display: block;
+font-weight: bold;
+padding: 5px 15px 5px;
+text-transform: uppercase;
+width: 200px;
+color:white;
 }
 
 .left{
-     width: 30%;
+ width: 30%;
 }
 
 .guarda{
-    background: transparent;
-    border: 3px solid #993333;
-    float: right;
-    margin-top: 27px;
-    width: 240px;
-    padding:8px;
+background: transparent;
+border: 3px solid #993333;
+float: right;
+margin-top: 27px;
+width: 240px;
+padding:8px;
 }
 
 .inner-block{
-    padding:0;
+padding:0;
 }
 
 .menu_secundario{
-    border-bottom: solid 3px #993333;
+border-bottom: solid 3px #993333;
 }
 
 #tabs > li {
-    width: 30%;
+width: 30%;
 }
 
 #tabs a{
-    display:block;
+display:block;
 }
 
 .faqs {
-    border: 3px solid #993333;
-    float: left;
-    margin-left: 13px;
-    padding: 5px 5px 5px 15px;
-    width: 683px;
-    font-weight: bold;
-    margin-top:3px;
+border: 3px solid #993333;
+float: left;
+margin-left: 13px;
+padding: 5px 5px 5px 15px;
+width: 683px;
+font-weight: bold;
+margin-top:3px;
 }
 
 .flechaAbajo{
-    float: right;
-    padding-left: 5px;
-    padding-top: 4px;
+float: right;
+padding-left: 5px;
+padding-top: 4px;
 }
 
 #cambiarContrasena .left{
-    width:33%;
-    margin-top:-8px;
+width:33%;
+margin-top:-8px;
 }
 
 #tituloModulo{
-    background: #993333 none repeat scroll 0 0;
-    color: white;
-    display: block;
-    font-weight: bold;
-    height: 40px;
-    padding: 12px 30px;
-    width: 100%;
+background: #993333 none repeat scroll 0 0;
+color: white;
+display: block;
+font-weight: bold;
+height: 40px;
+padding: 12px 30px;
+width: 100%;
 }
 
 .modulo > a {
-    float: left;
-    font-weight: bold;
-    padding-left: 19px;
-    padding-top: 44px;
+float: left;
+font-weight: bold;
+padding-left: 19px;
+padding-top: 44px;
 }
 
 
 
 #formularioEjercicios input{
-    width: 250px;
-    margin: 0 auto;
-    margin-top:25px;
-    padding:7px;
+width: 250px;
+margin: 0 auto;
+margin-top:25px;
+padding:7px;
 }
 #formularioEjercicios input[type='submit']{
-    margin-right: 23px;
-    width: 68px;
+margin-right: 23px;
+width: 68px;
 }
 #formularioEjercicios{
-    margin-top:25px;
+margin-top:25px;
 }
 #formularioEjercicios p{
-    text-transform: uppercase;
-    text-align: center;
+text-transform: uppercase;
+text-align: center;
 }
 
 .letraGrande{
-    font-size: 1.3em;
+font-size: 1.3em;
 }
 
 #contenedorDescripcion{
-    margin-top:30px;
+margin-top:30px;
 }
 
 
 /*********************************/
 /*AREA PRIVADA / CURSO ACTUAL*/
 /**********************************/
-
+h4.paddingLeft{
+    font-size: 0.9em;
+}
 .modulo *{
     float:left;
 }
 
 .modulo p{
-    margin: 47px 35px;
+     margin: 40px 0 0 10px;
     font-size: 1.3em;
 }
 
@@ -385,8 +378,11 @@ input{
     margin-bottom: -2px;
     padding: 0 10px;
     width: 100%;
+    opacity: 0.5;
 }
-
+#contenedorDescripcion .modulo{
+    opacity: 1;
+}
 .modulo input{
     float: right;
     margin-top: 45px;
@@ -394,7 +390,27 @@ input{
     width: 114px;
 }
 
-li{
+.modulo input.botonAcceder{
+    padding: 5px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#currentd input.botonAcceder{
+    padding: 5px;
+    width: 120px;
+    cursor: pointer;
+    color:#000;
+}
+#currentd input.botonAcceder:hover{
+    padding: 5px;
+    width: 120px;
+    cursor: pointer;
+    color:#fff;
+    background: #993333;
+}
+
+.tablaModulos li{
     list-style-type: none;
 }
 
@@ -405,24 +421,27 @@ li{
 }
 
 .headerMod h4{
+    margin: 0 auto;
+    text-align: left;
     text-transform: none;
-    text-align: initial;
+    width: 90%;
 }
-
 
 .tablaModulos{
     margin-top:25px;
-   
 }
 
 .tablaModulos li:first-child{
     border-top:solid 3px #993333;
-   
 }
 .imagenMod > img{
     padding:15px 0;
 }
-
+#currentd > p {
+    font-size: 1.6em;
+    font-weight: bold;
+    color:#000;
+}
 .bloqueIzq{
     float:left;
     width:65%;
@@ -446,12 +465,12 @@ li{
 }
 
 #currentd{
-    background: #cccccc;
+    background: #c1b1f7;
     border-top:solid 2px #cccccc;
+    opacity: 1;
 }
 
 #current{
     background: #cccccc;
-    
 }
 

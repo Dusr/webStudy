@@ -7,6 +7,7 @@
 		<meta name="author" content=" David Álvaro Uceda">
 		<meta name="author" content="Cristina Velilla">
 		<meta name="Copyright" content="©autores del proyecto"> 
+                <meta name="robots" content="NoIndex, NoFollow">
 		<!-- Css comun -->
 		<link href="../css/globalStyle.css" rel="stylesheet">
 		<!-- JAVASCRIPT -->
