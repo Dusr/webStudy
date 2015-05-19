@@ -124,7 +124,7 @@ if (!isset($_SESSION['logged'])) {
             <a title="Ir a Cursos Online" href="../cursosOnline.php">
                 <img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
             </a>
-            <h3><?php echo $nombreCurso; ?></h3>
+            <h3><?php echo $nombreCurso; ?></h3> cambiar nombre
 
             <!-- BOTON INSCRIBIRSE -->
              <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
@@ -165,9 +165,9 @@ if (!isset($_SESSION['logged'])) {
     <div class="contenedor top-block"> 
         <div class="info-box">
             <div class="introCursos row">
-                <p>HTML es un lenguaje que utilizan los ordenadores y los programas de diseño, es muy fácil de aprender.
-                    El lenguaje HTML es un estándar reconocido en todo el mundo y cuyas normas define un organismo sin ánimo de lucro llamado W3C.</p>
-                <p>Este curso, estudia a fondo el estándar. Aprenderemos qué son las "etiquetas" y como se forma una estructura básica con HTML, pero siempre siguiendo los estándares.</p>
+                <p>CSS (Cascade Style Sheet) son un conjunto de instrucciones que definen la apariencia de diversos elementos de un documento HTML. El HTML posee ciertas limitaciones a la hora de aplicarle forma a un documento. Pero con las CSS somos capaces de superar esas limitaciones. 
+                    Las CSS complementan al lenguaje HTML, dándole a éste mayores posibilidades. </p>
+                <p>Las CSS complementan al lenguaje Html, dándole a éste mayores posibilidades</p>
             </div>
         </div>
     </div>	
@@ -180,7 +180,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-                            Del 1 de octubre al 20 octubre
+                            Del 1 de julio al 20 agosto
                         </strong>
                     </p>
                 </div>
@@ -194,7 +194,7 @@ if (!isset($_SESSION['logged'])) {
                     <p><strong>
                             <?php echo $_SESSION['duracion']; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
-                    </p><p>(Se estiman 20 días | 3 horas/día)</p>
+                    </p><p>(Se estiman 30 días | 2 horas/día)</p>
                 </div>
             </li>
             <li>
@@ -221,11 +221,10 @@ if (!isset($_SESSION['logged'])) {
                                 ?>  
                                 <li>
 
-                                <strong> <?php
+                                    <strong> <?php
                                     echo $rowmodulo['nombre'];
                                     ?>
-                                </strong>
-                                    
+                                    </strong>
                                     <p class='paddingLeft'>
                                         <?php
                                         echo $rowmodulo['descripcion'];

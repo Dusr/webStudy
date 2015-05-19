@@ -291,9 +291,9 @@ ol.lista_numeros li {
 }
 
 /*DAVID*/
-.paddingLeft{
-   /* padding-left:40px;
-    font-size: 0.8em !important;*/
+.detalleCurso .texto_dcha p.paddingLeft{
+   padding-left:30px;
+   font-size:1em;
 }
 
 /**** pagina  NUESTROS CURSOS *subhome()******/

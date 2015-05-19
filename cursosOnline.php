@@ -152,7 +152,7 @@ if (!isset($_SESSION['logged'])) {
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
-                            <span class="cuadrado_blanco">Próximo</span>
+                            <span class="cuadrado_blanco">Abierta</span>
                         </p>
                     </div>
                     <div class="columna_down">
@@ -169,14 +169,14 @@ if (!isset($_SESSION['logged'])) {
             </a>
         </div>
          <div class="cursos_catalogo">
-            <a title="Css3" href="cursosOnline/cursoCss3.php">
+            <a title="Css3" href="cursosOnline/cursoCss.php">
                 <div class="caja_texto verde">
-                    <h3>Css3</h3>
-                    <p>Aprende las nuevas reglas para tu web</p>
+                    <h3>Css desde cero</h3>
+                    <p> El objetivo es poder aprender CSS de forma sencilla</p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
-                            <span class="cuadrado_blanco">Cerrada</span>
+                            <span class="cuadrado_blanco">Abierta</span>
                         </p>
                     </div>
                     <div class="columna_down">
