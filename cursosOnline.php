@@ -144,40 +144,15 @@ if (!isset($_SESSION['logged'])) {
                 </div>
             </a>
         </div>
-        <div class="cursos_catalogo">
-            <a title="Prestashop" href="cursosOnline/cursoPrestashop.php">
+         <div class="cursos_catalogo">
+            <a title="Javascript desde cero" href="cursosOnline/cursoJavascript.php">
                 <div class="caja_texto verde">
-                    <h3>Prestashop</h3>
-                    <p>Con este curso aprenderemos a instalar una tienda virtual </p>
+                    <h3>Javascript desde cero</h3>
+                    <p>Javascript para dar dinamismo, rapidez y agilidad a la web</p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
-                            <span class="cuadrado_blanco">Abierta</span>
-                        </p>
-                    </div>
-                    <div class="columna_down">
-                        <p>
-                            <img alt="Calendario" src="img/iconos/cursosCatalogo/icono_calendario.png"/>
-                            <span class="texto_mid">Octubre 2015</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="caja_imagen">
-                    <img alt="Prestashop" src="img/cursosCatalogo/logo-prestashop360x215.jpg"/>
-                </div>
-            </a>
-        </div>
-
-        <div class="cursos_catalogo">
-            <a title="Facebook - Guía" href="cursosOnline/cursoFacebook.php">
-                <div class="caja_texto rojo">
-                    <h3>Api de Facebook </h3>
-                    <p>Red Social más grande del mundo, construir comunidades.</p>
-                    <div class="columna_up">
-                        <p>
-                            <strong>Matrícula</strong>
-                            <span class="cuadrado_blanco">Cerrada</span>
+                            <span class="cuadrado_blanco">Próximo</span>
                         </p>
                     </div>
                     <div class="columna_down">
@@ -189,10 +164,36 @@ if (!isset($_SESSION['logged'])) {
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="Facebook" src="img/cursosCatalogo/FACEBOOK360x215.jpg">
+                    <img alt="Javascript desde cero" src="img/cursosCatalogo/cursoJavascript360x215.jpg">
                 </div>
             </a>
         </div>
+         <div class="cursos_catalogo">
+            <a title="Css3" href="cursosOnline/cursoCss3.php">
+                <div class="caja_texto verde">
+                    <h3>Css3</h3>
+                    <p>Aprende las nuevas reglas para tu web</p>
+                    <div class="columna_up">
+                        <p>
+                            <strong>Matrícula</strong>
+                            <span class="cuadrado_blanco">Cerrada</span>
+                        </p>
+                    </div>
+                    <div class="columna_down">
+                        <p>
+                            <img alt="Calendario" src="img/iconos/cursosCatalogo/icono_calendario.png"/>
+                            <span class="texto_mid">Mayo 2015</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="caja_imagen">
+                    <img alt="Css3" src="img/cursosCatalogo/css3_360x215.jpg"/>
+                </div>
+            </a>
+        </div>
+
+        
 
         <div class="cursos_catalogo">
             <a title="La Redacción con los Blogs" href="cursosOnline/cursoBlogs.php">
