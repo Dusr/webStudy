@@ -21,7 +21,19 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `profesor_has_curso` (
+  `Alumno_idAlumno` int(11) NOT NULL,
+  `Curso_idCurso` int(11) NOT NULL,
+  
+  FOREIGN KEY (`Alumno_idAlumno`) REFERENCES `usuario` (`idAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY (`Curso_idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  primary key (`Alumno_idAlumno,Curso_idCurso`);
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE `profesor_has_curso`
+ADD CONSTRAINT `fk_profesor_has_Curso_Alumno1` FOREIGN KEY (`Alumno_idAlumno`) REFERENCES `usuario` (`idAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_profesor_has_Curso_Curso1` FOREIGN KEY (`Curso_idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 --
 -- Estructura de tabla para la tabla `alumno_has_curso`
 --

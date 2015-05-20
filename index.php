@@ -192,7 +192,7 @@
                         <div class="infoCurso row">
                             <div class="texto">
                                 <p>Haz los cursos a tu ritmo, sin horarios. Gran variedad. Tú decides cuando!!</p>
-                                <a class="online" href="#" title="Ver curso">Ver curso</a>
+                                <a class="online" href="cursosOnline.php" title="Ver curso">Ver curso</a>
                             </div>
                             <div class="fechaCurso">
                                 <p>Comienzo</p>
@@ -210,7 +210,7 @@
                         <div class="infoCurso row">
                             <div class="textoSinfecha">
                                 <p>Necesitas conocimiento sobre un aspecto concreto en el mundo de la web. Nosotros te impartimos en curso. Formamos a tus empleados, en aquello que necesitan. </p>
-                                <a class="personalizados" href="#" title="Ver curso">Ver curso</a>
+                                <a class="personalizados" href="cursosPresenciales.php" title="Ver curso">Ver curso</a>
                             </div>
                         </div>
                     </div>
