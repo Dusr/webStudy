@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
@@ -60,10 +60,10 @@ CREATE TABLE IF NOT EXISTS `curso` (
 -- Volcado de datos para la tabla `curso`
 --
 
-INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `modalidad`, `comienzoCurso``, `descripcion`) VALUES
+INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `modalidad`, `comienzoCurso`, `descripcion`) VALUES
 (1, 'Curso básico de HTML', 'HTML', '20', 'online' , 'abril','Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
-(2, 'Curso CSS avanzado', 'CSS', '25', 'presencial', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.');
-(3, 'Javascript desde cero', 'Javascript', '30', 'online', 'enero', 'Curso básico de Javascript donde aprenderas.....');
+(2, 'Curso CSS avanzado', 'CSS', '25', 'presencial', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.'),
+(3, 'Javascript desde cero', 'Javascript', '30', 'online', 'enero', 'Curso básico de Javascript donde aprenderas.....'),
 (4, 'Prestashop', 'CMS', '40', 'online', 'enero', 'PrestaShop es un gestor de contenidos cms libre, de código abierto compatible con las pasarelas de pago como DirecPay, Google CheckOut, Authorize.net, Moneybookers, PayPal');
 
 -- --------------------------------------------------------
