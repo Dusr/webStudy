@@ -152,7 +152,13 @@ if (!isset($_SESSION['logged'])) {
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd></dd>
+            <dd> Lorem fistrum fistro a wan a gramenawer ese hombree ahorarr al ataquerl te voy a borrar el 
+                cerito amatomaa. Por la gloria de mi madre apetecan la caidita a peich caballo blanco caballo 
+                negroorl. Pecador no puedor condemor benemeritaar tiene musho peligro está la cosa muy malar pupita 
+                al ataquerl mamaar benemeritaar. No te digo trigo por no llamarte Rodrigor de la pradera se calle 
+                ustée diodeno diodenoo tiene musho peligro caballo blanco caballo negroorl no puedor. 
+                A gramenawer ahorarr papaar papaar apetecan no puedor no te digo trigo por no llamarte 
+                Rodrigor quietooor. </dd>
 
 
             <dt class="pregunta">¿Puedo obtener un certificado despues de terminar un curso?
@@ -160,7 +166,14 @@ if (!isset($_SESSION['logged'])) {
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd></dd>
+            <dd>Lorem fistrum ad velit fistro commodo la caidita papaar papaar torpedo. Aute dolore se calle
+                ustée nostrud ese hombree velit caballo blanco caballo negroorl occaecat veniam ex et.
+                Llevame al sircoo te va a hasé pupitaa a wan ahorarr enim magna te va a hasé pupitaa pupita. 
+                Sit amet no puedor ese que llega occaecat tiene musho peligro commodo aliquip duis consectetur 
+                a peich. Caballo blanco caballo negroorl commodo ese hombree ad ese que llega ut dolore.
+                No te digo trigo por no llamarte Rodrigor laboris no puedor qué dise usteer consectetur ad 
+                consectetur veniam sed ese hombree. La caidita duis mamaar te voy a borrar el cerito llevame 
+                al sircoo mamaar ese hombree veniam. </dd>
         </dl>
     </div>
 

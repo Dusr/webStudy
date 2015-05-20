@@ -234,7 +234,7 @@ if (!isset($_SESSION['logged'])) {
             </div>
         </div>
     </div>
-
+    
     <div class="inner-block-alternative">
         <div class="caja_gris">
             <p><strong>Presupuesto gratis y sin compromiso</strong></p>

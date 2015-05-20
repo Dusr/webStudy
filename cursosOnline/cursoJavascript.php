@@ -1,13 +1,13 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
-	<title>NodeJS | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
+	<title>Curso Javascript | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
 
 	<!-- METAS de la pagina -->
 	<meta name="description" content=''/>
     <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
     <!-- LINK hojas de CSS -->
-  	<link href="../css/cursosCatalogo.css" rel="stylesheet">
+ 	<link href="../css/cursosCatalogo.css" rel="stylesheet">
  	<link href="../css/detalleCursoStyle.css" rel="stylesheet">
     <!-- JAVASCRIPT -->
 
@@ -32,6 +32,7 @@
 				<li class="menuLogin">
    					 <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
 				</li>
+
 <?php include("../include/inc_5_nav_final.php") ?>
 
 <?php include("../include/inc_opcional_breadcrumb_Inicio_subcarpeta.php") ?>
@@ -51,6 +52,7 @@
 		                    <h2>Cursos presenciales</h2>
 <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
 
+			<!-- Estructura del Menu secundario. -->
 		<div class="menu_secundario">
 			<div class="contenedor_menu_secundario">
 				<ul>
@@ -74,25 +76,27 @@
 				 <a title="Ir a Cursos Presenciales" href="../cursosPresenciales.php">
             		<img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
         		</a>
-        		<h3>Curso de NodeJS</h3>
+        		<h3>Curso de Javascript desde cero</h3>
 			</div>
 
 		</div>
 
+	
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        			<img alt="" src="../img/imgSlider/nodeJs.jpg">
+        	<img alt="" src="../img/imgSlider/catalogoCursos.jpg">
 
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
 		<div class="contenedor top-block"> 
 			<div class="info-box">
                 <div class="introCursos row">
-                    <p>Todos hemos oído hablar de Node.js como tecnología que permite trabajar con Javascript del lado del servidor. Poco a poco Node se está ganando un hueco en la comunidad. Sin embargo hay muchas dudas sobre su funcionamiento. Vamos a intentar en este curso acercarnos un poco más a esta tecnología tan interesante.  </p>
-           
+                    <p>JavaScript desde CERO. Está pensado para que pueda ser desarrollado por una persona que no conoce lenguajes de programación.</p>
+                    <p> El objetivo es poder aprender JavaScript de <strong>forma sencilla</strong> viendo un concepto teórico, y lo más importante, efectuar una serie de ejercicios.</p>
                 </div>
             </div>
 		</div>	
+
 		<div class="main inner-block fondoBlanco detalleCurso">
 			<ul>
               <li>
@@ -102,10 +106,10 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                          Del 1 de septiembre al 10 octubre
+                          Del 28 de julio al de 30 Agosto
                       </strong>
                       </p>
-                      <p>Disponible : turno mañana , turno tarde , turno fin de semana</p>
+                      <p>Disponible : turno tarde, turno fin de semana</p>
                   </div>
               </li>
               <li>
@@ -115,9 +119,9 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                        100 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                         80 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                       </strong>
-                      </p><p>(se estiman 50 días dedicando 3 horas diarias)</p>
+                      </p><p>(se estiman 40 dias dedicando 3 horas diarias)</p>
                   </div>
               </li>
               <li>
@@ -127,10 +131,11 @@
                   </div>
                   <div class="texto_dcha">
                       <p>
-                          
-						Curso donde a lo largo de diversos capítulos iremos viendo como trabajar con NodeJs, una plataforma para el desarrollo con Javascript del lado del servidor. 
+                          JavaScript es un lenguaje ideado para <strong>dotar de dinamismo, rapidez y agilidad a las páginas web</strong>. JavaScript puede tener distintas aplicaciones, pero la más común es la de ser un lenguaje de programación que se ejecuta del lado del cliente.
                       </p>
-                      
+                      <p>
+                          A veces se dice que JavaScript no es un lenguaje de programación propiamente dicho, sino un <strong>lenguaje de script</strong>. Un script vendría siendo un programa normalmente simple, almacenado en un archivo de texto, y que es ejecutado por un intérprete del lenguaje para conseguir unos resultados.
+                      </p>
                   </div>
               </li>
               <li>
@@ -142,25 +147,30 @@
                       <ol class="lista_numeros">
                           <li>
                               
-                              Introducción a NodeJS. Instalar Node.JS.
+                                  Introducción a JavaScript. Qué es JavaScript?
                               
                           </li>
                           <li>
-							Características destacables de Node.JS. Módulos y NPM en NodeJS
+                              
+                                 Variables. Entrada de datos por teclado.
                               
                           </li>
                           <li>
-								Ejemplo Node.JS con el módulo HTTP. Eventos en NodeJS 
+                              
+                                 Estructuras condicionales simples. Estructuras condicionales compuestas.
+                                 Estructuras condicionales anidadas
                               
                           </li>
                           <li>
-								Construyendo la Pila de Aplicaciones. Analizando nuestro servidor HTTP
+                              
+                                 Funciones. Funciones y eventos. Introducción a eventos.
                               
                           </li>
-                           <li>
-								Pasando Funciones de un Lado a Otro. Callbacks Manejadas por Eventos                              
+                          <li>
+                              
+                                  Formularios. Métodos de validación.
+                             
                           </li>
-                 
                       </ol>
                   </div>
               </li>

@@ -1,19 +1,19 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
-	<title>NodeJS | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
+	<title>Curso Prestashop | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
 
 	<!-- METAS de la pagina -->
 	<meta name="description" content=''/>
     <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
-    <!-- LINK hojas de CSS -->
-  	<link href="../css/cursosCatalogo.css" rel="stylesheet">
+    <!-- LINK hojas de CSS --> 
+ 	<link href="../css/cursosCatalogo.css" rel="stylesheet">
  	<link href="../css/detalleCursoStyle.css" rel="stylesheet">
     <!-- JAVASCRIPT -->
-
-
+	
 <?php include("../include/inc_3_headerTemplate_subcarpeta.php") ?>
 <?php include("../include/inc_4_nav_inicio_subcarpeta.php") ?> 
+
 				<li class="item-2">
    					<a title="Ir a conocenós" href="../conocenos.php">Conócenos</a>
     			</li>
@@ -51,7 +51,7 @@
 		                    <h2>Cursos presenciales</h2>
 <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
 
-		<div class="menu_secundario">
+	<div class="menu_secundario">
 			<div class="contenedor_menu_secundario">
 				<ul>
 					<li class="">
@@ -74,22 +74,23 @@
 				 <a title="Ir a Cursos Presenciales" href="../cursosPresenciales.php">
             		<img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
         		</a>
-        		<h3>Curso de NodeJS</h3>
+        		<h3>Curso de Prestashop</h3>
 			</div>
 
 		</div>
 
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        			<img alt="" src="../img/imgSlider/nodeJs.jpg">
+        		<img alt="" src="../img/imgSlider/prestashop.jpg">
 
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
 		<div class="contenedor top-block"> 
 			<div class="info-box">
                 <div class="introCursos row">
-                    <p>Todos hemos oído hablar de Node.js como tecnología que permite trabajar con Javascript del lado del servidor. Poco a poco Node se está ganando un hueco en la comunidad. Sin embargo hay muchas dudas sobre su funcionamiento. Vamos a intentar en este curso acercarnos un poco más a esta tecnología tan interesante.  </p>
-           
+                    <p>PrestaShop es un gestor de contenidos cms libre, de código abierto compatible con 
+                        las pasarelas de pago como DirecPay, Google CheckOut, Authorize.net, Moneybookers, PayPal.
+                        También se ofrecen módulos de pago adicionales en el mercado.</p>
                 </div>
             </div>
 		</div>	
@@ -102,10 +103,10 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                          Del 1 de septiembre al 10 octubre
+                          Del 1 de septiembre al 20 octubre
                       </strong>
                       </p>
-                      <p>Disponible : turno mañana , turno tarde , turno fin de semana</p>
+                      <p>Disponible : turno mañana , turno tarde</p>
                   </div>
               </li>
               <li>
@@ -115,9 +116,9 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                        100 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                         130 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                       </strong>
-                      </p><p>(se estiman 50 días dedicando 3 horas diarias)</p>
+                      </p><p>(se estiman 45 dias dedicando 3 horas diarias)</p>
                   </div>
               </li>
               <li>
@@ -127,10 +128,14 @@
                   </div>
                   <div class="texto_dcha">
                       <p>
-                          
-						Curso donde a lo largo de diversos capítulos iremos viendo como trabajar con NodeJs, una plataforma para el desarrollo con Javascript del lado del servidor. 
+                         En este curso aprenderás a crear fácilmente una tienda online con PrestaShop.
+                        El curso PrestaShop se compone de 6 capítulos.
                       </p>
-                      
+                      <p>
+                          El problema concreto que se presenta es que al ser tan extensa y al poseer tantas 
+                          posibilidades a la hora de listar ventajas o a elegir “que lenguaje es el mas adecuado” 
+                          se puede volver una tarea desalentadora.
+                      </p>
                   </div>
               </li>
               <li>
@@ -142,29 +147,28 @@
                       <ol class="lista_numeros">
                           <li>
                               
-                              Introducción a NodeJS. Instalar Node.JS.
+                                 Introducción y cambios de diseño
                               
                           </li>
                           <li>
-							Características destacables de Node.JS. Módulos y NPM en NodeJS
+                              
+                                  Categorías, fabricantes y productos
                               
                           </li>
                           <li>
-								Ejemplo Node.JS con el módulo HTTP. Eventos en NodeJS 
+                              
+                                 Quiero crear una app para un móvil, ya sea android o iOS (iphone)
                               
                           </li>
-                          <li>
-								Construyendo la Pila de Aplicaciones. Analizando nuestro servidor HTTP
-                              
-                          </li>
-                           <li>
-								Pasando Funciones de un Lado a Otro. Callbacks Manejadas por Eventos                              
-                          </li>
-                 
+                          <li>Gestión del menú y páginas CMS</li>
+                          <li>Compra y gestión de pedidos</li>
+                          <li>Métodos de pago y tarifas de envío</li>
+                          <li>Impuestos y reglas de precios</li>
+                         
                       </ol>
                   </div>
               </li>
             </ul>
 		</div>
 <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>
+<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>s
