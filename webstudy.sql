@@ -51,6 +51,8 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `nombre` varchar(20) NOT NULL,
   `lenguaje` varchar(15) DEFAULT NULL,
   `duracion` varchar(5) NOT NULL,
+  `modalidad` varchar(10) NOT NULL,
+  `comienzoCurso` varchar(12) NOT NULL,
   `descripcion` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -58,9 +60,11 @@ CREATE TABLE IF NOT EXISTS `curso` (
 -- Volcado de datos para la tabla `curso`
 --
 
-INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `descripcion`) VALUES
-(1, 'Curso básico de HTML', 'HTML', '20', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
-(2, 'Curso CSS avanzado', 'CSS', '25', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.');
+INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `modalidad`, `comienzoCurso``, `descripcion`) VALUES
+(1, 'Curso básico de HTML', 'HTML', '20', 'online' , 'abril','Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
+(2, 'Curso CSS avanzado', 'CSS', '25', 'presencial', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.');
+(3, 'Javascript desde cero', 'Javascript', '30', 'online', 'enero', 'Curso básico de Javascript donde aprenderas.....');
+(4, 'Prestashop', 'CMS', '40', 'online', 'enero', 'PrestaShop es un gestor de contenidos cms libre, de código abierto compatible con las pasarelas de pago como DirecPay, Google CheckOut, Authorize.net, Moneybookers, PayPal');
 
 -- --------------------------------------------------------
 
@@ -105,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nombre` varchar(45) NOT NULL,
   `apellidos` varchar(50) DEFAULT NULL,
   `direccion` varchar(50) DEFAULT NULL,
-  `avatar` varchar(30) DEFAULT NULL,
+  `avatar` varchar(100) DEFAULT NULL,
   `profesor` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
