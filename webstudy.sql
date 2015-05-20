@@ -1,11 +1,11 @@
-﻿-- phpMyAdmin SQL Dump
--- version 4.2.11
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2015 a las 11:23:29
--- Versión del servidor: 5.6.21
--- Versión de PHP: 5.6.3
+-- Tiempo de generación: 20-05-2015 a las 21:00:00
+-- Versión del servidor: 5.6.20
+-- Versión de PHP: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,8 +37,7 @@ CREATE TABLE IF NOT EXISTS `alumno_has_curso` (
 --
 
 INSERT INTO `alumno_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`, `done`) VALUES
-(1, 1, 0),
-(6, 1, 0);
+(1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -54,16 +53,16 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `modalidad` varchar(10) NOT NULL,
   `comienzoCurso` varchar(12) NOT NULL,
   `descripcion` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `curso`
 --
 
 INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `modalidad`, `comienzoCurso`, `descripcion`) VALUES
-(1, 'Curso básico de HTML', 'HTML', '20', 'online' , 'abril','Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
+(1, 'Curso básico de HTML', 'HTML', '20', 'online', 'abril', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
 (2, 'Curso CSS avanzado', 'CSS', '25', 'presencial', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.'),
-(3, 'Javascript desde cero', 'Javascript', '30', 'online', 'enero', 'Curso básico de Javascript donde aprenderas.....'),
+(3, 'Javascript desde cer', 'Javascript', '30', 'online', 'enero', 'Curso básico de Javascript donde aprenderas.....'),
 (4, 'Prestashop', 'CMS', '40', 'online', 'enero', 'PrestaShop es un gestor de contenidos cms libre, de código abierto compatible con las pasarelas de pago como DirecPay, Google CheckOut, Authorize.net, Moneybookers, PayPal');
 
 -- --------------------------------------------------------
@@ -99,6 +98,24 @@ INSERT INTO `modulo` (`idModulo`, `nombre`, `descripcion`, `Curso_idCurso`, `apu
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `profesor_has_curso`
+--
+
+CREATE TABLE IF NOT EXISTS `profesor_has_curso` (
+  `Alumno_idAlumno` int(11) NOT NULL,
+  `Curso_idCurso` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `profesor_has_curso`
+--
+
+INSERT INTO `profesor_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`) VALUES
+(9, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -109,9 +126,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nombre` varchar(45) NOT NULL,
   `apellidos` varchar(50) DEFAULT NULL,
   `direccion` varchar(50) DEFAULT NULL,
-  `avatar` varchar(100) DEFAULT NULL,
+  `avatar` varchar(100) NOT NULL DEFAULT 'avatar_1.png',
   `profesor` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -119,13 +136,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`idAlumno`, `login`, `password`, `nombre`, `apellidos`, `direccion`, `avatar`, `profesor`) VALUES
 (1, 'david.a.u@hotmail.com', 'goyeneche33', 'David', 'Álvaro Uceda', 'Calle Goyeneche, 33, Bajo', '', 0),
-(2, 'xxx', 'xxx', 'xxx', 'xxx', NULL, NULL, 0),
-(3, 'aaaa', 'aaaa', 'aaaa', 'aaaa', NULL, NULL, 0),
-(5, 'bbbb', 'bbbb', 'bbbb', 'bbbb bbbb', NULL, NULL, 0),
-(6, 'juanito@hotmail.com', 'juanito', 'Juanito', 'Perez Perez', 'Calle Luna, 7', NULL, 0),
-(7, 'prueba@hotmail.com', 'prueba', 'Juanito', 'Prueba Prueba', NULL, NULL, 0),
-(8, 'Juanito', 'juanito', '', '', NULL, NULL, 0),
-(9, 'profesor@hotmail.com', 'soyprofesor', 'Profesor1', 'Profe Profe', 'Calle del profesor, 1,', '', 1);
+(2, 'xxx', 'xxx', 'xxx', 'xxx', NULL, '', 0),
+(3, 'aaaa', 'aaaa', 'aaaa', 'aaaa', NULL, '', 0),
+(5, 'bbbb', 'bbbb', 'bbbb', 'bbbb bbbb', NULL, '', 0),
+(6, 'juanito@hotmail.com', 'juanito', 'Juanito', 'Perez Perez', 'Calle Luna, 7', '', 0),
+(7, 'prueba@hotmail.com', 'prueba', 'Juanito', 'Prueba Prueba', NULL, '', 0),
+(8, 'Juanito', 'juanito', '', '', NULL, '', 0),
+(9, 'profesor@hotmail.com', 'soyprofesor', 'Profesor1', 'Profe Profe', 'Calle del profesor, 1,', '', 1),
+(12, 'profe1@hotmail.com', 'profesor1', 'profe1', 'profe profe', NULL, 'avatar_1.png', 1);
 
 --
 -- Índices para tablas volcadas
@@ -150,6 +168,12 @@ ALTER TABLE `modulo`
  ADD PRIMARY KEY (`idModulo`,`Curso_idCurso`), ADD KEY `fk_Modulo_Curso_idx` (`Curso_idCurso`);
 
 --
+-- Indices de la tabla `profesor_has_curso`
+--
+ALTER TABLE `profesor_has_curso`
+ ADD PRIMARY KEY (`Alumno_idAlumno`,`Curso_idCurso`), ADD KEY `fk_Profesor_has_Curso` (`Curso_idCurso`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -163,12 +187,12 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- Restricciones para tablas volcadas
 --
@@ -185,6 +209,13 @@ ADD CONSTRAINT `fk_Alumno_has_Curso_Curso1` FOREIGN KEY (`Curso_idCurso`) REFERE
 --
 ALTER TABLE `modulo`
 ADD CONSTRAINT `fk_Modulo_Curso` FOREIGN KEY (`Curso_idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `profesor_has_curso`
+--
+ALTER TABLE `profesor_has_curso`
+ADD CONSTRAINT `fk_Profesor_has_Curso_Alumno1` FOREIGN KEY (`Alumno_idAlumno`) REFERENCES `usuario` (`idAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_Profesor_has_Curso_Curso1` FOREIGN KEY (`Curso_idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
