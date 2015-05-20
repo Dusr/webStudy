@@ -16,15 +16,21 @@
     }
     
     if($password == $rpassword){
-        $sql = "INSERT INTO usuario(idAlumno, login, password, nombre, apellidos, avatar, profesor) ".
-               "VALUES(default,'".$login."', '".$password."', '".$nombre."', '".$apellidos."',null,".$profesor.")";
+        $sql = "INSERT INTO usuario(idAlumno, login, password, nombre, apellidos, profesor) ".
+               "VALUES(default,'".$login."', '".$password."', '".$nombre."', '".$apellidos."',".$profesor.")";
 
         $result = mysql_query($sql, $con);    
         
         
         if ($result){
-                $row = mysql_fetch_array($result);
-            
+               // $row = mysql_fetch_array($result)
+                $result0 = mysql_query("SELECT * "
+                     ."From usuario "
+                     ."WHERE login = '".$login."' "
+                     ."AND password= '".$password."'",
+                     $con);
+                
+                $row = mysql_fetch_array($result0);
             //CREAMOS SESION.
                 session_start();  
 
