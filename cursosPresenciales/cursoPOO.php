@@ -1,6 +1,6 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
-	<title>Curso Html5 | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
+	<title>Curso POO | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
 
 	<!-- METAS de la pagina -->
 	<meta name="description" content=''/>
@@ -76,7 +76,7 @@
 				 <a title="Ir a Cursos Presenciales" href="../cursosPresenciales.php">
             		<img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
         		</a>
-        		<h3>Curso de Html5</h3>
+        		<h3>Curso de programación orientada a objetos</h3>
 			</div>
 
 		</div>
@@ -84,7 +84,7 @@
 	
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        			<img alt="" src="../img/imgSlider/catalogoCursos.jpg">
+        			<img alt="" src="../img/imgSlider/javaSlider.jpg">
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
 		<div class="contenedor top-block"> 

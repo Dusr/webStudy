@@ -1,19 +1,19 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
-	<title>NodeJS | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
+	<title>Curso Api de Facebook | Cursos Presenciales | Nuestros cursos | Webstudy.com</title>
 
 	<!-- METAS de la pagina -->
 	<meta name="description" content=''/>
     <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
-    <!-- LINK hojas de CSS -->
-  	<link href="../css/cursosCatalogo.css" rel="stylesheet">
+    <!-- LINK hojas de CSS --> 
+ 	<link href="../css/cursosCatalogo.css" rel="stylesheet">
  	<link href="../css/detalleCursoStyle.css" rel="stylesheet">
     <!-- JAVASCRIPT -->
-
-
+	
 <?php include("../include/inc_3_headerTemplate_subcarpeta.php") ?>
 <?php include("../include/inc_4_nav_inicio_subcarpeta.php") ?> 
+
 				<li class="item-2">
    					<a title="Ir a conocenós" href="../conocenos.php">Conócenos</a>
     			</li>
@@ -51,7 +51,7 @@
 		                    <h2>Cursos presenciales</h2>
 <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
 
-		<div class="menu_secundario">
+	<div class="menu_secundario">
 			<div class="contenedor_menu_secundario">
 				<ul>
 					<li class="">
@@ -74,22 +74,25 @@
 				 <a title="Ir a Cursos Presenciales" href="../cursosPresenciales.php">
             		<img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
         		</a>
-        		<h3>Curso de NodeJS</h3>
+        		<h3>Curso Api de Facebook</h3>
 			</div>
 
 		</div>
 
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        			<img alt="" src="../img/imgSlider/nodeJs.jpg">
+        		<img alt="" src="../img/imgSlider/Facebook_api.jpg">
 
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
 		<div class="contenedor top-block"> 
 			<div class="info-box">
                 <div class="introCursos row">
-                    <p>Todos hemos oído hablar de Node.js como tecnología que permite trabajar con Javascript del lado del servidor. Poco a poco Node se está ganando un hueco en la comunidad. Sin embargo hay muchas dudas sobre su funcionamiento. Vamos a intentar en este curso acercarnos un poco más a esta tecnología tan interesante.  </p>
-           
+                    <p>Facebook va más allá de su portal e interacción entre los usuarios, ofrece realmente una
+                        <strong>plataforma completa con herramientas para desarrolladores</strong> donde se pueden hacer aplicaciones
+                        para la Web, móviles y Facebook. Estas aplicaciones ponen en servicio un sin fin de métodos 
+                        y propiedades para que nuestras APPs o Webs puedan convertirse en potentes sistemas de
+                        marketing, mediante la recolección de datos y comportamientos de los usuarios. </p>
                 </div>
             </div>
 		</div>	
@@ -102,10 +105,10 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                          Del 1 de septiembre al 10 octubre
+                          Del 1 de junio al 20 julio
                       </strong>
                       </p>
-                      <p>Disponible : turno mañana , turno tarde , turno fin de semana</p>
+                      <p>Disponible : turno mañana , turno tarde</p>
                   </div>
               </li>
               <li>
@@ -115,9 +118,9 @@
                   </div>
                   <div class="texto_dcha">
                       <p><strong>
-                        100 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                         120 horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                       </strong>
-                      </p><p>(se estiman 50 días dedicando 3 horas diarias)</p>
+                      </p><p>(se estiman 30 dias dedicando 3 horas diarias)</p>
                   </div>
               </li>
               <li>
@@ -127,10 +130,16 @@
                   </div>
                   <div class="texto_dcha">
                       <p>
-                          
-						Curso donde a lo largo de diversos capítulos iremos viendo como trabajar con NodeJs, una plataforma para el desarrollo con Javascript del lado del servidor. 
+                         La API está desarrollada con un extensa compatibilidad a la mayoría de los SDK actuales
+                         disponibles, PHP, JavaScript, Android e IOS SDK, ActionScript etc. 
+                         También está disponible una cantidad básica de plugins para la interacción de nuestros
+                         sitios con Facebook en unos simples copy/paste!
                       </p>
-                      
+                      <p>
+                          El problema concreto que se presenta es que al ser tan extensa y al poseer tantas 
+                          posibilidades a la hora de listar ventajas o a elegir “que lenguaje es el mas adecuado” 
+                          se puede volver una tarea desalentadora.
+                      </p>
                   </div>
               </li>
               <li>
@@ -142,29 +151,24 @@
                       <ol class="lista_numeros">
                           <li>
                               
-                              Introducción a NodeJS. Instalar Node.JS.
+                                  Quiero crear una app para mi Web o integrar mi pagina Web con funcionalidades de Facebook
                               
                           </li>
                           <li>
-							Características destacables de Node.JS. Módulos y NPM en NodeJS
+                              
+                                   Quiero crear una app (Aplicación) para facebook
                               
                           </li>
                           <li>
-								Ejemplo Node.JS con el módulo HTTP. Eventos en NodeJS 
+                              
+                                 Quiero crear una app para un móvil, ya sea android o iOS (iphone)
                               
                           </li>
-                          <li>
-								Construyendo la Pila de Aplicaciones. Analizando nuestro servidor HTTP
-                              
-                          </li>
-                           <li>
-								Pasando Funciones de un Lado a Otro. Callbacks Manejadas por Eventos                              
-                          </li>
-                 
+                         
                       </ol>
                   </div>
               </li>
             </ul>
 		</div>
 <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>
+<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>s
