@@ -115,7 +115,7 @@ if (!isset($_SESSION['logged'])) {
    
     
  <?php
-    if ($_SESSION['profesor'] == 0){
+    if (isset($_SESSION['profesor'])==0){
  ?>
     <!-- Estructura del Menu secundario. -->
 
