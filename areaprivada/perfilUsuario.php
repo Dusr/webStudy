@@ -204,18 +204,18 @@ if (!isset($_SESSION['logged'])) {
                         <?php
                         $con = mysqli_connect('localhost', 'project', 'project', 'webstudy');
                         $query = mysqli_query($con, "SELECT * from usuario");
-                        while ($row = mysqli_fetch_assoc($query)) {
-                            if ($row['avatar'] == "") {
-                                echo "<img src='avatares/1.jpg' alt='Imagen por defecto'>";
-                            } else {
-                                echo "<img src='avatares/" . $row['avatar'] . "' alt='Avatar'>";
+                        if ($row = mysqli_fetch_assoc($query)) {
+                            if ($row['avatar'] == NULL) { /*
+                                echo "<img src='avatares/avatar_1.png' alt='Imagen por defecto'>";
+                            } else { */
+                                echo "<img width='240' height='240' src='avatares/".$_SESSION['avatar']."' alt='Avatar'>";
                             }
                         }
                         ?>
-                        <img src="avatares/<?php ?>">
+                        
                     </div>    
                     <div class="avatar">
-                        <?php echo $_SESSION['avatar']; ?>
+                        
     <!--                   <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
                         <p>Cambiar avatar</p>
                     </div>
