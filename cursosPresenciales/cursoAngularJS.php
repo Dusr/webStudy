@@ -81,7 +81,7 @@
 		</div>
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        	<img alt="" src="../img/imgSlider/angularJs.jpg">
+        	<img alt="" src="../img/imgSlider/catalogoCursos.jpg">
 
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->

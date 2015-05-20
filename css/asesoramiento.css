@@ -18,9 +18,7 @@
     width: 70%;
     margin:0 auto;
 }
-.contenedor-total #content {
-    background: #fff none repeat scroll 0 0;
-}
+
 .contenedorFila {
   border-bottom: 2px solid #ccc;
   clear: both;
