@@ -6,7 +6,7 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
-<?php include("../cursosOnline/cargarHTML.php") ?>
+<?php include("../cursosOnline/cargarCss.php") ?>
 
 
 
@@ -124,7 +124,7 @@ if (!isset($_SESSION['logged'])) {
             <a title="Ir a Cursos Online" href="../cursosOnline.php">
                 <img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
             </a>
-            <h3><?php echo $nombreCurso; ?></h3> cambiar nombre
+            <h3><?php echo $nombreCurso; ?></h3>
 
             <!-- BOTON INSCRIBIRSE -->
              <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
@@ -192,7 +192,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-                            <?php echo $_SESSION['duracion']; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                            <?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
                     </p><p>(Se estiman 30 días | 2 horas/día)</p>
                 </div>
@@ -203,7 +203,7 @@ if (!isset($_SESSION['logged'])) {
                     <h4>Descripción del curso</h4>
                 </div>
                 <div class="texto_dcha">
-                    <?php echo $_SESSION['descripcion']; ?>
+                    <?php echo $descripcion; ?>
                 </div>
             </li>
             <li>

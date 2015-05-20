@@ -192,7 +192,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-                            <?php echo $_SESSION['duracion']; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                            <?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
                     </p><p>(Se estiman 20 días | 3 horas/día)</p>
                 </div>
@@ -203,7 +203,7 @@ if (!isset($_SESSION['logged'])) {
                     <h4>Descripción del curso</h4>
                 </div>
                 <div class="texto_dcha">
-                    <?php echo $_SESSION['descripcion']; ?>
+                    <?php echo $descripcion; ?>
                 </div>
             </li>
             <li>

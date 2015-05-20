@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2015 a las 17:58:08
+-- Tiempo de generación: 20-05-2015 a las 11:23:29
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `alumno_has_curso` (
   `Alumno_idAlumno` int(11) NOT NULL,
   `Curso_idCurso` int(11) NOT NULL,
-  `done` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `done` tinyint(4) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `alumno_has_curso`
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `alumno_has_curso` (
 
 INSERT INTO `alumno_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`, `done`) VALUES
 (1, 1, 0),
-(9, 1, 0);
+(6, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -52,14 +52,15 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `lenguaje` varchar(15) DEFAULT NULL,
   `duracion` varchar(5) NOT NULL,
   `descripcion` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `curso`
 --
 
 INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `descripcion`) VALUES
-(1, 'Curso básico de HTML', 'HTML', '20', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con text');
+(1, 'Curso básico de HTML', 'HTML', '20', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
+(2, 'Curso CSS avanzado', 'CSS', '25', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.');
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,11 @@ INSERT INTO `modulo` (`idModulo`, `nombre`, `descripcion`, `Curso_idCurso`, `apu
 (2, 'Módulo 2: Características básicas.', 'Descripción de los elementos del lenguaje HTML como lenguaje de marcas(etiquetas y atributos), sintaxis y XHTML.', 1, 'Modulo_2', 'Modulo_2_ejercicios'),
 (3, 'Módulo 3: Texto.', 'Estructura, formateo básico, avanzado y genérico del texto en HTML. Espacios en blanco, saltos de linea y codificación de caracteres.', 1, 'Modulo_3', 'Modulo_3_ejercicios'),
 (4, 'Módulo 4: Enlaces.', 'URL''s, enlaces básicos y avanzados, así como otro tipo de enlaces (Relativos, absolutos...). Cuenta con ejemplos de enlazado a otras páginas.', 1, 'Modulo_4', 'Modulo_4_ejercicios'),
-(5, 'Módulo 5: Listas', 'Utilización de listas ordenadas, no ordenadas y de definición.', 1, 'Modulo_5', 'Modulo_5_ejercicios');
+(5, 'Módulo 5: Listas', 'Utilización de listas ordenadas, no ordenadas y de definición.', 1, 'Modulo_5', 'Modulo_5_ejercicios'),
+(6, 'Módulo 1: Técnicas imprescindibles.', 'Técnicas imprescindibles para aplicar estilos básicos a los elementos HTML', 2, 'Modulo_1', 'Modulo_1_ejercicios'),
+(7, 'Módulo 2: Buenas prácticas.', 'Te enseñaremos buenas prácticas a la hora de aplicar estilos para elaborar una hoja de estilo limpia, coherente y depurada.', 2, 'Modulo_2', 'Modulo_2_ejercicios'),
+(8, 'Módulo 3: Selectores.', 'Aprenderás a conocer y dominar todos los selectores de CSS tanto básicos como avanzados.', 2, 'Modulo_3', 'Modulo_3_ejercicios'),
+(9, 'Módulo 4: Propiedades avanzadas.', 'Propiedades avanzadas de los elementos que abarcan el modelo de cajas, la tipografia, las ablas, las listas, el posicionamiento de los elemntos', 2, 'Modulo_4', 'Modulo_4_ejercicios');
 
 -- --------------------------------------------------------
 
@@ -126,7 +131,7 @@ INSERT INTO `usuario` (`idAlumno`, `login`, `password`, `nombre`, `apellidos`, `
 -- Indices de la tabla `alumno_has_curso`
 --
 ALTER TABLE `alumno_has_curso`
- ADD PRIMARY KEY (`Alumno_idAlumno`,`Curso_idCurso`), ADD KEY `fk_Alumno_has_Curso_Curso1_idx` (`Curso_idCurso`), ADD KEY `fk_Alumno_has_Curso_Alumno1_idx` (`Alumno_idAlumno`);
+ ADD PRIMARY KEY (`Alumno_idAlumno`,`Curso_idCurso`), ADD KEY `fk_Alumno_has_Curso_Curso1` (`Curso_idCurso`);
 
 --
 -- Indices de la tabla `curso`
@@ -154,7 +159,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
