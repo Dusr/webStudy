@@ -1,0 +1,3 @@
+select * from usuario where idAlumno in (select alumno_has_curso.Alumno_idAlumno from alumno_has_curso, profesor_has_curso where alumno_has_curso.Curso_idCurso = profesor_has_curso.Curso_idCurso and done=0 ) 
+
+// Con el done=0 solo saca los alumnos que no han acabado el curso.
