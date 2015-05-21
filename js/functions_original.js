@@ -63,31 +63,9 @@ $(document).ready(function () {
 //            $('.contentd').removeClass("margen");
 //        }
 //    });
-/*funcion de prueba de SCROLL de area privada*/
-  //var top = $('#moduloScroll').offset().top; // capturamos la posicion inicial
- // var top = $('#moduloScroll').offset().top - $('#moduloScroll').css('marginTop');//A continuación sustraemos el margen superior en el siguiente código:
-  
-   $(document).ready(function () {
-        
-       var top = $('#moduloScroll').offset().top - parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
-       var sv = $('#moduloScroll').scrollTop();
-       
-       $(window).scroll(function (event) 
-	{                 
-	  var y = $(this).scrollTop();    
-	   // whether that's below the form       
-	   if (y >= top) 
-           {       
-            // if so, ad the fixed class   
-            $('#moduloScroll').addClass('fixed');  
-           } 
-           else 
-           {                   
-	   // otherwise remove it           
-	   $('#moduloScroll').removeClass('fixed');  
-           }          
-	});     
-    }); 
+
+
+
 
     /* Function tabs */
 

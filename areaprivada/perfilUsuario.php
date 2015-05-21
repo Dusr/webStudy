@@ -305,7 +305,7 @@ if (!isset($_SESSION['logged'])) {
 
 
                     <div class="bloqueDcha">
-                        <div class="contentd">
+                        <div class="contentd" id="moduloScroll">
 
                             <?php
                             $modulos = mysql_query("SELECT * "

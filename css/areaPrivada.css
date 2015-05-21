@@ -193,8 +193,9 @@ input[type="checkbox"]{
     float:right;
     width:30%;
     margin: 40px 0;
+    
+   
 }
-
 
 .inputs {
     float: left;
@@ -333,7 +334,7 @@ padding-top: 44px;
 #formularioEjercicios input{
 width: 250px;
 margin: 0 auto;
-margin-top:25px;
+margin-top:15px;
 padding:7px;
 }
 #formularioEjercicios input[type='submit']{
@@ -341,7 +342,7 @@ margin-right: 23px;
 width: 68px;
 }
 #formularioEjercicios{
-margin-top:25px;
+margin-top:0px;
 }
 #formularioEjercicios p{
 text-transform: uppercase;
@@ -353,7 +354,7 @@ font-size: 1.3em;
 }
 
 #contenedorDescripcion{
-margin-top:30px;
+margin-top:10px;
 }
 
 
@@ -421,10 +422,10 @@ h4.paddingLeft{
 }
 
 .headerMod h4{
-    margin: 0 auto;
+    margin: 0 20px;
     text-align: left;
     text-transform: none;
-    width: 90%;
+    width: 60%;
 }
 
 .tablaModulos{
@@ -448,16 +449,27 @@ h4.paddingLeft{
 }
 
 .bloqueDcha{
+   float: right;
+   height: auto;
+   width: 34%;
+}
+#moduloScroll {
     border-left: 3px solid #993333;
     border-right: 3px solid #993333;
-    float: right;
-    height: auto;
+    border-bottom: 3px solid #993333;
     margin-top: 25px;
-    width: 34%;
+    position: absolute;
+    background: #fff;
+    padding-bottom: 10px;
+    
 }
 
-.fixed{position:fixed;top:0}
-.margen{margin-top:50px}
+#moduloScroll.fixed{
+   position: fixed;
+   top: 40px;
+   width: 26%;
+}
+//.margen{margin-top:50px}
 // DESCRIPCION MODULO
 
 .descripcionModulo{
