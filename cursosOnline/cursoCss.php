@@ -74,9 +74,7 @@ if (!isset($_SESSION['logged'])) {
         </div>
     </li>
 
-                    <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $nombre; ?></a>-->
-
-    <?php
+<?php
 }
 ?>
 <?php include("../include/inc_5_nav_final.php") ?>

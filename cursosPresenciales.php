@@ -146,11 +146,12 @@ if (!isset($_SESSION['logged'])) {
             </a>
         </div>
 
-         <div class="cursos_catalogo">
-            <a title="Prestashop" href="cursosPresenciales/cursoPrestashop.php">
+         
+        <div class="cursos_catalogo">
+            <a title="La Redacción con los Blogs" href="cursosPresenciales/cursoBlogs.php">
                 <div class="caja_texto verde">
-                    <h3>Prestashop</h3>
-                    <p>Con este curso aprenderemos a instalar una tienda virtual </p>
+                    <h3>La creacion de Blogs</h3>
+                    <p> Los blogs es el “internet sin esfuerzo”.</p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
@@ -160,16 +161,17 @@ if (!isset($_SESSION['logged'])) {
                     <div class="columna_down">
                         <p>
                             <img alt="Calendario" src="img/iconos/cursosCatalogo/icono_calendario.png"/>
-                            <span class="texto_mid">Octubre 2015</span>
+                            <span class="texto_mid">Agosto 2015</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="Prestashop" src="img/cursosCatalogo/logo-prestashop360x215.jpg"/>
+                    <img alt="La Redacción con los Blogs" src="img/cursosCatalogo/blog-360x215.jpg"/>
                 </div>
             </a>
         </div>
+
 
        <div class="cursos_catalogo">
             <a title="Facebook - Guía" href="cursosPresenciales/cursoFacebook.php">
