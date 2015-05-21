@@ -17,21 +17,7 @@
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#tab1").hide();
-        $("#tab2").hide();
-        $("#tabs li:first").attr("id", "current");
-        $("#content div:first").fadeIn();
-
-        $('#tabs a').click(function (e) {
-            e.preventDefault();
-            $("#tab1").hide();
-            $("#tab2").hide();
-            $("#tabs li").attr("id", "");
-            $(this).parent().attr("id", "current");
-            $('#' + $(this).attr('title')).fadeIn();
-        });
-    })();
+    
 </script>
 
 <?php include("include/inc_2_head_final.php") ?> 

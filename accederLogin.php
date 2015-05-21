@@ -16,7 +16,7 @@
 <script type="text/javascript" src="js/functions.js"></script>
 
 <script>
-  window.onload = document.getElementById('formRegister').style.display = 'block';
+ // window.onload = document.getElementById('formRegister').style.display = 'block';
 </script>
 <script>
    
@@ -27,7 +27,7 @@
 if (isset($_SESSION['nosamepass'])) {
     ?>
     <script>
-        document.getElementById('formRegister').style.display = 'block';
+        //document.getElementById('formRegister').style.display = 'block';
     </script>
     <?php
 }
@@ -212,7 +212,7 @@ if (!isset($_SESSION['logged'])) {
                 <?php
                 if (isset($_GET['nosamepass'])) {
                     ?>
-                    <script>document.getElementById('formRegister').style.display = 'block';</script>
+                    <script>//document.getElementById('formRegister').style.display = 'block';</script>
                     <br>
                     <span class="alerta" style="color:red">Las contraseñas no coinciden.</span>
                     <?php

@@ -1,4 +1,4 @@
-<?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
+<?php include("../include/inc_1_head_inicio_areaprivada.php") ?>
 
 <?php
 //INICIAMOS LA SESION
@@ -266,9 +266,15 @@ if (!isset($_SESSION['logged'])) {
                 
                     ?> <!-- SI ENCUENTRA EN LA BASE DE DATOS -->
                     <div class="headerMod">
+                        <div class="titleCursoImg">
+                            <img src="../img/iconos/areaPrivada/icono_titulo_curso.png" />
+                        </div>
                         <h3><?php echo $nombreCurso; ?></h3>
+                        <div class="boton">
+                            <a href="cursoHecho.php?id=<?php echo $idCurso?> "><p>Pincha aqui cuando acabes el curso</p></a>
+                        </div>
                         <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
-                        <a href="cursoHecho.php?id=<?php echo $idCurso?> "><p>Marcar curso como hecho!</p></a>
+                        
                     </div>
 
                     <div class="bloqueIzq">
