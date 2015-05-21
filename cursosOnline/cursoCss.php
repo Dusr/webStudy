@@ -149,12 +149,12 @@ if (!isset($_SESSION['logged'])) {
                     if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
                         
-                        <h3>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h3>
+                        <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
                     
                         <?php
                     } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                         ?>
-                        <form action="../areaprivada/inscribirseHTML.php" method="POST">
+                        <form action="../areaprivada/inscribirseCurso.php" method="POST">
                             <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
                             <input class="botonIncribir" type="submit" value="Inscribirse"/>
                         </form>

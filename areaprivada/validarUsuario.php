@@ -44,33 +44,5 @@ if(mysql_num_rows($result) == 1){
     mysql_close();
 
 
-//if(isset($_GET['login'])){
-//    if(mysql_num_rows($result)==0){
-//     //En caso que el nombre de Usuario sea incorrecto enviamos un msj y redireccionamos a login.php
-//        echo 'ERROR';
-//        header("Location: ../accederLogin.php?incorrect=1");
-//     }
-//}  
-//
-//if(isset($_GET['update'])){
-//    $nombre = $_POST['nombre'];
-//    $apellidos = $_POST['apellidos'];
-//    $login = $_POST['correo'];
-//    $direccion = $_POST['direccion'];
-//    $password = $_POST['pass'];
-//    $rpassword = $_POST['rpass'];
-//    $avatar = $_POST['avatar'];
-//    
-//    if($password == $_SESSION['pass'] && $password==$rpassword){
-//        $sql = "UPDATE usuario SET login=".$login.", ".
-//                                  "password=".$password.", ".
-//                                  "nombre=".$nombre.", ".
-//                                  "apellidos=".$apellidos.", ".
-//                                  "direccion=".$direccion.", ".
-//                                  "avatar=".$a.",";
-//    }
-//    
-//    
-//} 
 
 

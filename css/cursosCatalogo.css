@@ -439,4 +439,12 @@ ol.lista_numeros li {
     -moz-box-shadow: 2px 2px 5px #999;
 }
 
+.titulo_detalleCurso h4 {
+    float: right;
+    font-size: 1em;
+    margin-top: 6px;
+    text-align: right;
+    color:darkred ;
+}
+
 

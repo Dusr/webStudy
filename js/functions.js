@@ -7,8 +7,8 @@ $(document).ready(function () {
         $(this).next().slideToggle('fast');
         $(this).next().$('dd').slideToggle('fast');
     });
-    
-    
+
+
 
     /* Rotacion de la flecha en el FAQ */
     var rotation = 0;
@@ -37,25 +37,38 @@ $(document).ready(function () {
     });
 
     /*Fin boton de registro */
-    
-    $(".menuLogin").hover(function(){
+
+    $(".menuLogin").hover(function () {
         $(".menuLogin ul li").show();
     });
 
-//});
-
-/*funcion del despleglable del Acceso-login*/
-//$(document).ready(function () {
-        $('.menuLogin').click(function (e) {
-            $(".header").find('.dropdown-menu').slideToggle("slow");
-        });
-  //  })();
 
 
+    /*funcion del despleglable del Acceso-login*/
+
+    $('.menuLogin').click(function (e) {
+        $(".header").find('.dropdown-menu').slideToggle("slow");
+    });
+
+    /*Funcion desplazamiento de descripcion del curso*/
+
+//    $(window).scroll(function ()
+//    {
+//        if ($(this).scrollTop() > 250) {
+//            $('.bloqueDcha').addClass("fixed").fadeIn();
+//            $('.contentd').addClass("margen").fadeIn();
+//        }
+//        else {
+//            $('.bloqueDcha').removeClass("fixed");
+//            $('.contentd').removeClass("margen");
+//        }
+//    });
 
 
-/* Function tabs */
-    
+
+
+    /* Function tabs */
+
 
 //$(document).ready(function () {
     $("#tab1").show();
@@ -73,18 +86,23 @@ $(document).ready(function () {
         $(this).parent().attr("id", "current");
         $('#' + $(this).attr('name')).fadeIn();
     });
-    
-    
-  /* Tabs Modulos */
+
+
+    /* Tabs Modulos */
 
     $("#tab1d").show();
     $("#tab2d").hide();
     $("#tab3d").hide();
     $("#tab4d").hide();
     $("#tab5d").hide();
-    
+    $("#tab6d").hide();
+    $("#tab7d").hide();
+    $("#tab8d").hide();
+    $("#tab9d").hide();
+    $("#tab10d").hide();
+
     $(".modulo input:first").parent().attr("id", "currentd");
-    
+
     $("#contentd div:first").fadeIn();
 
     $('.modulo input').click(function (e) {
@@ -94,12 +112,17 @@ $(document).ready(function () {
         $("#tab3d").hide();
         $("#tab4d").hide();
         $("#tab5d").hide();
-        
+        $("#tab6d").hide();
+        $("#tab7d").hide();
+        $("#tab8d").hide();
+        $("#tab9d").hide();
+        $("#tab10d").hide();
+
         $(".modulo input").parent().attr("id", "");
         $(this).parent().attr("id", "currentd");
         $('#' + $(this).attr('name')).fadeIn();
     });
-    
+
 })();
 
 
