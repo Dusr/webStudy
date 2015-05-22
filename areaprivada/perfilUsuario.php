@@ -115,7 +115,7 @@ if (!isset($_SESSION['logged'])) {
    
     
  <?php
-    if (isset($_SESSION['profesor']) == 0){
+    if ($_SESSION['profesor'] == 0){
  ?>
     <!-- Estructura del Menu secundario. -->
 
@@ -400,7 +400,7 @@ if (!isset($_SESSION['logged'])) {
                     <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                 </li>
                 <li class="">
-                    <a title="Ir al curso actual" name="tab2" href="/">Listado cursos de <?php echo $_SESSION['nombre'];?> </a>
+                    <a title="Ir al curso actual" name="tab2" href="/">Listado cursos de <?php echo $_SESSION['nombre']?></a>
                 </li>
                 <li class="">
                     <a title="Mis cursos" name="tab3" href="/">Notificaciones</a>
@@ -412,7 +412,7 @@ if (!isset($_SESSION['logged'])) {
     <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
 
     <!-- MI PERFIL -->
-    <div class="content">
+    <div class="content profesor">
         <div id="tab1" class="main inner-block">
             <form action="actualizarUsuario.php" method="POST" enctype="multipart/form-data">
                 <div id="colIzq">
@@ -479,33 +479,25 @@ if (!isset($_SESSION['logged'])) {
                 <div id="colDcha">
 
                     <div id="avatar">
-                        <?php
-                        $con = mysqli_connect('localhost', 'project', 'project', 'webstudy');
-                        $query = mysqli_query($con, "SELECT * from usuario");
-                        if ($row = mysqli_fetch_assoc($query)) {
-                            if ($row['avatar'] == NULL) { /*
-                                echo "<img src='avatares/avatar_1.png' alt='Imagen por defecto'>";
-                            } else { */
-                                echo "<img width='240' height='240' src='avatares/".$_SESSION['avatar']."' alt='Avatar'>";
-                            }
-                        }
+                        <?php /****************************************************    AVATAR   *****************************************************************************/
+                        
+                                if ($_SESSION['avatar'] != NULL) { 
+                                    ?>
+                                        <img width='240' height='240' src='avatares/<?php echo $_SESSION['avatar']?>' alt='Avatar'>
+                                    <?php
+                                }else{
+                                    ?>
+                                        <img width='240' height='240' src='avatares/avatar_1.png' alt='Avatar por defecto'>
+                                    <?php
+                                }
                         ?>
                         
                     </div>    
                     <div class="avatar">
-                        
-    <!--                   <input class="avatar" type="file" value="Cambiar avatar" name="avatar">-->
                         <p>Cambiar avatar</p>
                     </div>
-                    <form method="post" action="actualizarUsuario.php" enctype="multipart/form-data">
-                        <input class="guarda" name="avatar" type="file"/>
-                    </form>
-
-                    <!--                    <form method="post" action="actualizarUsuario.php" enctype="multipart/form-data">
-                                            <input type="file" name="avatardavid"/>
-                                            <input type="submit" name="formavatar" value="enviar avatar"/>
-                                        </form>-->
-
+                    
+                    <input class="guarda" name="avatar" type="file"/>
                 </div>
             </form>
         </div>
@@ -516,25 +508,46 @@ if (!isset($_SESSION['logged'])) {
                 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCION DEL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
 
                 <?php
-//                include("../areaprivada/openDB.php");
-                include("../cursosOnline/cargarHTML.php");
-
-
-                $tiene_curso = mysql_query("SELECT * "
-                        . "FROM alumno_has_curso "
-                        . "WHERE Alumno_idAlumno= " . $_SESSION['idAlumno'] . " and done=0", $con);
+                include('../areaprivada/openDB.php');
 
                 /* ------------------------------------------------------------------------------------------COMPROBAMOS EL CURSO ACTUAL Y QUE NO ESTÉ ACABADO--------------------------------------------- */
+                //select * from curso where idCurso in (select Curso_idCurso from alumno_has_curso where curso.idCurso = alumno_has_curso.Curso_idCurso and Alumno_idAlumno=13)
+                $tiene_curso = mysql_query("SELECT * "
+                                         . "FROM curso "
+                                         . "WHERE idCurso IN ("
+                                         . "SELECT Curso_idCurso "
+                                         . "FROM alumno_has_curso "
+                                         . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
+                                         . "AND Alumno_idAlumno=".$_SESSION['idAlumno']." "
+                                         . "AND done=0)", $con);
+                
+                $row = mysql_fetch_array($tiene_curso);
 
-
- 
-               if (mysql_num_rows($tiene_curso) == 1) {
+                if (mysql_num_rows($tiene_curso) == 1){
+                    
+                   //Almacenamos los datos del curso en variables de sesión
+                    $idCurso = $row['idCurso'];    
+                    $nombreCurso = $row['nombre'];
+                    $lenguaje = $row['lenguaje'];
+                    $duracion = $row['duracion'];
+                    $descripcion = $row['descripcion'];
+                    $_SESSION['inscribed'] = TRUE;
+                
+                    //CONSULTA MODULOS DEL CURSO
+                            $modulos = mysql_query("SELECT * "
+                                    . "FROM modulo "
+                                    . "WHERE Curso_idCurso =".$idCurso , $con); 
+                
                     ?> <!-- SI ENCUENTRA EN LA BASE DE DATOS -->
                     <div class="headerMod">
-                        
+                        <div class="titleCursoImg">
+                            <img src="../img/iconos/areaPrivada/icono_titulo_curso.png" />
+                        </div>
                         <h3><?php echo $nombreCurso; ?></h3>
+                        <div class="boton">
+                            <a href="cursoHecho.php?id=<?php echo $idCurso?> "><p>Pincha aqui cuando acabes el curso</p></a>
+                        </div>
                         <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
-                        <a href="/cursoHecho.php?id=<?php echo $idCurso?> "><p>Marcar curso como hecho!</p></a>
                         
                     </div>
 
@@ -550,7 +563,7 @@ if (!isset($_SESSION['logged'])) {
                                     <li>
                                         <div class="modulo">
                                             <div class="imagenMod">
-                                                <img src="../img/iconos/cursosCatalogo/modulos76x76.png"/>
+                                                <img src="../img/iconos/cursosCatalogo/modulos76x76_areaprivada.png"/>
                                             </div>
 
                                             <p><?php echo $rowmodulo['nombre']; ?></p>
@@ -572,28 +585,28 @@ if (!isset($_SESSION['logged'])) {
 
 
                     <div class="bloqueDcha">
-                        <div class="contentd">
+                        <div class="contentd" id="moduloScroll">
 
                             <?php
-                            //CONSULTA MODULOS DEL CURSO
                             $modulos = mysql_query("SELECT * "
                                     . "FROM modulo "
-                                    . "WHERE Curso_idCurso = 1", $con); 
+                                    . "WHERE Curso_idCurso =".$idCurso , $con);
                             
                             if (mysql_num_rows($modulos) > 0) {
                                 $controlModulo = 1;
-                                while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                while ($rowmodulo = mysql_fetch_array($modulos)) {  
+                                    echo ''
                                     ?>  
                                     <div id="tab<?php echo $controlModulo ?>d" class="descripcionModulo">
                                         <span id="tituloModulo"><?php echo $rowmodulo['nombre']; ?></span>
-
+                                                    
                                         <div id="contenedorDescripcion">
                                             <div class="modulo" style="border:none;">
                                                 <div class="imagenMod">
                                                     <img src="../img/iconos/cursosCatalogo/modulo_pdf76x76.png"/>
                                                 </div>
 
-                                                <a target="_blank" href="../pdf/HTMLBasico/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Temario para descargar</a>
+                                                <a target="_blank" href="../pdf/<?php echo $idCurso?>/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Temario para descargar</a>
                                             </div> 
 
 
@@ -602,7 +615,7 @@ if (!isset($_SESSION['logged'])) {
                                                     <img src="../img/iconos/cursosCatalogo/modulo_ejercicios76x76.png"/>
                                                 </div>
 
-                                                <a href="../pdf/HTMLBasico/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
+                                                <a href="../pdf/<?php echo $idCurso?>/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
                                             </div> 
 
                                             <div id="formularioEjercicios">
@@ -611,7 +624,7 @@ if (!isset($_SESSION['logged'])) {
                                                     <input type="text" disabled="" name="nombreModuloCorreo" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
                                                     <input type="text" disabled="" name="nombreAlumnoCorreo" required value="<?php echo $_SESSION['nombre']; ?>"/>
                                                     <input type="file" name="archivoCorreo"/>
-                                                    <input type="submit" style="float:right" value="Enviar ejercicios"/>
+                                                    <input type="submit" style="float:right" value="Enviar"/>
                                                 </form>
 
                                             </div>
@@ -632,6 +645,7 @@ if (!isset($_SESSION['logged'])) {
                 } else {
                     echo '<p> No estás inscrito en ningún curso. </p>';
                 }
+               
                 ?>
 
             </div>    

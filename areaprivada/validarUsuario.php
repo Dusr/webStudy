@@ -31,6 +31,7 @@ if(mysql_num_rows($result) == 1){
         $_SESSION['direccion'] = $row['direccion'];
         $_SESSION['avatar'] = $row['avatar'];
         $_SESSION['pass'] = $row['password'];
+        $_SESSION['profesor'] = $row['profesor'];
         $_SESSION['logged'] = TRUE;
         
         //Redireccionamos a la pagina: Perfil del usuario
