@@ -341,7 +341,7 @@ if (!isset($_SESSION['logged'])) {
                                                     <img src="../img/iconos/cursosCatalogo/modulo_ejercicios76x76.png"/>
                                                 </div>
 
-                                                <a href="../pdf/<?php echo $idCurso?>/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
+                                                <a target="_blank" href="../pdf/<?php echo $idCurso?>/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
                                             </div> 
 
                                             <div id="formularioEjercicios">
