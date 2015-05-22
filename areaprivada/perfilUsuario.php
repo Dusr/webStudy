@@ -35,7 +35,7 @@ if (isset($_GET['insert'])) {
 if (isset($_GET['erroravatar'])) {
     ?>
     <script>
-        alert('No se ha cambiado el avatar, inténtelo otra vez');
+        alert('No se a cambiado el avatar, inténtelo otra vez');
     </script>
     <?php
 } else if (isset($_GET['avatarmodified'])) {
