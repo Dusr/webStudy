@@ -3,7 +3,7 @@
 
 <meta name="description" content=''/>
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
-
+<title>Inicio | Webstudy.com</title>
 <!-- LINK hojas de CSS -->
 <!--<link href="css/homeStyle.css" rel="stylesheet">-->
 <script>
@@ -223,7 +223,7 @@
                     <h2>Proximamente en nuestro centro</h2>
                     <div class="formularioIndex">
                         <h3>Encuentra los cursos</h3>
-                        <form action="index.php" method="get" name="form_buscador">
+                        <form action="index.php#nombreCurso" method="get" name="form_buscador">
                             <label class="sr-only" for="nombreCurso">Nombre del curso</label>
                             <input type="text" id="nombreCurso" name="nombreCurso" value="Nombre del curso">
                             <div class="contenedor_Izq">
@@ -309,7 +309,17 @@
                                          
                                     ';
                                 }
-                            } else {
+                            }
+                            elseif ($busquedaSql=NULL) {
+                                 echo ' 
+                                        <tr> 
+                                          <td colspan="4">No hay resultados en la busqueda</td> 
+                                        </tr>
+                                         
+                                    ';
+                            }
+                            else 
+                            {
                                 echo ' 
                                         <tr> 
                                           <td colspan="4">No hay resultados en la busqueda</td> 

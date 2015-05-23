@@ -15,7 +15,7 @@
 		                 <p>Cursos destacados</p>
 
 		                 <ul>
-		                    <li><a title="Javasript desde cero" href="cursosPresenciales/cursoJavascript.php">Javasript desde cero</a></li>
+		                    <li><a title="Javasript desde cero" href="cursosPresenciales/cursoJavascript.php">JavaScript desde cero</a></li>
 		                    <li><a title="Curso sobre angular Js" href="cursosPresenciales/cursoAngularJS.php">Curso sobre angular Js</a></li>
 		                    <li><a title="Seminarios gratuitos" href="cursosSeminarios.php">Seminarios gratuitos</a></li>
 		                    <li><a title="Consultoría web" href="asesoramiento.php">Consultoría web </a></li>
@@ -29,8 +29,7 @@
 		                     <li><a title="Inicio" href="index.php">Inicio</a></li>
 		                    <li><a title="Nosotros" href="conocenos.php">Nosotros</a></li>
 		                    <li><a title="Contacto" href="contacto.php">Contacto</a></li>
-		                    <li><a title="Certificaciones" href="/">Certificaciones</a></li>
-		                    <li><a title="Preguntas frecuentes" href="soporteFaqs.php"> Preguntas frecuentes</a></li>
+                                    <li><a title="Preguntas frecuentes" href="soporteFaqs.php"> Preguntas frecuentes</a></li>
 		                    <li><a title="Condiciones de uso" href="/">Condiciones de uso</a></li>
 
 		                </ul>

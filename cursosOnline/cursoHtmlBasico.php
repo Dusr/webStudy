@@ -217,7 +217,9 @@ if (!isset($_SESSION['logged'])) {
                     <h4>Descripción del curso</h4>
                 </div>
                 <div class="texto_dcha">
+                    <p>
                     <?php echo $descripcion; ?>
+                    </p>
                 </div>
             </li>
             <li>

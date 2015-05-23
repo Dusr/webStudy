@@ -121,14 +121,14 @@ if (!isset($_SESSION['logged'])) {
             </div>
         </div>
     </div>	
-    <div class="main inner-block">
+    <div class="main inner-block cursosPersonalizados">
         <div class="cursos_catalogo">
             <div class="caja_texto azul">
                 <h3>Curso programación</h3>
                 <p>Necesitas aprender algo nuevo...</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['logged'])) {
                 <p>Necesitas formar a tus empleados, llamamos!!</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>
@@ -171,11 +171,11 @@ if (!isset($_SESSION['logged'])) {
         </div>
         <div class="cursos_catalogo">
             <div class="caja_texto azul">
-                <h3>Deseas asesoramiento</h3>
+                <h3>¿Estás perdido?</h3>
                 <p>Estás perdido en algún aspecto de la web...</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>
@@ -199,7 +199,7 @@ if (!isset($_SESSION['logged'])) {
                 <p>Lenguajes, técnicas, etc...</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>
@@ -223,7 +223,7 @@ if (!isset($_SESSION['logged'])) {
                 <p>Necesitas enfocar un proyecto. Te ayudamos!!</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>
@@ -247,7 +247,7 @@ if (!isset($_SESSION['logged'])) {
                 <p>Pregunta tus dudas.</p>
                 <div class="columna_up">
                     <p>
-                        <a href="contacto.php">Contacta con nosotros</a>
+                        <a href="contacto.php">Contáctanos</a>
 
                     </p>
                 </div>

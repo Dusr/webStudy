@@ -120,7 +120,7 @@ if (!isset($_SESSION['logged'])) {
             </div>
         </div>
     </div>	
-    <div class="main inner-block">
+    <div class="main inner-block cursoPresencial">
         <div class="cursos_catalogo">
             <a title="Html5" href="cursosPresenciales/cursoHtml5.php">
                 <div class="caja_texto rojo">
@@ -141,17 +141,17 @@ if (!isset($_SESSION['logged'])) {
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="HTML5" src="img/cursosCatalogo/cursoHtml360x215.jpg"/>
+                    <img alt="HTML5" src="img/cursosCatalogo/html_360x215.jpg"/>
                 </div>
             </a>
         </div>
 
          
         <div class="cursos_catalogo">
-            <a title="La Redacción con los Blogs" href="cursosPresenciales/cursoBlogs.php">
+            <a title="Bootstrap" href="cursosPresenciales/cursoBootstrap.php">
                 <div class="caja_texto verde">
-                    <h3>La creacion de Blogs</h3>
-                    <p> Los blogs es el “internet sin esfuerzo”.</p>
+                    <h3>Bootstrap 3</h3>
+                    <p>Con Bootstrap crea interfaces web.</p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
@@ -167,7 +167,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="La Redacción con los Blogs" src="img/cursosCatalogo/blog-360x215.jpg"/>
+                    <img alt="BootSttrap" src="img/cursosCatalogo/bootstrap_360x215.jpg"/>
                 </div>
             </a>
         </div>

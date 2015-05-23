@@ -2,31 +2,21 @@
 session_start();
 header("Content-Type: text/html;charset=utf-8");
 ?>
-
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
-<?php include("../cursosOnline/cargarCss.php") ?>
+<?php include("../cursosOnline/cargarJQuery.php") ?>
 
-
-
-
-<title> <?php echo $nombreCurso; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
-
+<title><?php echo $nombreCurso; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
 
 <!-- METAS de la pagina -->
 <meta name="description" content=''/>
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 
 <!-- LINK hojas de CSS -->
-
 <link href="../css/cursosCatalogo.css" rel="stylesheet">
 <link href="../css/detalleCursoStyle.css" rel="stylesheet">
-
 <!-- JAVASCRIPT -->
-<script>
-
-</script>
 
 
 <?php include("../include/inc_3_headerTemplate_subcarpeta.php") ?>
@@ -74,7 +64,7 @@ if (!isset($_SESSION['logged'])) {
         </div>
     </li>
 
-<?php
+    <?php
 }
 ?>
 <?php include("../include/inc_5_nav_final.php") ?>
@@ -87,7 +77,6 @@ if (!isset($_SESSION['logged'])) {
     <a title="Cursos presenciales" href="../cursosPresenciales.php">Cursos presenciales</a>
 </li>
 </ul>
-
 <div class="header">
     <div class="image">
         <a href="#">
@@ -95,10 +84,9 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Cursos online</h2>
-
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
-    <!-- Estructura del Menu secundario. -->
 
+    <!-- Estructura del Menu secundario. -->
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul>
@@ -117,16 +105,12 @@ if (!isset($_SESSION['logged'])) {
             </ul>
         </div>
     </div>
-    <div class="full-block fondo_gris online">
+    <div class="full-block fondo_gris presenciales">
         <div class="inner-block-alternative titulo_detalleCurso">
             <a title="Ir a Cursos Online" href="../cursosOnline.php">
                 <img alt="Volver atrás" src="../img/cursosCatalogo/flechaIzq.png">
             </a>
             <h3><?php echo $nombreCurso; ?></h3>
-
-            <!-- BOTON INSCRIBIRSE -->
-            <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
-
             <?php
             if (isset($_SESSION['logged'])) {
 
@@ -134,13 +118,13 @@ if (!isset($_SESSION['logged'])) {
                         . "FROM alumno_has_curso "
                         . "WHERE Curso_idCurso=" . $idCurso . " AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "'"
                         . "AND done=0", $con);
-                                
+
                 if (mysql_num_rows($result) == 1) { // SI YA ESTÁ INSCRITO EN ESE CURSO
                     ?>
-                        <input class="inscrito" type="submit" value="inscrito"/>
-                    <?php 
+                    <input class="inscrito" type="submit" value="inscrito"/>
+                    <?php
                 } else {
-                    
+
                     $result2 = mysql_query("SELECT * "
                             . "FROM alumno_has_curso "
                             . "WHERE Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
@@ -148,9 +132,9 @@ if (!isset($_SESSION['logged'])) {
 
                     if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
-                        
+
                         <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
-                    
+
                         <?php
                     } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                         ?>
@@ -158,32 +142,34 @@ if (!isset($_SESSION['logged'])) {
                             <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
                             <input class="botonIncribir" type="submit" value="Inscribirse"/>
                         </form>
-            <?php
-        }
-    }
-}
-?> 
-
-
+                        <?php
+                    }
+                }
+            }
+            ?>
         </div>
 
     </div>
 
-<?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
+
+    <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
     <img alt="" src="../img/imgSlider/catalogoCursos.jpg">
 
     <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
-    <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
+    <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
     <div class="contenedor top-block"> 
         <div class="info-box">
             <div class="introCursos row">
-                <p>CSS (Cascade Style Sheet) son un conjunto de instrucciones que definen la apariencia de diversos elementos de un documento HTML. El HTML posee ciertas limitaciones a la hora de aplicarle forma a un documento. Pero con las CSS somos capaces de superar esas limitaciones. 
-                    Las CSS complementan al lenguaje HTML, dándole a éste mayores posibilidades. </p>
-                <p>Las CSS complementan al lenguaje Html, dándole a éste mayores posibilidades</p>
+                <p>jQuery se está convirtiendo rápidamente en una herramienta que todo desarrollador de interfaces 
+                    web debería de conocer.</p>
+                <p>El propósito de este curso es proveer un resumen de la biblioteca, de tal forma que para cuando lo haya terminado,
+                    será capaz de realizar tareas básicas utilizando jQuery y tendrá una sólida base para continuar el aprendizaje. </p>
+               
             </div>
         </div>
     </div>	
+
     <div class="main inner-block fondoBlanco detalleCurso">
         <ul>
             <li>
@@ -193,9 +179,9 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-                            Del 1 de julio al 20 agosto
+                            <?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
-                    </p>
+                    </p><p>(Se estiman 20 días | 3 horas/día)</p>
                 </div>
             </li>
             <li>
@@ -205,9 +191,9 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-<?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                            <?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
-                    </p><p>(Se estiman 30 días | 2 horas/día)</p>
+                    </p><p>(se estiman 40 dias dedicando 3 horas diarias)</p>
                 </div>
             </li>
             <li>
@@ -217,7 +203,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p>
-                <?php echo $descripcion; ?>
+                    <?php echo $descripcion; ?>
                     </p>
                 </div>
             </li>
@@ -228,17 +214,15 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <ol class="lista_numeros">
-
-
-<?php
-if (mysql_num_rows($modulos) > 0) {
-    while ($rowmodulo = mysql_fetch_array($modulos)) {
-        ?>  
+                        <?php
+                        if (mysql_num_rows($modulos) > 0) {
+                            while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                ?>  
                                 <li>
 
                                     <strong> <?php
-                                echo $rowmodulo['nombre'];
-                                ?>
+                                        echo $rowmodulo['nombre'];
+                                        ?>
                                     </strong>
                                     <p class='paddingLeft'>
                                         <?php
@@ -246,17 +230,18 @@ if (mysql_num_rows($modulos) > 0) {
                                         ?>
                                     </p> 
                                 </li>
-                                        <?php
-                                    }//end_while
-                                } else {
-                                    //SI NO ESTA EN LA BASE DE DATOS
-                                    header("Location: ../cursosOnline.php");
-                                }
-                                ?>
+                                <?php
+                            }//end_while
+                        } else {
+                            //SI NO ESTA EN LA BASE DE DATOS
+                            header("Location: ../cursosOnline.php");
+                        }
+                        ?>
+                        
                     </ol>
                 </div>
             </li>
         </ul>
     </div>
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php"); ?>
+    <?php include("../include/inc_6_footer_template_subcarpeta.php") ?>

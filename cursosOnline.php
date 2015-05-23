@@ -219,10 +219,10 @@ if (!isset($_SESSION['logged'])) {
         </div>
 
         <div class="cursos_catalogo">
-            <a title="Seguridad en Internet" href="cursosOnline/cursoSeguridad.php">
+            <a title="Seguridad en Internet" href="cursosOnline/cursoJquery.php">
                 <div class="caja_texto verde">
-                    <h3>Seguridad en Internet</h3>
-                    <p>Programas maliciosos son creados a diario ...</p>
+                    <h3>Fundamentos de jQuery</h3>
+                    <p>jQuery la herramienta para la web. </p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>

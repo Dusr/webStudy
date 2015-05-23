@@ -9,6 +9,7 @@
         $nomCurso=$_GET['nombreCurso'];
         $modali_Curso=$_GET['modalidad'];
         $mesFecha=$_GET['mes_Select'];
+        $sinResultado="";
         /*
         if (isset($_REQUEST['nombreCurso'])) {
             $nomCurso = $_REQUEST['nombreCurso'];
@@ -22,11 +23,13 @@
         
      include '/areaprivada/openDB.php'; // conexion
      // consultas
-    if ($nomCurso!="" && $nomCurso!="Nombre del curso")
+    if ($nomCurso!="")
     {
       //echo'<p>'.$nomCurso.'</p>';
       $busquedaSql=mysql_query("select * from curso where nombre like '".mysql_real_escape_string($nomCurso)."'")or die (mysql_error());
     }
+ 
+    
 //                                     
     if ($mesFecha!="" && $mesFecha!="todos")
     {

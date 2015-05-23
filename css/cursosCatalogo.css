@@ -42,7 +42,22 @@
 	
 }
 
-.contenedor_menu_secundario .personalizado a{
+.contenedor_menu_secundario ul li.activa.personalizados{
+    background-color:#ffcc00;
+}
+
+.contenedor_menu_secundario ul li.activa.presenciales{
+    background-color:#cc9999;
+}
+
+.contenedor_menu_secundario ul li.activa.cursos_online{
+    background-color:#cc6633;
+}
+
+.contenedor_menu_secundario ul li.activa.seminarios{
+    background-color:#ff6633;
+}
+/*.contenedor_menu_secundario .personalizado a{
     color:#ffcc33;
 }
 
@@ -56,7 +71,7 @@
 
 .contenedor_menu_secundario .seminarios a{
     color:#ff6633;
-}
+}*/
 
 /*Fin menu cursos catalogo. */ 
 
@@ -68,18 +83,25 @@
 /*Comienzo bloques cursos catalogo. */
 
 .cursos_catalogo{
+    border: none;
     float: left;
     font-size: 0.8em;
     margin-bottom: 19px;
-    padding: 10px;
-    width: 50%;
+    margin-right: 10px;
+    width: 49%;
+}
+
+.cursosPersonalizados .cursos_catalogo {
+    border: 3px solid #5e6cac;
+    
 }
 
 .caja_texto{
     float:left;
     width:40%;
-    height:176px;
+    min-height:178px;
     padding: 3%;
+    position: relative;
 }
 
 .caja_texto *{
@@ -105,14 +127,17 @@
     padding-left: 5px;
 }
 
-.columna_up, .columna_down {
-    height: auto;
-    margin-top: 5px;
-    display: inline-block;
-    position: relative;
-    top:23px;
+.columna_up {
+    position: absolute;
+    bottom:70px;
+    left:30px;
+    
 }
 
+.columna_down {
+   position: absolute;
+   bottom:12px;
+}
 .columna_down span {
     vertical-align: middle;
     padding-top: 5px
@@ -123,12 +148,14 @@
 }
 
 .caja_texto .columna_up p a {
-    background: none repeat scroll 0 0 #fff;
-    padding: 2px;
-    border: 1px solid #666;
-    font-size: 1.2em;    
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #666;
+    color: #6699cc;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 7px;
     text-decoration: underline;
-    color: #3333cc;
+    text-transform: uppercase;
 }
 
 .caja_texto.verde{
@@ -144,7 +171,7 @@
 }
 
 .caja_texto.azul{
-    background-color:#3333cc;
+    background-color:#6699cc;
 }
 
 .cuadrado_blanco{
@@ -173,7 +200,7 @@ img[alt="Calendario"]{
 .texto_exclamar{
     text-align: center;
     font-weight: bold;
-    color: #ffcc33;
+    color: #fec603;
     font-size: 1.5em;
 }
 

@@ -201,12 +201,12 @@ if (!isset($_SESSION['logged'])) {
         </div>
 
         <div class="curso_destacado">
-            <a href="/cursosPresenciales/cursoCss3.php">
+            <a href="/cursosOnline/cursoCss.php">
                 <div class="imagenes_inferiores">
                     <img src="img/nuestrosCursos/nuestrosCursos_2.jpg" alt="imagen CSS"/>
                     <div class="cuadrado_azul">
                         <div class="texto">
-                            <p class="titulo_texto">Css3</p>
+                            <p class="titulo_texto">Css en la web</p>
                             <p 	class="info">Utiliza lo más nuevo en hojas de estilos</p>
                         </div>
                     </div>
@@ -220,8 +220,8 @@ if (!isset($_SESSION['logged'])) {
                     <img src="img/nuestrosCursos/nuestrosCursos_3.jpg" alt="Imagen para Marketing Online"/>
                     <div class="cuadrado_azul">
                         <div class="texto">	
-                            <p class="titulo_texto">Marketing Online</p>
-                            <p 	class="info">Aprende marketing, este es el momento</p>
+                            <p class="titulo_texto">Comercio electrónico</p>
+                            <p 	class="info">Es el momento de las compras por internet</p>
                         </div>
                     </div>
                 </div>
