@@ -7,9 +7,18 @@
     float: left;
     text-align: center;
     width: 50%;
+    text-transform: uppercase;   
+    padding: 13px 0;
+}
+
+.info-box.row #tabs li#current {
+    float: left;
+    text-align: center;
+    width: 50%;
     text-transform: uppercase;
     padding:10px;
-    background: #ccc;
+    border:2px solid #d2d27c;
+    
     padding: 13px 0;
 }
 .entradilla{
@@ -59,7 +68,6 @@
 
 .contenidoCirculoDerecha ul li:before {
     content: "- ";
-
 }
 #tab1, #tab2{
    height: auto;
@@ -68,16 +76,15 @@
 #tabs a:hover::after,
 #tabs a:focus,
 #tabs a:focus::after{
-  color:olive;
-}
-
-.pestana2{
-  outline: solid 3px #fff;
+  color:#000;
 }
 
 #current {
-  background: #e2efe6;
+  background: #a1a155;
+}
 
+#tabs li#current a {
+  color:#fff;
 }
 
 /*Caja de envio a contacto*/
