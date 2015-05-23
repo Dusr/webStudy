@@ -5,7 +5,7 @@ header("Content-Type: text/html;charset=utf-8");
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
-<?php include("../cursosOnline/cargarCursos/cargarJQuery.php") ?>
+<?php include("../cursosOnline/cargarCursos/cargarAjax.php") ?>
 
 <title><?php echo $nombreCurso; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
 
@@ -161,10 +161,13 @@ if (!isset($_SESSION['logged'])) {
     <div class="contenedor top-block"> 
         <div class="info-box">
             <div class="introCursos row">
-                <p>jQuery se está convirtiendo rápidamente en una herramienta que todo desarrollador de interfaces 
-                    web debería de conocer.</p>
-                <p>El propósito de este curso es proveer un resumen de la biblioteca, de tal forma que para cuando lo haya terminado,
-                    será capaz de realizar tareas básicas utilizando jQuery y tendrá una sólida base para continuar el aprendizaje. </p>
+                <p>AJAX, acrónimo de Asynchronous JavaScript And XML (JavaScript asíncrono y XML), es una técnica 
+                    de desarrollo web para crear aplicaciones interactivas. 
+                    Estas aplicaciones se ejecutan en el cliente, es decir, en el navegador de los usuarios mientras
+                    se mantiene la comunicación asíncrona con el servidor en segundo plano..</p>
+                <p> De esta forma es posible
+                    realizar cambios sobre las páginas sin necesidad de recargarlas, mejorando la interactividad, 
+                    velocidad y usabilidad en las aplicaciones </p>
                
             </div>
         </div>

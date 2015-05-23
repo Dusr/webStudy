@@ -6,7 +6,7 @@
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
-<?php include("../cursosOnline/cargarHTML.php") ?>
+<?php include("../cursosOnline/cargarCursos/cargarHTML.php") ?>
 
 
 

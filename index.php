@@ -11,7 +11,8 @@
 </script>
 
 
-<?php include("include/inc_2_head_final.php") ?> 
+
+<?php include("include/inc_2_head_final.php")?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
 <nav class="menu_principal">
     <div id="contenedor_menu_principal">
@@ -230,7 +231,7 @@
                                 <label for="modalidad">Modalidad</label>
                                 <select id="modalidad" name="modalidad" class="">
                                     <option value="todas"> Elige la modalidad</option>
-                                    <option value="personalizado">Personalizado</option>
+                                    <option value="personaliz">Personalizado</option>
                                     <option value="online">Online</option>
                                     <option value="presencial">Presencial</option>
                                     <option value="seminario">Seminario</option>
@@ -300,17 +301,42 @@
                                 while ($resultado = mysql_fetch_array($busquedaSql)) {
                                     echo ' 
                                         <tr> 
-                                          <td>' . $resultado['nombre'] . '</td> 
+                                          <td class="left">' . $resultado['nombre'] . '</td> 
                                           <td>' . $resultado['modalidad'] . '</td> 
                                           <td>' . $resultado['comienzoCurso'] . '</td> 
-                                          <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver el curso </a></td> 
-
-                                        </tr>
-                                         
-                                    ';
+                                        ';
+                                    if($resultado['modalidad']=='presencial')
+                                    {
+                                         echo '
+                                             <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver curso </a></td>
+                                         </tr>
+                                        ';
+                                    } 
+                                    elseif($resultado['modalidad']=='seminario')
+                                    {
+                                         echo '
+                                             <td> <a href="cursosSeminarios.php" title="cursos presenciales"> Ver curso </a></td>
+                                         </tr>
+                                        ';
+                                    } 
+                                    elseif($resultado['modalidad']=='online')
+                                    {
+                                         echo '
+                                             <td> <a href="cursosOnline.php" title="cursos presenciales"> Ver curso </a></td>
+                                         </tr>
+                                        ';
+                                    } 
+                                    else
+                                    {
+                                         echo '
+                                             <td> <a href="cursosPersonalizados.php" title="cursos presenciales"> Ver curso </a></td>
+                                         </tr>
+                                        ';
+                                    } 
+                                    
                                 }
                             }
-                            elseif ($busquedaSql=NULL) {
+                            elseif ($busquedaSql==NULL) {
                                  echo ' 
                                         <tr> 
                                           <td colspan="4">No hay resultados en la busqueda</td> 

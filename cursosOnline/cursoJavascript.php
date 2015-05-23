@@ -5,7 +5,7 @@ header("Content-Type: text/html;charset=utf-8");
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
 
 <!------------------------------------------------------------------------------------------CARGAMOS LA INFORMCIOND EL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
-<?php include("../cursosOnline/cargarJavascript.php") ?>
+<?php include("../cursosOnline/cargarCursos/cargarJavascript.php") ?>
 
 <title><?php echo $nombreCurso; ?> | Cursos Online | Nuestros cursos | Webstudy.com</title>
 

@@ -219,7 +219,7 @@ if (!isset($_SESSION['logged'])) {
         </div>
 
         <div class="cursos_catalogo">
-            <a title="Seguridad en Internet" href="cursosOnline/cursoJquery.php">
+            <a title="Fundamentos de jQuery" href="cursosOnline/cursoJquery.php">
                 <div class="caja_texto verde">
                     <h3>Fundamentos de jQuery</h3>
                     <p>jQuery la herramienta para la web. </p>
@@ -238,16 +238,16 @@ if (!isset($_SESSION['logged'])) {
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="Seguridad en Internet" src="img/cursosCatalogo/seguridad360x215.jpg">
+                    <img alt="Fundamentos de jQuery" src="img/cursosCatalogo/jQurery_360x215.jpg">
                 </div>
             </a>
         </div>
 
         <div class="cursos_catalogo">
-            <a title="Linkedin" href="cursosOnline/cursoLinkedin.php">
+            <a title="Introducción a AJAX" href="cursosOnline/cursoAjax.php">
                 <div class="caja_texto amarillo">
-                    <h3>Programacion web</h3>
-                    <p>Curso profesional de javascript y php</p>
+                    <h3>Introducción a AJAX</h3>
+                    <p>Consiste en :JavaScript asíncrono + XML</p>
                     <div class="columna_up">
                         <p>
                             <strong>Matrícula</strong>
@@ -263,32 +263,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
 
                 <div class="caja_imagen">
-                    <img alt="Linkedin" src="img/cursosCatalogo/php_360x215.jpg"/>
-                </div>
-            </a>
-        </div>
-
-        <div class="cursos_catalogo">
-            <a title="Plataforma Moodle" href="cursosOnline/cursoMoodle.php">
-                <div class="caja_texto verde">
-                    <h3>Plataforma Moodle</h3>
-                    <p>Creación de cursos virtuales basados en Internet</p>
-                    <div class="columna_up">
-                        <p>
-                            <strong class="Matrícula">Matrícula</strong>
-                            <span class="cuadrado_blanco">Abierta</span>
-                        </p>
-                    </div>
-                    <div class="columna_down">
-                        <p>
-                            <img alt="Calendario" src="img/iconos/cursosCatalogo/icono_calendario.png"/>
-                            <span class="texto_mid">Septiembre 2015</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="caja_imagen">
-                    <img alt="Plataforma Moodle" src="img/cursosCatalogo/Moodle360x215.jpg">
+                    <img alt="Introducción a AJAX" src="img/cursosCatalogo/ajax_360x215.jpg"/>
                 </div>
             </a>
         </div>
