@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    header("Content-Type: text/html;charset=utf-8");
+session_start();
+header("Content-Type: text/html;charset=utf-8");
 ?>
 
 <?php include("../include/inc_1_head_inicio_subcarpeta.php") ?>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['logged'])) {
     ?>
     <li class="menuLogin">
         <a title="Ir a la página de acceso" href="../accederLogin.php"> Acceder / Registro </a>
-         
+
     </li>
     <?php
 } else {
@@ -60,21 +60,21 @@ if (!isset($_SESSION['logged'])) {
         <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
         <div class="header">
             <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="../areaprivada/perfilUsuario.php">
-                            Ir a mi perfil
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../areaprivada/logout.php">
-                            Cerrar sesion
-                        </a>
-                    </li>
-                </ul>
+                <li>
+                    <a href="../areaprivada/perfilUsuario.php">
+                        Ir a mi perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="../areaprivada/logout.php">
+                        Cerrar sesion
+                    </a>
+                </li>
+            </ul>
         </div>
     </li>
 
-                <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $nombre; ?></a>-->
+                    <!--<a title="Ir a mi Perfil" href="#"> Bienvenido <?php echo $nombre; ?></a>-->
 
     <?php
 }
@@ -97,7 +97,7 @@ if (!isset($_SESSION['logged'])) {
         </a>
     </div>
     <h2>Cursos online</h2>
-       
+
     <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
     <!-- Estructura del Menu secundario. -->
 
@@ -127,7 +127,7 @@ if (!isset($_SESSION['logged'])) {
             <h3><?php echo $nombreCurso; ?></h3>
 
             <!-- BOTON INSCRIBIRSE -->
-             <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
+            <!--**************************************************************** SI EL ALUMNO ESTÁ INSCRITO APARECERÁ EN VERDE ***********-->
             <?php
             if (isset($_SESSION['logged'])) {
 
@@ -135,36 +135,51 @@ if (!isset($_SESSION['logged'])) {
                         . "FROM alumno_has_curso "
                         . "WHERE Curso_idCurso=" . $idCurso . " AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "'"
                         . "AND done=0", $con);
-                                
+
                 if (mysql_num_rows($result) == 1) { // SI YA ESTÁ INSCRITO EN ESE CURSO
                     ?>
-                        <input class="inscrito" type="submit" value="inscrito"/>
-                    <?php 
+                    <input class="inscrito" type="submit" value="inscrito"/>
+                    <?php
                 } else {
-                    
+
                     $result2 = mysql_query("SELECT * "
                             . "FROM alumno_has_curso "
                             . "WHERE Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
                             . "AND done=0", $con);
+                    
+                    // Para ver si ya ha terminado el curso.
+                    
+                        $result3 = mysql_query("SELECT * "
+                                . "FROM alumno_has_curso "
+                                . "WHERE Curso_idCurso=".$idCurso." AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
+                                . "AND done=1", $con);
+
 
                     if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
-                        
+
                         <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
-                    
+
                         <?php
-                    } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
-                        ?>
-                        <form action="../areaprivada/inscribirseCurso.php" method="POST">
-                            <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
-                            <input class="botonIncribir" type="submit" value="Inscribirse"/>
-                        </form>
-            <?php
-        }
-    }
-}
-?> 
-            
+                    } else if (mysql_num_rows($result3) == 1) { // SI YA HA HECHO EL CURSO
+                            ?>
+
+                            <h4>Ya has finalizado el curso!</h4>
+
+                            <?php
+                    } else {
+                            // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
+                            ?>
+                            <form action="../areaprivada/inscribirseCurso.php" method="POST">
+                                <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
+                                <input class="botonIncribir" type="submit" value="Inscribirse"/>
+                            </form>
+                            <?php
+                    }
+                }
+            }
+            ?> 
+
 
         </div>
 
@@ -218,7 +233,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p>
-                    <?php echo $descripcion; ?>
+                        <?php echo $descripcion; ?>
                     </p>
                 </div>
             </li>
@@ -237,11 +252,11 @@ if (!isset($_SESSION['logged'])) {
                                 ?>  
                                 <li>
 
-                                <strong> <?php
-                                    echo $rowmodulo['nombre'];
-                                    ?>
-                                </strong>
-                                    
+                                    <strong> <?php
+                                        echo $rowmodulo['nombre'];
+                                        ?>
+                                    </strong>
+
                                     <p class='paddingLeft'>
                                         <?php
                                         echo $rowmodulo['descripcion'];
@@ -255,31 +270,7 @@ if (!isset($_SESSION['logged'])) {
                             header("Location: ../cursosOnline.php");
                         }
                         ?>
-                        <!--                       <li>
-                       
-                                                   Características básicas. Etiquetas y atributos. Sintaxis de las etiquetas XHTML.
-                       
-                                               </li>
-                                               <li>
-                       
-                                                   Texto: Marcado básico de texto, Marcado genérico de texto, Espacios en blanco y nuevas líneas, Codificación de caracteres.
-                       
-                                               </li>
-                                               <li>
-                       
-                                                   Enlaces:Enlaces relativos y absolutos, Otros tipos de enlaces, Enlaces avanzados.
-                       
-                                               </li>
-                                               <li>
-                       
-                                                   Listas: Listas no ordenadas, Listas ordenadas, Listas de definición.
-                       
-                                               </li>
-                                               <li>
-                       
-                                                   Tablas: Tablas básicas, Tablas avanzadas.
-                       
-                                               </li>-->
+
                     </ol>
                 </div>
             </li>

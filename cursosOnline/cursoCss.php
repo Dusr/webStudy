@@ -74,7 +74,7 @@ if (!isset($_SESSION['logged'])) {
         </div>
     </li>
 
-<?php
+    <?php
 }
 ?>
 <?php include("../include/inc_5_nav_final.php") ?>
@@ -134,42 +134,57 @@ if (!isset($_SESSION['logged'])) {
                         . "FROM alumno_has_curso "
                         . "WHERE Curso_idCurso=" . $idCurso . " AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "'"
                         . "AND done=0", $con);
-                                
+
                 if (mysql_num_rows($result) == 1) { // SI YA ESTÁ INSCRITO EN ESE CURSO
                     ?>
-                        <input class="inscrito" type="submit" value="inscrito"/>
-                    <?php 
+                    <input class="inscrito" type="submit" value="inscrito"/>
+                    <?php
                 } else {
-                    
+
                     $result2 = mysql_query("SELECT * "
                             . "FROM alumno_has_curso "
                             . "WHERE Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
                             . "AND done=0", $con);
 
+                    // Para ver si ya ha terminado el curso.
+
+                    $result3 = mysql_query("SELECT * "
+                            . "FROM alumno_has_curso "
+                            . "WHERE Curso_idCurso=" . $idCurso . " AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
+                            . "AND done=1", $con);
+
+
                     if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
-                        
+
                         <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
-                    
+
                         <?php
-                    } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
+                    } else if (mysql_num_rows($result3) == 1) { // SI YA HA HECHO EL CURSO
+                        ?>
+
+                        <h4>Ya has finalizado el curso!</h4>
+
+                        <?php
+                    } else {
+                        // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                         ?>
                         <form action="../areaprivada/inscribirseCurso.php" method="POST">
                             <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
                             <input class="botonIncribir" type="submit" value="Inscribirse"/>
                         </form>
-            <?php
-        }
-    }
-}
-?> 
+                        <?php
+                    }
+                }
+            }
+            ?> 
 
 
         </div>
 
     </div>
 
-<?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
+    <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
     <img alt="" src="../img/imgSlider/catalogoCursos.jpg">
 
@@ -205,7 +220,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p><strong>
-<?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
+                            <?php echo $duracion; ?> horas de dedicación efectiva, incluyendo lecturas, estudio y ejercicios.
                         </strong>
                     </p><p>(Se estiman 30 días | 2 horas/día)</p>
                 </div>
@@ -217,7 +232,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p>
-                <?php echo $descripcion; ?>
+                        <?php echo $descripcion; ?>
                     </p>
                 </div>
             </li>
@@ -230,15 +245,15 @@ if (!isset($_SESSION['logged'])) {
                     <ol class="lista_numeros">
 
 
-<?php
-if (mysql_num_rows($modulos) > 0) {
-    while ($rowmodulo = mysql_fetch_array($modulos)) {
-        ?>  
+                        <?php
+                        if (mysql_num_rows($modulos) > 0) {
+                            while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                ?>  
                                 <li>
 
                                     <strong> <?php
-                                echo $rowmodulo['nombre'];
-                                ?>
+                                        echo $rowmodulo['nombre'];
+                                        ?>
                                     </strong>
                                     <p class='paddingLeft'>
                                         <?php
@@ -246,17 +261,17 @@ if (mysql_num_rows($modulos) > 0) {
                                         ?>
                                     </p> 
                                 </li>
-                                        <?php
-                                    }//end_while
-                                } else {
-                                    //SI NO ESTA EN LA BASE DE DATOS
-                                    header("Location: ../cursosOnline.php");
-                                }
-                                ?>
+                                <?php
+                            }//end_while
+                        } else {
+                            //SI NO ESTA EN LA BASE DE DATOS
+                            header("Location: ../cursosOnline.php");
+                        }
+                        ?>
                     </ol>
                 </div>
             </li>
         </ul>
     </div>
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php"); ?>
+    <?php include("../include/inc_6_footer_template_subcarpeta.php"); ?>

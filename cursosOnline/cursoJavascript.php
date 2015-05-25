@@ -129,6 +129,14 @@ if (!isset($_SESSION['logged'])) {
                             . "FROM alumno_has_curso "
                             . "WHERE Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
                             . "AND done=0", $con);
+                    
+                    // Para ver si ya ha terminado el curso.
+
+                    $result3 = mysql_query("SELECT * "
+                            . "FROM alumno_has_curso "
+                            . "WHERE Curso_idCurso=" . $idCurso . " AND Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
+                            . "AND done=1", $con);
+
 
                     if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
@@ -136,7 +144,14 @@ if (!isset($_SESSION['logged'])) {
                         <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
 
                         <?php
-                    } else { // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
+                    } else if (mysql_num_rows($result3) == 1) { // SI YA HA HECHO EL CURSO
+                        ?>
+
+                        <h4>Ya has finalizado el curso!</h4>
+
+                        <?php
+                    } else {
+                        // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                         ?>
                         <form action="../areaprivada/inscribirseCurso.php" method="POST">
                             <input class="hide" id="id" name="id" type="text" value="<?php echo $idCurso; ?>"/>
@@ -201,7 +216,7 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="texto_dcha">
                     <p>
-                    <?php echo $descripcion; ?>
+                        <?php echo $descripcion; ?>
                     </p>
                 </div>
             </li>
@@ -235,7 +250,7 @@ if (!isset($_SESSION['logged'])) {
                             header("Location: ../cursosOnline.php");
                         }
                         ?>
-                        
+
                     </ol>
                 </div>
             </li>
