@@ -727,3 +727,11 @@ margin-top:10px;
 .profesor #current{
     background: #cccccc;
 }
+
+.msj_no_inscrito{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 55px;
+    
+}
