@@ -735,3 +735,25 @@ margin-top:10px;
     margin-top: 55px;
     
 }
+
+.titListado{
+    text-align:left;
+    border:medium none;
+    margin-top:30px;
+    background:#66cccc none repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    float: none;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    min-height: 25px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.listado li{
+    border-bottom:solid;
+    padding: 15px;
+    font-size:15px;
+}

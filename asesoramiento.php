@@ -99,7 +99,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="info-box row">
             <ul id="tabs" >
                 <li><a href="/" title="tab1"><strong>incidencias en entorno web</strong></a></li>
-                <li class="pestana2"><a href="/" title="tab2" ><strong>consultoria y asesoramienton web</strong></a></li>
+                <li class="pestana2"><a href="/" title="tab2" ><strong>consultoria y asesoramiento web</strong></a></li>
             </ul>
         </div>
     </div>

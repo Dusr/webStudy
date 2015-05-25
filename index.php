@@ -265,10 +265,10 @@
                     <div class="asesoramientoDcha">
                         <h3>Asesoramiento web sobre...</h3>
                         <div class="bloqueIzq">
-                            <a href="asesoramiento.php" title="Asesoramiento sobre responsive Desing">
+                            <a href="asesoramiento.php" title="Asesoramiento sobre responsive Design">
                                 <img src="img/index/asesoramientoA_278x242.jpg" alt=""/>
                                 <div class="textoDown">
-                                    <p>Responsive Desing</p>
+                                    <p>Responsive Design</p>
                                 </div>
                             </a>
                         </div>

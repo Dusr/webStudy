@@ -537,30 +537,20 @@ if (!isset($_SESSION['logged'])) {
                             . "WHERE alumno_has_curso.Curso_idCurso = profesor_has_curso.Curso_idCurso "
                             . "AND done=0)", $con);
                     ?>
-                    <div class="headerMod">
-                        <div class="titleCursoImg">
-                            <img src="../img/iconos/areaPrivada/icono_titulo_curso.png" />
-                        </div>
-                        <h3><?php echo $nombreCurso; ?></h3>
-                        <div class="boton">
-                            <a href="cursoHecho.php?id=<?php echo $idCurso?> "><p>Pincha aqui cuando acabes el curso</p></a>
-                        </div>
-                        <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
-                        
-                    </div>
+                  
                     <?php
                     $row = mysql_fetch_array($tiene_alumnos);
 
                     if (mysql_num_rows($tiene_alumnos) > 0) {
                         ?>
-                        <h4>Listado de alumnos del curso <?php echo $nombreCurso ?></h4>
-                        <ul>
+                        <h4 class="titListado">Listado de alumnos del <?php echo $nombreCurso ?></h4>
+                        <ul class="listado">
                             <?php
                             for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {
                                 ?>
                                 <li>
                                     <?php
-                                    echo $row['nombre'];
+                                    echo $row['nombre'].' ';
                                     echo $row['apellidos'];
                                     ?>
                                 </li>
