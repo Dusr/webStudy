@@ -5,10 +5,8 @@ desplegableFaq = function(){
     $('#cambiarContrasena').hide();
     $('.faqs dt').click(function () {
         $(this).next().slideToggle('fast');
-        $(this).next().$('dd').slideToggle('fast');
+       // $(this).next().$('.faqs dd').slideToggle('fast');
     });
-
-
 
     /* Rotacion de la flecha en el FAQ */
     var rotation = 0;

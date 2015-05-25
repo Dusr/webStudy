@@ -92,7 +92,7 @@ if (!isset($_SESSION['logged'])) {
                 <legend>¿Qué quieres contarnos?</legend>
                 <p>Explícanos lo que necesitas</p>
                 <div class="fila_form">
-                    <label for="mensaje">Tu mensaje*:</label>
+                    <label for="mensaje">Tu mensaje:</label>
                     <textarea cols="1" rows="1" id="mensaje"> </textarea>
                     <p>Max. 500 caracteres</p>
                 </div>
@@ -103,36 +103,36 @@ if (!isset($_SESSION['logged'])) {
                 <p>Envianos tus datos para poder responderte</p>
                 <div class="fila_form">
                     <label for="nombre">Nombre*:</label>
-                    <input id="nombre"/>
+                    <input id="nombre" required/>
                 </div>
                 <div class="fila_form">
                     <label for="primerApellido">Primer apellido*:</label>
-                    <input id="primerApellido"/>
+                    <input id="primerApellido" required/>
                 </div>
                 <div class="fila_form">
-                    <label for="segundoApellido">Segundo Apellido*:</label>
+                    <label for="segundoApellido">Segundo Apellido:</label>
                     <input id="segundoApellido"/>
                 </div>
                 <div class="fila_form">
                     <label for="correo">Correo electrónico*:</label>
-                    <input id="correo"/>
+                    <input id="correo" required onblur="validarEmail(this);"/>
                 </div>
                 <div class="fila_form">
                     <label for="confirm_correo">Confirma tu correo*:</label>
                     <input id="confirm_correo"/>
                 </div>
                 <div class="fila_form">
-                    <label for="direccion">Dirección*:</label>
+                    <label for="direccion">Dirección:</label>
                     <input id="direccion"/>
                 </div>
                 <div class="fila_form">
-                    <label for="cp">Código Postal*:</label>
+                    <label for="cp">Código Postal:</label>
                     <div class="contenedorContacto">
                         <div class="columna_izq">
                             <input id="cp">
                         </div>
                         <div class="columna_drcha">
-                            <label for="poblacion">Población*:</label>
+                            <label for="poblacion">Población:</label>
                             <input id="poblacion">
                         </div>
                     </div>
@@ -141,7 +141,7 @@ if (!isset($_SESSION['logged'])) {
                     <div class="texto_legal row">
                         <p>En cumplimiento de los dispuesto en la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal, los datos de carácter personal facilitados por usted formarán parte del fichero informático de webStudy.com cuyo titular es Enjuto Mojamuto con NIF 12345678R y serán utilizados únicamente para enviarle información y publicidad sobre nuestros productos, así como para facilitar el mantenimiento de la relación contractual, el control y gestión de las compras y sus correspondientes cobros. </p>
 
-                        <input type="checkbox" class="checkboxCss" id="legal">
+                        <input type="checkbox" class="checkboxCss" id="legal" required>
                         <label class="labelCss" for="legal"> Declaro que he leido las 
                             <span class="texto_subrayado">
                                 <a href="documentosLegales/politicaPrivacidad.pdf" target="_blank" title="Condiciones legales"> condiciones legales</a>

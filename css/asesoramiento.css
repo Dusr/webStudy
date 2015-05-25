@@ -29,6 +29,7 @@
 }
 .contenedor-total #content {
     background: #fff none repeat scroll 0 0;
+    margin-bottom:40px;
 }
 .contenedorFila {
   border-bottom: 2px solid #ccc;
