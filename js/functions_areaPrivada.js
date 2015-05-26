@@ -1,3 +1,11 @@
+//Notificaciones
+$(document).ready(function(){
+    $('.notificacion').hide();
+    $(".notificaciones").click(function(){
+        $(".notificacion").slideToggle("slow");
+    });
+});
+
 /* Desplegable FAQ*/
 desplegableFaq = function(){
 
@@ -165,4 +173,7 @@ $(function(){
 
 $(window).load(function(){
    
-})
+});
+// Notificaciones -- Desplegable de Mensajes
+
+   

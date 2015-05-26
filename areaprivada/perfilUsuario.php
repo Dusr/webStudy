@@ -15,7 +15,7 @@ session_start();
 <!-- LINK hojas de CSS -->
 <link href="../css/cursosCatalogo.css" rel="stylesheet">
 <link href="../css/areaPrivada.css" rel="stylesheet">
-
+<script src="../js/functions_areaPrivada.js"></script>
 
 
 <!-- JAVASCRIPT -->
@@ -380,8 +380,34 @@ if (!isset($_SESSION['logged'])) {
         
         <!-- MIS CURSOS -->
         <div id="tab3" class="main inner-block">
-
-
+            <?php
+if(isset($_POST["enviar"])){
+$titulo = $_POST["titulo"];
+$receptor = $_POST["receptor"];
+$emisor = $_POST["emisor"];
+$mensaje = $_POST["mensaje"];
+$query = mysql_query("INSERT INTO mensajes (titulo, receptor, emisor, mensaje) VALUES ('$titulo','$receptor','$emisor','$mensaje')") or die(mysql_error());
+echo '<script>alert("El mensaje se envio exitosamente a '.$_POST["receptor"].'")</script>';
+}
+?>
+<form name="mp" method="post" action="">
+  <p>Tu Nick:<br>
+    <input type="text" name="emisor" id="emisor">
+  </p>
+  <p>Receptor:<br>
+    <input type="text" name="receptor" id="receptor">
+  </p>
+  <p>Título:<br>
+    <input type="text" name="titulo" id="titulo">
+  </p>
+  <p>Mensaje:<br>
+    <textarea name="mensaje" id="mensaje" cols="45" rows="5"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="enviar" id="enviar" value="Enviar">
+  </p>
+</form>
+            
         </div>
     </div>
     
@@ -575,9 +601,51 @@ if (!isset($_SESSION['logged'])) {
     
         <!-- MIS CURSOS -->
         <div id="tab3" class="main inner-block">
-
-
+        <div class='notificaciones'>
+              <a href='#'>Tiene un mensaje de: <?php if(isset($_GET["id"])){$sql = mysql_query("SELECT * FROM mensajes WHERE id = '$_GET[id]' and '$_POST[idAlumno]'='$_SESSION[idAlumno]'");
+              $fetch = mysql_fetch_array($sql); echo $fetch[emisor]
+              ?></a><?php } ?>
         </div>
+<div class="notificacion" name="notificacion">
+<?php
+if(isset($_GET["borrar"])){
+	mysql_query("DELETE FROM mensajes WHERE id = '$_GET[borrar]'");
+	echo "<script>alert('El mensaje número $_GET[borrar] ha sido eliminado'); document.location=('perfilUsuario.php')</script>";
+}
+?>
+<?php
+if(isset($_GET["id"])){
+        $sql = mysql_query("SELECT * FROM mensajes WHERE id = '$_GET[id]' and '$_POST[idAlumno]'='$_SESSION[idAlumno]'");
+	$fetch = mysql_fetch_array($sql);
+	echo"<table><tr><td>
+	                  De: $fetch[emisor]
+	                  </td></tr><tr><td>
+	                  Para: $fetch[receptor]
+	                  </td></tr><tr><td>
+	                  Mensaje: $fetch[mensaje]
+	                  </td></tr></table><hr><a href='perfilUsuario.php?borrar=$fetch[id]'>Eliminar</a>";	
+}else{ ?>
+<?php
+$query = mysql_query("SELECT * FROM mensajes where receptor = '$_SESSION[login]' order by id ASC ");
+if(mysql_num_rows($query)){
+                if($row = mysql_fetch_array($query)){
+                    echo "<table><tr><td>
+	                  De: $row[emisor]
+	                  </td></tr><tr><td>
+	                  Para: $row[receptor]
+	                  </td></tr><tr><td>
+                          Mensaje: $row[mensaje]
+	                  </td></tr></table>
+				
+	                  ";
+				  }
+}else{
+	echo'No hay mensajes<hr>';
+}
+?>
+<?php } ?>
+        </div>
+    </div>
     </div>
     
     

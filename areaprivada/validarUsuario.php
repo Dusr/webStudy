@@ -25,6 +25,7 @@ if(mysql_num_rows($result) == 1){
 
         //Almacenamos los datos de usuario en variables de sesión
         $_SESSION['idAlumno'] = $row['idAlumno'];
+        $_SESSION['login'] = $row['login'];
         $_SESSION['nombre'] = $row['nombre'];
         $_SESSION['apellidos'] = $row['apellidos'];
         $_SESSION['correo'] = $row['login'];
