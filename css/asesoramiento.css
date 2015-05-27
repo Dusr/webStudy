@@ -56,6 +56,7 @@
 .contenidoCirculoDerecha p {
   margin-bottom: 10px;
   font-size: 1em;
+  margin-right: 10px;
 }
 
 .contenidoCirculoDerecha > ul {
@@ -71,7 +72,15 @@
     content: "- ";
 }
 #tab1, #tab2{
-   height: auto;
+    height: auto;
+    background: #d2d27c; /* Old browsers */
+    background: -moz-linear-gradient(top, #d2d27c 0%, #d2d27c 46%, #e0e589 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2d27c), color-stop(46%,#d2d27c), color-stop(100%,#e0e589)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d27c', endColorstr='#e0e589',GradientType=0 ); /* IE6-9 */
 }
 #tabs a:hover,
 #tabs a:hover::after,
@@ -81,7 +90,7 @@
 }
 
 #current {
-  background: #a1a155;
+  background: #d2d27c;
 }
 
 #tabs li#current a {
@@ -129,4 +138,7 @@ a.boton:hover {
 .contenedorFila.row {
     background: none repeat scroll 0 0 white;
     padding-top: 15px;
+    -webkit-box-shadow: inset 3px 3px 13px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 3px 3px 13px -1px rgba(0,0,0,0.75);
+    box-shadow: inset 3px 3px 13px -1px rgba(0,0,0,0.75);
 }
