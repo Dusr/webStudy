@@ -5,11 +5,6 @@
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 <title>Inicio | Webstudy.com</title>
 <!-- LINK hojas de CSS -->
-<!--<link href="css/homeStyle.css" rel="stylesheet">-->
-<script>
-  
-</script>
-
 
 
 <?php include("include/inc_2_head_final.php")?> 
@@ -256,9 +251,59 @@
                                 </select>
                             </div>
                             <input type="submit" value="Buscar" class="texto_boton">
-                            <?php
-                            include 'include/buscador/buscadorPHP.php'; // buscador
-                            ?>
+							<?php
+
+								$DB_SERVER = 'localhost';
+
+								$DB_NAME = 'webstudy';
+
+								$DB_USER = 'project';
+
+                                                                $DB_PASS = 'project';
+								//Conexion con la base de datos
+								$con = mysql_connect($DB_SERVER, $DB_USER, $DB_PASS)or die ("NO SE CONECTO CON EXITO"); 
+								//print ("Conexion realizada"); 
+
+								//Seleccionamos la base de datos
+								mysql_select_db($DB_NAME,$con);
+
+								mysql_query("SET NAMES 'UTF8'");
+								//mysql_close ($con);
+
+							?>
+							<?php
+
+									$busquedaSql="";                                       
+									$nomCurso="";
+									$mesFecha="";
+									$modali_Curso="";
+									
+								   
+									$nomCurso=$_GET['nombreCurso'];
+									$modali_Curso=$_GET['modalidad'];
+									$mesFecha=$_GET['mes_Select'];
+									$sinResultado="";
+									
+								// consultas
+								if ($nomCurso!="")
+								{
+								  //echo'<p>'.$nomCurso.'</p>';
+								  $busquedaSql=mysql_query("select * from curso where nombre like '".mysql_real_escape_string($nomCurso)."'")or die (mysql_error());
+								}
+								if ($mesFecha!="" && $mesFecha!="todos")
+								{
+								   //echo'<p>'.$mesFecha.'</p>';
+								  $busquedaSql=mysql_query("select * from curso where comienzoCurso like '".mysql_real_escape_string($mesFecha)."'") or die (mysql_error());
+								  
+								}
+								
+								if ($modali_Curso!="" && $modali_Curso!="todas")
+								{
+								  // echo'<p>'.$modali_Curso.'</p>';
+								  $busquedaSql=mysql_query("select * from curso where modalidad like '".mysql_real_escape_string($modali_Curso)."'") or die (mysql_error());
+								  
+								}
+							?>
                         </form>
 
                     </div>
@@ -274,7 +319,7 @@
                         </div>
                         <div class="bloqueDcha">
                             <a href="asesoramiento.php" title="Asesoramiento sobre prototipado en la web">
-                                <img src="img/index/asesoramientoB_278x242.jpg" alt=""/>
+                                <img src="img/index/asesoramientob_278x242.jpg" alt=""/>
                                 <div class="textoDown">
                                     <p>Prototipado en la web</p>
                                 </div>
@@ -296,7 +341,7 @@
                                 <th>Enlace al curso</th> 
                             </tr> 
                             <?php
-                            //include 'buscadorPHP.php'; // buscador
+                          
                             if ($busquedaSql) {
                                 while ($resultado = mysql_fetch_array($busquedaSql)) {
                                     echo ' 
@@ -336,7 +381,7 @@
                                     
                                 }
                             }
-                            elseif ($busquedaSql==NULL) {
+                            elseif ($busquedaSql==0) {
                                  echo ' 
                                         <tr> 
                                           <td colspan="4">No hay resultados en la busqueda</td> 
