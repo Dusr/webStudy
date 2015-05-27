@@ -1,13 +1,13 @@
 //Notificaciones
-$(document).ready(function(){
+$(document).ready(function () {
     $('.notificacion').hide();
-    $(".notificaciones").click(function(){
+    $(".notificaciones").click(function () {
         $(".notificacion").slideToggle("slow");
     });
 });
 
 /* Desplegable FAQ*/
-desplegableFaq = function(){
+desplegableFaq = function () {
 
     $('.faqs dd').hide();
     $('#cambiarContrasena').hide();
@@ -37,46 +37,85 @@ desplegableFaq = function(){
     /* Fin rotacion */
 };
 
-    /*Fin boton de registro */
-menuLogin = function(){
+/*Fin boton de registro */
+menuLogin = function () {
     $(".menuLogin").hover(function () {
         $(".menuLogin ul li").show();
     });
 };
 
 
-    /*funcion del despleglable del Acceso-login*/
-desplegableAccesoLogin = function(){
+/*funcion del despleglable del Acceso-login*/
+desplegableAccesoLogin = function () {
     $('.menuLogin').click(function (e) {
         $(".header").find('.dropdown-menu').slideToggle("slow");
     });
 };
+
+/*desplazarScroll = function(){
+ var top = $('#moduloScroll').offset().top() parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
+ $(window).scroll(function (e) 
+ {   
+ 
+ var y = $(this).scrollTop();    
+ // whether that's below the form       
+ if (y >= top) 
+ {       
+ // if so, ad the fixed class   
+ $('#moduloScroll').addClass('fixed');  
+ } 
+ else 
+ {                   
+ // otherwise remove it           
+ $('#moduloScroll').removeClass('fixed');  
+ }          
+ });     
+ 
+ };*/
+
+$(function () {
+//detectamos el scroll de la ventana
+    $(window).on('scroll', function () {
+        //cuando el usuario hace scroll en la ventana movemos la capa flotante
+        //lo hacemos con una pequena animacion
+        //var valorY=$(".bloqueDcha").css("margin-top");
+                
+        var valorY=$(window).scrollTop();
+            $('.bloqueDcha').stop().animate({
+                //tomamos la posicion actual del scroll vertical de la ventana
+                //con scrollTop y le sumamos 80 pixeles
+                marginTop: parseInt(valorY) + 'px'
+            }, 'slow');
+        });
     
-desplazarScroll = function(){
-         var top = $('#moduloScroll').offset().top - parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
-    $(window).scroll(function (e) 
-    {   
-         
-	  var y = $(this).scrollTop();    
-	   // whether that's below the form       
-	   if (y >= top) 
-           {       
-            // if so, ad the fixed class   
-            $('#moduloScroll').addClass('fixed');  
-           } 
-           else 
-           {                   
-	   // otherwise remove it           
-	   $('#moduloScroll').removeClass('fixed');  
-           }          
-    });     
-     
-};
+});
+
+
+//$(function () {
+////detectamos el scroll de la ventana
+//    $(window).on('scroll', function () {
+//        //cuando el usuario hace scroll en la ventana movemos la capa flotante
+//        //lo hacemos con una pequena animacion
+//        //var valorY=$(".bloqueDcha").css("margin-top");
+//        if(parseInt($(".bloqueDcha").scrollTop()) < 50){
+//            $(".bloqueDcha").addClass('fixed');
+//        }        
+//        
+//        var valorY=$(window).scrollTop();
+//            $('.bloqueDcha').stop().animate({
+//                //tomamos la posicion actual del scroll vertical de la ventana
+//                //con scrollTop y le sumamos 80 pixeles
+//                marginTop: parseInt(valorY) + 'px'
+//            }, 'slow');
+//        });
+//    
+//});
+
 
 
 
 /* Function tabs */
-pestannasTabsPerfil = function(){
+pestannasTabsPerfil = function () {
     $("#tab1").show();
     $("#tab2").hide();
     $("#tab3").hide();
@@ -92,10 +131,10 @@ pestannasTabsPerfil = function(){
         $(this).parent().attr("id", "current");
         $('#' + $(this).attr('name')).fadeIn();
     });
-};   
-    
+};
 
-pestannasTabsModulos = function(){
+
+pestannasTabsModulos = function () {
     /* Tabs Modulos */
 
     $("#tab1d").show();
@@ -162,17 +201,17 @@ function validarContrasena() {
 
 }
 
-$(function(){
-   desplegableAccesoLogin();
-  
-  desplegableFaq();
-  pestannasTabsPerfil();
-  pestannasTabsModulos();
-  desplazarScroll();
+$(function () {
+    desplegableAccesoLogin();
+
+    desplegableFaq();
+    pestannasTabsPerfil();
+    pestannasTabsModulos();
+    desplazarScroll();
 });
 
-$(window).load(function(){
-   
+$(window).load(function () {
+
 });
 // Notificaciones -- Desplegable de Mensajes
 
