@@ -52,8 +52,8 @@ desplegableAccesoLogin = function () {
     });
 };
 
-/*desplazarScroll = function(){
- var top = $('#moduloScroll').offset().top() parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
+desplazarScroll = function(){
+ var top = $('#moduloScroll').offset().top - parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
  $(window).scroll(function (e) 
  {   
  
@@ -71,24 +71,25 @@ desplegableAccesoLogin = function () {
  }          
  });     
  
- };*/
-
-$(function () {
-//detectamos el scroll de la ventana
-    $(window).on('scroll', function () {
-        //cuando el usuario hace scroll en la ventana movemos la capa flotante
-        //lo hacemos con una pequena animacion
-        //var valorY=$(".bloqueDcha").css("margin-top");
-                
-        var valorY=$(window).scrollTop();
-            $('.bloqueDcha').stop().animate({
-                //tomamos la posicion actual del scroll vertical de la ventana
-                //con scrollTop y le sumamos 80 pixeles
-                marginTop: parseInt(valorY) + 'px'
-            }, 'slow');
-        });
-    
-});
+ };
+//
+//$(function () {
+////detectamos el scroll de la ventana
+//    $(window).on('scroll', function () {
+//        //cuando el usuario hace scroll en la ventana movemos la capa flotante
+//        //lo hacemos con una pequena animacion
+//        //var valorY=$(".bloqueDcha").css("margin-top");
+//                
+//        var valorY=$(window).scrollTop();
+//        
+//            $('.bloqueDcha').stop().animate({
+//                //tomamos la posicion actual del scroll vertical de la ventana
+//                //con scrollTop y le sumamos 80 pixeles
+//                marginTop: parseInt(valorY) + 'px'
+//            }, 'slow');
+//        });
+//    
+//});
 
 
 //$(function () {

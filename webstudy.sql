@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2015 a las 14:39:46
+-- Tiempo de generación: 27-05-2015 a las 17:35:08
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -37,9 +37,14 @@ CREATE TABLE IF NOT EXISTS `alumno_has_curso` (
 --
 
 INSERT INTO `alumno_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`, `done`) VALUES
-(1, 1, 0),
+(1, 1, 1),
+(1, 2, 1),
+(1, 3, 1),
+(1, 4, 0),
 (2, 1, 0),
-(3, 1, 0);
+(3, 1, 1),
+(3, 3, 1),
+(3, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -55,17 +60,47 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `modalidad` varchar(10) NOT NULL,
   `comienzoCurso` varchar(12) NOT NULL,
   `descripcion` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `curso`
 --
 
 INSERT INTO `curso` (`idCurso`, `nombre`, `lenguaje`, `duracion`, `modalidad`, `comienzoCurso`, `descripcion`) VALUES
-(1, 'Curso básico de HTML', 'HTML', '20', 'online', 'abril', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
-(2, 'Curso CSS avanzado', 'CSS', '25', 'presencial', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.'),
+(1, 'HTML básico', 'HTML', '20', 'online', 'abril', 'Curso básico de HTML donde aprenderas los conceptos básicos de este lenguaje y obtendras los conocimientos necesarios para poder desarollar tu primera web estática. <br> HTML es un lenguaje básico para la creación de páginas web. Es usado para definir la estructutra y el contenido de páginas web con texto, imagenes, tablas, enlaces...'),
+(2, 'CSS desde cero', 'CSS', '25', 'online', 'enero', 'Curso avanzado de CSS donde aprenderás a aplicar los estilos necesarios a los elementos HTML para definir su distribución, su forma, color, tamaño, posición etc.. Mediante el establecimiento de reglas CSS tanto el linea, como de forma externa e interna.'),
 (3, 'Javascript desde cero', 'Javascript', '30', 'online', 'enero', 'Descubre Javascript desde cero. En este curso de Javascript aprenderás las características del lenguaje, como la sintaxis, variables, estructuras de control, funciones, arrays, etc.'),
-(4, 'Prestashop', 'CMS', '120', 'online', 'enero', 'En este curso de Prestashop aprenderás a crear una tienda online desde cero sin conocimientos de programación. Prestashop una de las herramientas más utilizadas a nivel mundial para la creación de tiendas online ¿Tienes algo que vender? ¡Comienza a venderlo por internet hoy mismo!');
+(4, 'Prestashop', 'CMS', '120', 'online', 'enero', 'En este curso de Prestashop aprenderás a crear una tienda online desde cero sin conocimientos de programación. Prestashop una de las herramientas más utilizadas a nivel mundial para la creación de tiendas online ¿Tienes algo que vender? ¡Comienza a venderlo por internet hoy mismo!'),
+(5, 'Fundamentos de JQuery', 'Javascript', '50', 'online', 'octubre', 'Este curso de jQuery te enseñará a utilizar el framework Javascript más popular, de modo que puedas entenderlo por dentro y usarlo con facilidad para crear tus propios plugins y componentes de interfaz de usuario.'),
+(6, 'Introducción a AJAX', 'JavaScript', '42', 'online', 'Marzo', 'En este curso aprenderás a construir aplicaciones Web similares a las aplicaciones de escritorio, con la capacidad de consultar información en el servidor y mostrarla en la pagina Web, sin la necesidad de refrescar o redibujar la misma.\r\nAprenderás a construir y leer documentos XML y JSON, desarrollar su estructura, reglas, validaciones y parseo. Desarrollarás diferentes prácticas de casos reales, para luego poder aplicarlas en cualquier desarrollo Web. Utilizando jQuery y las conexiones nativas'),
+(7, 'Html 5', 'de marcado', '25', 'presencial', 'Mayo', 'Aprender HTML en forma sencilla viendo un concepto teórico, luego algunos ejercicios resueltos y por último y lo más importante desarrollar otros por usted mismo\r\n\r\nHTML es el lenguaje más básico para la creación de páginas web. Es usado para definir la estructutra y el contenido en forma de texto y complementar el texto de páginas web con imágenes, tablas y formularios. HTML se escribe en forma de «etiquetas». Este curso permite aprender los fundamentos para la creación de páginas web usand'),
+(8, 'Bootstrap 3', 'diseño', '105', 'presencial', 'noviembre', 'Existen varias formas diferentes de empezar con Bootstrap, cada una orientada a un tipo de público en función de su nivel técnico.\r\n\r\nNosotros comenzamos desde cero, de esta manera no perderás nada importante.'),
+(9, 'Curso Api de Facebook', 'redes sociales', '120', 'presencial', 'junio', 'La API está desarrollada con un extensa compatibilidad a la mayoría de los SDK actuales disponibles, PHP, JavaScript, Android e IOS SDK, ActionScript etc. También está disponible una cantidad básica de plugins para la interacción de nuestros sitios con Facebook en unos simples copy/paste!\r\n\r\nEl problema concreto que se presenta es que al ser tan extensa y al poseer tantas posibilidades a la hora de listar ventajas o a elegir “que lenguaje es el mas adecuado” se puede volver una tarea desalentado'),
+(10, 'Curso de programación orientada a objetos', 'Java', '95', 'presencial', 'Septiembre', 'Java es un lenguaje de programación orientado a objetos que se popularizó a partir del lanzamiento de su primera versión comercial de amplia difusión, la JDK 1.0 en 1996. Actualmente es uno de los lenguajes más usados para la programación en todo el mundo. '),
+(11, 'Curso de AngularJS', 'JavaScript', '90', 'presencial', 'Mayo', 'AngularJS es un framework creado por Google para desarrollar aplicaciones web de alta calidad y en tiempo récord.\r\n\r\nEn este curso aprenderás a crear tus primeras webapps con AngularJS, descubrirás su configuración, arquitectura y componentes fundamentales y al final del curso habrás creado tu primera aplicación con este potente framework.'),
+(12, 'NodeJs', 'JavaScript', '100', 'presencial', 'Septiembre', 'Todos hemos oído hablar de Node.js como tecnología que permite trabajar con Javascript del lado del servidor. Poco a poco Node se está ganando un hueco en la comunidad. Sin embargo hay muchas dudas sobre su funcionamiento. Vamos a intentar en este curso acercarnos un poco más a esta tecnología tan interesante.'),
+(13, 'Cursos Personalizados', 'todos', '', 'personaliz', 'Todos', 'No todas las empresas tienen las mismas necesidades. No necesitan los mismos cursos porque cada negocio es único y el suyo aún mas. Nuestros precios le sorprenderán.\r\n\r\nHablando claro y con resultados. Nuestro servicios son tremendamente competitivos tanto en precio como en servicio y se basan en la calidad de nuestros resultados. Conozca todas las soluciones que podemos ofertar a su negocio o para ayudarle.'),
+(14, 'Java', 'servidor', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales.'),
+(15, 'Android', 'Servidor', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales. '),
+(16, 'Css3', 'de marcado', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales.'),
+(17, 'Web Design', 'Diseño', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales. '),
+(18, 'Responsive Design', 'de marcado', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales'),
+(19, 'Comercio Electrónico', 'Web', 'indet', 'seminario', 'todos', 'Descargaté nuestros seminarios en pdf, y aprende sobre nuevas tecnológias o reclicaté. Nuestros pdf han sido creados por profesionales');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mensaje`
+--
+
+CREATE TABLE IF NOT EXISTS `mensaje` (
+`id` int(11) NOT NULL,
+  `titulo` varchar(255) DEFAULT NULL,
+  `emisor` varchar(50) DEFAULT NULL,
+  `receptor` varchar(50) DEFAULT NULL,
+  `mensaje` varchar(255) NOT NULL,
+  `archivo` blob NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -112,7 +147,16 @@ INSERT INTO `modulo` (`idModulo`, `nombre`, `descripcion`, `Curso_idCurso`, `apu
 (23, 'Módulo 6: Transporte.', 'De que manera trabaja prestashop los envios, creación de un transportista y de las tarifas de transporte.', 4, 'Modulo_6', 'Modulo_6_ejercicios'),
 (24, 'Módulo 7: Medios de pago.', 'Módulos de pago disponibles para prestashop, paypal, transferencia bancaria, contra reembolso y con cheque.', 4, 'Modulo_7', 'Modulo_7_ejercicios'),
 (25, 'Módulo 8: Gestión de pedidos.', 'Como gestionar con prestashop tus pedidos, aprenderemos tambien a configurar los módulos por defecto y sus posiciones.', 4, 'Modulo_8', 'Modulo_8_ejercicios'),
-(26, 'Módulo 9: Clientes y fidelización.', 'Aprenderemos a administrar los datos de nuestros clientes, los grupos a los que pertenecen, los carros de la compra abandonados, el servicio al cliente y los medios de contacto.', 4, 'Modulo_9', 'Modulo_9_ejercicios');
+(26, 'Módulo 9: Clientes y fidelización.', 'Aprenderemos a administrar los datos de nuestros clientes, los grupos a los que pertenecen, los carros de la compra abandonados, el servicio al cliente y los medios de contacto.', 4, 'Modulo_9', 'Modulo_9_ejercicios'),
+(27, 'Módulo 1: Introducción.', 'jQuery se está convirtiendo rápidamente en una herramienta que todo desarrollador de interfaces web ', 5, 'modulo_1', 'Modulo_1_ejercicios'),
+(28, 'Modúlo 2: Conceptos Básicos de jQuery', 'No es posible interactuar de forma segura con el contenido de una página hasta que el documento no se encuentre preparado para su manipulación.', 5, 'modulo_2', 'Modulo_2_ejercicios'),
+(29, 'Módulo 3: El núcleo de jQuery', 'Existen métodos que son parte del espacio de nombres de $ y se consideran como métodos del núcleo de jQuery.', 5, 'modulo_3', 'Modulo_3_ejercicios'),
+(30, 'Módulo 4: Eventos', 'jQuery provee métodos para asociar controladores de eventos (en inglés event handlers) a selectores. Cuando un evento ocurre, la función provista es ejecutada.', 5, 'modulo_4', 'Modulo_4_ejercicios'),
+(31, 'Módulo 1: Introducción a AJAX', 'El término AJAX es un acrónimo de Asynchronous JavaScript + XML, que se puede traducir como "JavaScript asíncrono + XML".', 6, 'modulo_1', 'Modulo_1_ejercicios'),
+(32, 'Modúlo 2: Primeros pasos con AJAX', 'La historia de AJAX está íntimamente relacionada con un objeto de programación llamado XMLHttpRequest.', 6, 'modulo_2', 'Modulo_2_ejercicios'),
+(33, 'Módulo 3: Técnicas básicas con AJAX', 'Algunas aplicaciones web disponen de varias listas desplegables encadenadas. En este tipo de listas, cuando se selecciona un elemento de la primera lista desplegable', 6, 'modulo_3', 'Modulo_3_ejercicios'),
+(34, 'Módulo 4: Técnicas avanzadas con AJAX', 'Las aplicaciones JavaScript ejecutadas en los navegadores tienen unas restricciones muy estrictas en cuanto a su seguridad.', 6, 'modulo_4', 'Modulo_4_ejercicios'),
+(35, 'Módulo 5: Frameworks y librerías ', 'Las aplicaciones web son cada vez más complejas, ya que incluyen efectos e interacciones que hasta hace poco tiempo eran exclusivas de las aplicaciones de escritorio.', 6, 'modulo_5', 'Modulo_5_ejercicios');
 
 -- --------------------------------------------------------
 
@@ -130,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `profesor_has_curso` (
 --
 
 INSERT INTO `profesor_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`) VALUES
-(9, 1);
+(9, 4);
 
 -- --------------------------------------------------------
 
@@ -147,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `direccion` varchar(50) DEFAULT NULL,
   `avatar` varchar(100) NOT NULL DEFAULT 'avatar_1.png',
   `profesor` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -155,14 +199,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`idAlumno`, `login`, `password`, `nombre`, `apellidos`, `direccion`, `avatar`, `profesor`) VALUES
 (1, 'david.a.u@hotmail.com', 'goyeneche33', 'David', 'Álvaro Uceda', 'Calle Goyeneche, 33, Bajo', '', 0),
-(2, 'xxx', 'xxx', 'xxx', 'xxx', NULL, '', 0),
+(2, 'Jaimito', 'xxx', 'Jaimito', 'Curso Curso', NULL, '', 0),
 (3, 'aaaa', 'aaaa', 'aaaa', 'aaaa', NULL, '', 0),
 (5, 'bbbb', 'bbbb', 'bbbb', 'bbbb bbbb', NULL, '', 0),
 (6, 'juanito@hotmail.com', 'juanito', 'Juanito', 'Perez Perez', 'Calle Luna, 7', '', 0),
 (7, 'prueba@hotmail.com', 'prueba', 'Juanito', 'Prueba Prueba', NULL, '', 0),
 (8, 'Juanito', 'juanito', '', '', NULL, '', 0),
 (9, 'profesor@hotmail.com', 'soyprofesor', 'Profesor1', 'Profe Profe', 'Calle del profesor, 1,', '', 1),
-(12, 'profe1@hotmail.com', 'profesor1', 'profe1', 'profe profe', NULL, 'avatar_1.png', 1);
+(12, 'profe1@hotmail.com', 'profesor1', 'profe1', 'profe profe', NULL, 'avatar_1.png', 1),
+(13, 'sss@dddd.es', '111111111', 'dessss', '', NULL, 'avatar_1.png', 0),
+(14, 'aaaaaa@aaaa.com', '123456', 'Pepe', 'Pepe', NULL, 'avatar_1.png', 0);
 
 --
 -- Índices para tablas volcadas
@@ -179,6 +225,12 @@ ALTER TABLE `alumno_has_curso`
 --
 ALTER TABLE `curso`
  ADD PRIMARY KEY (`idCurso`);
+
+--
+-- Indices de la tabla `mensaje`
+--
+ALTER TABLE `mensaje`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `modulo`
@@ -206,12 +258,17 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT de la tabla `mensaje`
+--
+ALTER TABLE `mensaje`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- Restricciones para tablas volcadas
 --
