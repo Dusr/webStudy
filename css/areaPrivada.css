@@ -475,6 +475,7 @@ h4.paddingLeft{
 .bloqueIzq{
     float:left;
     width:65%;
+    min-height: 730px;
 }
 
 .bloqueDcha{

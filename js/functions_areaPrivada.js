@@ -52,26 +52,39 @@ desplegableAccesoLogin = function () {
     });
 };
 
-desplazarScroll = function(){
- var top = $('#moduloScroll').offset().top - parseFloat($('#moduloScroll').css('marginTop').replace(/auto/,0));
- $(window).scroll(function (e) 
- {   
- 
- var y = $(this).scrollTop();    
- // whether that's below the form       
- if (y >= top) 
- {       
- // if so, ad the fixed class   
- $('#moduloScroll').addClass('fixed');  
- } 
- else 
- {                   
- // otherwise remove it           
- $('#moduloScroll').removeClass('fixed');  
- }          
- });     
- 
- };
+//$(window).scroll(function() {    
+//    posicionarScroll();
+//});
+//
+//function posicionarScroll() {
+//    var altura_del_header = $('#contenedor_header').outerHeight(true);
+//    var altura_del_menu = $('.menu_principal').outerHeight(true);
+//    var altura_del_breamcrumb = $('.breadcrumb_title').outerHeight(true);
+//    var altura_del_menu_secun = $('.menu_secundario').outerHeight(true);
+//    var altura_texto_curso= $('.headerMod').outerHeight(true);
+//    var altura_bloq_izq=$('.bloqueIzq').outerHeight(true);
+//    var altura_total=altura_del_header+altura_del_menu+ altura_del_breamcrumb + altura_del_menu_secun +altura_texto_curso;
+//    var total_bloq_izq= altura_bloq_izq;
+//   
+//
+//    if ($(window).scrollTop() <= altura_total)
+//    {
+//        $('#moduloScroll').removeClass('fixed');
+//    }    
+//    else if ($(window).scrollTop() >= altura_total && $(window).scrollTop() <= (total_bloq_izq)){
+//       
+//        $('#moduloScroll').removeClass('no_fixed').addClass('fixed');
+//        //$('.bloqueIzq').css('margin-top', 10 + 'px');
+//    }
+//    else
+//    {
+//       $('#moduloScroll').removeClass('fixed').addClass('no_fixed');
+//       //$('#moduloScroll').toggleClass('fixed no_fixed');
+//       //$('#moduloScroll').addClass('no_fixed');
+//        //$('.bloqueIzq').css('margin-top', '0');
+//    }
+//    
+// };
 //
 //$(function () {
 ////detectamos el scroll de la ventana
