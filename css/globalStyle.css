@@ -71,7 +71,7 @@ ul, ol {
 
 /*Cabecera*/
 header {
-    background: none repeat scroll 0 0 #fff;
+   /* background: none repeat scroll 0 0 #fff;*/
     display: inline-block;
     float: left;
     margin: 0 auto;
@@ -161,6 +161,10 @@ body {
     width: 100%;
 }
 
+body {
+    background: #fff url("img/background_header.png") repeat-x scroll 0 0
+}
+
 h1 {
     display: inline-block;
     font-size: 3em;
@@ -213,7 +217,7 @@ a:hover {
 }
 
 #logo {
-    background: none repeat scroll 0 0 #fff;
+    
     float: left;
     margin: 0;
     padding: 0 0 5px 0;
