@@ -186,7 +186,7 @@ if (!isset($_SESSION['logged'])) {
 
     <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-    <img alt="" src="../img/imgSlider/catalogoCursos.jpg">
+    <img alt="" src="../img/imgSlider/css_Slider.png">
 
     <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
     <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->

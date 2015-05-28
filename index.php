@@ -5,7 +5,11 @@
 <meta name="keywords" content="Keyword1,Keyword2,Keyword3,Keyword4,Keyword5"/>
 <title>Inicio | Webstudy.com</title>
 <!-- LINK hojas de CSS -->
-
+<style>
+    .destacado_principal.slider > .destacado {
+    display: none;
+}
+</style>
 
 <?php include("include/inc_2_head_final.php")?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
@@ -66,12 +70,53 @@
             ?>
 
             <?php include("include/inc_5_nav_final.php") ?>
-            <?php include("include/inc_opcional_slider_Inicio.php") ?>
+        <div class="destacado_principal slider" aria-valuemax="3" aria-valuenow="1" aria-valuemin="1" role="slider">
 
-            <!-- Imagen del slider -->
-            <img alt="" src="img/imgSlider/slider_home.jpg"/>
+   		<div class="destacado">
+<!--        		<div class="imagen">
 
-            <?php include("include/inc_opcional_slider_Final.php") ?>
+             Imagen del slider 
+                        <img alt="" src="img/imgSlider/slider_home.jpg"/>
+
+                        </div>-->
+                </div>
+            
+            <!--SLIDER-->
+             <div class="slider_botones">
+                <a href="javascript:void(0);" class="pause">Presentación en marcha, pulsar para pausar</a>
+                <a href="javascript:void(0);" class="play">Presentación en pausa, pulsar para reanudar</a>
+                <ul>
+                    <li><a href="javascript:void(0);" class="slider_nav sn1"><span>Ir a la diapositiva 1</span></a></li>
+                    <li><a href="javascript:void(0);" class="slider_nav sn2"><span>Ir a la diapositiva 2</span></a></li>
+                    <li><a href="javascript:void(0);" class="slider_nav sn3"><span>Ir a la diapositiva 3</span></a></li>
+                </ul>
+            </div>
+            <ul>
+                <li class="slide1">
+                    <div class="destacado">
+                        <div class="imagen">
+                            <img alt="" src="img/imgSlider/slider_home_1.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="slide2">
+                    <div class="destacado">
+                        <div class="imagen">
+                            <img alt="" src="img/imgSlider/slider_home_2.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="slide3">
+                    <div class="destacado">
+                        <div class="imagen">
+                            <img alt="" src="img/imgSlider/slider_home_3.png">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    <script type="text/javascript">initSlider();</script>
+            <!--FIN DEL SLIDER-->
+        </div>
             <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
             <div class="contenedor top-block"> 
                 <div class="info-box">

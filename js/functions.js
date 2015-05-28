@@ -94,6 +94,89 @@ desplegableAccesoLogin = function(){
     });
 };
 
+/* Slider */
+
+var timeoutSlider;
+var diapositivaActual = 0;
+
+function initSlider() {
+    $('.slider > ul > li').css('display', 'none');
+    $('.slider > ul > li:eq(0)').css('display', 'block').css('position','relative');
+    $('.slider .slider_botones .pause').addClass('active');
+    $('.slider .slider_botones .slider_nav.sn1').addClass('active');
+
+    $(".slider .slider_botones .slider_nav").on("click", function()
+    {
+        if (isNaN(timeoutSlider) == false)
+            clearTimeout(timeoutSlider) ;
+        botonSelected = $(this).attr('class').replace("slider_nav","").replace("active","").trim();
+        pasSlide(botonSelected);
+    });
+
+    $(".slider .slider_botones .pause").on("click", function()
+    {
+        $(".slider .slider_botones .pause").removeClass('active');
+        $(".slider .slider_botones .play").addClass('active').focus();
+        clearTimeout(timeoutSlider);
+        return false;
+    }) ;
+
+    $(".slider .slider_botones .play").on("click", function()
+    {
+        $(".slider .slider_botones .play").removeClass('active');
+        $(".slider .slider_botones .pause").addClass('active').focus();
+        setTimeout( 'pasSlide(false)' , 5000);
+        return false;
+    }) ;
+
+    if (timeoutSlider == undefined && $('.slider .slider_botones .pause').hasClass('active')) {
+        timeoutSlider = setTimeout( 'pasSlide(false)' , 5000) ;
+    }
+}
+
+
+
+
+function pasSlide(slideNumber) {
+
+    if (isNaN(timeoutSlider) == false)
+        clearTimeout(timeoutSlider) ;
+
+    if (slideNumber == false)
+    {
+        var numeroDiapositivas = $(".slider > ul > li").length ;
+        var diapositivaSiguiente = diapositivaActual + 1 ;
+
+        if (diapositivaSiguiente == numeroDiapositivas)
+            diapositivaSiguiente = 0 ;
+    }
+    else
+    {
+        diapositivaSiguiente = parseInt( slideNumber.replace("sn","") ) - 1 ;
+    }
+
+    $(".slider > ul > li").eq(diapositivaActual).fadeOut(400, function(){
+        $(".slider > ul > li").css('position','absolute');
+        $(".slider > ul > li").eq(diapositivaActual).css('position','relative');
+    }) ;
+    $(".slider > ul > li").eq(diapositivaSiguiente).fadeIn(400, function(){
+
+    }) ;
+
+    if ( $(".slider .slider_botones .pause").hasClass("active") ) {
+        timeoutSlider = setTimeout( 'pasSlide(false)' , 5000) ;
+    }
+
+    $('.slider .slider_botones .slider_nav').removeClass('active');
+    $('.slider .slider_botones .slider_nav').eq(diapositivaSiguiente).addClass('active');
+
+
+    diapositivaActual = diapositivaSiguiente ;
+
+    $(".slider").attr("aria-valuenow",(diapositivaActual + 1) ) ;
+}
+
+
 $(function(){
    
    botonRegistro();
