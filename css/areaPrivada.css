@@ -192,7 +192,7 @@ input[type="checkbox"]{
 #colDcha{
     float:right;
     width:30%;
-    margin: 40px 0;
+    margin: 70px 0;
 }
 
 .inputs {
@@ -425,7 +425,11 @@ h4.paddingLeft{
 .tablaModulos li{
     list-style-type: none;
 }
-.titleCursoImg {
+
+.headerMod {
+    margin-top:15px;
+}
+.headerMod .titleCursoImg {
     float: left;
     margin: 16px 4px 0 0;
     width: 3%;
@@ -436,11 +440,11 @@ h4.paddingLeft{
     margin-bottom: 25px;
     padding-top: 15px;
     text-transform: uppercase;
-    width: 30%;
+    width: 75%;
 }
 
 .headerMod h4{
-    margin: 0 20px;
+    margin: 20px 20px;
     text-align: left;
     text-transform: none;
     width: 100%;
@@ -448,23 +452,29 @@ h4.paddingLeft{
     padding-top: 20px;
 }
 .headerMod .boton {
-    border: 3px solid #000;
+    border-radi: 3px solid #000;
     float: left;
     width: 20%;
     margin-top: 10px;
     padding: 3px;
+    height: auto;
 }
 
 .headerMod .boton a {    
     text-align: center;
     text-transform: uppercase;
     display: block;
-    color:red;
+    border-radius: 7px;
+    color: #009bdc;
+    display: inline-block;
+    height: auto;
+    padding: 5px 10px;
+    width: 100%;
 }
 .headerMod .boton a:hover {
-    background: red;
+/*    background: red;
     border:3px solid red;
-    color:#fff;
+    color:#fff;*/
     
 }
 .headerMod .boton a p {

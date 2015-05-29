@@ -386,56 +386,72 @@
                                 <th>Enlace al curso</th> 
                             </tr> 
                             <?php
-                          
+                           
                             if ($busquedaSql) {
                                 while ($resultado = mysql_fetch_array($busquedaSql)) {
-                                    echo ' 
-                                        <tr> 
-                                          <td class="left">' . $resultado['nombre'] . '</td> 
-                                          <td>' . $resultado['modalidad'] . '</td> 
-                                          <td>' . $resultado['comienzoCurso'] . '</td> 
-                                        ';
+                                  
                                     if($resultado['modalidad']=='presencial')
                                     {
                                          echo '
-                                             <td> <a href="cursosPresenciales.php" title="cursos presenciales"> Ver curso </a></td>
+                                             <tr> 
+                                                <td class="left">' . $resultado['nombre'] . '</td> 
+                                                <td>' . $resultado['modalidad'] . '</td> 
+                                                <td>' . $resultado['comienzoCurso'] . '</td> 
+                                             <td> <a href="cursosPresenciales.php" title="Cursos presenciales"> Ver curso </a></td>
                                          </tr>
                                         ';
                                     } 
                                     elseif($resultado['modalidad']=='seminario')
                                     {
                                          echo '
-                                             <td> <a href="cursosSeminarios.php" title="cursos presenciales"> Ver curso </a></td>
+                                             <tr> 
+                                                <td class="left">' . $resultado['nombre'] . '</td> 
+                                                <td>' . $resultado['modalidad'] . '</td> 
+                                                <td>' . $resultado['comienzoCurso'] . '</td>
+                                             <td> <a href="cursosSeminarios.php" title="Seminarios gratuitos"> Ver curso </a></td>
                                          </tr>
                                         ';
                                     } 
                                     elseif($resultado['modalidad']=='online')
                                     {
                                          echo '
-                                             <td> <a href="cursosOnline.php" title="cursos presenciales"> Ver curso </a></td>
+                                             <tr> 
+                                                <td class="left">' . $resultado['nombre'] . '</td> 
+                                                <td>' . $resultado['modalidad'] . '</td> 
+                                                <td>' . $resultado['comienzoCurso'] . '</td>
+                                             <td> <a href="cursosOnline.php" title="cursos Online"> Ver curso </a></td>
                                          </tr>
                                         ';
                                     } 
-                                    else
+                                    elseif($resultado['modalidad']=='personaliz')
                                     {
-                                         echo '
+                                        print($resultado);
+                                          echo '
+                                              <tr> 
+                                                <td class="left">' . $resultado['nombre'] . '</td> 
+                                                <td>' . $resultado['modalidad'] . '</td> 
+                                                <td>' . $resultado['comienzoCurso'] . '</td>
                                              <td> <a href="cursosPersonalizados.php" title="cursos presenciales"> Ver curso </a></td>
                                          </tr>
                                         ';
                                     } 
                                     
-                                }
-                            }
-                            elseif ($busquedaSql==0) {
-                                 echo ' 
+                                    elseif($resultado['modalidad']==='todas' && $resultado['nombre']==="" && $resultado['comienzoCurso']==='todos' )
+                                    {
+                                        print($resultado);
+                                         echo ' 
                                         <tr> 
                                           <td colspan="4">No hay resultados en la busqueda</td> 
                                         </tr>
                                          
                                     ';
+                                    } 
+                                    
+                                }
                             }
                             else 
                             {
+                                
                                 echo ' 
                                         <tr> 
                                           <td colspan="4">No hay resultados en la busqueda</td> 
