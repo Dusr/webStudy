@@ -129,7 +129,7 @@ if (!isset($_SESSION['logged'])) {
                         <a title="Ir al curso actual" name="tab2" href="#tab2">Curso actual</a>
                     </li>
                     <li class="">
-                        <a title="Mis cursos" name="tab3" href="#tab3">Mis cursos</a>
+                        <a title="Mis cursos" name="tab3" href="#tab3">Mis cursos finalizados</a>
                     </li>
                 </ul>
             </div>
@@ -412,11 +412,55 @@ if (!isset($_SESSION['logged'])) {
                 </div>    
             </div>
 
-            <!-- MIS CURSOS -->
+            <!-- MIS CURSOS FINALIZADOS-->
             <div id="tab3" class="main inner-block">
+                    <?php
+                    include('../areaprivada/openDB.php');
+
+                    /* ----------------COMPROBAMOS EL CURSO ACTUAL Y QUE ESTÉ ACABADO-------------------- */
+
+                    $curso_finalizado = mysql_query("SELECT * "
+                            . "FROM curso "
+                            . "WHERE idCurso IN ("
+                            . "SELECT Curso_idCurso "
+                            . "FROM alumno_has_curso "
+                            . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
+                            . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . " "
+                            . "AND done=1)", $con) or die("Error en: $busqueda: " . mysql_error());
 
 
-            </div>
+//            while ($row = mysql_fetch_array($curso_finalizado, MYSQL_ASSOC)) {
+//    print_r($row);
+//}
+
+                    if (mysql_num_rows($curso_finalizado) > 0) {
+                        ?>
+                        <ul>
+                            <?php
+                            while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
+
+                                $nombreCurso = $rowcurso['nombre'];
+                                ?>
+                                <li>
+                                    <div class="imagenCursoFinalizado">
+                                        <img src="../img/iconos/areaPrivada/diploma.png"/>
+                                    </div>
+                                    <div class="datosCursoFinalizado">
+                                        <ul>
+                                            <li>Curso finalizado:<?php echo $rowcurso['nombre']; ?></li>
+                                        </ul>
+                                    </div>
+                                </li>
+        <?php } ?>
+                        </ul>
+
+        <?php
+    } else {
+        ?>
+                        <p class="curso_sin_finalizar">Aún no has finalizado ningún curso</p>
+                    <?php } ?>
+
+                </div>
         </div>
 
 
@@ -574,7 +618,7 @@ if (!isset($_SESSION['logged'])) {
                         ?>
 
                         <?php
-                        $row = mysql_fetch_array($tiene_alumnos);
+                        
 
                         if (mysql_num_rows($tiene_alumnos) > 0) {
                             ?>
@@ -582,6 +626,7 @@ if (!isset($_SESSION['logged'])) {
                             <ul class="listado">
                                 <?php
                                 for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {
+                                $row = mysql_fetch_array($tiene_alumnos);
                                     ?>
                                     <li>
                                         <?php
