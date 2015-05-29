@@ -382,16 +382,16 @@ margin-top:10px;
 h4.paddingLeft{
     font-size: 0.9em;
 }
-.modulo *{
+.bloqueDcha .modulo *{
     float:left;
 }
 
-.modulo p{
+.bloqueDcha .modulo p{
      margin: 40px 0 0 10px;
     font-size: 1.3em;
 }
 
-.modulo{
+.bloqueDcha .modulo{
     border-bottom: 3px solid #993333;
     display: inline-block;
     margin-bottom: -2px;
@@ -399,17 +399,17 @@ h4.paddingLeft{
     width: 100%;
     opacity: 0.5;
 }
-#contenedorDescripcion .modulo{
+.bloqueDcha #contenedorDescripcion .modulo{
     opacity: 1;
 }
-.modulo input{
+.bloqueDcha .modulo input{
     float: right;
     margin-top: 45px;
     padding: 7px;
     width: 114px;
 }
 
-.modulo input.botonAcceder{
+ .bloqueDcha .modulo input.botonAcceder{
     padding: 5px;
     width: 120px;
     cursor: pointer;
@@ -447,58 +447,103 @@ h4.paddingLeft{
     margin-bottom: 25px;
     padding-top: 15px;
     text-transform: uppercase;
-    width: 75%;
+    width: 70%;
 }
 
 .headerMod h4{
-    margin: 20px 20px;
+    clear: both;
+    font-weight: normal;
+    margin: 20px;
+    padding-top: 20px;
     text-align: left;
     text-transform: none;
-    width: 100%;
-    clear: both;
-    padding-top: 20px;
+    width: 60%;
+    font-size: 1.1em;
 }
-.headerMod .boton {
-    border-radi: 3px solid #000;
+#tab2.main.inner-block #mainContainer.main.inner-block .headerMod .boton {
     float: left;
     width: 20%;
-    margin-top: 10px;
+   
     padding: 3px;
-    height: auto;
+   
 }
 
-.headerMod .boton a {    
+#tab2.main.inner-block #mainContainer.main.inner-block .headerMod .boton a {    
     text-align: center;
     text-transform: uppercase;
     display: block;
+    border: 2px solid #993333;
     border-radius: 7px;
-    color: #009bdc;
+    font-weight: bold;
     display: inline-block;
     height: auto;
     padding: 5px 10px;
     width: 100%;
 }
-.headerMod .boton a:hover {
-/*    background: red;
-    border:3px solid red;
-    color:#fff;*/
+#tab2.main.inner-block #mainContainer.main.inner-block .headerMod .boton a:hover {
+    background: #993333;
+    
+    color:#fff;
     
 }
-.headerMod .boton a p {
+#tab2.main.inner-block #mainContainer.main.inner-block .headerMod .boton a p {
+    font-size: 12px;
     font-weight: bold;
-    
+    padding: 5px;
 }
+
 .tablaModulos{
     margin-top:25px;
 }
+.bloqueIzq .info-box .tablaModulos ul.lista_modulos li .modulo {
+    opacity: 0.5;
+}
+.bloqueIzq .tablaModulos ul.lista_modulos{
+    width: 100%;
+    display: inline-block;
+    margin: 10px 0 0 0;
+}
+
+.bloqueIzq .tablaModulos ul.lista_modulos li{
+    width: 45%;
+    display: inline-block;
+    
+    border:2px solid #999;
+    border-radius: 5px;
+    margin:15px 10px;
+}
+
+#tab2.main.inner-block #mainContainer.main.inner-block .bloqueIzq .tablaModulos ul.lista_modulos li .modulo p{
+    font-size: 14px;
+    padding: 5px;
+}
+.bloqueIzq .tablaModulos ul.lista_modulos li .modulo .imagenMod img{
+    margin: 0 auto;    
+}
+.bloqueIzq  .tablaModulos ul.lista_modulos li .modulo input.botonAcceder {
+     color: #000;
+    cursor: pointer;
+    padding: 5px;
+    width: 120px;
+    margin: 10px auto;
+}
+
+.bloqueIzq  .tablaModulos ul.lista_modulos li .modulo input.botonAcceder:hover {
+    background: #993333 none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 120px;
+}
+
 
 .tablaModulos li:first-child{
-    border-top:solid 3px #993333;
+/*    border-top:solid 3px #993333;*/
 }
-.imagenMod > img{
+bloqueDcha .imagenMod > img{
     padding:15px 0;
 }
-#currentd > p {
+bloqueDcha #currentd > p {
     font-size: 1.3em;
     font-weight: bold;
     color:#000;
@@ -540,9 +585,12 @@ h4.paddingLeft{
 }
 
 #currentd{
-    background: #c1b1f7;
-    border-top:solid 2px #cccccc;
-    opacity: 1;
+  background: #ccc none repeat scroll 0 0;
+  border-top: 2px solid #cccccc;
+  display: inline-block;
+  height: 100%;
+  opacity: 1;
+  width: 100%;
 }
 
 #current{
@@ -572,15 +620,18 @@ h4.paddingLeft{
 #tab3.main.inner-block ul.curso_finalizado li .envoltura {
     border: 1px solid #993333;
     border-radius: 7px;
-    height: 100%;
-    padding: 15px;
+    min-height:180px;
+    padding: 15px 7px;
 }
 #tab3.main.inner-block ul.curso_finalizado li .datosCursoFinalizado {
     text-align: center;
-    padding: 10px 15px;
+    padding: 15px 5px;
     
 }
-
+#tab3.main.inner-block ul.curso_finalizado li .envoltura .datosCursoFinalizado p {
+    font-size: 12px;
+    padding: 0;
+}
 .imagenCursoFinalizado img {
     margin: 0 auto;
 }

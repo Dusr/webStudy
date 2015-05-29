@@ -167,7 +167,7 @@ if (!isset($_SESSION['logged'])) {
                                 <dl class="faqs">
                                     <dt class="pregunta">Cambiar contraseña
                                     <div class="flechaAbajo">
-                                        <img class="flecha" src="../img/iconos/flechaAbajo.png">
+                                        <img class="flecha" src="../img/iconos/flechaAbajo_roja.png">
                                     </div>
                                     </dt>
                                     <div id="cambiarContrasena">
@@ -271,7 +271,7 @@ if (!isset($_SESSION['logged'])) {
                             </div>
                             <h3><?php echo $nombreCurso; ?></h3>
                             <div class="boton">
-                                <a href="cursoHecho.php?id=<?php echo $idCurso ?> "><p>Pincha aqui cuando acabes el curso</p></a>
+                                <a href="cursoHecho.php?id=<?php echo $idCurso ?> ">Pincha aqui cuando acabes el curso</a>
                             </div>
                             <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
 
@@ -281,6 +281,7 @@ if (!isset($_SESSION['logged'])) {
                             <div class="info-box">
                                 <div class="tablaModulos paddingLeft"> 
                                     <span id="tituloModulo" class="letraGrande">Módulos del curso</span>
+                                    <ul class="lista_modulos">
                                     <?php
                                     if (mysql_num_rows($modulos) > 0) {
                                         $controlModulo = 1;
@@ -304,6 +305,7 @@ if (!isset($_SESSION['logged'])) {
                                         header("Location: ../cursosOnline.php");
                                     }
                                     ?>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -518,7 +520,7 @@ if (!isset($_SESSION['logged'])) {
                                 <dl class="faqs">
                                     <dt class="pregunta">Cambiar contraseña.
                                     <div class="flechaAbajo">
-                                        <img class="flecha" src="../img/iconos/flechaAbajo.png">
+                                        <img class="flecha" src="../img/iconos/flechaAbajo_roja.png">
                                     </div>
                                     </dt>
                                     <div id="cambiarContrasena">
