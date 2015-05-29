@@ -126,10 +126,10 @@ if (!isset($_SESSION['logged'])) {
                         <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                     </li>
                     <li class="">
-                        <a title="Ir al curso actual" name="tab2" href="/">Curso actual</a>
+                        <a title="Ir al curso actual" name="tab2" href="#tab2">Curso actual</a>
                     </li>
                     <li class="">
-                        <a title="Mis cursos" name="tab3" href="/">Mis cursos</a>
+                        <a title="Mis cursos" name="tab3" href="#tab3">Mis cursos</a>
                     </li>
                 </ul>
             </div>

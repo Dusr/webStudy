@@ -264,7 +264,7 @@
                     <h2>Proximamente en nuestro centro</h2>
                     <div class="formularioIndex">
                         <h3>Encuentra los cursos</h3>
-                        <form action="index.php#nombreCurso" method="get" name="form_buscador">
+                        <form action="index.php#nombreCurso" method="post" name="form_buscador">
                             <label class="sr-only" for="nombreCurso">Nombre del curso</label>
                             <input type="text" id="nombreCurso" name="nombreCurso" value="Nombre del curso">
                             <div class="contenedor_Izq">
@@ -324,9 +324,9 @@
 									$modali_Curso="";
 									
 								   
-									$nomCurso=$_GET['nombreCurso'];
-									$modali_Curso=$_GET['modalidad'];
-									$mesFecha=$_GET['mes_Select'];
+									$nomCurso=$_POST['nombreCurso'];
+									$modali_Curso=$_POST['modalidad'];
+									$mesFecha=$_POST['mes_Select'];
 									$sinResultado="";
 									
 								// consultas

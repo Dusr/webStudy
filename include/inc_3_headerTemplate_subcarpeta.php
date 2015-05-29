@@ -6,7 +6,7 @@
 			<div class="menu_desplegable"> </div>
 				<div id="logo">
 		            <h1>Webstudy.com</h1>
-		            <a title="Ir a la home" href="index.php">
+		            <a title="Ir a la home" href="../index.php">
 		                <img alt="Webstudy.com"  src="../img/logoProyecto.png"/>
 		            </a>
 	       		</div>
