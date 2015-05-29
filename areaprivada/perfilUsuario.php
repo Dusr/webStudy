@@ -165,7 +165,7 @@ if (!isset($_SESSION['logged'])) {
                                     <input type="password" id="rpass" name="newpass"/>-->
                                 </div>
                                 <dl class="faqs">
-                                    <dt class="pregunta">Cambiar contraseña.
+                                    <dt class="pregunta">Cambiar contraseña
                                     <div class="flechaAbajo">
                                         <img class="flecha" src="../img/iconos/flechaAbajo.png">
                                     </div>
@@ -221,9 +221,7 @@ if (!isset($_SESSION['logged'])) {
                             ?>
 
                         </div>    
-                        <div class="avatar">
-                            <p>Cambiar avatar</p>
-                        </div>
+                       
                          <div class="fileUpload">
                              <input class="guarda" name="avatar" type="file"/>
                         </div>
@@ -405,7 +403,7 @@ if (!isset($_SESSION['logged'])) {
                         </div>
                         <?php
                     } else {
-                        echo '<p> No estás inscrito en ningún curso. </p>';
+                        echo '<p><a href="../nuestrosCursos.php" title="No estás inscrito a ningun curso">No estás inscrito en ningún curso</a>. </p>';
                     }
                     ?>
 
@@ -435,20 +433,20 @@ if (!isset($_SESSION['logged'])) {
 
                     if (mysql_num_rows($curso_finalizado) > 0) {
                         ?>
-                        <ul>
+                        <ul class="curso_finalizado">
                             <?php
                             while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
 
                                 $nombreCurso = $rowcurso['nombre'];
                                 ?>
                                 <li>
-                                    <div class="imagenCursoFinalizado">
-                                        <img src="../img/iconos/areaPrivada/diploma.png"/>
-                                    </div>
-                                    <div class="datosCursoFinalizado">
-                                        <ul>
-                                            <li>Curso finalizado:<?php echo $rowcurso['nombre']; ?></li>
-                                        </ul>
+                                    <div class="envoltura">
+                                        <div class="imagenCursoFinalizado">
+                                            <img src="../img/iconos/areaPrivada/diploma.png"/>
+                                        </div>
+                                        <div class="datosCursoFinalizado">                                        
+                                                <p>Curso finalizado:<?php echo $rowcurso['nombre']; ?></p>                                        
+                                        </div>
                                     </div>
                                 </li>
         <?php } ?>
@@ -457,7 +455,8 @@ if (!isset($_SESSION['logged'])) {
         <?php
     } else {
         ?>
-                        <p class="curso_sin_finalizar">Aún no has finalizado ningún curso</p>
+                        
+                        <p><a href="/areaprivada/perfilUsuario.php" title="Aún no has finalizado ningún curso">Aún no has finalizado ningún curso</a>. </p>
                     <?php } ?>
 
                 </div>

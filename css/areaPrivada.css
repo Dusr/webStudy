@@ -302,7 +302,7 @@ display:block;
 }
 
 .faqs {
-border: 3px solid #993333;
+border-bottom: 3px solid #993333;
 float: left;
 margin-left: 13px;
 padding: 5px 5px 5px 15px;
@@ -325,7 +325,16 @@ margin-top:-8px;
 /*********************************/
 /*AREA PRIVADA / CURSO ACTUAL / ALUMNO*/ 
 /**********************************/
-
+#tab2.main.inner-block #mainContainer.main.inner-block p,
+#tab3.main.inner-block p {
+    width: 100%;
+    padding: 20px;
+    font-size:20px;
+    text-align: center;
+}
+#tab2.main.inner-block #mainContainer.main.inner-block p a:hover{
+    text-decoration: underline;
+}
 #tituloModulo{
 /*background: #993333 none repeat scroll 0 0;*/
 color: #000;
@@ -343,8 +352,6 @@ font-weight: bold;
 padding-left: 19px;
 padding-top: 44px;
 }
-
-
 
 #formularioEjercicios input{
 width: 250px;
@@ -545,7 +552,38 @@ h4.paddingLeft{
 #current a{
     color: #fff;
 }
+/*********************************/
+/*AREA PRIVADA / CURSOS FINALIZADOS*/ 
+/**********************************/
+#tab3.main.inner-block ul.curso_finalizado {
+   margin:30px 15px;
+    display:inline-block;
+   width: 100%;
+}
+#tab3.main.inner-block ul.curso_finalizado li {
+   float:left;
+   width: 23%;
+   text-align: center;
+   border: 2px solid #ccc;
+   border-radius: 10px;
+   padding: 5px;
+   margin: 10px 5px 10px 4px;
+}
+#tab3.main.inner-block ul.curso_finalizado li .envoltura {
+    border: 1px solid #993333;
+    border-radius: 7px;
+    height: 100%;
+    padding: 15px;
+}
+#tab3.main.inner-block ul.curso_finalizado li .datosCursoFinalizado {
+    text-align: center;
+    padding: 10px 15px;
+    
+}
 
+.imagenCursoFinalizado img {
+    margin: 0 auto;
+}
 /*********************************/
 /*AREA PRIVADA / LISTADO CURSOS / PROFESOR*/ 
 /**********************************/
