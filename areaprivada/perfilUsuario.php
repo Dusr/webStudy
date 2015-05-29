@@ -224,8 +224,9 @@ if (!isset($_SESSION['logged'])) {
                         <div class="avatar">
                             <p>Cambiar avatar</p>
                         </div>
-
-                        <input class="guarda" name="avatar" type="file"/>
+                         <div class="fileUpload">
+                             <input class="guarda" name="avatar" type="file"/>
+                        </div>
                     </div>
                 </form>
             </div>
