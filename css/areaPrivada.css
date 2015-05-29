@@ -345,93 +345,14 @@ padding: 12px 30px;
 width: 100%;
 border-bottom: 2px solid #993333;
 }
-
-.modulo > a {
-float: left;
-font-weight: bold;
-padding-left: 19px;
-padding-top: 44px;
-}
-
-#formularioEjercicios input{
-width: 250px;
-margin: 0 auto;
-margin-top:15px;
-padding:7px;
-}
-#formularioEjercicios input[type='submit']{
-margin-right: 23px;
-width: 68px;
-}
-#formularioEjercicios{
-margin-top:0px;
-}
-#formularioEjercicios p{
-text-transform: uppercase;
-text-align: center;
-}
-
 .letraGrande{
 font-size: 1.3em;
-}
-
-#contenedorDescripcion{
-margin-top:10px;
 }
 
 h4.paddingLeft{
     font-size: 0.9em;
 }
-.bloqueDcha .modulo *{
-    float:left;
-}
 
-.bloqueDcha .modulo p{
-     margin: 40px 0 0 10px;
-    font-size: 1.3em;
-}
-
-.bloqueDcha .modulo{
-    border-bottom: 3px solid #993333;
-    display: inline-block;
-    margin-bottom: -2px;
-    padding: 0 10px;
-    width: 100%;
-    opacity: 0.5;
-}
-.bloqueDcha #contenedorDescripcion .modulo{
-    opacity: 1;
-}
-.bloqueDcha .modulo input{
-    float: right;
-    margin-top: 45px;
-    padding: 7px;
-    width: 114px;
-}
-
- .bloqueDcha .modulo input.botonAcceder{
-    padding: 5px;
-    width: 120px;
-    cursor: pointer;
-}
-
-#currentd input.botonAcceder{
-    padding: 5px;
-    width: 120px;
-    cursor: pointer;
-    color:#000;
-}
-#currentd input.botonAcceder:hover{
-    padding: 5px;
-    width: 120px;
-    cursor: pointer;
-    color:#fff;
-    background: #993333;
-}
-
-.tablaModulos li{
-    list-style-type: none;
-}
 
 .headerMod {
     margin-top:15px;
@@ -492,8 +413,21 @@ h4.paddingLeft{
     padding: 5px;
 }
 
-.tablaModulos{
-    margin-top:25px;
+
+#currentd{
+  background: #ccc none repeat scroll 0 0;
+  border-top: 2px solid #cccccc;
+  display: inline-block;
+  height: 100%;
+  opacity: 1;
+  width: 100%;
+}
+
+/*Bloque izquierda*/
+.bloqueIzq{
+    float:left;
+    width:65%;
+    min-height: 730px;
 }
 .bloqueIzq .info-box .tablaModulos ul.lista_modulos li .modulo {
     opacity: 0.5;
@@ -535,31 +469,77 @@ h4.paddingLeft{
     padding: 5px;
     width: 120px;
 }
+/*Bloque derecha*/
+.bloqueDcha {
+    float: left;
+    height: auto;
+    margin-left: 20px;
+    width: 32%;
+}
+.bloqueDcha .contentd .descripcionModulo {
+    min-height: 600px;
+}
+.bloqueDcha .contentd .descripcionModulo {
+   border: 2px solid;
+   border-radius: 5px;
+   
+}
+.bloqueDcha .contentd .descripcionModulo .modulo {
+    float: left;
+    width: 50%;
+    padding: 3px 10px;
+}
+.bloqueDcha .contentd .descripcionModulo .modulo .imagenMod img{
+    margin: 0 auto;
+}
 
-
-.tablaModulos li:first-child{
-/*    border-top:solid 3px #993333;*/
+.bloqueDcha .contentd .descripcionModulo .modulo a {
+  display: inline-block;
+    text-align: center;
 }
-bloqueDcha .imagenMod > img{
-    padding:15px 0;
+.bloqueDcha #formularioEjercicios{
+    margin-top:0px;
+    clear: both;
 }
-bloqueDcha #currentd > p {
-    font-size: 1.3em;
-    font-weight: bold;
-    color:#000;
+.bloqueDcha #formularioEjercicios legend{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 2px;
+    text-decoration: underline;
 }
-.bloqueIzq{
+.bloqueDcha #formularioEjercicios label{
+    font-size: 14px;
+    padding: 0 20px;
+    text-align: left;
     float:left;
-    width:65%;
-    min-height: 730px;
+    width: 30%;
+}
+.bloqueDcha  #formularioEjercicios input{
+    width: 60%;    
+    float:left;
+}
+.bloqueDcha  #formularioEjercicios textarea{
+    width: 60%;   
+    height: 80px;
+    margin-bottom:20px;
+}
+.bloqueDcha  #formularioEjercicios .fileUpload {
+    background: rgba(0, 0, 0, 0) url("../css/img/boton_subirEjercicio.png") no-repeat scroll 0 0;
+    height: 40px;
+    margin-left: 82px;
+    overflow: hidden;
+    width: 210px;
+}
+.bloqueDcha  #formularioEjercicios input[type='submit']{
+margin-right: 23px;
+width: 68px;
 }
 
-.bloqueDcha{
-   float: right;
-   height: auto;
-   width: 34%;
+.bloqueDcha #formularioEjercicios p{
+text-transform: uppercase;
+text-align: center;
 }
-#moduloScroll {
+/*#moduloScroll {
     border-left: 3px solid #993333;
     border-right: 3px solid #993333;
     border-bottom: 3px solid #993333;
@@ -575,8 +555,7 @@ bloqueDcha #currentd > p {
    top: 40px;
    width: 26%;
 }
-//.margen{margin-top:50px}
-// DESCRIPCION MODULO
+
 
 .descripcionModulo{
     width:100%;
@@ -584,14 +563,7 @@ bloqueDcha #currentd > p {
     display: none;
 }
 
-#currentd{
-  background: #ccc none repeat scroll 0 0;
-  border-top: 2px solid #cccccc;
-  display: inline-block;
-  height: 100%;
-  opacity: 1;
-  width: 100%;
-}
+
 
 #current{
     background: #993333;
@@ -599,7 +571,7 @@ bloqueDcha #currentd > p {
 
 #current a{
     color: #fff;
-}
+}*/
 /*********************************/
 /*AREA PRIVADA / CURSOS FINALIZADOS*/ 
 /**********************************/
@@ -629,7 +601,7 @@ bloqueDcha #currentd > p {
     
 }
 #tab3.main.inner-block ul.curso_finalizado li .envoltura .datosCursoFinalizado p {
-    font-size: 12px;
+    font-size: 13px;
     padding: 0;
 }
 .imagenCursoFinalizado img {

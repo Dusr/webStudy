@@ -371,7 +371,7 @@ if (!isset($_SESSION['logged'])) {
                                                     ?>
 
                                                     <form name="mp" method="POST" action="enviarMensaje.php">
-                                                        <p>Formulario de envio</p>
+                                                        <legend>Formulario de envio</legend>
                                                         <label for="titulo">Módulo: </label>
                                                         <input type="text" disabled="" id="titulo" name="titulo" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
 
@@ -383,9 +383,13 @@ if (!isset($_SESSION['logged'])) {
                                                         <label for="mensaje">Mensaje</label>
                                                         <textarea id="mensaje" name="mensaje"></textarea>
 
-                                                        <label for="archivo">Archivo: </label>
-                                                        <input type="file" id="archivo" name="archivo"/>
-
+                                                          <label for="archivo">Archivo: </label>
+                                                        <div class="fileUpload">
+                                                          
+                                                             <input class="guarda" type="file" id="archivo" name="archivo"/>
+                                                        </div>      
+                                                               
+                                                        
                                                         <input type="submit" name="enviarArchivo" style="float:right" value="Enviar"/>
                                                     </form>
 
