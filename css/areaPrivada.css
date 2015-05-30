@@ -817,7 +817,25 @@ margin-top:10px;
 .profesor #current{
     background: #cccccc;
 }
-
+.profesor .notificaciones{
+    margin:20px 0;
+}
+.profesor .notificaciones .boton_mensaje{
+    display: inline-block;
+    width: 200px;
+    background: #5ab1b1;
+    border:2px solid #66cccc;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.profesor .notificaciones a {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:#fff;
+    
+}
 .msj_no_inscrito{
     text-align: center;
     font-weight: bold;

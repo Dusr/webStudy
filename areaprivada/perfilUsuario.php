@@ -564,7 +564,7 @@ if (!isset($_SESSION['logged'])) {
 
                         <div id="avatar">
                             <?php
-                            /*                             * **************************************************    AVATAR   **************************************************************************** */
+                            /*                             * **************************************************    AVATAR del profesor   **************************************************************************** */
 
                             if ($_SESSION['avatar'] != NULL) {
                                 ?>
@@ -578,11 +578,9 @@ if (!isset($_SESSION['logged'])) {
                             ?>
 
                         </div>    
-                        <div class="avatar">
-                            <p>Cambiar avatar</p>
+                        <div class="fileUpload">
+                             <input class="guarda" name="avatar" type="file"/>
                         </div>
-
-                        <input class="guarda" name="avatar" type="file"/>
                     </div>
                 </form>
             </div>
@@ -661,12 +659,14 @@ if (!isset($_SESSION['logged'])) {
             <!-- MIS CURSOS -->
             <div id="tab3" class="main inner-block">
                 <div class='notificaciones'>
-                    <a href='#'>Tiene un mensaje de: <?php
+                    <div class="boton_mensaje">
+                    <a href="javascript:void(0)">Tiene un mensaje de: <?php
                         if (isset($_GET["id"])) {
                             $sql = mysql_query("SELECT * FROM mensajes WHERE id = '$_GET[id]' and '$_POST[idAlumno]'='$_SESSION[idAlumno]'");
                             $fetch = mysql_fetch_array($sql);
                             echo $fetch[emisor]
-                            ?></a><?php } ?>
+                            ?></a> <?php } ?> 
+                    </div>
                 </div>
                 <div class="notificacion" name="notificacion">
                     <?php
