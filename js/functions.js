@@ -27,7 +27,8 @@ desplegableFaq = function(){
     
 };
 
-    /*Boton de registro */
+    
+/*Boton de registro */
 
 botonRegistro = function(){
     $(".texto_boton").click(function () {

@@ -6,6 +6,8 @@ $(document).ready(function () {
     });
 });
 
+    
+
 /* Desplegable FAQ*/
 desplegableFaq = function () {
 

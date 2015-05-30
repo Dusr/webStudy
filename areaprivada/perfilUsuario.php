@@ -125,9 +125,11 @@ if (!isset($_SESSION['logged'])) {
                     <li class="">
                         <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                     </li>
-                    <li class="">
+                    
+                    <li class="medio">
                         <a title="Ir al curso actual" name="tab2" href="#tab2">Curso actual</a>
                     </li>
+                    
                     <li class="">
                         <a title="Mis cursos" name="tab3" href="#tab3">Mis cursos finalizados</a>
                     </li>
@@ -271,7 +273,7 @@ if (!isset($_SESSION['logged'])) {
                             </div>
                             <h3><?php echo $nombreCurso; ?></h3>
                             <div class="boton">
-                                <a href="cursoHecho.php?id=<?php echo $idCurso ?> ">Pincha aqui cuando acabes el curso</a>
+                                <a href="cursoHecho.php?id=<?php echo $idCurso ?> ">Finalizar curso</a>
                             </div>
                             <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
 
