@@ -334,7 +334,7 @@ if (!isset($_SESSION['logged'])) {
                                                         <img src="../img/iconos/cursosCatalogo/modulo_pdf76x76.png"/>
                                                     </div>
 
-                                                    <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Temario para descargar</a>
+                                                    <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Descargar temario</a>
                                                 </div> 
 
 
@@ -439,6 +439,7 @@ if (!isset($_SESSION['logged'])) {
 
                     if (mysql_num_rows($curso_finalizado) > 0) {
                         ?>
+                <p class="titulo">Enhorabuena, has terminados estos cursos</p>
                         <ul class="curso_finalizado">
                             <?php
                             while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
@@ -477,7 +478,7 @@ if (!isset($_SESSION['logged'])) {
 
         <!-- Estructura del Menu secundario. -->
 
-        <div class="menu_secundario">
+        <div class="menu_secundario profesor">
             <div class="contenedor_menu_secundario">
                 <ul id="tabs">
                     <li class="">
@@ -524,7 +525,7 @@ if (!isset($_SESSION['logged'])) {
                                 <dl class="faqs">
                                     <dt class="pregunta">Cambiar contraseña.
                                     <div class="flechaAbajo">
-                                        <img class="flecha" src="../img/iconos/flechaAbajo_roja.png">
+                                        <img class="flecha" src="../img/iconos/flechaAbajo_azul.png">
                                     </div>
                                     </dt>
                                     <div id="cambiarContrasena">

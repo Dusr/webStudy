@@ -496,6 +496,7 @@ h4.paddingLeft{
 .bloqueDcha .contentd .descripcionModulo .modulo a {
   display: inline-block;
     text-align: center;
+     padding: 0 12px;
 }
 .bloqueDcha #formularioEjercicios{
     margin-top:0px;
@@ -531,8 +532,14 @@ h4.paddingLeft{
     width: 210px;
 }
 .bloqueDcha  #formularioEjercicios input[type='submit']{
-margin-right: 23px;
-width: 68px;
+margin: 20px;
+width: 90px;
+cursor:pointer;
+}
+.bloqueDcha  #formularioEjercicios input[type='submit']:hover{
+    background:#993333; 
+    cursor:pointer;
+    color:#fff;
 }
 
 .bloqueDcha #formularioEjercicios p{
@@ -610,7 +617,53 @@ text-align: center;
 /*********************************/
 /*AREA PRIVADA / LISTADO CURSOS / PROFESOR*/ 
 /**********************************/
+.contenedor-total .menu_secundario.profesor {
+    border-bottom: 3px solid #66cccc;
+}
+.profesor #cabAcceso, #cabRegistro {
+    border-bottom: 2px solid #66cccc;
+    padding: 6px 15px 28px;
+    width: 100%;
+}
 
+.profesor #cabAcceso p, #cabRegistro p {
+    color: #66cccc;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 6px;
+    padding-top: 4px;
+    text-transform: uppercase;
+}
+.profesor .faqs {
+    border-bottom: 3px solid #66cccc;
+    float: left;
+    font-weight: bold;
+    margin-left: 13px;
+    margin-top: 3px;
+    padding: 5px 5px 5px 15px;
+    width: 683px;
+}
+
+.profesor .boton_enviar input {
+    background: transparent;
+    border: 3px solid #66cccc;
+    color: black;
+    margin-top: 5px;
+}
+.profesor .boton_enviar input:hover {
+     background: #66cccc none repeat scroll 0 0;
+    border: 3px solid #66cccc;
+    color: #fff;
+    margin-top: 5px;
+}
+.profesor #avatar {
+    background: #66cccc none repeat scroll 0 0;
+    display: block;
+    float: right;
+    height: 240px;
+    width: 240px;
+}
 .profesor #tituloModulo{
 background: #6F4BAD none repeat scroll 0 0;
 color: white;
@@ -638,7 +691,7 @@ padding:7px;
 }
 
 .profesor #formularioEjercicios input[type='submit']{
-margin-right: 23px;
+margin: 23px;
 width: 68px;
 }
 
