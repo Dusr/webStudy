@@ -87,13 +87,19 @@ if (!isset($_SESSION['logged'])) {
     </div>
 
     <div class="main inner-block">
-        <form>
+        <?php
+    
+          
+         if (!$_POST){
+            
+    ?>
+        <form action="contacto.php" method="post">
             <fieldset>
                 <legend>¿Qué quieres contarnos?</legend>
                 <p>Explícanos lo que necesitas</p>
                 <div class="fila_form">
                     <label for="mensaje">Tu mensaje:</label>
-                    <textarea cols="1" rows="1" id="mensaje"> </textarea>
+                    <textarea cols="1" rows="1" id="mensaje" name="mensaje"> </textarea>
                     <p>Max. 500 caracteres</p>
                 </div>
             </fieldset>
@@ -103,19 +109,19 @@ if (!isset($_SESSION['logged'])) {
                 <p>Envianos tus datos para poder responderte</p>
                 <div class="fila_form">
                     <label for="nombre">Nombre*:</label>
-                    <input id="nombre" required/>
+                    <input id="nombre" name="nombre" required/>
                 </div>
                 <div class="fila_form">
                     <label for="primerApellido">Primer apellido*:</label>
-                    <input id="primerApellido" required/>
+                    <input id="primerApellido" name="primerApellido" required/>
                 </div>
                 <div class="fila_form">
                     <label for="segundoApellido">Segundo Apellido:</label>
-                    <input id="segundoApellido"/>
+                    <input id="segundoApellido" name="segundoApellido"/>
                 </div>
                 <div class="fila_form">
                     <label for="correo">Correo electrónico*:</label>
-                    <input id="correo" required onblur="validarEmail(this);"/>
+                    <input id="correo"  name="correo" required onblur="validarEmail(this);"/>
                 </div>
                 <div class="fila_form">
                     <label for="confirm_correo">Confirma tu correo*:</label>
@@ -123,17 +129,17 @@ if (!isset($_SESSION['logged'])) {
                 </div>
                 <div class="fila_form">
                     <label for="direccion">Dirección:</label>
-                    <input id="direccion"/>
+                    <input id="direccion" name="direccion"/>
                 </div>
                 <div class="fila_form">
                     <label for="cp">Código Postal:</label>
                     <div class="contenedorContacto">
                         <div class="columna_izq">
-                            <input id="cp">
+                            <input id="cp" name="cp">
                         </div>
                         <div class="columna_drcha">
                             <label for="poblacion">Población:</label>
-                            <input id="poblacion">
+                            <input id="poblacion" name="poblacion">
                         </div>
                     </div>
                 </div>
@@ -147,6 +153,7 @@ if (!isset($_SESSION['logged'])) {
                                 <a href="documentosLegales/politicaPrivacidad.pdf" target="_blank" title="Condiciones legales"> condiciones legales</a>
                             </span> y las acepto.
                         </label>
+                        <input id="correoEnviado" name="correoEnviado" type="hidden" title="Enviado desde contacto">
                         <div class="boton_enviar contacto">
                             <input type="submit" value="enviar consulta" name="enviar"/>
                         </div>
@@ -158,6 +165,33 @@ if (!isset($_SESSION['logged'])) {
 
 
         </form>
+        
+         <?php
+        }else{
+            //Estoy recibiendo el formulario, compongo el cuerpo
+            $cuerpo = "Formulario enviado\n";
+            $cuerpo .= "Nombre: " . $_POST["nombre"] . "\n";
+            $cuerpo .= "Primer apellido: " . $_POST["primerApellido"] . "\n";
+            $cuerpo .= "Segundo apellido: " . $_POST["segundoApellido"] . "\n";
+            $cuerpo .= "Email: " . $_POST["correo"] . "\n";
+            $cuerpo .= "Dirección: " . $_POST["direccion"] . "\n";
+            $cuerpo .= "C.postal: " . $_POST["cp"] . "\n";
+            $cuerpo .= "Población: " . $_POST["poblacion"] . "\n";
+            $cuerpo .= "Comentarios: " . $_POST["mensaje"] . "\n";
+
+         //mando el correo...
+            mail("crisalmaloca@hotmail.com.es",$_POST["correoEnviado"],$cuerpo);
+
+    //doy las gracias por el envio
+        echo "<div class='formulario_ok'>";
+	echo "<p>";
+	echo "Gracias por rellenar el formulario.<br>
+        Nos pondremos en contacto lo antes posible";
+        echo "</p>";
+	echo "</div>";
+	} 
+        
+    ?>
     </div>
 
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->

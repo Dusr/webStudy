@@ -2,26 +2,20 @@ p.texto_grande {
 	font-size:1em;
 	text-align: center;
 }
-
 p.texto_grande + p {
  text-align: center;
 }
-
-
-
 fieldset {
     border-style: none;
     margin-top: 40px;
     width: 100%;
 }
-
 legend {
     font-size: 1em;
     padding: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
-
 fieldset p{
 	margin-bottom: 2%;
 }
@@ -30,7 +24,6 @@ fieldset p{
     margin-top: 14px;
     width: 100%;
 }
-
 .fila_form label {
     clear: both;
     display: block;
@@ -41,13 +34,11 @@ fieldset p{
     text-transform: none;
     width: 20%;
 }
-
 .fila_form textarea {
     float: left;
     height: 20em;
     width: 60%;
 }
-
 .fila_form p {
 	clear: both;
     float: left;
@@ -56,79 +47,74 @@ fieldset p{
     width: 80%;
     text-align: right;
 }
-
 .fila_form input {
     width: 60%;
     float: left;
 }
-
 .contenedorContacto {
-	width: 60%;
-	float: left;
+    width: 60%;
+    float: left;
 }
-
 .contenedorContacto .columna_izq {
-	width: 30%;
-	float: left;
+    width: 30%;
+    float: left;
 }
-
 .contenedorContacto .columna_izq input {
-	width: 100%;
-	float: left;
+    width: 100%;
+    float: left;
 }
-
 .contenedorContacto .columna_drcha {
-	width: 70%;
-	float: left;
+    width: 70%;
+    float: left;
 }
-
 .contenedorContacto .columna_drcha label {
-	width: 40%;
-	float: left;
+    width: 40%;
+    float: left;
 }
-
 .contenedorContacto .columna_drcha input {
-	width: 60%;
-	float: left;
+    width: 60%;
+    float: left;
 }
-
 .texto_legal {
-	margin: 0 auto;
+    margin: 0 auto;
     width: 60%;
 }
-
 .fila_form .texto_legal p {
-	text-align: left;
+    text-align: left;
 }
-
 .fila_form input.checkboxCss {
-	clear: both;
-	float: left;
+    clear: both;
+    float: left;
 	width: auto;
-
 }
-
 .fila_form label.labelCss {
-	clear: none;
-	float: left;
-	width: auto;
-	margin: 0 0 0 2%;
+    clear: none;
+    float: left;
+    width: auto;
+    margin: 0 0 0 2%;
 }
-
 .fila_form .boton_enviar.contacto {
-	clear: both;
+    clear: both;
     float: left;
     margin-top: 20px;
     width: 100%;
-   
-
 }
-
 .fila_form .boton_enviar.contacto input{
-
-	 border:2px solid #cc6666 ;
+    border:2px solid #cc6666 ;
+}
+.fila_form .boton_enviar.contacto input:hover{
+    background:#cc6666 ;
+    color:#fff;
+}
+.fila_form label.labelCss > span.texto_subrayado a {
+    text-decoration: underline;
 }
 
-.fila_form label.labelCss > span.texto_subrayado a {
-	text-decoration: underline;
+.formulario_ok {
+    border: 2px solid #cc6666;
+    font-size: 1.4em;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
 }

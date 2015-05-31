@@ -183,16 +183,51 @@ function pasSlide(slideNumber) {
 
     $(".slider").attr("aria-valuenow",(diapositivaActual + 1) ) ;
 }
+/* Newsletters*/
+var htmlPopup;
+var popupAbierto;
+function cierraPopup()
+{
+    popupAbierto = $(this).attr("data-role-id") ;
+    htmlPopup = $("#" + popupAbierto + " .video").html() ;
+
+    $("#" + popupAbierto + " .video").html('') ;
+    $("#" + popupAbierto).fadeOut(500, function()
+    {
+        $("#" + popupAbierto + " .video").html(htmlPopup) ;
+        $("#" + popupAbierto + " .cerrar").on("click",cierraPopup)
+
+    }) ;
+}
+function muestraPopup()
+{
+    $("#" + $(this).attr("data-role-id") ).fadeIn(500) ;
+
+    if($(".slider_botones").length > 0 && $(".slider_botones .pause").hasClass('active')) {
+        $(".slider .slider_botones .pause").removeClass('active');
+        $(".slider .slider_botones .play").addClass('active').focus();
+        clearTimeout(timeoutSlider);
+    }
+
+}
 
 
 $(function(){
-   
+    abrirPopup();
+    resizeOverlay();
    botonRegistro();
    desplegableFaq();
    pestannasTabsAsesoramiento();
    desplegableAccesoLogin();
 });
 
-$(window).load(function(){
-   
-})
+abrirPopup = function(){
+    $(".muestraPopup").on("click",muestraPopup);
+    $(".colorbox .cerrar2").on("click",cierraPopup);
+    $(".colorbox .cerrar").on("click",cierraPopup);
+}
+
+resizeOverlay = function(){
+    hOverlay = $(document).height();
+    $(".colorbox ").css("height",hOverlay);
+}

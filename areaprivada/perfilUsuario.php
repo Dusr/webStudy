@@ -292,7 +292,7 @@ if (!isset($_SESSION['logged'])) {
                                             <li>
                                                 <div class="modulo">
                                                     <div class="imagenMod">
-                                                        <img src="../img/iconos/cursosCatalogo/modulos76x76_areaprivada.png"/>
+                                                        <img src="../img/iconos/areaPrivada/icono_modulo.png"/>
                                                     </div>
 
                                                     <p><?php echo $rowmodulo['nombre']; ?></p>
@@ -333,7 +333,7 @@ if (!isset($_SESSION['logged'])) {
                                             <div id="contenedorDescripcion">
                                                 <div class="modulo" style="border:none;">
                                                     <div class="imagenMod">
-                                                        <img src="../img/iconos/cursosCatalogo/modulo_pdf76x76.png"/>
+                                                        <img src="../img/iconos/areaPrivada/descargaPdf.png"/>
                                                     </div>
 
                                                     <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Descargar temario</a>
@@ -342,7 +342,7 @@ if (!isset($_SESSION['logged'])) {
 
                                                 <div class="modulo" style="border:none;">
                                                     <div class="imagenMod">
-                                                        <img src="../img/iconos/cursosCatalogo/modulo_ejercicios76x76.png"/>
+                                                        <img src="../img/iconos/areaPrivada/descargaEjercicios.png"/>
                                                     </div>
 
                                                     <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>

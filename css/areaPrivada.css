@@ -1,8 +1,6 @@
 /*********************************/
 /*LOGIN para que no me de problemas el area privada*/
 /**********************************/
-
-
 #imgPrincipal{
     float:left;
     width:66%;	
@@ -45,25 +43,29 @@
     width:32%;
     margin-left: 14px;
 }
-
-#cabAcceso, #cabRegistro{
-/*    background: none repeat scroll 0 0 #993333;*/
+#tab1.main.inner-block #colIzq #cabRegistro{
     padding: 6px 15px 28px;
     width: 100%;
-    border-bottom: 2px solid #993333; 
+    border-bottom: 2px solid #6699cc; 
+}
+#cabAcceso, #cabRegistro{
+/*    background: none repeat scroll 0 0 #993333;*/
+/*    padding: 6px 15px 28px;
+    width: 100%;
+    border-bottom: 2px solid #993333; */
 }	
 
 #cabAcceso img{
     float:left;	
 }
 
-#cabAcceso p, #cabRegistro p{
+ #tab1.main.inner-block #colIzq #cabRegistro p{
     float:left;
     padding-left:6px;
     padding-top:4px;
     text-transform: uppercase;
     font-weight: bold;
-    color:#993333;
+    color:#6699cc;
     font-size: 1em;
 }
 
@@ -81,7 +83,7 @@
 
 .boton_enviar input{
     margin-top:35px;
-    background: #993333;
+    background: #6699cc;
     border:none;
     color:white;
 }
@@ -230,14 +232,14 @@ margin-right: 20px;
 
 .boton_enviar input{
 background: none repeat scroll 0 0 transparent;
-border: 2px solid #66cccc;
+border: 2px solid #6699cc;
 color: black;
 margin-top:5px;
 }
 
 .boton_enviar input:hover{
-background: #66cccc;
-border: 3px solid #66cccc;
+background: #6699cc;
+border: 3px solid #6699cc;
 color: #fff;
 margin-top:5px;
 }
@@ -245,7 +247,7 @@ margin-top:5px;
 #avatar{
 width: 240px;
 height: 240px;
-background:#66cccc;
+background:#6699cc;
 float:right;
 display:block;
 border-radius:5px;
@@ -299,13 +301,13 @@ padding:0;
 }
 
 .menu_secundario{
-border-bottom: solid 3px #66cccc;
+border-bottom: solid 3px #6699cc;
 }
 
 #tabs > li {
 width: 30%;
 border-radius: 5px 5px 0 0;
-border-color: #66cccc;
+border-color: #6699cc;
 }
 
 
@@ -315,8 +317,8 @@ border-color: #66cccc;
 }
 
 #tabs li:hover{
-    background: #66cccc;
-    border: 3px solid #66cccc;
+    background: #6699cc;
+    border: 3px solid #6699cc;
 }
 
 #tabs li a{
@@ -329,7 +331,7 @@ border-color: #66cccc;
 }
 
 #current{
-    background:#66cccc;
+    background:#6699cc;
 }
 
 .blanco{
@@ -337,7 +339,7 @@ border-color: #66cccc;
 }
 
 .faqs {
-border-bottom: 2px solid #66cccc;
+border-bottom: 2px solid #6699cc;
 float: left;
 margin-left: 13px;
 padding: 5px 5px 5px 15px;
@@ -347,7 +349,7 @@ margin-top:3px;
 }
 
 .faqs dt{
-    color:#66cccc;
+    color:#6699cc;
 }
 
 .flechaAbajo{
@@ -382,7 +384,7 @@ font-weight: bold;
 height: 40px;
 padding: 12px 30px;
 width: 100%;
-border-bottom: 2px solid #66cccc;
+border-bottom: 2px solid #6699cc;
 }
 .letraGrande{
 font-size: 1.3em;
@@ -398,7 +400,7 @@ h4.paddingLeft{
 }
 .headerMod .titleCursoImg {
     float: left;
-    margin: 16px 4px 0 0;
+    margin: 16px 0 0 0;
     width: 3%;
 }
 
@@ -432,7 +434,7 @@ h4.paddingLeft{
     text-align: center;
     text-transform: uppercase;
     display: block;
-    border: 2px solid #66cccc;
+    border: 2px solid #6699cc;
     border-radius: 7px;
     font-weight: bold;
     display: inline-block;
@@ -441,7 +443,7 @@ h4.paddingLeft{
     width: 100%;
 }
 #tab2.main.inner-block #mainContainer.main.inner-block .headerMod .boton a:hover {
-    background: #66cccc;
+    background: #6699cc;
     color:#fff;
     
 }
@@ -453,8 +455,7 @@ h4.paddingLeft{
 
 
 #currentd{
-  background: #ccc none repeat scroll 0 0;
-  border-top: 2px solid #cccccc;
+  background: #eee; 
   display: inline-block;
   height: 100%;
   opacity: 1;
@@ -502,7 +503,7 @@ h4.paddingLeft{
 }
 
 .bloqueIzq  .tablaModulos ul.lista_modulos li .modulo input.botonAcceder:hover {
-    background: #66cccc none repeat scroll 0 0;
+    background: #6699cc none repeat scroll 0 0;
     color: #fff;
     cursor: pointer;
     padding: 5px;
@@ -536,6 +537,10 @@ h4.paddingLeft{
   display: inline-block;
     text-align: center;
      padding: 0 12px;
+}
+
+.bloqueDcha .contentd .descripcionModulo .modulo a:hover {
+  text-decoration: underline;
 }
 .bloqueDcha #formularioEjercicios{
     margin-top:0px;
@@ -577,7 +582,7 @@ cursor:pointer;
 padding: 5px;
 }
 .bloqueDcha  #formularioEjercicios input[type='submit']:hover{
-    background:#66cccc; 
+    background:#6699cc; 
     cursor:pointer;
     color:#fff;
 }
@@ -590,39 +595,7 @@ text-align: center;
 .bloqueDcha input{
     border-radius:5px;
 }
-/*#moduloScroll {
-    border-left: 3px solid #993333;
-    border-right: 3px solid #993333;
-    border-bottom: 3px solid #993333;
-    margin-top: 25px;
-    position: absolute;
-    background: #fff;
-    padding-bottom: 10px;
-    
-}
 
-#moduloScroll.fixed{
-   position: fixed;
-   top: 40px;
-   width: 26%;
-}
-
-
-.descripcionModulo{
-    width:100%;
-    height:620px;
-    display: none;
-}
-
-
-
-#current{
-    background: #993333;
-}
-
-#current a{
-    color: #fff;
-}*/
 /*********************************/
 /*AREA PRIVADA / CURSOS FINALIZADOS*/ 
 /**********************************/
@@ -641,7 +614,7 @@ text-align: center;
    margin: 10px 5px 10px 4px;
 }
 #tab3.main.inner-block ul.curso_finalizado li .envoltura {
-    border: 1px solid #993333;
+    border: 2px solid #6699cc;
     border-radius: 7px;
     min-height:180px;
     padding: 15px 7px;

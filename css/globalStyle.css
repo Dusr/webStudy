@@ -853,6 +853,7 @@ p.centrado {
     background: red;
     height: auto;
     border-right: 1px solid #fff;
+    padding-bottom: 10px;
 }
 
 .cajaEstadisticas ul li h3 {
@@ -867,6 +868,26 @@ p.centrado {
     text-align: center;
     color: #fff;
     padding: 5px 0 10px 0;
+}
+.cajaEstadisticas .news {
+    font-size: 1.2em;
+}
+
+.cajaEstadisticas .caja_newsletter_select .boton {
+    border:2px solid #fff;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    padding: 6px;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+}
+.cajaEstadisticas .caja_newsletter_select .boton:hover {    
+    color:#000;
+    background: #fff;
+    
 }
 
 /**** BLOQUE DE NUESTROS CURSOS******/
@@ -1106,3 +1127,106 @@ table#buscador a {
     text-decoration: underline;
 }
 
+
+/*Newsletters*/
+
+.colorbox {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+
+.popup-container {
+    margin: 2.5em auto;
+    width: 45%;
+}
+
+.popup-container {
+    margin: 2.5em auto;
+    width: 45%;
+}
+
+
+.cabecera_newsletter {
+    background: #f7f7f7;
+    color: #5092c9;
+    font-size: 1.6em;
+    margin: 0 auto;
+    padding: 20px 5%;
+    width: 100%;
+}
+.cabecera_newsletter a {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: -5px;
+}
+
+.cabecera_newsletter a img {
+    border: medium none;
+}
+.cabecera_newsletter a img {
+    cursor: pointer;
+}
+
+.newsletter_form {
+    background: #fff;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 35px 7% 15px;
+    width: 100%;
+}
+
+.newsletter_form p:first-child {
+    font-size: 1.2em;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.lista_newsletter {
+    margin-top: 20px;
+}
+
+.lista_newsletter li:first-child {
+    /*width: 100%;*/
+}
+
+.lista_newsletter label {
+    display: inline;
+}
+.lista_newsletter li {
+    float: left;
+    margin: 1.2em 0 0;
+    width: 50%;
+}
+
+.lista_newsletter li input {
+    float: left;
+}
+.colorbox input[type="checkbox"] {
+    border: medium none;
+    padding: 4px 5px;
+}
+.newsletter_form .boton {
+    background-position: 90% -23px;
+    float: right;
+    margin: 20px 0;
+    clear:both;
+}
+
+.newsletter_form .boton:hover, .newsletter_form .boton:focus {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #5092c9;
+    background-origin: padding-box;
+    background-position: 94% center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: #fff;
+}
