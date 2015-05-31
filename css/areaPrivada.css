@@ -510,11 +510,15 @@ h4.paddingLeft{
 }
 /*Bloque derecha*/
 .bloqueDcha {
+    background: #eee; 
+    border: 1px solid #ccc;
+    position:relative;
     float: left;
     height: auto;
     margin-left: 20px;
     width: 32%;
 }
+
 .bloqueDcha .contentd .descripcionModulo {
     min-height: 600px;
 }

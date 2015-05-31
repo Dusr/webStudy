@@ -32,9 +32,16 @@ desplegableFaq = function(){
 
 botonRegistro = function(){
     $(".texto_boton").click(function () {
-        $("#formRegister").show();
+/*Scroll*/
+        $('html, body').animate({
+           'scrollTop':   $('#formRegister').offset().top}, 1000);
+/*Desplegable Registro*/       
+        $("#formRegister").show(1000);
     });
 };
+
+
+
     /*Fin boton de registro */
 menuLogin = function(){
     $(".menuLogin").hover(function () {
@@ -184,7 +191,6 @@ $(function(){
    desplegableFaq();
    pestannasTabsAsesoramiento();
    desplegableAccesoLogin();
-   
 });
 
 $(window).load(function(){
