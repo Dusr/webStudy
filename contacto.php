@@ -180,7 +180,7 @@ if (!isset($_SESSION['logged'])) {
             $cuerpo .= "Comentarios: " . $_POST["mensaje"] . "\n";
 
          //mando el correo...
-            mail("crisalmaloca@hotmail.com.es",$_POST["correoEnviado"],$cuerpo);
+            mail("crisalmaloca@hotmail.com",$_POST["nombre"],$cuerpo);
 
     //doy las gracias por el envio
         echo "<div class='formulario_ok'>";

@@ -36,12 +36,7 @@ CREATE TABLE IF NOT EXISTS `alumno_has_curso` (
 -- Volcado de datos para la tabla `alumno_has_curso`
 --
 
-INSERT INTO `alumno_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`, `done`) VALUES
-(1, 1, 0),
-(2, 1, 0),
-(3, 1, 1),
-(3, 3, 1),
-(3, 6, 1);
+
 
 -- --------------------------------------------------------
 
@@ -156,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `profesor_has_curso` (
 --
 
 INSERT INTO `profesor_has_curso` (`Alumno_idAlumno`, `Curso_idCurso`) VALUES
-(9, 1);
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -181,16 +176,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`idAlumno`, `login`, `password`, `nombre`, `apellidos`, `direccion`, `avatar`, `profesor`) VALUES
 (1, 'david.a.u@hotmail.com', 'goyeneche33', 'David', 'Álvaro Uceda', 'Calle Goyeneche, 33, Bajo', '', 0),
-(2, 'xxx', 'xxx', 'xxx', 'xxx', NULL, '', 0),
-(3, 'aaaa', 'aaaa', 'aaaa', 'aaaa', NULL, '', 0),
-(5, 'bbbb', 'bbbb', 'bbbb', 'bbbb bbbb', NULL, '', 0),
-(6, 'juanito@hotmail.com', 'juanito', 'Juanito', 'Perez Perez', 'Calle Luna, 7', '', 0),
-(7, 'prueba@hotmail.com', 'prueba', 'Juanito', 'Prueba Prueba', NULL, '', 0),
-(8, 'Juanito', 'juanito', '', '', NULL, '', 0),
-(9, 'profesor@hotmail.com', 'soyprofesor', 'Profesor1', 'Profe Profe', 'Calle del profesor, 1,', '', 1),
-(12, 'profe1@hotmail.com', 'profesor1', 'profe1', 'profe profe', NULL, 'avatar_1.png', 1),
-(13, 'sss@dddd.es', '111111111', 'dessss', '', NULL, 'avatar_1.png', 0),
-(14, 'aaaaaa@aaaa.com', '123456', 'Pepe', 'Pepe', NULL, 'avatar_1.png', 0);
+(2, 'aaaa', 'aaaa', 'alumno_Prueba', 'apellido_prueba', 'Calle Luna 66', '', 0),
+(3, 'Juanito', 'juanito', '', '', NULL, '', 0),
+(4, 'profesor@hotmail.com', 'soyprofesor', 'Profesor1', 'Profe Profe', 'Calle del profesor, 1,', '', 1);
+
+
+
 
 --
 -- Índices para tablas volcadas
