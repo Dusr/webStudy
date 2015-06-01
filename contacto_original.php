@@ -88,12 +88,11 @@ if (!isset($_SESSION['logged'])) {
 
     <div class="main inner-block">
         <?php
-if(!isset($_POST['correo'])) {
-
-
-
-
-?>
+    
+          
+         if (!$_POST){
+            
+    ?>
         <form action="contacto.php" method="post">
             <fieldset>
                 <legend>¿Qué quieres contarnos?</legend>
@@ -166,14 +165,11 @@ if(!isset($_POST['correo'])) {
 
 
         </form>
-       <?php
-      } else {
-          
-          // Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-$email_to = "contacto@midesvanweb.com";
-$email_subject = "Contacto desde el sitio web";
-
- $cuerpo = "Formulario enviado\n";
+        
+         <?php
+        }else{
+            //Estoy recibiendo el formulario, compongo el cuerpo
+            $cuerpo = "Formulario enviado\n";
             $cuerpo .= "Nombre: " . $_POST["nombre"] . "\n";
             $cuerpo .= "Primer apellido: " . $_POST["primerApellido"] . "\n";
             $cuerpo .= "Segundo apellido: " . $_POST["segundoApellido"] . "\n";
@@ -183,14 +179,10 @@ $email_subject = "Contacto desde el sitio web";
             $cuerpo .= "Población: " . $_POST["poblacion"] . "\n";
             $cuerpo .= "Comentarios: " . $_POST["mensaje"] . "\n";
 
-// Ahora se envía el e-mail usando la función mail() de PHP
-$email_from = "";
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $cuerpo, $headers);
+         //mando el correo...
+            mail("contacto@midesvanweb.com",$_POST["nombre"],$cuerpo);
 
- //doy las gracias por el envio
+    //doy las gracias por el envio
         echo "<div class='formulario_ok'>";
 	echo "<p>";
 	echo "Gracias por rellenar el formulario.<br>
@@ -198,9 +190,8 @@ $headers = 'From: '.$email_from."\r\n".
         echo "</p>";
 	echo "</div>";
 	} 
-
-?> 
-     
+        
+    ?>
     </div>
 
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->

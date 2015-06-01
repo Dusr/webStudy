@@ -278,7 +278,7 @@
                                 </select>
                             </div>
                             <div class="contenedor_drcha">
-                                <label for="fechas">Fechas</label>
+                                <label for="mes">Fechas</label>
                                 <select id="mes" class="" name="mes_Select">
                                     <option value="todos">Elige el mes</option>
                                     <option value="enero">Enero</option>

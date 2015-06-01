@@ -161,7 +161,7 @@ if (!isset($_SESSION['logged'])) {
                     </div>
                 </div>
                 <div class="contenedorFila row mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.3931756351612!2d-3.705982600000001!3d40.422292000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287cc4d44f9d%3A0x6f6538cc7cb400b1!2sCalle+de+la+Luna%2C+Madrid!5e0!3m2!1ses!2ses!4v1430229013698" width="390" height="200" frameborder="0" style="border:0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.3931756351612!2d-3.705982600000001!3d40.422292000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287cc4d44f9d%3A0x6f6538cc7cb400b1!2sCalle+de+la+Luna%2C+Madrid!5e0!3m2!1ses!2ses!4v1430229013698" width="390" height="200" frameborder="0"></iframe>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="es">
 	<head>
-                <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+           
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Juan Carlos Gonzalez">
