@@ -892,13 +892,18 @@ margin-top:10px;
 }
 .profesor .notificaciones .boton_mensaje{
     display: inline-block;
-    width: 200px;
+    width: 1000px;
     background: #5ab1b1;
     border:2px solid #66cccc;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
 }
+
+.boton_mensaje li{
+    text-align:left;
+}
+
 .profesor .notificaciones a {
     font-size: 14px;
     font-weight: bold;
