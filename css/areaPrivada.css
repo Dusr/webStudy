@@ -304,18 +304,11 @@ padding:0;
 border-bottom: solid 3px #6699cc;
 }
 
-#tabs > li {
+#tabs li {
 width: 30%;
 border-radius: 5px 5px 0 0;
 border-color: #6699cc;
 }
-
-
-
-#tabs .medio{
-    margin: 0 2px 0 2px;
-}
-
 #tabs li:hover{
     background: #6699cc;
     border: 3px solid #6699cc;
@@ -330,7 +323,7 @@ border-color: #6699cc;
     color:white;
 }
 
-#current{
+.current{
     background:#6699cc;
 }
 
@@ -642,8 +635,19 @@ text-align: center;
     padding: 6px 15px 28px;
     width: 100%;
 }
+.profesor #tabs li {
+width: 30%;
+border-radius: 5px 5px 0 0;
+border-color: #66cccc;
+}
 
-.profesor #cabAcceso p, #cabRegistro p {
+.profesor #tabs li:hover{
+    background: #66cccc;
+    border: 3px solid #66cccc;
+}
+
+
+.profesor #tab1.main.inner-block #colIzq #cabRegistro p {
     color: #66cccc;
     float: left;
     font-size: 1em;
@@ -652,7 +656,12 @@ text-align: center;
     padding-top: 4px;
     text-transform: uppercase;
 }
-.profesor .faqs {
+.profesor #tab1.main.inner-block #colIzq #cabRegistro{
+    padding: 6px 15px 28px;
+    width: 100%;
+    border-bottom: 2px solid #66cccc; 
+}
+.profesor .faqs{
     border-bottom: 3px solid #66cccc;
     float: left;
     font-weight: bold;
@@ -661,7 +670,9 @@ text-align: center;
     padding: 5px 5px 5px 15px;
     width: 683px;
 }
-
+.profesor .faqs dt{
+    color:#66cccc;
+}
 .profesor .boton_enviar input {
     background: transparent;
     border: 3px solid #66cccc;
@@ -691,7 +702,7 @@ padding: 12px 30px;
 width: 100%;
 }
 
-.profesor .modulo > a {
+.profesor .modulo a {
 float: left;
 font-weight: bold;
 padding-left: 19px;
@@ -835,7 +846,7 @@ margin-top:10px;
 .profesor .tablaModulos li:first-child{
     border-top:solid 3px #993333;
 }
-.imagenMod > img{
+.imagenMod img{
     padding:15px 0;
 }
 .profesor #currentd > p {
@@ -884,7 +895,7 @@ margin-top:10px;
     opacity: 1;
 }
 
-.profesor #current{
+.profesor .current{
     background: #cccccc;
 }
 .profesor .notificaciones{

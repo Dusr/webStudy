@@ -71,24 +71,7 @@ desplegableAccesoLogin = function () {
 
 
 
-/* Function tabs */
-pestannasTabsPerfil = function () {
-    $("#tab1").show();
-    $("#tab2").hide();
-    $("#tab3").hide();
-    $("#tabs li:first").attr("id", "current");
-    $("#content div:first").fadeIn();
 
-    $('#tabs a').click(function (e) {
-        e.preventDefault();
-        $("#tab1").hide();
-        $("#tab2").hide();
-        $("#tab3").hide();
-        $("#tabs li").attr("id", "");
-        $(this).parent().attr("id", "current");
-        $('#' + $(this).attr('name')).fadeIn();
-    });
-};
 
 
 pestannasTabsModulos = function () {
