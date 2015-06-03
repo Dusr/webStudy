@@ -9,6 +9,7 @@
     width: 50%;
     text-transform: uppercase;   
     padding: 13px 0;
+    background: #d2d27c;
 }
 
 .info-box.row #tabs li#current {
@@ -17,7 +18,9 @@
     width: 50%;
     text-transform: uppercase;
     padding:10px;
-    border:2px solid #d2d27c;
+    /*border:2px solid #d2d27c;*/
+    background: #ffffff;
+    color:#d2d27c;
     
     padding: 13px 0;
 }
@@ -73,14 +76,7 @@
 }
 #tab1, #tab2{
     height: auto;
-    background: #d2d27c; /* Old browsers */
-    background: -moz-linear-gradient(top, #d2d27c 0%, #d2d27c 46%, #e0e589 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2d27c), color-stop(46%,#d2d27c), color-stop(100%,#e0e589)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #d2d27c 0%,#d2d27c 46%,#e0e589 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d27c', endColorstr='#e0e589',GradientType=0 ); /* IE6-9 */
+   
 }
 #tabs a:hover,
 #tabs a:hover::after,
@@ -94,7 +90,7 @@
 }
 
 #tabs li#current a {
-  color:#fff;
+  color:#d2d27c;
 }
 
 /*Caja de envio a contacto*/
@@ -138,7 +134,4 @@ a.boton:hover {
 .contenedorFila.row {
     background: none repeat scroll 0 0 white;
     padding-top: 15px;
-    -webkit-box-shadow: inset 2px 2px 9px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 2px 2px 9px -1px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 9px -3px rgba(0, 0, 0, 0.75) inset;
 }

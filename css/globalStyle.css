@@ -810,6 +810,9 @@ select {
     width: 20%;
 }
 
+#tabs li a {
+    color:#fff;
+}
 .iconoImg > img {
     margin: 0 auto;
 }
@@ -1229,4 +1232,17 @@ table#buscador a {
     background-repeat: no-repeat;
     background-size: auto auto;
     color: #fff;
+}
+.newsletter_form .lista_newsletter li.last{
+    float: left;
+    width: 100%;
+}
+.newsletter_form .lista_newsletter li label[for="mail"]{
+    float: left;
+    width: 25%;
+}
+
+.newsletter_form  ul.lista_newsletter li input#mail {
+    float:left;
+    width: 75%;
 }

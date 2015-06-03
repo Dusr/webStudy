@@ -118,3 +118,7 @@ fieldset p{
     text-align: center;
     width: 50%;
 }
+
+.fila_form #select-option {
+    width: 350px;
+}

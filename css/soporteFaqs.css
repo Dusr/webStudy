@@ -11,8 +11,9 @@
 	margin: 30px;
 	border-bottom: solid 0.1px;
 	border-color:#CCCCCC;
-	color:#0099CC;
+	color:#cc99cc;
 	cursor:pointer;
+        font-weight: bold;
 }
 
 .encabezado_faqs{

@@ -98,6 +98,18 @@ if(!isset($_POST['correo'])) {
             <fieldset>
                 <legend>¿Qué quieres contarnos?</legend>
                 <p>Explícanos lo que necesitas</p>
+                
+                <div class="fila_form">
+                    <label for="select_opcion">Selecciona una opción:</label>
+                    <select id="select-option" name="select-option" class="">
+                                    <option value="todas"> Mi consulta es sobre:</option>
+                                    <option value="Asesoramiento">Asesoramiento</option>
+                                    <option value="Consultas">Consultas web</option>
+                                    <option value="Cursos">Cursos</option>
+                                    <option value="Soporte">Soporte</option>
+                                    <option value="otras">Otras consultas</option>
+                                </select>
+                </div>
                 <div class="fila_form">
                     <label for="mensaje">Tu mensaje:</label>
                     <textarea cols="1" rows="1" id="mensaje" name="mensaje"> </textarea>
@@ -124,10 +136,7 @@ if(!isset($_POST['correo'])) {
                     <label for="correo">Correo electrónico*:</label>
                     <input id="correo"  name="correo" required onblur="validarEmail(this);"/>
                 </div>
-                <div class="fila_form">
-                    <label for="confirm_correo">Confirma tu correo*:</label>
-                    <input id="confirm_correo"/>
-                </div>
+
                 <div class="fila_form">
                     <label for="direccion">Dirección:</label>
                     <input id="direccion" name="direccion"/>
@@ -174,6 +183,7 @@ if(!isset($_POST['correo'])) {
 
 
  $cuerpo = "Formulario enviado\n";
+            $cuerpo= "Opción de la consulta: " .$_POST['select_opcion']. "\n";
             $cuerpo .= "Nombre: " . $_POST["nombre"] . "\n";
             $cuerpo .= "Primer apellido: " . $_POST["primerApellido"] . "\n";
             $cuerpo .= "Segundo apellido: " . $_POST["segundoApellido"] . "\n";
