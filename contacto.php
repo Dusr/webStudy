@@ -170,8 +170,8 @@ if(!isset($_POST['correo'])) {
       } else {
           
           // Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-$email_to = "contacto@midesvanweb.com";
-$email_subject = "Contacto desde el sitio web";
+//$email_to = "contacto@midesvanweb.com";
+
 
  $cuerpo = "Formulario enviado\n";
             $cuerpo .= "Nombre: " . $_POST["nombre"] . "\n";
@@ -183,12 +183,9 @@ $email_subject = "Contacto desde el sitio web";
             $cuerpo .= "Población: " . $_POST["poblacion"] . "\n";
             $cuerpo .= "Comentarios: " . $_POST["mensaje"] . "\n";
 
-// Ahora se envía el e-mail usando la función mail() de PHP
-$email_from = "";
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $cuerpo, $headers);
+
+    $email_subject = "Contacto";
+    @mail("contacto@midesvanweb.com",$email_subject,$cuerpo);
 
  //doy las gracias por el envio
         echo "<div class='formulario_ok'>";
