@@ -2,7 +2,7 @@
  
 /*Capturamos los datos del formulario y los almacenamos en variables*/
 $login = $_POST['login'];
-$pass = $_POST['pass'];
+$pass = base64_encode($_POST['pass']);
 
 //CONEXION BASE DATOS.
     include 'openDB.php';

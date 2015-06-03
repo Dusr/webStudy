@@ -2,13 +2,14 @@
 
 //CONEXION BASE DATOS.
     include 'openDB.php';
+
     
 //RECOGEMOS LOS DATOS DEL REGISTRO.   
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
     $login = $_POST['login'];
-    $password = $_POST['pass'];
-    $rpassword = $_POST['rpass'];
+    $password = base64_encode($_POST['pass']);
+    $rpassword = base64_encode($_POST['rpass']);
     $profesor = 0;
     
     if(isset($_POST['profesor'])){

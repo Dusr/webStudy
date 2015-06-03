@@ -251,8 +251,8 @@
                                                     <label for="direccion">Contraseña Nueva:</label>
                                                 </div>
                                                 <div class="inputs2">
-                                                    <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
-                                                    <input type="password" id="rpass" name="newpass" value="<?php echo $_SESSION['pass']; ?>"/>
+                                                    <input type="password" id="pass" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
+                                                    <input type="password" id="rpass" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
                                                 </div>
                                             </div>
                                         </dl>
@@ -449,7 +449,7 @@
                                                                 <input type="text" readonly id="title" name="title" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
 
                                                                 <label for="emisor">Alumno: </label>
-                                                                <input type="text" readonly id="emisor" name="emisor" required value="<?php echo $_SESSION['nombre']; ?>"/>
+                                                                <input type="text" readonly id="emisor" name="emisor" required value="<?php echo $_SESSION['login']; ?>"/>
 
                                                                 <input style="display:none" id="receptor" name="receptor" value="<?php echo $idProfe ?>"/>
 

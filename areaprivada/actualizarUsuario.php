@@ -11,8 +11,8 @@ include 'openDB.php';
     $apellidos = $_POST['apellidos'];
     $login = $_POST['correo'];
     $direccion = $_POST['direccion'];
-    $oldpassword = $_POST['oldpass'];
-    $newpassword = $_POST['newpass'];
+    $oldpassword = base64_encode($_POST['oldpass']);
+    $newpassword = base64_encode($_POST['newpass']);
     move_uploaded_file($_FILES['avatar']['tmp_name'], "avatares/" . $_FILES['avatar']['name']);
     
     if ($oldpassword == $_SESSION['pass']) {
