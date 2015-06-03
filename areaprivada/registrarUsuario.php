@@ -10,15 +10,10 @@
     $login = $_POST['login'];
     $password = base64_encode($_POST['pass']);
     $rpassword = base64_encode($_POST['rpass']);
-    $profesor = 0;
-    
-    if(isset($_POST['profesor'])){
-        $profesor = 1;
-    }
     
     if($password == $rpassword){
-        $sql = "INSERT INTO usuario(idAlumno, login, password, nombre, apellidos, profesor) ".
-               "VALUES(default,'".$login."', '".$password."', '".$nombre."', '".$apellidos."',".$profesor.")";
+        $sql = "INSERT INTO usuario( login, password, nombre, apellidos, avatar) ".
+               "VALUES('".$login."', '".$password."', '".$nombre."', '".$apellidos."','avatar_1.png')";
 
         $result = mysql_query($sql, $con);    
         

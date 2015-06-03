@@ -395,6 +395,11 @@
                                             <script>alert('Se ha enviado su mensaje al profesor satisfactoriamente')</script>    
                                             <?php
                                         }
+                                        if (isset($_GET["withoutarchive"])) {
+                                            ?>
+                                            <script>alert('El archivo subido no es de un tipo permitido o es demasiado grande.')</script>    
+                                            <?php
+                                        }
                                         ?>
                                         <?php
                                         $modulos = mysql_query("SELECT * "
@@ -606,8 +611,8 @@
                                                     <label for="direccion">Contraseña Nueva:</label>
                                                 </div>
                                                 <div class="inputs2">
-                                                    <input type="password" id="pass" name="oldpass" value="<?php echo $_SESSION['pass']; ?>"/>
-                                                    <input type="password" id="rpass" name="newpass" value="<?php echo $_SESSION['pass']; ?>"/>
+                                                    <input type="password" id="pass" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
+                                                    <input type="password" id="rpass" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
                                                 </div>
                                             </div>
                                         </dl>
@@ -636,20 +641,7 @@
                             <div id="colDcha">
 
                                 <div id="avatar">
-                                    <?php
-                                    /*                                     * **************************************************    AVATAR del profesor   **************************************************************************** */
-
-                                    if ($_SESSION['avatar'] != NULL) {
-                                        ?>
-                                        <img width='240' height='240' src='avatares/<?php echo $_SESSION['avatar'] ?>' alt='Avatar'/>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <img width='240' height='240' src='avatares/avatar_1.png' alt='Avatar por defecto'/>
-                                        <?php
-                                    }
-                                    ?>
-
+                                    <img width='240' height='240' src='avatares/<?php echo $_SESSION['avatar'] ?>' alt='Avatar'/>
                                 </div>    
                                 <div class="fileUpload">
                                     <input class="guarda" name="avatar" type="file"/>
@@ -698,23 +690,23 @@
                                     ?>
                                     <h4 class="titListado">Listado de alumnos de <?php echo $nombreCurso ?></h4>
                                     <ul class="listado">
-                                    <?php
-                                    for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {
-                                        $row = mysql_fetch_array($tiene_alumnos);
-                                        ?>
-                                            <li>
-                                            <?php
-                                            echo $row['nombre'] . ' ';
-                                            echo $row['apellidos'];
-                                            ?>
-                                            </li>
-                                                <?php
-                                            }
-                                            ?>
-                                    </ul>
                                         <?php
-                                    } else {
+                                        for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {
+                                            $row = mysql_fetch_array($tiene_alumnos);
+                                            ?>
+                                            <li>
+                                                <?php
+                                                echo $row['nombre'] . ' ';
+                                                echo $row['apellidos'];
+                                                ?>
+                                            </li>
+                                            <?php
+                                        }
                                         ?>
+                                    </ul>
+                                    <?php
+                                } else {
+                                    ?>
                                     <p class="msj_no_inscrito"> No hay alumnos inscritos en el curso. </p>;
                                     <?php
                                 }
@@ -733,33 +725,20 @@
                             <div class="boton_mensaje">
                                 Sus mensajes:
                                 <ul>
-    <?php
-    
-    $qry = "SELECT id, nombre, titulo, tipo FROM archivos where receptor=".$_SESSION['idAlumno'];
-    $res = mysql_query($qry);
-    
-    while($fila = mysql_fetch_array($res)){
-        ?>
-<!--                <li><?php echo $fila['nombre'] ?></li>
-                <li><?php echo $fila['titulo'] ?></li>
-                <li><a href="descargarArchivo.php?id=<?php echo $fila['id']?>">Descargar</a></li>
-                <br>-->
-          <?php 
-    
-    $mensajes = mysql_query("select * from mensaje where receptor=" . $_SESSION['idAlumno']);
+                                    <?php
+                                    $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
+                                    $mensajes = mysql_query($queryMensaje);
 
-    while ($filaNotificacion = mysql_fetch_array($mensajes)) {
-        ?>
-                
-                <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
-                <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
-                <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
-                <li><a href="descargarArchivo.php?id=<?php echo $fila['id']?>">Descargar</a></li>
-                
-                <br>
-     <?php
-    }    }
-    ?>
+                                    while ($filaNotificacion = mysql_fetch_array($mensajes)) {
+                                        ?>
+                                        <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
+                                        <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
+                                        <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
+                                        <li><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
+                                        <br>
+                                        <?php
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -770,7 +749,7 @@
                 </div>
 
 
-<?php } ?>
+            <?php } ?>
 
             <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
             <footer>

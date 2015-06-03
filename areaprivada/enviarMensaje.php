@@ -20,8 +20,7 @@ if (isset($_SESSION['logged'])) {
     
     if ($titulo != null && $titulo != "" &&
             $emisor != null && $emisor != "" &&
-            $receptor != null && $receptor != "" &&
-            $archivo != null) {
+            $receptor != null && $receptor != "") {
 
         /* Preparando el archivo */
         $fp = fopen($archivo, "rb");
@@ -29,23 +28,24 @@ if (isset($_SESSION['logged'])) {
         $contenido = addslashes($contenido);
         fclose($fp);
      
-        $queryArchivo = "INSERT INTO archivos (nombre,titulo,contenido,tipo,receptor) VALUES
-                ('" . $nombreArchivo . "','" . $titulo . "','" . $contenido . "','" . $tipo . "',".$receptor.")";
-
-        if (mysql_query($queryArchivo)) {
-            /* Si inserta el archivo */
-            $sql = "INSERT INTO mensaje (titulo, emisor, receptor, mensaje, archivo) VALUES ('" . $titulo . "','" . $emisor . "'," . $receptor . ",'" . $mensaje . "','" . $archivo . "')";
+        
+            $sql = "INSERT INTO mensaje (titulo, emisor, receptor, mensaje, nb_archivo, contenido, tipo) VALUES ('" . $titulo . "','" . $emisor . "'," . $receptor . ",'" . $mensaje . "','" . $nombreArchivo . "','" . $contenido . "','" . $tipo . "')";
             
-            if (mysql_query($sql) or die(mysql_error())) { 
+            if (mysql_query($sql)) { 
                 /* Inserta en mensajes */
                 
                 header("Location: ./perfilUsuario.php?mensaje_enviado");
+            }else{
+                header("Location: ./perfilUsuario.php?withoutarchive");
+                
             }
             
+        }else{
+            echo 'fallo';
+            
+            echo $titulo,$emisor,$receptor;
         }
-    } else {
-        header("Location: ./perfilUsuario.php?withoutarchive");
-    }
+    
 }else{
     header("Location: ../accederLogin.php");
 }    

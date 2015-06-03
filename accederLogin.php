@@ -1,5 +1,5 @@
 <?php session_start() ?>
-<?php include("include/inc_1_head_inicio.php") ?>
+<?php include("include/inc_1_head_inicio.php"); ?>
 
 
 <title>Acceder - Login | Webstudy.com</title>
@@ -197,11 +197,6 @@ if (!isset($_SESSION['logged'])) {
                                 <input type="checkbox" required>
                                 <p>Acepto y entiendo la Política de Privacidad.</p>
                             </div>
-                            <div id="politica" class="row">
-                                <input type="checkbox" name="profesor" id="profesor"/>
-                                <p>Quiero ser profesor</p>
-                            </div>
-
                         </div>
 
                         <div class="boton_enviar">
@@ -220,7 +215,7 @@ if (!isset($_SESSION['logged'])) {
                     ?>
                     <script>document.getElementById('formRegister').style.display = 'block';</script>
                     <br>
-                    <span class="alerta" style="color:red">Los datos introducidos no son admitidos.</span>
+                    <span class="alerta" style="color:red">Los datos introducidos no son admitidos o el correo electrónico está en uso.</span>
                     <?php
                 }
                 ?>
