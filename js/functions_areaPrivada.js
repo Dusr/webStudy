@@ -1,27 +1,27 @@
 //Notificaciones
 $(document).ready(function () {
-    $('.notificacion').hide();
+    $('.boton_mensaje').hide();
     $(".notificaciones").click(function () {
-        $(".notificacion").slideToggle("slow");
+        $(".boton_mensaje").slideToggle(1000);
     });
 });
 
-//scroll
-$(document).scroll(function() {
-    var element = $('.bloqueDcha'),
-        originalY = element.offset().top;
-        
-    var topMargin = 20;
-    element.css('position', 'relative');
-   
-    $(window).on('scroll', function(event) {
-       var scrollTop = $(window).scrollTop();
-        
-       element.stop().animate({
-            top: scrollTop <= originalY ? 0 : scrollTop - originalY + topMargin 
-        }, 300);
-    });
-});
+////scroll
+//$(document).scroll(function() {
+//    var element = $('.bloqueDcha'),
+//        originalY = element.offset().top;
+//        
+//    var topMargin = 20;
+//    element.css('position', 'relative');
+//   
+//    $(window).on('scroll', function(event) {
+//       var scrollTop = $(window).scrollTop();
+//        
+//       element.stop().animate({
+//            top: scrollTop <= originalY ? 0 : scrollTop - originalY + topMargin 
+//        }, 300);
+//    });
+//});
 
 /* Desplegable FAQ*/
 desplegableFaq = function () {
@@ -29,8 +29,8 @@ desplegableFaq = function () {
     $('.faqs dd').hide();
     $('#cambiarContrasena').hide();
     $('.faqs dt').click(function () {
-        $(this).next().slideToggle('fast');
-        $(this).next().$('dd').slideToggle('fast');
+        $(this).next().slideToggle("fast");
+        $(this).next().$('dd').slideToggle("fast");
     });
 
 
@@ -38,7 +38,7 @@ desplegableFaq = function () {
     /* Rotacion de la flecha en el FAQ */
     var rotation = 0;
 
-    $('.pregunta').click(function () {
+    $('.faqs').click(function () {
         rotation += 180;
         $(this).find('.flecha').rotate(rotation);
     });

@@ -242,7 +242,7 @@
                                         <dl class="faqs">
                                             <dt class="pregunta">Cambiar contraseña
                                             <div class="flechaAbajo">
-                                                <img class="flecha" src="../img/iconos/flechaAbajo_roja.png"/>
+                                                <img class="flecha" src="../img/iconos/flechaAbajo_azul.png"/>
                                             </div>
                                             </dt>
                                             <div id="cambiarContrasena">
@@ -721,25 +721,28 @@
 
                     <!-- MIS CURSOS -->
                     <div id="tab3" class="main inner-block">
-                        <div class='notificaciones'>
+                        <div class='notificaciones faqs'>
+                            <p>Sus mensajes:</p>
+                            <div class="flechaAbajo">
+                                <img class="flecha" src="../img/iconos/flechaAbajo_azul.png"/>
+                            </div>
                             <div class="boton_mensaje">
-                                Sus mensajes:
-                                <ul>
-                                    <?php
+                                
+                                 <?php
                                     $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
                                     $mensajes = mysql_query($queryMensaje);
 
-                                    while ($filaNotificacion = mysql_fetch_array($mensajes)) {
-                                        ?>
+                                while ($filaNotificacion = mysql_fetch_array($mensajes)) {
+                                    ?>
+                                <ul class="row">
                                         <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
                                         <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
                                         <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
                                         <li><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
-                                        <br>
-                                        <?php
+                                </ul>
+                                 <?php
                                     }
                                     ?>
-                                </ul>
                             </div>
                         </div>
                         <div class="notificacion" name="notificacion">
