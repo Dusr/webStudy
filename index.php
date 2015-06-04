@@ -378,181 +378,183 @@
                             </tr> 
                             <?php
                             $resBusqueda = mysql_query($busquedaSql);
-                            if (mysql_num_rows($resBusqueda) > 0) { // Si la busqueda da resultados
-                                    
-                                    while ($rowBusqueda = mysql_fetch_array($resBusqueda)) {
-                                                if ($rowBusqueda['modalidad'] == 'presencial') {
-                                                        switch ($rowBusqueda['nombre']){
-                                                            case 'HTML5':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoHtml5.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Bootstrap 3':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoBootstrap.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'API de Facebook':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoFacebook.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Programación orientada a objetos':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoPOO.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'AngularJS':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoAngularJS.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'NodeJS':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosPresenciales/cursoNodeJS.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                        }
-                                                    
-                                                } else if ($rowBusqueda['modalidad'] == 'seminario') {
-                                                        switch ($rowBusqueda['nombre']){
-                                                            case 'Java':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/Java.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Android':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/android.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'CSS3':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/CursoCSS3.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Web Design':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/creacionWeb.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Responsive Design':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/responsiveDesign.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Comercio Electrónico':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="pdfSeminarios/comercioElectronico.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                        }
-                                                    
-                                                } else if ($rowBusqueda['modalidad'] == 'online') {
-                                                        switch ($rowBusqueda['nombre']){
-                                                            case 'HTML básico':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoHtmlBasico.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'CSS desde cero':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoCss.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Javascript desde cero':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoJavascript.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Prestashop':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoPrestashop.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Fundamentos de JQuery':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoJquery.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                            case 'Introducción a AJAX':
-                                                                echo '<tr> 
-                                                                        <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                                        <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                                        <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
-                                                                        <td> <a href="cursosOnline/cursoAjax.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
-                                                                      </tr>';
-                                                                break;
-                                                        }
-                                                    
-                                                } else if ($rowBusqueda['modalidad'] == 'personaliz') {
-                                                    echo '<tr> 
-                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
-                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
-                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td>
-                                                            <td> <a href="cursosPersonalizados.php" title="cursos presenciales"> Ver curso </a></td>
-                                                        </tr>';
-                                                    
-                                                } else if ($rowBusqueda['modalidad'] === 'todas' && $rowBusqueda['nombre'] === "" && $rowBusqueda['comienzoCurso'] === 'todos') {
-                                                    echo '<tr> 
-                                                           <td colspan="4">No hay resultados en la busqueda</td> 
-                                                          </tr>';
-                                                }
-                                    }// end_while
-                                    
-                            } else { // Si la busqueda es erronea
+                            if ($nomCurso != '' && $modali_Curso != '' && $mesFecha != ''){
+                                if (mysql_num_rows($resBusqueda) > 0) { // Si la busqueda da resultados
+
+                                        while ($rowBusqueda = mysql_fetch_array($resBusqueda)) {
+                                                    if ($rowBusqueda['modalidad'] == 'presencial') {
+                                                            switch ($rowBusqueda['nombre']){
+                                                                case 'HTML5':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoHtml5.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Bootstrap 3':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoBootstrap.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'API de Facebook':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoFacebook.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Programación orientada a objetos':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoPOO.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'AngularJS':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoAngularJS.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'NodeJS':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosPresenciales/cursoNodeJS.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                            }
+
+                                                    } else if ($rowBusqueda['modalidad'] == 'seminario') {
+                                                            switch ($rowBusqueda['nombre']){
+                                                                case 'Java':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/Java.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Android':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/android.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'CSS3':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/CursoCSS3.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Web Design':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/creacionWeb.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Responsive Design':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/responsiveDesign.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Comercio Electrónico':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="pdfSeminarios/comercioElectronico.pdf" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                            }
+
+                                                    } else if ($rowBusqueda['modalidad'] == 'online') {
+                                                            switch ($rowBusqueda['nombre']){
+                                                                case 'HTML básico':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoHtmlBasico.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'CSS desde cero':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoCss.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Javascript desde cero':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoJavascript.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Prestashop':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoPrestashop.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Fundamentos de JQuery':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoJquery.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                                case 'Introducción a AJAX':
+                                                                    echo '<tr> 
+                                                                            <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                            <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                            <td>' . $rowBusqueda['comienzoCurso'] . '</td> 
+                                                                            <td> <a href="cursosOnline/cursoAjax.php" title="'. $rowBusqueda['nombre'] .'"> Ver curso </a></td>
+                                                                          </tr>';
+                                                                    break;
+                                                            }
+
+                                                    } else if ($rowBusqueda['modalidad'] == 'personaliz') {
+                                                        echo '<tr> 
+                                                                <td class="left">' . $rowBusqueda['nombre'] . '</td> 
+                                                                <td>' . $rowBusqueda['modalidad'] . '</td> 
+                                                                <td>' . $rowBusqueda['comienzoCurso'] . '</td>
+                                                                <td> <a href="cursosPersonalizados.php" title="cursos presenciales"> Ver curso </a></td>
+                                                            </tr>';
+
+                                                    } else if ($rowBusqueda['modalidad'] === 'todas' && $rowBusqueda['nombre'] === "" && $rowBusqueda['comienzoCurso'] === 'todos') {
+                                                        echo '<tr> 
+                                                               <td colspan="4">No hay resultados en la busqueda</td> 
+                                                              </tr>';
+                                                    }
+                                        }// end_while
+
+                                }
+                            }else if ($nomCurso == '' && $modali_Curso == '' && $mesFecha == '') { // Si la busqueda es erronea
 
                                 echo '<tr> 
                                         <td colspan="4">No hay resultados en la busqueda</td> 
