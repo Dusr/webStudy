@@ -210,7 +210,7 @@
                     <div class="cursoPresentacion">
                         <h3 class="presenciales">Cursos presenciales</h3>
                         <div class="imagenUp">
-                            <img src="img/index/cursoPresencial400x202.jpg" alt=""/>
+                            <img src="img/index/cursoPresencial400x202_2.jpg" alt=""/>
                         </div>
                         <div class="infoCurso row">
                             <div class="texto">
@@ -228,7 +228,7 @@
                     <div class="cursoPresentacion">
                         <h3 class="online">Cursos online</h3>
                         <div class="imagenUp">
-                            <img src="img/index/cursoPresencial400x202.jpg" alt=""/>
+                            <img src="img/index/cursoonline400x202_2.jpg" alt=""/>
                         </div>
                         <div class="infoCurso row">
                             <div class="texto">
@@ -246,7 +246,7 @@
                     <div class="cursoPresentacion">
                         <h3 class="personalizados">Cursos personalizados</h3>
                         <div class="imagenUp">
-                            <img src="img/index/cursoPresencial400x202.jpg" alt=""/>
+                            <img src="img/index/cursopersonalizado400x202_2.jpg" alt=""/>
                         </div>
                         <div class="infoCurso row">
                             <div class="textoSinfecha">
@@ -527,49 +527,54 @@
                 <form action="index.php" method="post">
                         <ul class="lista_newsletter">
                             <li>
-                                <input type="checkbox" id="checkbox1" name="newsletters[]" title="Boletín de cursos persenciales">
+                                <input type="checkbox" id="checkbox1" name="newsletters[]" value="Presenciales" title="Boletín de cursos persenciales">
                                 <label for="checkbox1">Boletín de cursos presenciales</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="checkbox2" name="newsletters[]" title="Boletín de cursos online">
+                                <input type="checkbox" id="checkbox2" name="newsletters[]" value="online"  title="Boletín de cursos online">
                                 <label for="checkbox2">Boletín de cursos online</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="checkbox3" name="newsletters[]" title="Boletín de seminarios gratuitos">
+                                <input type="checkbox" id="checkbox3" name="newsletters[]" value="seminarios"  title="Boletín de seminarios gratuitos">
                                 <label for="checkbox3">Boletín de seminarios gratuitos</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="checkbox4" name="newsletters[]" title="Boletín de novedades">
+                                <input type="checkbox" id="checkbox4" name="newsletters" value="novedades"  title="Boletín de novedades">
                                  <label for="checkbox4">Boletín de novedades</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="checkbox5" name="newsletters[]" title="Boletín de todos nuestros cursos">
+                                <input type="checkbox" id="checkbox5" name="newsletters[]" value="todos"  title="Boletín de todos nuestros cursos">
                                 <label for="checkbox5">Boletín de todos nuestros cursos</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="checkbox6" name="newsletters[]" title="Boletín últimas noticias">
+                                <input type="checkbox" id="checkbox6" name="newsletters[]" value="noticias" title="Boletín últimas noticias">
                                 <label for="checkbox6">Boletín últimas noticias</label>
                             </li>
                             <li class="last">
-                                 <label for="mail">Email suscripción</label>
-                                <input type="text" id="mail" name="mail">
+                                 <label for="correo">Email suscripción</label>
+                                <input type="text" id="correo" name="correo">
                                
                             </li>
                         </ul>
                     <input type="submit" title="Enviar los boletines seleccionados" value="Enviar" class="boton">
-                    <input type="hidden" title="Datos del email para newsletter" id="email_newsletter">
+                   
                 </form>
                  <?php
                         } else {
 
 
-
-                  $newslettersDatos=$_POST["newsletters"];
+                   $email_subject = "NEWSletters";             
+                  //$newslettersDatos=$_POST["newsletters"];
+                   $checked = $_POST['newsletters']; 
                   $cuerpo = "Newsletters\n";
-                  $cuerpo .= "Mail: " . $_POST["mail"] . "\n";
-                  for ($i=0;$i<count($newslettersDatos);$i++)    
-                  {     
-                  $cuerpo .= "newsletters: " . $newslettersDatos . "\n";  
+                  $count= count($newslettersDatos);
+                  $cuerpo .= "el mail es: " . $_POST["correo"] . "\n";
+                  foreach($checked as $i) 
+                    { 
+                      $cuerpo .= "newsletters: " . $i . "\n"; 
+                 // for ($i=0;$i<$count($newslettersDatos);$i++)    
+                 // {     
+                 // $cuerpo .= "newsletters: " . $newslettersDatos() . "\n";  
                   }
                       
                       @mail("contacto@midesvanweb.com",$email_subject,$cuerpo);

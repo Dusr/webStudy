@@ -1237,12 +1237,12 @@ table#buscador a {
     float: left;
     width: 100%;
 }
-.newsletter_form .lista_newsletter li label[for="mail"]{
+.newsletter_form .lista_newsletter li label[for="correo"]{
     float: left;
     width: 25%;
 }
 
-.newsletter_form  ul.lista_newsletter li input#mail {
+.newsletter_form  ul.lista_newsletter li input#correo {
     float:left;
     width: 75%;
 }

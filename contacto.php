@@ -183,7 +183,7 @@ if(!isset($_POST['correo'])) {
 
 
  $cuerpo = "Formulario enviado\n";
-            $cuerpo= "Opción de la consulta: " .$_POST['select_opcion']. "\n";
+            $cuerpo= "Opción de la consulta: " .$_POST["select-option"]. "\n";
             $cuerpo .= "Nombre: " . $_POST["nombre"] . "\n";
             $cuerpo .= "Primer apellido: " . $_POST["primerApellido"] . "\n";
             $cuerpo .= "Segundo apellido: " . $_POST["segundoApellido"] . "\n";
