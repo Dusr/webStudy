@@ -902,13 +902,37 @@ margin-top:10px;
 }
 .profesor .notificaciones{
     margin:20px 0;
+    width:100%;
 }
+
+.contenedor-total .content.profesor #tab3.main.inner-block .notificaciones.faqs p{
+    float:left;
+    width:96%;
+    margin:5px 0;
+    padding:0;
+    text-align:left;
+}
+
+.profesor .flechaAbajo{
+    float: right;
+    padding-right: 5px;
+    padding-top: 14px;
+}
+
+.profesor .notificaciones.faqs{
+    border-bottom: 3px solid #66cccc;
+    float: left;
+    font-weight: bold;
+    margin-left: 0;
+    margin-top: 3px;
+    padding: 5px 5px 5px 15px;
+    width: 100%;
+}
+
 .profesor .notificaciones .boton_mensaje{
     display: inline-block;
     width: 1000px;
-    background: #5ab1b1;
     border:2px solid #66cccc;
-    border-radius: 10px;
     padding: 5px;
     text-align: center;
 }
@@ -920,11 +944,10 @@ margin-top:10px;
 .profesor .notificaciones a {
     font-size: 14px;
     font-weight: bold;
-    text-align: center;
     color:#fff;
     
 }
-.msj_no_inscrito{
+.profesor .msj_no_inscrito{
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;
@@ -932,7 +955,7 @@ margin-top:10px;
     
 }
 
-.titListado{
+.profesor .titListado{
     text-align:left;
     border:medium none;
     margin-top:30px;
@@ -948,8 +971,29 @@ margin-top:10px;
     width: 100%;
 }
 
-.listado li{
+.profesor .listado li{
     border-bottom:solid;
     padding: 15px;
     font-size:15px;
+}
+
+.profesor .notificaciones div.boton_mensaje ul{
+    width:45%;
+    padding:30px;
+    float:left;
+    border:1px solid;
+    border-radius:5px;
+    margin:30px 24px;
+}
+
+.profesor .notificaciones div.boton_mensaje ul li{
+    float:left;
+    padding:10px;
+    width:100%;
+}
+
+.profesor .notificaciones div.boton_mensaje ul li a{
+    border:1px solid;
+    color:#000;
+    width:100%;
 }

@@ -1,27 +1,27 @@
 //Notificaciones
 $(document).ready(function () {
-    $('.notificacion').hide();
+    $('.boton_mensaje').hide();
     $(".notificaciones").click(function () {
-        $(".notificacion").slideToggle("slow");
+        $(".boton_mensaje").slideToggle(1000);
     });
 });
 
-//scroll
-$(document).scroll(function() {
-    var element = $('.bloqueDcha'),
-        originalY = element.offset().top;
-        
-    var topMargin = 20;
-    element.css('position', 'relative');
-   
-    $(window).on('scroll', function(event) {
-       var scrollTop = $(window).scrollTop();
-        
-       element.stop().animate({
-            top: scrollTop <= originalY ? 0 : scrollTop - originalY + topMargin 
-        }, 300);
-    });
-});
+////scroll
+//$(document).scroll(function() {
+//    var element = $('.bloqueDcha'),
+//        originalY = element.offset().top;
+//        
+//    var topMargin = 20;
+//    element.css('position', 'relative');
+//   
+//    $(window).on('scroll', function(event) {
+//       var scrollTop = $(window).scrollTop();
+//        
+//       element.stop().animate({
+//            top: scrollTop <= originalY ? 0 : scrollTop - originalY + topMargin 
+//        }, 300);
+//    });
+//});
 
 /* Desplegable FAQ*/
 desplegableFaq = function () {
