@@ -201,12 +201,12 @@ INSERT INTO `usuario` (`idAlumno`, `login`, `password`, `nombre`, `apellidos`, `
 (1, 'david.a.u@hotmail.com', 'ZGF2aWRhbHZhcm8=', 'David', 'Álvaro Uceda', NULL, 'avatar_1.png', 0),
 (2, 'juancarlosg2812@gmail.com', 'anVhbmNhcmxvcw==', 'Juan Carlos', 'González Sánchez', NULL, 'avatar_1.png', 0),
 (3, 'velillamoralcris@gmail.com', 'Y3Jpc3RpbmE=', 'Cristina', 'Velilla Moral', NULL, 'avatar_1.png', 0),
-(4, 'profehtml@hotmail.com', 'profehtml', 'ProfeHTML', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
-(5, 'profecss@hotmail.com', 'profecss', 'ProfeCSS', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
-(6, 'profejs@hotmail.com', 'profejs', 'ProfeJS', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
-(7, 'profeprestashop@hotmail.com', 'profeprestashop', 'ProfePrestashop', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
-(8, 'profejquery@hotmail.com', 'profejquery', 'ProfeJQuery', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
-(9, 'profeajax@hotmail.com', 'profeajax', 'ProfeAjax', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1);
+(4, 'profehtml@hotmail.com', 'cHJvZmVodG1s', 'ProfeHTML', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
+(5, 'profecss@hotmail.com', 'cHJvZmVjc3M=', 'ProfeCSS', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
+(6, 'profejs@hotmail.com', 'cHJvZmVqcw==', 'ProfeJS', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
+(7, 'profeprestashop@hotmail.com', 'cHJvZmVwcmVzdGFzaG9w', 'ProfePrestashop', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
+(8, 'profejquery@hotmail.com', 'cHJvZmVqcXVlcnk=', 'ProfeJQuery', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1),
+(9, 'profeajax@hotmail.com', 'cHJvZmVhamF4', 'ProfeAjax', 'WebStudy WebStudy', NULL, 'avatar_profe.png', 1);
 
 --
 -- Índices para tablas volcadas
