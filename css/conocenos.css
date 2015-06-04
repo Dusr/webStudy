@@ -162,12 +162,13 @@
     letter-spacing: 0;
     line-height: inherit;
     margin: 1% 0 0;
-    text-align: left;
+    padding-top: 5px;
+    text-align: center;
     text-transform: uppercase;
 }
 
 iframe{
-    height:308px;
+    height:285px;
 }
 .margenTop{
     margin-top:15px;

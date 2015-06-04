@@ -88,13 +88,13 @@ if (!isset($_SESSION['logged'])) {
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul>
-                <li class="">
-                    <a title="Cursos personalizados" href="cursosPersonalizados.php">Cursos <br />personalizados</a>
+                <li class="personalizados">
+                    <a title="Cursos Personalizados" href="cursosPersonalizados.php">Cursos <br />personalizados</a>
                 </li>
-                <li class="">
-                    <a title="Cursos presenciales" href="cursosPresenciales.php">Cursos <br />presenciales</a>
+                <li class="presenciales">
+                    <a title="Cursos presenciales" href="cursosPresenciales.php">Cursos <br />presenciales</a>					
                 </li>
-                <li class="">
+                <li class="cursos_online">
                     <a title="Cursos online" href="cursosOnline.php">Cursos online</a>
                 </li>
                 <li class="activa seminarios">

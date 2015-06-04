@@ -26,13 +26,13 @@ header("Content-Type: text/html;charset=utf-8");
 <?php include("include/inc_4_nav_inicio.php") ?>
 
 <li class="item-2 activo">
-    <a title="Ir a conocenós" href="conocenos.php">Conócenos</a>
+    <a title="Ir a Conócenos" href="conocenos.php">Conócenos</a>
 </li>
 <li class="item-3" >
-    <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>				
+    <a title="Ir a Nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>				
 </li>
 <li class="item-4">
-    <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+    <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
 </li>
 <li class="item-5">
     <a title="Ir a Soporte - Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>

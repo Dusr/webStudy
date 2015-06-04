@@ -68,13 +68,13 @@ if (isset($_GET['insert'])) {
 <?php
 if (!isset($_SESSION['logged'])) {
     ?>
-    <li class="menuLogin">
+    <li class="menuLogin activo">
         <a title="Ir a la página de acceso" href="accederLogin.php"> Acceder / Registro </a>
     </li>
     <?php
 } else {
     ?>
-   <li class="menuLogin">
+   <li class="menuLogin activo">
         <a href="#"> Bienvenido <?php echo $_SESSION['nombre']; ?></a>
         <div class="header">
             <ul class="dropdown-menu" role="menu">
@@ -200,7 +200,7 @@ if (!isset($_SESSION['logged'])) {
                         </div>
 
                         <div class="boton_enviar">
-                            <input type="submit" name="enviar" value="ACCEDER">
+                            <input type="submit" name="enviar" value="REGISTRARSE">
                         </div>
                     </div>
                 </form>

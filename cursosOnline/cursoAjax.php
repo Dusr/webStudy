@@ -125,6 +125,7 @@ if (!isset($_SESSION['logged'])) {
                     <?php
                 } else {
 
+                    // Cursos que no ha terminado
                     $result2 = mysql_query("SELECT * "
                             . "FROM alumno_has_curso "
                             . "WHERE Alumno_idAlumno= '" . $_SESSION['idAlumno'] . "' "
@@ -138,18 +139,21 @@ if (!isset($_SESSION['logged'])) {
                             . "AND done=1", $con);
 
 
-                    if (mysql_num_rows($result2) == 1) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
+                    
+                        
+                    if (mysql_num_rows($result3) == 1) { // SI YA HA HECHO EL CURSO
+                        ?>
+
+                        <h4>¡Ya has finalizado el curso!</h4>
+
+                        <?php
+                    }else if (mysql_num_rows($result2) > 0) { // SI ESTA INSCRITO EN OTRO CURSO QUE NO SEA ESTE
                         ?>
 
                         <h4>Ya estás inscrito en otro curso, terminalo antes de inscribirte en otro</h4>
 
                         <?php
-                    } else if (mysql_num_rows($result3) == 1) { // SI YA HA HECHO EL CURSO
-                        ?>
-
-                        <h4>Ya has finalizado el curso!</h4>
-
-                        <?php
+                            
                     } else {
                         // SI NO ESTÁ INSCRITO APARECERA EL BOTON PARA INSCRIBIRSE
                         ?>

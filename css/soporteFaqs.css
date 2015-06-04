@@ -1,7 +1,3 @@
-.main{
-	width:80%;
-}
-
 .row{
 	width:100%;
 }
@@ -14,6 +10,10 @@
 	color:#cc99cc;
 	cursor:pointer;
         font-weight: bold;
+}
+
+.inner-block {
+    padding:0 0 30px; 
 }
 
 .encabezado_faqs{

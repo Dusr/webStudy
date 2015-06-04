@@ -16,15 +16,26 @@
 }
 
 .contenedor_menu_secundario li{
-    display:table-cell;
-    height: 4em;
-    vertical-align: middle;
-    padding: 0 7%;
-    text-align: center;
-    border:2px solid silver;
-    border-bottom: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
     border-collapse: collapse;
+    border-color: #993333 #993333 -moz-use-text-color;
+    border-image: none;
     border-spacing: 0;
+    border-style: solid solid none;
+    border-width: 2px 2px medium;
+    border-radius: 7px 7px 0 0;
+    display: table-cell;
+    height: 4em;
+    text-align: center;
+    vertical-align: middle;
+    width: 25%;
+}
+
+.contenedor_menu_secundario li:last-child {
+    padding-right: 14px;
 }
 
 .contenedor_menu_secundario a{
@@ -33,7 +44,7 @@
    text-transform:uppercase;
    font-weight: bold;
    font-size:1em;
-   display:table-cell;
+   display:block;
 }
 
 .contenedor_menu_secundario .activa {
@@ -43,19 +54,35 @@
 }
 
 .contenedor_menu_secundario ul li.activa.personalizados{
-    background-color:#ffcc00;
+    background-color:#ba5454;
 }
 
 .contenedor_menu_secundario ul li.activa.presenciales{
-    background-color:#cc9999;
+    background-color:#c55f5f;
 }
 
 .contenedor_menu_secundario ul li.activa.cursos_online{
-    background-color:#cc6633;
+    background-color:#d87272;
 }
 
 .contenedor_menu_secundario ul li.activa.seminarios{
-    background-color:#ff6633;
+    background-color:#ed8787;
+}
+
+.contenedor_menu_secundario ul li.personalizados:hover{
+    background-color:#ba5454;
+}
+
+.contenedor_menu_secundario ul li.presenciales:hover{
+    background-color:#c55f5f;
+}
+
+.contenedor_menu_secundario ul li.cursos_online:hover{
+    background-color:#d87272;
+}
+
+.contenedor_menu_secundario ul li.seminarios:hover{
+    background-color:#ed8787;
 }
 /*.contenedor_menu_secundario .personalizado a{
     color:#ffcc33;
@@ -160,18 +187,22 @@
 
 .caja_texto.verde{
     background-color:#2B9B2B;
+    border-radius: 7px;
 }
 
 .caja_texto.rojo{
     background-color:#FF0000;
+    border-radius: 7px;
 }
 
 .caja_texto.amarillo{
     background-color:#FF9D00;
+    border-radius: 7px;
 }
 
 .caja_texto.azul{
     background-color:#6699cc;
+    border-radius: 7px;
 }
 
 .cuadrado_blanco{
@@ -226,15 +257,31 @@ img[alt="Calendario"]{
 
 /*Cuando no estas inscrito en rojo*/
 .titulo_detalleCurso input.botonIncribir {
-    background: #a52a2a;
-    color: #fff;
+    background: #ffffff none repeat scroll 0 0;
+    border-color: #993333;
+    border-radius: 7px;
+    color: #993333;
     float: right;
+    padding: 5px 10px;
+}
+.titulo_detalleCurso input.botonIncribir:hover {
+    background: #993333;
+    color: white;
 }
 /*Cuando estás inscrito en verde*/
 .titulo_detalleCurso input.inscrito {
-    background: #6B8E23;
-    color: #fff;
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 7px;
+    border-color: #6b8e23;
+    border-style: solid;
+    color: #6b8e23;
     float: right;
+    padding: 5px 10px;
+}
+
+.titulo_detalleCurso input.inscrito:hover {
+    background: #6b8e23;
+    color: white;
 }
 
 .full-block.fondo_gris.presenciales {

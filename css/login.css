@@ -29,12 +29,16 @@
     z-index:5;
     top:65px;
     left:330px;
+    background: #66cccc;
     color:white;
-    background-color: #993333;
-    padding:10px;
+    border-radius:7px;
+    border: solid 2px #66cccc;
+    padding: 5px 10px;
     font-weight: bold;
-    font-size: 1em;
+    text-align:center;
+    
 }
+
 
 /* Fin texto y boton sobre imagen */
 
@@ -45,7 +49,7 @@
 }
 
 #cabAcceso, #cabRegistro{
-    background: none repeat scroll 0 0 #993333;
+    background: #66cccc none repeat scroll 0 0;
     padding: 6px 15px 28px;
     width: 100%;
 }	
@@ -78,9 +82,11 @@
 
 .boton_enviar input{
     margin-top:35px;
-    background: #993333;
-    border:none;
+    background:#66cccc;
     color:white;
+    border:2px solid #66cccc;
+    padding:5px 10px;
+    border-radius:7px;
 }
 
 #formRegister{

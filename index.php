@@ -270,7 +270,7 @@
                             <div class="contenedor_Izq">
                                 <label for="modalidad">Modalidad</label>
                                 <select id="modalidad" name="modalidad" class="">
-                                    <option value="todas"> Elige la modalidad</option>
+                                    <option value=""> Elige la modalidad</option>
                                     <option value="personaliz">Personalizado</option>
                                     <option value="online">Online</option>
                                     <option value="presencial">Presencial</option>
@@ -280,7 +280,7 @@
                             <div class="contenedor_drcha">
                                 <label for="mes">Fechas</label>
                                 <select id="mes" class="" name="mes_Select">
-                                    <option value="todos">Elige el mes</option>
+                                    <option value="">Elige el mes</option>
                                     <option value="enero">Enero</option>
                                     <option value="febrero">Febrero</option>
                                     <option value="marzo">Marzo</option>
@@ -377,14 +377,16 @@
                                 <th>Enlace al curso</th> 
                             </tr> 
                             <?php
+                            echo $nomCurso, $modali_Curso, $mesFecha;
                             $resBusqueda = mysql_query($busquedaSql);
-                            if ($nomCurso != '' && $modali_Curso != '' && $mesFecha != ''){
+                            if ($nomCurso != '' || $modali_Curso != '' || $mesFecha != ''){
+                                                                
                                 if (mysql_num_rows($resBusqueda) > 0) { // Si la busqueda da resultados
-
+                                         
                                         while ($rowBusqueda = mysql_fetch_array($resBusqueda)) {
                                                     if ($rowBusqueda['modalidad'] == 'presencial') {
                                                             switch ($rowBusqueda['nombre']){
-                                                                case 'HTML5':
+                                                                case 'HTML 5':
                                                                     echo '<tr> 
                                                                             <td class="left">' . $rowBusqueda['nombre'] . '</td> 
                                                                             <td>' . $rowBusqueda['modalidad'] . '</td> 
@@ -552,7 +554,7 @@
                                                               </tr>';
                                                     }
                                         }// end_while
-
+                                    
                                 }
                             }else if ($nomCurso == '' && $modali_Curso == '' && $mesFecha == '') { // Si la busqueda es erronea
 
@@ -560,6 +562,8 @@
                                         <td colspan="4">No hay resultados en la busqueda</td> 
                                       </tr>';
                             }
+                            
+                            echo $busquedaSql;
                             ?> 
                         </table>
 
