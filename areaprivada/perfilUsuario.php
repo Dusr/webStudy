@@ -242,7 +242,7 @@
                                         <dl class="faqs">
                                             <dt class="pregunta">Cambiar contraseña
                                             <div class="flechaAbajo">
-                                                <img class="flecha" src="../img/iconos/flechaAbajo_roja.png"/>
+                                                <img class="flecha" src="../img/iconos/flechaAbajo_azul.png"/>
                                             </div>
                                             </dt>
                                             <div id="cambiarContrasena">

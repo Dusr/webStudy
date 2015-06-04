@@ -29,8 +29,8 @@ desplegableFaq = function () {
     $('.faqs dd').hide();
     $('#cambiarContrasena').hide();
     $('.faqs dt').click(function () {
-        $(this).next().slideToggle('fast');
-        $(this).next().$('dd').slideToggle('fast');
+        $(this).next().slideToggle("fast");
+        $(this).next().$('dd').slideToggle("fast");
     });
 
 
@@ -38,7 +38,7 @@ desplegableFaq = function () {
     /* Rotacion de la flecha en el FAQ */
     var rotation = 0;
 
-    $('.pregunta').click(function () {
+    $('.faqs').click(function () {
         rotation += 180;
         $(this).find('.flecha').rotate(rotation);
     });

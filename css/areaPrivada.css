@@ -317,6 +317,7 @@ border-color: #6699cc;
 #tabs li a{
     display:block;
     text-align: center;
+    color:#000;
 }
 
 #tabs li a:hover{
@@ -343,6 +344,7 @@ margin-top:3px;
 
 .faqs dt{
     color:#6699cc;
+    cursor:pointer;
 }
 
 .flechaAbajo{
