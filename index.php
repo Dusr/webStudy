@@ -514,8 +514,7 @@
                 </a>
             </p>
             <div class="newsletter_form">
-                <p>Sigue informado de todo lo que pasa en WebStudy.com.</p>
-                <p>Escoge lo que interesa de nuestra empresa:</p>
+               
                 
                  <?php
                     if(!isset($_POST['correo'])) {
@@ -524,6 +523,8 @@
 
 
                 ?>
+                <p>Sigue informado de todo lo que pasa en WebStudy.com.</p>
+                <p>Escoge lo que interesa de nuestra empresa:</p>
                 <form action="index.php" method="post">
                         <ul class="lista_newsletter">
                             <li>
@@ -564,22 +565,29 @@
 
 
                    $email_subject = "NEWSletters";             
-                  //$newslettersDatos=$_POST["newsletters"];
+                  
                    $checked = $_POST['newsletters']; 
-                  $cuerpo = "Newsletters\n";
-                  $count= count($newslettersDatos);
+                 $cuerpo = "Newsletters\n";
+                 
                   $cuerpo .= "el mail es: " . $_POST["correo"] . "\n";
                   foreach($checked as $i) 
                     { 
                       $cuerpo .= "newsletters: " . $i . "\n"; 
-                 // for ($i=0;$i<$count($newslettersDatos);$i++)    
-                 // {     
-                 // $cuerpo .= "newsletters: " . $newslettersDatos() . "\n";  
+                
                   }
+                  
                       
                       @mail("contacto@midesvanweb.com",$email_subject,$cuerpo);
-                      echo "news".$cuerpo;
-                        }
+                     
+                        //doy las gracias por el envio
+                    echo "<div class='news_ok'>";
+                    echo "<p>";
+                    echo "Gracias, ya estás inscrito a nuestras newsletters.<br>
+                    Si quieres darte de baja escribenós a :
+                    </br> contacto@midesvanweb.com";
+                    echo "</p>";
+                    echo "</div>";
+                    } 
                    ?> 
             </div>
         </div>

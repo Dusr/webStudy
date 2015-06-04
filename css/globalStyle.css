@@ -1246,3 +1246,11 @@ table#buscador a {
     float:left;
     width: 75%;
 }
+
+.newsletter_form div.news_ok {
+   
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+
+}
