@@ -1,10 +1,10 @@
 //Notificaciones
-$(document).ready(function () {
-    $('.boton_mensaje').hide();
-    $(".notificaciones").click(function () {
-        $(".boton_mensaje").slideToggle(1000);
-    });
-});
+//$(document).ready(function () {
+//    $('.boton_mensaje').hide();
+//    $(".notificaciones").click(function () {
+//        $(".boton_mensaje").slideToggle(1000);
+//    });
+//});
 
 ////scroll
 //$(document).scroll(function() {

@@ -194,17 +194,17 @@
 
                 <div class="menu_secundario">
                     <div class="contenedor_menu_secundario">
-                        <ul class="tabs">
-                            <li class="current">
-                                <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
+                        <ul id="tabs">
+                            <li class="">
+                                <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                             </li>
 
                             <li class="medio">
-                                <a title="Curso actual" href="perfil_cursoActual.php">Curso actual</a>
+                                <a title="Ir al curso actual" name="tab2" href="#tab2">Curso actual</a>
                             </li>
 
                             <li class="">
-                                <a title="Cursos finalizados" href="perfilUsuario_cursoHecho.php">Mis cursos finalizados</a>
+                                <a title="Mis cursos" name="tab3" href="#tab3">Mis cursos finalizados</a>
                             </li>
                         </ul>
                     </div>
@@ -215,7 +215,7 @@
 
                 <div class="content">
                     <!-- MI PERFIL -->
-                    <div class="main inner-block tab1">
+                    <div id="tab1" class="main inner-block">
                         <form action="actualizarUsuario.php" method="POST" enctype="multipart/form-data">
                             <div id="colIzq">
                                 <div id="userData">
@@ -242,7 +242,7 @@
                                         <dl class="faqs">
                                             <dt class="pregunta">Cambiar contraseña
                                             <div class="flechaAbajo">
-                                                <img class="flecha" src="../img/iconos/flechaAbajo_azul_alumno.png"/>
+                                                <img class="flecha" src="../img/iconos/flechaAbajo_azul.png"/>
                                             </div>
                                             </dt>
                                             <div id="cambiarContrasena">
@@ -302,7 +302,250 @@
                                 </div>
                             </div>
                         </form>
-                    </div>          
+                    </div>
+
+                    <!-- CURSO ACTUAL -->
+                    <div id="tab2" class="main inner-block">
+                        <div class="main inner-block" id="mainContainer">
+                            <!--CARGAMOS LA INFORMCION DEL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
+
+                            <?php
+                            include('../areaprivada/openDB.php');
+
+                            /* ------------------------------------------------------------------------------------------COMPROBAMOS EL CURSO ACTUAL Y QUE NO ESTÉ ACABADO--------------------------------------------- */
+                            //select * from curso where idCurso in (select Curso_idCurso from alumno_has_curso where curso.idCurso = alumno_has_curso.Curso_idCurso and Alumno_idAlumno=13)
+                            $tiene_curso = mysql_query("SELECT * "
+                                    . "FROM curso "
+                                    . "WHERE idCurso IN ("
+                                    . "SELECT Curso_idCurso "
+                                    . "FROM alumno_has_curso "
+                                    . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
+                                    . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . " "
+                                    . "AND done=0)", $con);
+
+                            $row = mysql_fetch_array($tiene_curso);
+
+                            if (mysql_num_rows($tiene_curso) == 1) {
+
+                                //Almacenamos los datos del curso en variables de sesión
+                                $idCurso = $row['idCurso'];
+                                $nombreCurso = $row['nombre'];
+                                $lenguaje = $row['lenguaje'];
+                                $duracion = $row['duracion'];
+                                $descripcion = $row['descripcion'];
+                                $_SESSION['inscribed'] = TRUE;
+
+                                //CONSULTA MODULOS DEL CURSO
+                                $modulos = mysql_query("SELECT * "
+                                        . "FROM modulo "
+                                        . "WHERE Curso_idCurso =" . $idCurso, $con);
+                                ?> <!-- SI ENCUENTRA EN LA BASE DE DATOS -->
+                                <div class="headerMod">
+                                    <div class="titleCursoImg">
+                                        <img src="../img/iconos/areaPrivada/icono_titulo_curso.png" />
+                                    </div>
+                                    <h3><?php echo $nombreCurso; ?></h3>
+                                    <div class="boton">
+                                        <a href="cursoHecho.php?id=<?php echo $idCurso ?> ">Finalizar curso</a>
+                                    </div>
+                                    <h4 class="paddingLeft"><?php echo $descripcion; ?></h4>
+
+                                </div>
+
+                                <div class="bloqueIzq">
+                                    <div class="info-box">
+                                        <div class="tablaModulos paddingLeft"> 
+                                            <span id="tituloModulo" class="letraGrande">Módulos del curso</span>
+                                            <ul class="lista_modulos">
+                                                <?php
+                                                if (mysql_num_rows($modulos) > 0) {
+                                                    $controlModulo = 1;
+                                                    while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                                        ?>  
+                                                        <li>
+                                                            <div class="modulo">
+                                                                <div class="imagenMod">
+                                                                    <img src="../img/iconos/areaPrivada/icono_modulo.png"/>
+                                                                </div>
+
+                                                                <p><?php echo $rowmodulo['nombre']; ?></p>
+                                                                <input class="botonAcceder" type="button" name="tab<?php echo $controlModulo ?>d" value="Mostrar módulo"/>
+                                                            </div> 
+                                                        </li>
+                                                        <?php
+                                                        $controlModulo = $controlModulo + 1;
+                                                    }//end_while
+                                                } else {
+                                                    //SI NO ESTA EN LA BASE DE DATOS
+                                                    header("Location: ../cursosOnline.php");
+                                                }
+                                                ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="bloqueDcha">
+                                    <div class="contentd" id="moduloScroll">
+                                        <?php
+                                        if (isset($_GET["mensaje_enviado"])) {
+                                            ?>
+                                            <script>alert('Se ha enviado su mensaje al profesor satisfactoriamente')</script>    
+                                            <?php
+                                        }
+                                        if (isset($_GET["withoutarchive"])) {
+                                            ?>
+                                            <script>alert('El archivo subido no es de un tipo permitido o es demasiado grande.')</script>    
+                                            <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        $modulos = mysql_query("SELECT * "
+                                                . "FROM modulo "
+                                                . "WHERE Curso_idCurso =" . $idCurso, $con);
+
+                                        if (mysql_num_rows($modulos) > 0) {
+                                            $controlModulo = 1;
+                                            while ($rowmodulo = mysql_fetch_array($modulos)) {
+                                                echo ''
+                                                ?>  
+                                                <div id="tab<?php echo $controlModulo ?>d" class="descripcionModulo">
+                                                    <span id="tituloModulo"><?php echo $rowmodulo['nombre']; ?></span>
+
+                                                    <div id="contenedorDescripcion">
+                                                        <div class="modulo" style="border:none;">
+                                                            <div class="imagenMod">
+                                                                <img src="../img/iconos/areaPrivada/descargaPdf.png"/>
+                                                            </div>
+
+                                                            <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['apuntes']; ?>.pdf"> Descargar temario</a>
+                                                        </div> 
+
+
+                                                        <div class="modulo" style="border:none;">
+                                                            <div class="imagenMod">
+                                                                <img src="../img/iconos/areaPrivada/descargaEjercicios.png"/>
+                                                            </div>
+
+                                                            <a target="_blank" href="../pdf/<?php echo $idCurso ?>/<?php echo $rowmodulo['ejercicios']; ?>.pdf"> Descargar ejercicios</a>
+                                                        </div> 
+
+                                                        <div id="formularioEjercicios">
+                                                            <?php
+                                                            include("./openDB.php");
+
+                                                            $query = mysql_query("select * from usuario where idAlumno = (select Alumno_idAlumno from profesor_has_curso where profesor_has_curso.Alumno_idAlumno = usuario.idAlumno and profesor_has_curso.Curso_idCurso=" . $idCurso . ")");
+
+                                                            $row = mysql_fetch_array($query);
+
+                                                            if ($query) {
+                                                                $idProfe = $row['idAlumno'];
+                                                                $nombreProfe = $row['nombre'];
+                                                                $apellidosProfe = $row['apellidos'];
+                                                                $correoProfe = $row['login'];
+                                                            }
+                                                            ?>
+
+                                                            <form name="mp" method="POST" action="enviarMensaje.php" enctype="multipart/form-data">
+                                                                <legend>Formulario de envio</legend>
+                                                                <label for="titulo">Módulo: </label>
+                                                                <input type="text" readonly id="title" name="title" required size="30" value="<?php echo $rowmodulo['nombre'] ?>"/>
+
+                                                                <label for="emisor">Alumno: </label>
+                                                                <input type="text" readonly id="emisor" name="emisor" required value="<?php echo $_SESSION['login']; ?>"/>
+
+                                                                <input style="display:none" id="receptor" name="receptor" value="<?php echo $idProfe ?>"/>
+
+                                                                <label for="mensaje">Mensaje</label>
+                                                                <textarea id="mensaje" name="mensaje"></textarea>
+
+                                                                <label for="archivo">Archivo: </label>
+                                                                <div class="fileUpload">
+                                                                    <input class="guarda" type="file" id="archivo" name="archivo"/>
+                                                                </div>      
+
+
+                                                                <input type="submit" name="enviarArchivo" style="float:right" value="Enviar"/>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                                $controlModulo = $controlModulo + 1;
+                                            }//end_while
+                                        } else {
+                                            //SI NO ESTA EN LA BASE DE DATOS
+                                            header("Location: ../cursosOnline.php");
+                                        }
+                                        ?>
+
+                                    </div>    
+                                </div>
+                                <?php
+                            } else {
+                                echo '<p><a href="../nuestrosCursos.php" title="No estás inscrito a ningun curso">No estás inscrito en ningún curso</a>. </p>';
+                            }
+                            ?>
+
+                        </div>    
+                    </div>
+
+                    <!-- MIS CURSOS FINALIZADOS-->
+                    <div id="tab3" class="main inner-block">
+                        <?php
+                        include('../areaprivada/openDB.php');
+
+                        /* ----------------COMPROBAMOS EL CURSO ACTUAL Y QUE ESTÉ ACABADO-------------------- */
+
+                        $curso_finalizado = mysql_query("SELECT * "
+                                . "FROM curso "
+                                . "WHERE idCurso IN ("
+                                . "SELECT Curso_idCurso "
+                                . "FROM alumno_has_curso "
+                                . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
+                                . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . " "
+                                . "AND done=1)", $con) or die("Error en: $busqueda: " . mysql_error());
+
+
+//            while ($row = mysql_fetch_array($curso_finalizado, MYSQL_ASSOC)) {
+//    print_r($row);
+//}
+
+                        if (mysql_num_rows($curso_finalizado) > 0) {
+                            ?>
+                            <p class="titulo">Enhorabuena, has terminados estos cursos</p>
+                            <ul class="curso_finalizado">
+                                <?php
+                                while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
+
+                                    $nombreCurso = $rowcurso['nombre'];
+                                    ?>
+                                    <li>
+                                        <div class="envoltura">
+                                            <div class="imagenCursoFinalizado">
+                                                <img src="../img/iconos/areaPrivada/diploma.png"/>
+                                            </div>
+                                            <div class="datosCursoFinalizado">                                        
+                                                <p>Curso finalizado:<?php echo $rowcurso['nombre']; ?></p>                                        
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+
+                            <?php
+                        } else {
+                            ?>
+
+                            <p><a href="/areaprivada/perfilUsuario.php" title="Aún no has finalizado ningún curso">Aún no has finalizado ningún curso</a>. </p>
+                        <?php } ?>
+
+                    </div>
+                </div>
+
 
 
             <?php } else { ?> 
@@ -314,15 +557,15 @@
 
                 <div class="menu_secundario profesor">
                     <div class="contenedor_menu_secundario">
-                        <ul class="tabs">
-                            <li class="current">
-                                <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
+                        <ul id="tabs">
+                            <li class="">
+                                <a title="Ir a tu perfil" name="tab1" href="/">Tu perfil</a>
                             </li>
                             <li class="">
-                                <a title="Listado de alumnos" href="perfil_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
+                                <a title="Ir al curso actual" name="tab2" href="/">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
                             </li>
                             <li class="">
-                                <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
+                                <a title="Mis cursos" name="tab3" href="/">Notificaciones</a>
                             </li>
                         </ul>
                     </div>
@@ -332,7 +575,7 @@
 
                 <!-- MI PERFIL -->
                 <div class="content profesor">
-                    <div class="main inner-block tab1">
+                    <div id="tab1" class="main inner-block">
                         <form action="actualizarUsuario.php" method="POST" enctype="multipart/form-data">
                             <div id="colIzq">
                                 <div id="userData">
@@ -407,7 +650,108 @@
                         </form>
                     </div>
 
-                   
+                    <!-- CURSO ACTUAL -->
+                    <div id="tab2" class="main inner-block">
+                        <div class="main inner-block" id="mainContainer">
+                            <!--CARGAMOS LA INFORMCION DEL CURSO Y DE LOS MODULOS DE LA BASE DE DATOS-->
+
+                            <?php
+                            include('../areaprivada/openDB.php');
+
+                            $curso = mysql_query("SELECT * "
+                                    . "FROM curso "
+                                    . "WHERE idCurso = ("
+                                    . "SELECT Curso_idCurso "
+                                    . "FROM profesor_has_curso "
+                                    . "WHERE curso.idCurso = profesor_has_curso.Curso_idCurso "
+                                    . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . ")", $con);
+
+                            $rowCurso = mysql_fetch_array($curso);
+
+                            if (mysql_num_rows($curso) == 1) {
+                                //Almacenamos los datos del curso en variables de sesión
+                                $idCurso = $rowCurso['idCurso'];
+                                $nombreCurso = $rowCurso['nombre'];
+                                $lenguaje = $rowCurso['lenguaje'];
+                                $duracion = $rowCurso['duracion'];
+                                $descripcion = $rowCurso['descripcion'];
+
+                                $tiene_alumnos = mysql_query("SELECT nombre, apellidos "
+                                        . "FROM usuario "
+                                        . "WHERE idAlumno IN ("
+                                        . "SELECT alumno_has_curso.Alumno_idAlumno "
+                                        . "FROM alumno_has_curso , profesor_has_curso "
+                                        . "WHERE alumno_has_curso.Curso_idCurso = profesor_has_curso.Curso_idCurso "
+                                        . "AND done=0)", $con);
+                                ?>
+
+                                <?php
+                                if (mysql_num_rows($tiene_alumnos) > 0) {
+                                    ?>
+                                    <h4 class="titListado">Listado de alumnos de <?php echo $nombreCurso ?></h4>
+                                    <ul class="listado">
+                                        <?php
+                                        for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {
+                                            $row = mysql_fetch_array($tiene_alumnos);
+                                            ?>
+                                            <li>
+                                                <?php
+                                                echo $row['nombre'] . ' ';
+                                                echo $row['apellidos'];
+                                                ?>
+                                            </li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <p class="msj_no_inscrito"> No hay alumnos inscritos en el curso. </p>;
+                                    <?php
+                                }
+                            } else { //SI EL PROFESOR NO TIENE UN CURSO ASIGNADO
+                                ?>
+                                <p class="msj_no_inscrito"> No estás asociado a ningún curso. </p>;
+                                <?php
+                            }
+                            ?>
+                        </div>  
+                    </div>
+
+                    <!-- MIS CURSOS -->
+                    <div id="tab3" class="main inner-block">
+                        <div class='notificaciones faqs'>
+                            <p>Sus mensajes:</p>
+                            <div class="flechaAbajo">
+                                <img class="flecha" src="../img/iconos/flechaAbajo_azul.png"/>
+                            </div>
+                            <div class="boton_mensaje">
+                                
+                                 <?php
+                                    $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
+                                    $mensajes = mysql_query($queryMensaje);
+
+                                while ($filaNotificacion = mysql_fetch_array($mensajes)) {
+                                    ?>
+                                <ul class="row">
+                                        <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
+                                        <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
+                                        <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
+                                        <li><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
+                                </ul>
+                                 <?php
+                                    }
+                                    ?>
+                            </div>
+                        </div>
+                        <div class="notificacion" name="notificacion">
+
+                        </div>
+                    </div>
+                </div>
+
+
             <?php } ?>
 
             <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->

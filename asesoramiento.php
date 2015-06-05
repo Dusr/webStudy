@@ -89,7 +89,7 @@ if (!isset($_SESSION['logged'])) {
 
     <?php include("include/inc_opcional_slider_Inicio.php") ?>
 
-    <img alt="asesoramiento" src="img/imgSlider/asesoramiento.jpg">
+    <img alt="asesoramiento" src="img/imgSlider/slider_9.jpg">
 
     <?php include("include/inc_opcional_slider_Final.php") ?>
 

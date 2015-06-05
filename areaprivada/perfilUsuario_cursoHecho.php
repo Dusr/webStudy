@@ -194,17 +194,17 @@ if (!isset($_SESSION['logged'])) {
 
         <div class="menu_secundario">
             <div class="contenedor_menu_secundario">
-                 <ul id="tabs">
+                 <ul class="tabs">
                     <li>
-                        <a title="Ir a tu perfil" href="perfilUsuario.php">Tu perfil</a>
+                        <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
                     
                     <li>
-                        <a title="Ir al curso actual" href="perfil_cursoActual.php">Curso actual</a>
+                        <a title="Curso actual" href="perfil_cursoActual.php">Curso actual</a>
                     </li>
                     
                     <li class="current">
-                        <a title="Mis cursos finalizados" href="perfilUsuario_cursoHecho.php">Mis cursos finalizados</a>
+                        <a title="Cursos finalizados" href="perfilUsuario_cursoHecho.php">Mis cursos finalizados</a>
                     </li>
                 </ul>
             </div>
@@ -219,59 +219,57 @@ if (!isset($_SESSION['logged'])) {
             <!-- CURSO ACTUAL -->
          
             <!-- MIS CURSOS FINALIZADOS-->
-            <div id="tab3" class="main inner-block">
+            <div class="main inner-block tab3">
                     <?php
-                    include('../areaprivada/openDB.php');
+                        include('../areaprivada/openDB.php');
 
-                    /* ----------------COMPROBAMOS EL CURSO ACTUAL Y QUE ESTÉ ACABADO-------------------- */
+                        /* ----------------COMPROBAMOS EL CURSO ACTUAL Y QUE ESTÉ ACABADO-------------------- */
 
-                    $curso_finalizado = mysql_query("SELECT * "
-                            . "FROM curso "
-                            . "WHERE idCurso IN ("
-                            . "SELECT Curso_idCurso "
-                            . "FROM alumno_has_curso "
-                            . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
-                            . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . " "
-                            . "AND done=1)", $con) or die("Error en: $busqueda: " . mysql_error());
+                        $curso_finalizado = mysql_query("SELECT * "
+                                . "FROM curso "
+                                . "WHERE idCurso IN ("
+                                . "SELECT Curso_idCurso "
+                                . "FROM alumno_has_curso "
+                                . "WHERE curso.idCurso = alumno_has_curso.Curso_idCurso "
+                                . "AND Alumno_idAlumno=" . $_SESSION['idAlumno'] . " "
+                                . "AND done=1)", $con) or die("Error en: $busqueda: " . mysql_error());
 
 
 //            while ($row = mysql_fetch_array($curso_finalizado, MYSQL_ASSOC)) {
 //    print_r($row);
 //}
 
-                    if (mysql_num_rows($curso_finalizado) > 0) {
-                        ?>
-                <p class="titulo">Enhorabuena, has terminados estos cursos</p>
-                        <ul class="curso_finalizado">
-                            <?php
-                            while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
+                        if (mysql_num_rows($curso_finalizado) > 0) {
+                            ?>
+                            <p class="titulo">Enhorabuena, has terminados estos cursos</p>
+                            <ul class="curso_finalizado">
+                                <?php
+                                while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
 
-                                $nombreCurso = $rowcurso['nombre'];
-                                ?>
-                                <li>
-                                    <div class="envoltura">
-                                        <div class="imagenCursoFinalizado">
-                                            <img src="../img/iconos/areaPrivada/diploma.png"/>
-                                        </div>
-                                        <div class="datosCursoFinalizado">                                        
+                                    $nombreCurso = $rowcurso['nombre'];
+                                    ?>
+                                    <li>
+                                        <div class="envoltura">
+                                            <div class="imagenCursoFinalizado">
+                                                <img src="../img/iconos/areaPrivada/diploma.png"/>
+                                            </div>
+                                            <div class="datosCursoFinalizado">                                        
                                                 <p>Curso finalizado:<?php echo $rowcurso['nombre']; ?></p>                                        
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-        <?php } ?>
-                        </ul>
+                                    </li>
+                                <?php } ?>
+                            </ul>
 
-        <?php
-    } else {
-        ?>
-                        
-                        <p><a href="/areaprivada/perfilUsuario.php" title="Aún no has finalizado ningún curso">Aún no has finalizado ningún curso</a>. </p>
-                    <?php } ?>
+                            <?php
+                        } else {
+                            ?>
 
+                            <p><a href="/areaprivada/perfilUsuario.php" title="Aún no has finalizado ningún curso">Aún no has finalizado ningún curso</a>. </p>
+                        <?php } ?>
+
+                    </div>
                 </div>
-        </div>
-
-
 
     <?php } else { ?> 
 
@@ -282,15 +280,15 @@ if (!isset($_SESSION['logged'])) {
 
         <div class="menu_secundario profesor">
             <div class="contenedor_menu_secundario">
-                <ul id="tabs">
+                <ul class="tabs">
                     <li>
-                        <a title="Ir a tu perfil" href="perfilUsuario.php">Tu perfil</a>
+                        <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
                     <li >
-                        <a title="Ir al curso actual" href="perfil_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
+                        <a title="Listado de alumnos" href="perfil_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
                     </li>
                     <li class="current">
-                        <a title="Mis cursos finalizados" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
+                        <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
                     </li>
                 </ul>
             </div>
@@ -301,63 +299,49 @@ if (!isset($_SESSION['logged'])) {
         <!-- MI PERFIL -->
         <div class="content profesor">
           <!-- MIS CURSOS -->
-            <div id="tab3" class="main inner-block">
-                <div class='notificaciones'>
-                    <div class="boton_mensaje">
-                    <a href="javascript:void(0)">Tiene un mensaje de: <?php
-                        if (isset($_GET["id"])) {
-                            $sql = mysql_query("SELECT * FROM mensajes WHERE id = '$_GET[id]' and '$_POST[idAlumno]'='$_SESSION[idAlumno]'");
-                            $fetch = mysql_fetch_array($sql);
-                            echo $fetch[emisor]
-                            ?></a> <?php } ?> 
-                    </div>
-                </div>
-                <div class="notificacion" name="notificacion">
-                    <?php
-                    if (isset($_GET["borrar"])) {
-                        mysql_query("DELETE FROM mensajes WHERE id = '$_GET[borrar]'");
-                        echo "<script>alert('El mensaje número $_GET[borrar] ha sido eliminado'); document.location=('perfilUsuario.php')</script>";
-                    }
+            <div class="main inner-block tab3">
+                 <p>Sus mensajes:</p>
+                  <?php
+                        include('../areaprivada/openDB.php');
+                         $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
+                         $mensajes = mysql_query($queryMensaje);
+                        if (mysql_num_rows( $mensajes) > 0) {
                     ?>
-                    <?php
-                    if (isset($_GET["id"])) {
-                        $sql = mysql_query("SELECT * FROM mensajes WHERE id = '$_GET[id]' and '$_POST[idAlumno]'='$_SESSION[idAlumno]'");
-                        $fetch = mysql_fetch_array($sql);
-                        echo"<table><tr><td>
-	                  De: $fetch[emisor]
-	                  </td></tr><tr><td>
-	                  Para: $fetch[receptor]
-	                  </td></tr><tr><td>
-	                  Mensaje: $fetch[mensaje]
-	                  </td></tr></table><hr><a href='perfilUsuario.php?borrar=$fetch[id]'>Eliminar</a>";
-                    } else {
-                        ?>
-                        <?php
-                        $query = mysql_query("SELECT * FROM mensajes where receptor = '$_SESSION[login]' order by id ASC ");
-                        if (mysql_num_rows($query)) {
-                            if ($row = mysql_fetch_array($query)) {
-                                echo "<table><tr><td>
-	                  De: $row[emisor]
-	                  </td></tr><tr><td>
-	                  Para: $row[receptor]
-	                  </td></tr><tr><td>
-                          Mensaje: $row[mensaje]
-	                  </td></tr></table>
-				
-	                  ";
-                            }
+               <div class='notificaciones'>
+                        <div class="boton_mensaje">
+                             <?php
+                                   
+                                   // $mensajes = mysql_query($queryMensaje);
+
+                                while ($filaNotificacion = mysql_fetch_array($mensajes)) {
+                                    ?>
+                                <ul class="row">
+                                        <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
+                                        <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
+                                        <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
+                                        <li class="last"><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
+                                </ul>
+                                 <?php
+                                    }
+                                    ?>
+                             <?php
                         } else {
-                            echo'No hay mensajes<hr>';
-                        }
-                        ?>
-                    <?php } ?>
+                            ?>
+
+                            <p>No tienes ningún mensaje. </p>
+                        <?php } ?>
+                        </div>
                 </div>
-            </div>
-        </div>
+                    
 
 
-    <?php } ?>
-        
+ <?php
+                                    }
+                     ?>  
+                    </div>
+              
+
+    
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
    	<footer>
 	<div id="contenido_footer">
