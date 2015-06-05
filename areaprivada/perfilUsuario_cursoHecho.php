@@ -269,7 +269,7 @@ if (!isset($_SESSION['logged'])) {
                         <?php } ?>
 
                     </div>
-                </div>
+                
 
     <?php } else { ?> 
 
@@ -338,10 +338,9 @@ if (!isset($_SESSION['logged'])) {
  <?php
                                     }
                      ?>  
-                    </div>
+             </div>
               
-
-    
+        
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
    	<footer>
 	<div id="contenido_footer">
