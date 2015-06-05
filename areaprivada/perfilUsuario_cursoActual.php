@@ -398,7 +398,7 @@ if (!isset($_SESSION['logged'])) {
                                 </div>
                                 <?php
                             } else {
-                                echo '<p><a href="../nuestrosCursos.php" title="No estás inscrito a ningun curso">No estás inscrito en ningún curso. <br/> ! Apuntaté aquí !</a> </p>';
+                                echo '<p><a href="../nuestrosCursos.php" title="No estás inscrito a ningun curso">No estás inscrito en ningún curso. <br/> ! Apúntate aquí !</a> </p>';
                             }
                             ?>
 
