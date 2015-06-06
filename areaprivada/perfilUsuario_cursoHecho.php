@@ -316,9 +316,9 @@ if (!isset($_SESSION['logged'])) {
                                 while ($filaNotificacion = mysql_fetch_array($mensajes)) {
                                     ?>
                                 <ul class="row">
-                                        <li><strong>Alumno:</strong> <?php echo $filaNotificacion['emisor'] ?></li>
-                                        <li><strong>Módulo:</strong><?php echo $filaNotificacion['titulo'] ?></li>
-                                        <li><strong>Mensaje:</strong><?php echo $filaNotificacion['mensaje'] ?></li>
+                                        <li><strong>Alumno: </strong> <?php echo $filaNotificacion['emisor'] ?></li>
+                                        <li><strong>Módulo: </strong><?php echo $filaNotificacion['titulo'] ?></li>
+                                        <li><strong>Mensaje: </strong><?php echo $filaNotificacion['mensaje'] ?></li>
                                         <li class="last"><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
                                 </ul>
                                  <?php
