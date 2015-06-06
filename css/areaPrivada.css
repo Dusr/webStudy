@@ -73,6 +73,8 @@
     min-width: 1024px;
 }
 
+
+
 #formLogin input{
     width:100%;
 }
@@ -302,28 +304,29 @@ padding:8px;
 padding:0;
 }
 
-.menu_secundario{
-border-bottom: solid 3px #6699cc;
-}
 
 .tabs li {
-width: 30%;
+width: 20%;
 border-radius: 5px 5px 0 0;
-border-color: #6699cc;
-}
-.tabs li:hover{
-    background: #6699cc;
-    border: 3px solid #6699cc;
+border-color: #4275a8;
+background: #6699cc;
 }
 
+
 .tabs li a{
-    display:block;
+    color: #000;
+    display: block;
+    height: 100%;
+    padding-top: 18px;
     text-align: center;
-    color:#000;
+    width: 100%;
 }
 
 .tabs li a:hover{
     color:white;
+}
+.tabs li.current a:hover{
+    color:black;
 }
 
 .current{
@@ -632,18 +635,17 @@ text-align: center;
 /*********************************/
 /*AREA PRIVADA / LISTADO CURSOS / PROFESOR*/ 
 /**********************************/
-.contenedor-total .menu_secundario.profesor {
-    border-bottom: 3px solid #66cccc;
-}
+
 .profesor #cabAcceso, #cabRegistro {
     border-bottom: 2px solid #66cccc;
     padding: 6px 15px 28px;
     width: 100%;
 }
 .profesor .tabs li {
-width: 30%;
-border-radius: 5px 5px 0 0;
-border-color: #66cccc;
+    background: #66cccc none repeat scroll 0 0;
+    border-color: #43a9a9;
+    border-radius: 5px 5px 0 0;
+    width: 30%;
 }
 
 .profesor .tabs li:hover{
@@ -909,8 +911,9 @@ margin-top:10px;
     opacity: 1;
 }
 
-.profesor .current{
-    background: #66cccc;
+.profesor .tabs li.current{
+    background: white none repeat scroll 0 0;
+    border-bottom: none;
 }
 .profesor .notificaciones{
     margin:20px 0;
@@ -944,7 +947,6 @@ margin-top:10px;
 .profesor .notificaciones .boton_mensaje{
     display: inline-block;
     width: 1000px;
-    border:2px solid #66cccc;
     padding: 5px;
     text-align: center;
 }
@@ -991,12 +993,12 @@ margin-top:10px;
     text-align: left;
 }
 .profesor .notificaciones div.boton_mensaje ul{
-    width:90%;
-    padding:30px;
-    float:left;
-    border:1px solid;
-    border-radius:5px;
-    margin:30px 24px;
+    border: 2px solid #66cccc;
+    border-radius: 5px;
+    float: left;
+    margin: 30px 24px;
+    padding: 30px;
+    width: 90%;
 }
 
 .profesor .notificaciones div.boton_mensaje ul li{
@@ -1007,9 +1009,8 @@ margin-top:10px;
 
 .profesor .notificaciones div.boton_mensaje ul li a{
     border: 2px solid #66cccc;
-    
     border-radius: 5px;
-    color: #000;
+    color: #66cccc;
     display: inline-block;
     padding: 5px 10px;
     text-align: center;

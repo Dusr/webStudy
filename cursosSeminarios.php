@@ -88,6 +88,9 @@ if (!isset($_SESSION['logged'])) {
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul>
+                <li class="ladoc">
+                                
+                </li>
                 <li class="personalizados">
                     <a title="Cursos Personalizados" href="cursosPersonalizados.php">Cursos <br />personalizados</a>
                 </li>
@@ -99,6 +102,9 @@ if (!isset($_SESSION['logged'])) {
                 </li>
                 <li class="activa seminarios">
                     <a title="Seminarios gratuitos" href="cursosSeminarios.php">Seminarios <br />  gratuitos</a>
+                </li>
+                <li class="ladoc">
+                                
                 </li>
             </ul>
         </div>
