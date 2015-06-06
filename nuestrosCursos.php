@@ -23,14 +23,14 @@
 <?php include("include/inc_4_nav_inicio.php") ?> 
 
 <li class="item-2">
-    <a title="Ir a conócenos" href="conocenos.php">Conócenos
+    <a title="Ir a Conócenos" href="conocenos.php">Conócenos
     </a>
 </li>
 <li class="item-3 activo" >
-    <a title="Ir a nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>		
+    <a title="Ir a Nuestros cursos" href="nuestrosCursos.php">Nuestros cursos</a>		
 </li>
 <li class="item-4">
-    <a title="Ir a asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
+    <a title="Ir a Asesoramiento" href="asesoramiento.php"> Asesoramiento </a>
 </li>
 <li class="item-5">
     <a title="Ir a Soporte/Faq´s" href="soporteFaqs.php"> Soporte/Faq´s </a>
@@ -93,6 +93,9 @@ if (!isset($_SESSION['logged'])) {
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul>
+                <li class="ladoc">
+                                
+                </li>
                 <li class="personalizados">
                     <a title="Cursos Personalizados" href="cursosPersonalizados.php">Cursos <br />personalizados</a>
                 </li>
@@ -100,10 +103,13 @@ if (!isset($_SESSION['logged'])) {
                     <a title="Cursos presenciales" href="cursosPresenciales.php">Cursos <br />presenciales</a>					
                 </li>
                 <li class="cursos_online">
-                    <a title="Cursos online" href="cursosOnline.php">Cursos online</a>
+                    <a title="Cursos online" href="cursosOnline.php">Cursos <br> online</a>
                 </li>
                 <li class="seminarios">
                     <a title="Seminarios gratuitos" href="cursosSeminarios.php">Seminarios <br />  gratuitos</a>
+                </li>
+                <li class="ladoc">
+                                
                 </li>
             </ul>
         </div>

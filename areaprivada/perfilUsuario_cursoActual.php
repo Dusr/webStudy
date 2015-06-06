@@ -484,7 +484,7 @@ if (!isset($_SESSION['logged'])) {
                                 <?php
                                 if (mysql_num_rows($tiene_alumnos) > 0) {
                                     ?>
-                                    <h4 class="titListado">Listado de alumnos de <?php echo $nombreCurso ?></h4>
+                                    <h3 class="titListado">Listado de alumnos de <?php echo $nombreCurso ?></h3>
                                     <ul class="listado">
                                         <?php
                                         for ($i = 0; $i < mysql_num_rows($tiene_alumnos); $i++) {

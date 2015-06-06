@@ -310,6 +310,7 @@ width: 20%;
 border-radius: 5px 5px 0 0;
 border-color: #4275a8;
 background: #6699cc;
+height: 40px;
 }
 
 
@@ -317,7 +318,7 @@ background: #6699cc;
     color: #000;
     display: block;
     height: 100%;
-    padding-top: 18px;
+    padding-top: 10px;
     text-align: center;
     width: 100%;
 }
@@ -645,12 +646,21 @@ text-align: center;
     background: #66cccc none repeat scroll 0 0;
     border-color: #43a9a9;
     border-radius: 5px 5px 0 0;
-    width: 30%;
+    width: 20%;
+    height: 40px;
 }
 
-.profesor .tabs li:hover{
-    background: #66cccc;
-    border: 3px solid #66cccc;
+.tabs li.lado{
+    border-bottom: solid 3px #43a9a9 ; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: white;
+}
+
+.profesor .tabs li.lado {
+    border-style: none none solid;
+    border-width: medium medium 3px;
 }
 
 
@@ -978,9 +988,8 @@ margin-top:10px;
     float: none;
     font-size: 17px;
     font-weight: 600;
-    margin-bottom: 10px;
     min-height: 25px;
-    padding: 10px 20px;
+    padding: 6px 20px;
     width: 100%;
 }
 
@@ -996,8 +1005,8 @@ margin-top:10px;
     border: 2px solid #66cccc;
     border-radius: 5px;
     float: left;
-    margin: 30px 24px;
-    padding: 30px;
+    margin: 0 24px;
+    padding: 13px;
     width: 90%;
 }
 

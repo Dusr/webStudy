@@ -195,6 +195,9 @@ if (!isset($_SESSION['logged'])) {
         <div class="menu_secundario">
             <div class="contenedor_menu_secundario">
                  <ul class="tabs">
+                    <li class="lado">
+                                
+                    </li>
                     <li>
                         <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
@@ -205,6 +208,9 @@ if (!isset($_SESSION['logged'])) {
                     
                     <li class="current">
                         <a title="Cursos finalizados" href="perfilUsuario_cursoHecho.php">Mis cursos finalizados</a>
+                    </li>
+                    <li class="lado">
+                                
                     </li>
                 </ul>
             </div>
@@ -281,14 +287,20 @@ if (!isset($_SESSION['logged'])) {
         <div class="menu_secundario profesor">
             <div class="contenedor_menu_secundario">
                 <ul class="tabs">
+                    <li class="lado">
+                        
+                    </li>
                     <li>
                         <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
                     <li >
-                        <a title="Listado de alumnos" href="perfilUsuario_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
+                        <a title="Listado de alumnos" href="perfilUsuario_cursoActual.php">Listado alumnos de <?php echo $_SESSION['nombre'] ?></a>
                     </li>
                     <li class="current">
                         <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
+                    </li>
+                    <li class="lado">
+                        
                     </li>
                 </ul>
             </div>
@@ -316,7 +328,7 @@ if (!isset($_SESSION['logged'])) {
                                 while ($filaNotificacion = mysql_fetch_array($mensajes)) {
                                     ?>
                                 <ul class="row">
-                                        <li><strong>Alumno: </strong> <?php echo $filaNotificacion['emisor'] ?></li>
+                                        <li><strong>Alumno: </strong> <?php echo $filaNotificacion['login'] ?></li>
                                         <li><strong>Módulo: </strong><?php echo $filaNotificacion['titulo'] ?></li>
                                         <li><strong>Mensaje: </strong><?php echo $filaNotificacion['mensaje'] ?></li>
                                         <li class="last"><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>

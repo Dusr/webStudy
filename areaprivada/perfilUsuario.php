@@ -12,8 +12,8 @@
         <link href="../css/globalStyle.css" rel="stylesheet">
         <!-- JAVASCRIPT -->
         <script src="../js/jquery-1.11.2.min.js"></script>
-        <script src="../js/functions_areaPrivada.js"></script>
-
+        
+        
         <?php
 //INICIAMOS LA SESION
         session_start();
@@ -240,7 +240,7 @@
                                         <div class="inputs">
                                             <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>"/>
                                             <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" />
-                                            <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo']; ?>" />
+                                            <input type="text" id="correo" name="correo"  onblur="validarEmail(this);" value="<?php echo $_SESSION['correo']; ?>" />
                                             <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion']; ?>" />
             <!--                                <input type="password" id="pass" name="oldpass" value=""/>
                                             <input type="password" id="rpass" name="newpass"/>-->
@@ -257,8 +257,8 @@
                                                     <label for="direccion">Contraseña Nueva:</label>
                                                 </div>
                                                 <div class="inputs2">
-                                                    <input type="password" id="pass" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
-                                                    <input type="password" id="rpass" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
+                                                    <input type="password" id="password" onblur="validarContrasena();" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>" />
+                                                    <input type="password" id="rpassword" onblur="validarContrasena();" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>" />
                                                 </div>
                                             </div>
                                         </dl>
@@ -363,7 +363,7 @@
                                         <div class="inputs">
                                             <input type="text" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>"/>
                                             <input type="text" id="apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" />
-                                            <input type="text" id="correo" name="correo" value="<?php echo $_SESSION['correo']; ?>" />
+                                            <input type="text" id="correo" name="correo" onblur="validarEmail(this);" value="<?php echo $_SESSION['correo']; ?>" />
                                             <input type="text" id="direccion" name="direccion" value="<?php echo $_SESSION['direccion']; ?>" />
             <!--                                <input type="password" id="pass" name="oldpass" value=""/>
                                             <input type="password" id="rpass" name="newpass"/>-->
@@ -380,8 +380,8 @@
                                                     <label for="direccion">Contraseña Nueva:</label>
                                                 </div>
                                                 <div class="inputs2">
-                                                    <input type="password" id="pass" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
-                                                    <input type="password" id="rpass" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
+                                                    <input type="password" id="password" onblur="validarContrasena();" name="oldpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
+                                                    <input type="password" id="rpassword" onblur="validarContrasena();" name="newpass" value="<?php echo base64_decode($_SESSION['pass']); ?>"/>
                                                 </div>
                                             </div>
                                         </dl>
