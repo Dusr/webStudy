@@ -285,7 +285,7 @@ if (!isset($_SESSION['logged'])) {
                         <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
                     <li >
-                        <a title="Listado de alumnos" href="perfil_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
+                        <a title="Listado de alumnos" href="perfilUsuario_cursoActual.php">Listado cursos de <?php echo $_SESSION['nombre'] ?></a>
                     </li>
                     <li class="current">
                         <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
