@@ -200,7 +200,7 @@ if (!isset($_SESSION['logged'])) {
                     </li>
                     
                     <li>
-                        <a title="Curso actual" href="perfil_cursoActual.php">Curso actual</a>
+                        <a title="Curso actual" href="perfilUsuario_cursoActual.php">Curso actual</a>
                     </li>
                     
                     <li class="current">
