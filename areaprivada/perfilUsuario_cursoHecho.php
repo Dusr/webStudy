@@ -301,15 +301,14 @@ if (!isset($_SESSION['logged'])) {
           <!-- MIS CURSOS -->
             <div class="main inner-block tab3">
                  <p>Sus mensajes:</p>
+                   <div class='notificaciones'>
+                        <div class="boton_mensaje">
                   <?php
                         include('../areaprivada/openDB.php');
                          $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
                          $mensajes = mysql_query($queryMensaje);
                         if (mysql_num_rows( $mensajes) > 0) {
-                    ?>
-               <div class='notificaciones'>
-                        <div class="boton_mensaje">
-                             <?php
+                    
                                    
                                    // $mensajes = mysql_query($queryMensaje);
 
@@ -331,7 +330,7 @@ if (!isset($_SESSION['logged'])) {
                             <p>No tienes ningún mensaje. </p>
                         <?php } ?>
                         </div>
-                </div>
+                
                     
 
 
@@ -339,7 +338,7 @@ if (!isset($_SESSION['logged'])) {
                                     }
                      ?>  
              </div>
-              
+            </div>    
         
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
    	<footer>
