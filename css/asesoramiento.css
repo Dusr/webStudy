@@ -9,7 +9,7 @@
     width: 50%;
     text-transform: uppercase;   
     padding: 13px 0;
-    background: #d2d27c;
+    background: #9d9d41;
 }
 
 .info-box.row #tabs li#current {
@@ -18,9 +18,9 @@
     width: 50%;
     text-transform: uppercase;
     padding:10px;
-    /*border:2px solid #d2d27c;*/
+   
     background: #ffffff;
-    color:#d2d27c;
+    color:#9d9d41;
     
     padding: 13px 0;
 }
@@ -87,11 +87,11 @@
 }
 
 #current {
-  background: #d2d27c;
+  background: #9d9d41;
 }
 
 #tabs li#current a {
-  color:#d2d27c;
+  color:#9d9d41;
 }
 
 /*Caja de envio a contacto*/

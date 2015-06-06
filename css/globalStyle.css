@@ -840,23 +840,31 @@ p.centrado {
 }
 
 /*Caja de estadisticas */
-.cajaEstadisticas{
-    margin-top: 40px;
-}
 
 .cajaEstadisticas ul{
-	display: table;
-	width: 90%;
-	margin: 0 auto;
+    display: table;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .cajaEstadisticas ul li{
     display: table-cell;
     width: 30%;
-    background: red;
+    background: #5092c9;
     height: auto;
     border-right: 1px solid #fff;
     padding-bottom: 10px;
+}
+.cajaEstadisticas ul li.column_derecha{    
+    width: 70%;    
+}
+.cajaEstadisticas ul li.column_derecha h2{    
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.cajaEstadisticas ul li.colum_izq{    
+    width: 30%;    
 }
 
 .cajaEstadisticas ul li h3 {
@@ -878,6 +886,7 @@ p.centrado {
 
 .cajaEstadisticas .caja_newsletter_select .boton {
     border:2px solid #fff;
+     border-radius: 5px;
     cursor: pointer;
     width: 50%;
     margin: 0 auto;
@@ -908,15 +917,15 @@ p.centrado {
 }
 
 .presenciales {
-    color: #cc6633;
+    color: #c55f5f;
 }
 
 .online {
-    color: #ff3300;
+    color: #d87272;
 }
 
 .personalizados {
-    color: #ffcc00;
+    color: #ba5454;
 }
 
 .main.inner-block .info-box > .cursoPresentacion {

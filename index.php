@@ -183,20 +183,16 @@
                 </div>
             </div>	
             <!-- Bloque de estadisticas sobre la empresa -->
-            <div class="main inner-block">
-                <h2>Te ayudamos a encontrar tu camino</h2>
-                <p class="centrado">Resolvemos problemas reales y nuestros alumnos vuelven.</p>
+            <div class="main inner-block">             
+                
                 <div class="cajaEstadisticas">
                     <ul>
-                        <li>
-                            <h3 class="cifras">2000</h3>
-                            <p class="textoInfo">Resolvemos problemas</p>
+                        <li class="column_derecha">
+                           <h2>Te ayudamos a encontrar tu camino</h2>
+                            <p class="textoInfo">Resolvemos problemas reales y nuestros alumnos vuelven.</p>
                         </li>
-                        <li>
-                            <h3 class="cifras">100</h3>
-                            <p class="textoInfo">cursos y seminarios</p>
-                        </li>
-                        <li>
+                        
+                        <li class="colum_izq">
                             <p class="news">Suscríbete a nuestro boletín: </p>
                             <div class="caja_newsletter_select"><a data-role-id="newsletter" title="Suscribirse a nuestra newsletter" class="boton muestraPopup" href="#">Suscribirte</a></div>
                         </li>
@@ -376,7 +372,7 @@
                                 <th>Enlace al curso</th> 
                             </tr> 
                             <?php
-                            echo $nomCurso, $modali_Curso, $mesFecha;
+                           // echo $nomCurso, $modali_Curso, $mesFecha;
                             $resBusqueda = mysql_query($busquedaSql);
                             if ($nomCurso != '' || $modali_Curso != '' || $mesFecha != ''){
                                                                 
