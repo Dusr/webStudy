@@ -29,7 +29,7 @@ if (isset($_SESSION['logged'])) {
         fclose($fp);
      
         
-            $sql = "INSERT INTO mensaje (titulo, emisor, receptor, mensaje, nb_archivo, contenido, tipo) VALUES ('" . $titulo . "','" . $emisor . "'," . $receptor . ",'" . $mensaje . "','" . $nombreArchivo . "','" . $contenido . "','" . $tipo . "')";
+            $sql = "INSERT INTO mensaje (titulo, login, receptor, mensaje, nb_archivo, contenido, tipo) VALUES ('" . $titulo . "','" . $emisor . "'," . $receptor . ",'" . $mensaje . "','" . $nombreArchivo . "','" . $contenido . "','" . $tipo . "')";
             
             if (mysql_query($sql)) { 
                 /* Inserta en mensajes */
