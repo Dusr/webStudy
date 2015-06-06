@@ -1,4 +1,10 @@
-
+function borrarMsg(id)
+{
+     if(confirm('¿Seguro que quieres borrar este mensaje?'))
+     {
+        window.location.href='perfilUsuario_cursoHecho.php?borrarMsg='+id;
+     }
+}
 
 /* Desplegable FAQ*/
 desplegableFaq = function () {
