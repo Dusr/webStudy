@@ -29,8 +29,51 @@ header("Content-Type: text/html;charset=utf-8");
 </script>
 
 
-<?php include("../include/inc_3_headerTemplate_subcarpeta.php") ?>
-<?php include("../include/inc_4_nav_inicio_subcarpeta.php") ?> 
+</head>
+    <body>
+    <header>
+		<div id="contenedor_header" class="row">
+			<!-- Para en menu en la version responsive , por ahora se queda en blanco -->
+			<div class="menu_desplegable"> </div>
+				<div id="logo">
+		            <h1>Webstudy.com</h1>
+		            <a title="Ir a la home" href="../index.php">
+		                <img alt="Webstudy.com"  src="../img/logoProyecto.png"/>
+		            </a>
+	       		</div>
+
+	        <!-- MENU DE de las redes sociales  -->
+			<div class="caja_redes_sociales" id="menu_top">
+                <ul>
+                    <li class="caja_redes_sociales_texto"><span>A <strong>más de 100 personas</strong>
+	                    <br>les gusta nuestra web</span></li>
+                    <li>
+                        <a href="https://es-es.facebook.com/" title="Hacer clic en Me gusta" class="ico_like" target="_blank">
+                            <img src="../img/iconos/header_nav/ico_like.png" title="Icono me gusta Facebook" alt="Icono me gusta Facebook"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://es-es.facebook.com/" title="Ser Fan en Facebook" class="ico_facebook" target="_blank">
+                            <img src="../img/iconos/header_nav/ico_facebook.png" title="Icono seguir Facebook" alt="Icono seguir Facebook"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/?lang=es" title="Seguir en Twitter" class="ico_twitter" target="_blank">
+                            <img src="../img/iconos/header_nav/ico_twitter.png" title="Icono seguir en Twitter" alt="Icono seguir en Twitter"/>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+	    </div>
+	</header>
+
+<nav class="menu_principal">
+		<div id="contenedor_menu_principal">
+			<ul>
+				<li class="item-1">
+   					<a title="Home" href="../index.php">Home</a>
+				</li> 
 <li class="item-2">
     <a title="Ir a conócenos" href="../conocenos.php">Conócenos</a>
 </li>
@@ -79,9 +122,20 @@ if (!isset($_SESSION['logged'])) {
     <?php
 }
 ?>
-<?php include("../include/inc_5_nav_final.php") ?>
+</ul>
+		</div>
+	</nav>
+<!-- CONTENEDOR TOTAL ESTA ESTRUCTURA ENVUELVE TODO EL CONTENIDO + FOOTER ....... -->
+	<div class="contenedor-total">
 
-<?php include("../include/inc_opcional_breadcrumb_Inicio_subcarpeta.php") ?>
+<div class="breadcrumb_title full-block"> 
+			<div class="inner-block-alternative">
+				<div class="breadcrumb">
+					<div class="location">
+		                <ul>
+		                    <li>
+		                      <a title="home" href="../index.php"><img alt="Ir a la página Principal" title="Ir a la página Principal" src="../img/iconos/header_nav/mini_ico_home.png"/></a>
+		                    </li>
 <li>
     <a title="Nuestros cursos" href="../nuestrosCursos.php">Nuestros cursos</a>
 </li>
@@ -98,7 +152,11 @@ if (!isset($_SESSION['logged'])) {
     </div>
     <h2>Cursos online</h2>
 
-    <?php include("../include/inc_opcional_breadcrumb_final_subcarpeta.php") ?>
+        					</div>
+           			</div>
+				</div>
+			</div>
+		</div>
     <!-- Estructura del Menu secundario. -->
 
     <div class="menu_secundario">
@@ -186,11 +244,16 @@ if (!isset($_SESSION['logged'])) {
 
     </div>
 
-    <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
+   <div class="destacado_principal slider">
+
+   		<div class="destacado">
+        		<div class="imagen">
 
     <img alt="" src="../img/imgSlider/html_basico.jpg">
 
-    <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
+   </div>
+	</div>
+	</div>
     <!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR-->
     <div class="contenedor top-block"> 
         <div class="info-box">
@@ -278,4 +341,48 @@ if (!isset($_SESSION['logged'])) {
         </ul>
     </div>
     <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-    <?php include("../include/inc_6_footer_template_subcarpeta.php") ?>
+   		<footer>
+			<div id="contenido_footer">
+				<div class="footer_cajas">
+		                 <p>Últimas Noticias</p>
+		              
+		                <ul>
+		                     <li><a target="_blank" title="¿Qué es una página web corporativa y cómo montarla? " href="http://webnovant.com/es/blog/otros/que-es-una-pagina-web-corporativa-y-como-montarla">¿Qué es una página web corporativa y cómo montarla? </a></li>
+		                    <li><a target="_blank" title="La importancia del Diseño Web Responsive" href="http://www.ecomputer.es/blog/diseno-web/importancia-del-diseno-responsive-en-una-web/">La importancia del Diseño Web Responsive</a></li>
+		                    <li><a target="_blank" title="Cómo pasar correctamente de HTTP a HTTPS" href="http://webnovant.com/es/blog/recursos/como-pasar-correctamente-de-http-a-https">Cómo pasar correctamente de HTTP a HTTPS</a></li>
+		                    <li><a target="_blank" title="¿Dónde descargar imágenes gratis y libres?" href="http://webnovant.com/es/blog/recursos/donde-descargar-imagenes-gratis-y-libres">¿Dónde descargar imágenes gratis y libres?</a></li>
+		                   
+		                </ul>
+	 				</div>
+	            	<div class="footer_cajas">
+		                 <p>Cursos destacados</p>
+
+		                 <ul>
+		                    <li><a title="Javascript desde cero" href="../cursosPresenciales/cursoJavascript.php">Javascript desde cero</a></li>
+		                    <li><a title="Curso sobre angular Js" href="../cursosPresenciales/cursoAngularJS.php">Curso sobre angular Js</a></li>
+		                    <li><a title="Seminarios gratuitos" href="../cursosSeminarios.php">Seminarios gratuitos</a></li>
+		                    <li><a title="Consultoría web" href="../asesoramiento.php">Consultoría web </a></li>
+		                    <li><a title="Cursos personalizados" href="../cursosPersonalizados.php">Cursos personalizados</a></li>
+		                </ul>
+		            </div>
+	            	<div class="footer_cajas">
+		                <p>Enlaces </p>
+		               
+		                <ul>
+		                     <li><a title="Inicio" href="../index.php">Inicio</a></li>
+		                    <li><a title="Nosotros" href="../conocenos.php">Nosotros</a></li>
+		                    <li><a title="Contacto" href="../contacto.php">Contacto</a></li>
+		                    <li><a title="Certificaciones" href="/">Certificaciones</a></li>
+		                    <li><a title="Preguntas frecuentes" href="../soporteFaqs.php"> Preguntas frecuentes</a></li>
+		                    <li><a title="Condiciones de uso" href="/">Condiciones de uso</a></li>
+
+		                </ul>
+	            	</div>
+	            	<div class="copyright">
+	            		<span>© WebStudy. Reservados todos los derechos.</span>
+	            	</div>
+				</div>
+			</footer>
+		</div>	
+	</body>
+</html>
