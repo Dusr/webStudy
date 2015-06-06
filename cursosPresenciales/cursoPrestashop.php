@@ -81,7 +81,7 @@
 
 <?php include("../include/inc_opcional_slider_Inicio_subcarpeta.php") ?>
 
-        		<img alt="" src="../img/imgSlider/prestashop.jpg">
+        		<img alt="" src="../img/imgSlider/phestashop.png">
 
 <?php include("../include/inc_opcional_slider_Final_subcarpeta.php") ?>
 	<!-- ESTRUCTURA PARA EL CONTENEDOR SUPERIOR -->
@@ -171,4 +171,4 @@
             </ul>
 		</div>
 <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>s
+<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>

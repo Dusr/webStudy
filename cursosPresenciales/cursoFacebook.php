@@ -171,4 +171,4 @@
             </ul>
 		</div>
 <!-- ESTRUCTURA PARA EL FOOTER DE LA PAGINA -->
-<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>s
+<?php include("../include/inc_6_footer_template_subcarpeta.php") ?>

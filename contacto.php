@@ -100,7 +100,7 @@ if(!isset($_POST['correo'])) {
                 <p>Explícanos lo que necesitas</p>
                 
                 <div class="fila_form">
-                    <label for="select_opcion">Selecciona una opción:</label>
+                    <label for="select-opcion">Selecciona una opción:</label>
                     <select id="select-option" name="select-option" class="">
                                     <option value="todas"> Mi consulta es sobre:</option>
                                     <option value="Asesoramiento">Asesoramiento</option>

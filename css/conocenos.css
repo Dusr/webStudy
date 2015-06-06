@@ -169,6 +169,8 @@
 
 iframe{
     height:285px;
+    border:0;
+    width: 390px;
 }
 .margenTop{
     margin-top:15px;

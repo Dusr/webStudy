@@ -22,7 +22,7 @@
    
 </script>
 
-<!------------------------ Si la contraseña no es correcta ----------------------------------->
+<!-- Si la contraseña no es correcta -->
 <?php
 if (isset($_SESSION['nosamepass'])) {
     ?>
@@ -32,7 +32,7 @@ if (isset($_SESSION['nosamepass'])) {
     <?php
 }
 ?>
-<!------------------------------------------------------------------------------->
+<!--fin-->
 <?php
 if (isset($_GET['insert'])) {
     if ($_GET['insert'] == 0) {
@@ -44,7 +44,7 @@ if (isset($_GET['insert'])) {
     }
 }
 ?>
-<!------------------------------------------------------------------------------->
+<!--**-->
 
 <?php include("include/inc_2_head_final.php") ?> 
 <?php include("include/inc_3_headerTemplate.php") ?>
