@@ -195,9 +195,6 @@ if (!isset($_SESSION['logged'])) {
         <div class="menu_secundario">
             <div class="contenedor_menu_secundario">
                  <ul class="tabs">
-                     <li class="lado">
-                                
-                    </li>
                     <li>
                         <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
@@ -208,9 +205,6 @@ if (!isset($_SESSION['logged'])) {
                     
                     <li class="">
                         <a title="Cursos finalizados" href="perfilUsuario_cursoHecho.php">Mis cursos finalizados</a>
-                    </li>
-                    <li class="lado">
-                                
                     </li>
                 </ul>
             </div>
@@ -423,9 +417,6 @@ if (!isset($_SESSION['logged'])) {
         <div class="menu_secundario profesor">
             <div class="contenedor_menu_secundario">
                 <ul class="tabs">
-                    <li class="lado">
-                                
-                    </li>
                     <li>
                         <a title="Perfil del usuario" href="perfilUsuario.php">Tu perfil</a>
                     </li>
@@ -434,9 +425,6 @@ if (!isset($_SESSION['logged'])) {
                     </li>
                     <li class="">
                         <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
-                    </li>
-                    <li class="lado">
-                                
                     </li>
                 </ul>
             </div>

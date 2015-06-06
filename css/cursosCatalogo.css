@@ -6,30 +6,8 @@
 }
 
 .contenedor_menu_secundario{	
-    width: 100%;
+    width:1024px;
     margin: 0 auto;
-}
-
-.tabs li.lado{
-    border-bottom: solid 3px #6699cc ; 
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: white;
-}
-
-.contenedor_menu_secundario li.ladoc{
-    border-bottom: solid 3px #993333 ; 
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: white;
-}
-
-.tabs li.current {
-    background: white none repeat scroll 0 0;
-    border-bottom: none;
-    width: 20%;
 }
 
 .contenedor_menu_secundario ul{
@@ -42,19 +20,18 @@
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: #d87272 none repeat scroll 0 0;
     border-collapse: collapse;
-    border-color: #993333 #993333 #993333 -moz-use-text-color;
+    border-color: #993333 #993333 -moz-use-text-color;
     border-image: none;
-    border-radius: 7px 7px 0 0;
     border-spacing: 0;
-    border-style: solid;
+    border-style: solid solid none;
     border-width: 2px 2px medium;
+    border-radius: 7px 7px 0 0;
     display: table-cell;
     height: 4em;
     text-align: center;
     vertical-align: middle;
-    width: 17%;
+    width: 25%;
 }
 
 .contenedor_menu_secundario li:last-child {
@@ -76,26 +53,36 @@
 	
 }
 
+.contenedor_menu_secundario ul li.activa.personalizados{
+    background-color:#ba5454;
+}
 
-.contenedor_menu_secundario ul li.activa{
-    background-color: white;
-    border-bottom-color: white;
+.contenedor_menu_secundario ul li.activa.presenciales{
+    background-color:#c55f5f;
+}
+
+.contenedor_menu_secundario ul li.activa.cursos_online{
+    background-color:#d87272;
+}
+
+.contenedor_menu_secundario ul li.activa.seminarios{
+    background-color:#ed8787;
 }
 
 .contenedor_menu_secundario ul li.personalizados:hover{
-    background-color:whitesmoke;
+    background-color:#ba5454;
 }
 
 .contenedor_menu_secundario ul li.presenciales:hover{
-    background-color:whitesmoke;
+    background-color:#c55f5f;
 }
 
 .contenedor_menu_secundario ul li.cursos_online:hover{
-    background-color:whitesmoke;
+    background-color:#d87272;
 }
 
 .contenedor_menu_secundario ul li.seminarios:hover{
-    background-color:whitesmoke;
+    background-color:#ed8787;
 }
 /*.contenedor_menu_secundario .personalizado a{
     color:#ffcc33;

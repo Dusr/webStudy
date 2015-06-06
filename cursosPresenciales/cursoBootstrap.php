@@ -113,9 +113,6 @@
     <div class="menu_secundario">
         <div class="contenedor_menu_secundario">
             <ul>
-                <li class="ladoc">
-                                
-                </li>
                 <li class="">
                     <a title="Cursos personalizados" href="../cursosPersonalizados.php">Cursos <br />personalizados</a>
                 </li>
@@ -127,9 +124,6 @@
                 </li>
                 <li class="">
                     <a title="Seminarios gratuitos" href="../cursosSeminarios.php">Seminarios <br />  gratuitos</a>
-                </li>
-                <li class="ladoc">
-                                
                 </li>
             </ul>
         </div>
