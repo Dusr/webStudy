@@ -275,7 +275,7 @@ if (!isset($_SESSION['logged'])) {
                         <?php } ?>
 
                     </div>
-                
+        
 
     <?php } else { ?> 
 
