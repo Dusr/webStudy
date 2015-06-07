@@ -8,6 +8,7 @@
         <meta name="author" content="Cristina Velilla">
         <meta name="Copyright" content="©autores del proyecto"> 
         <meta name="robots" content="NoIndex, NoFollow">
+      <link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
         <!-- Css comun -->
         <link href="../css/globalStyle.css" rel="stylesheet">
         <!-- JAVASCRIPT -->
