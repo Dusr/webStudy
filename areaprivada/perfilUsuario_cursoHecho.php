@@ -320,14 +320,7 @@ if (!isset($_SESSION['logged'])) {
                         include('../areaprivada/openDB.php');
                          $queryMensaje = "select * from mensaje where receptor=" . $_SESSION['idAlumno'];
                          $mensajes = mysql_query($queryMensaje);
-                         if(isset($_GET['borrarMsg']))
-                                {
-                                     $sql_query="DELETE FROM mensaje WHERE id=".$_GET['borrarMsg'];
-                                     mysql_query($sql_query);
-                                     @header('Location: ' . $_SERVER['HTTP_REFERER']);
-                                     echo "<p>No tienes ningún mensaje. </p>";
-                                     exit;
-                                }
+
                         if (mysql_num_rows( $mensajes) > 0) {
                                    
                                    // $mensajes = mysql_query($queryMensaje);
@@ -339,7 +332,7 @@ if (!isset($_SESSION['logged'])) {
                                         <li><strong>Módulo: </strong><?php echo $filaNotificacion['titulo'] ?></li>
                                         <li><strong>Mensaje: </strong><?php echo $filaNotificacion['mensaje'] ?></li>
                                         <li class="last"><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
-                                        <li class="lastDos"><a href="perfilUsuario_cursoHecho.php?borrarMsg=<?php echo $filaNotificacion['id']; ?>" onclick="return confirm('sure to delete ?'); " >delete</a></li>
+                                        <li class="lastDos"><a href="borrarMsg.php?borrarMsg=<?php echo $filaNotificacion['id']; ?>" onclick="return confirm('¿Seguro que quieres borrar este mensaje?');">Borrar mensaje</a></li>
                                 </ul>
                                  <?php
                                     }
