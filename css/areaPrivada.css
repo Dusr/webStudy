@@ -71,6 +71,7 @@
 
 #mainContainer{
     min-width: 1024px;
+    min-height: 250px;
 }
 
 
@@ -601,6 +602,9 @@ text-align: center;
 /*********************************/
 /*AREA PRIVADA / CURSOS FINALIZADOS*/ 
 /**********************************/
+.tab3.main.inner-block {
+    min-height: 250px;
+}
 .tab3.main.inner-block ul.curso_finalizado {
    margin:30px 15px;
     display:inline-block;
