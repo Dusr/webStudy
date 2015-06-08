@@ -658,9 +658,10 @@ text-align: center;
     background: white;
 }
 
-.profesor .tabs li.lado {
+.profesor .tabs li.ladop {
     border-style: none none solid;
     border-width: medium medium 3px;
+    background:white !important;
 }
 
 

@@ -8,7 +8,7 @@ if (isset($_SESSION['logged'])) {
 
 
     $titulo = $_POST["title"];
-    $emisor = $_POST["emisor"];
+    $emisor = $_POST["login"];
     $receptor = $_POST["receptor"];
     $mensaje = $_POST["mensaje"];
 
@@ -34,16 +34,14 @@ if (isset($_SESSION['logged'])) {
             if (mysql_query($sql)) { 
                 /* Inserta en mensajes */
                 
-                header("Location: ./perfilUsuario.php?mensaje_enviado");
+                header("Location: ./perfilUsuario_cursoActual.php?mensaje_enviado");
             }else{
-                header("Location: ./perfilUsuario.php?withoutarchive");
+                header("Location: ./perfilUsuario_cursoActual.php?withoutarchive");
                 
             }
             
         }else{
-            echo 'fallo';
-            
-            echo $titulo,$emisor,$receptor;
+            header("Location: ./perfilUsuario_cursoActual.php?notallfields");
         }
     
 }else{
