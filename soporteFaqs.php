@@ -111,9 +111,9 @@ if (!isset($_SESSION['logged'])) {
                 <img class="flecha" alt="icono flecha" src="img/iconos/flechaAbajo.png">
             </div>
             </dt>
-            <dd>Los certificados de superación pueden emitirse para todos y cada uno de los cursos que se imparten en Miríada X, a solicitud del usuario. Su función es reconocer al usuario que lo obtiene la superación con éxito del 100% de las actividades obligatorias de cada curso.  Tienen un coste que puede consultarse desde la página principal de cada curso.
+            <dd>Los certificados de superación pueden emitirse para todos y cada uno de los cursos que se imparten en webStudy, a solicitud del usuario. Su función es reconocer al usuario que lo obtiene la superación con éxito del 100% de las actividades obligatorias de cada curso.  Tienen un coste que puede consultarse desde la página principal de cada curso.
 
-                Los certificados de superación son emitidos por Miríada X y cuentan con el respaldo de la universidad, cuya imagen aparece en el diploma correspondiente, y del equipo docente, del que se incluye una firma también en el diploma.</dd>
+                Los certificados de superación son emitidos por webStudy y cuentan con el respaldo de la universidad, cuya imagen aparece en el diploma correspondiente, y del equipo docente, del que se incluye una firma también en el diploma.</dd>
 
 
             <dt class="pregunta">¿Dónde puedo encontrar una referencia de la sintaxis de los lenguajes de programación?
