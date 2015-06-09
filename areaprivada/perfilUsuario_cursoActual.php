@@ -384,7 +384,7 @@
 
                                                                 <label for="archivo">Archivo: </label>
                                                                 <div class="fileUpload">
-                                                                    <input class="guarda" type="file" id="archivo" name="archivo"/>
+                                                                    <input class="guarda arch" type="file" id="archivo" name="archivo"/>
                                                                 </div>      
 
 

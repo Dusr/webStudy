@@ -248,7 +248,7 @@ if (!isset($_SESSION['logged'])) {
 
                         if (mysql_num_rows($curso_finalizado) > 0) {
                             ?>
-                            <p class="titulo">Enhorabuena, has terminados estos cursos</p>
+                            <p class="titulo">Enhorabuena, has terminado estos cursos...</p>
                             <ul class="curso_finalizado">
                                 <?php
                                 while ($rowcurso = mysql_fetch_array($curso_finalizado)) {
@@ -288,7 +288,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="menu_secundario profesor">
             <div class="contenedor_menu_secundario">
                 <ul class="tabs">
-                    <li class="lado">
+                    <li class="ladop">
                         
                     </li>
                     <li>
@@ -300,7 +300,7 @@ if (!isset($_SESSION['logged'])) {
                     <li class="current">
                         <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
                     </li>
-                    <li class="lado">
+                    <li class="ladop">
                         
                     </li>
                 </ul>

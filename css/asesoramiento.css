@@ -77,6 +77,9 @@
 }
 #tab1, #tab2{
     height: auto;
+    -webkit-box-shadow: -4px 35px 37px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 35px 37px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -4px 35px 37px -10px rgba(0, 0, 0, 0.75);
    
 }
 #tabs a:hover,

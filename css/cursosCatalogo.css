@@ -67,19 +67,19 @@
 }
 
 .contenedor_menu_secundario a{
-   width:100%;
-   text-align: center;
-   text-transform:uppercase;
-   font-weight: bold;
-   font-size:1em;
-   display:block;
-   padding-top: 4px;
+    width:100%;
+    text-align: center;
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size:1em;
+    display:block;
+    padding-top: 4px;
 }
 
 .contenedor_menu_secundario .activa {
     background-color: #dde1e1;
     border-color:#993333;
-	
+
 }
 
 
@@ -123,23 +123,27 @@
 
 .introCursos {
     font-size: 1.4em;
-    text-align: center;
+    text-align: justify;
 }
 
 /*Comienzo bloques cursos catalogo. */
 
 .cursos_catalogo{
-    border: none;
+    border: medium none;
+    border-radius: 7px;
     float: left;
     font-size: 0.8em;
+    height: 178px;
     margin-bottom: 19px;
     margin-right: 10px;
     width: 49%;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
 }
 
 .cursosPersonalizados .cursos_catalogo {
-    border: 3px solid #5e6cac;
-    
+
 }
 
 .caja_texto{
@@ -177,12 +181,12 @@
     position: absolute;
     bottom:70px;
     left:30px;
-    
+
 }
 
 .columna_down {
-   position: absolute;
-   bottom:12px;
+    position: absolute;
+    bottom:12px;
 }
 .columna_down span {
     vertical-align: middle;
@@ -195,12 +199,13 @@
 
 .caja_texto .columna_up p a {
     background: #fff none repeat scroll 0 0;
-    border: 2px solid #666;
-    color: #6699cc;
+    border: 2px solid #993333;
+    border-radius: 5px;
+    color: #993333;
     font-size: 1.2em;
     font-weight: bold;
     padding: 7px;
-    text-decoration: underline;
+    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -220,8 +225,10 @@
 }
 
 .caja_texto.azul{
-    background-color:#6699cc;
+    background-color: #d87272;
+    border-color: #993333;
     border-radius: 7px;
+    border-style: solid;
 }
 
 .cuadrado_blanco{
@@ -258,19 +265,19 @@ img[alt="Calendario"]{
 /*PAGINAS DETALLE DE LOS CURSOS*/
 /*++++++++++++++++++++++++++++++*/
 .inner-block-alternative.titulo_detalleCurso {
-	padding: 20px 0;
+    padding: 20px 0;
 }
 
 .inner-block-alternative.titulo_detalleCurso a {
-	float: left;
+    float: left;
 }
 
 .inner-block-alternative.titulo_detalleCurso h3 {
-	float: left;
-	font-size: 1.4em;
-	padding-top: 5px;
-	padding-left: 5px;
-	font-weight: bold;
+    float: left;
+    font-size: 1.4em;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-weight: bold;
 }
 /*Boton de inscribirse en un curso */
 
@@ -385,8 +392,8 @@ ol.lista_numeros li {
 
 /*DAVID*/
 .detalleCurso .texto_dcha p.paddingLeft{
-   padding-left:30px;
-   font-size:1em;
+    padding-left:30px;
+    font-size:1em;
 }
 
 /**** pagina  NUESTROS CURSOS *subhome()******/
@@ -527,7 +534,7 @@ ol.lista_numeros li {
 /*DAVID*/
 .inner-block.fondoBlanco {
     padding-bottom: 25px;
-   
+
     -webkit-box-shadow: 2px 2px 5px #999;
     -moz-box-shadow: 2px 2px 5px #999;
 }

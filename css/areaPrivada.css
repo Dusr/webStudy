@@ -278,19 +278,28 @@ color:white;
  width: 30%;
 }
 .fileUpload {
-    width: 210px;
-    height: 55px;
+    
    /* background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);*/
     overflow: hidden;
-    background:url("../css/img/boton_examinar.png")no-repeat 0 0;
-    margin-left: 82px;
-    
+    background: rgba(0, 0, 0, 0) url("../css/img/boton_examinar.png") no-repeat scroll 0 0;
+    height: 55px;
+    margin-left: 66px;
+    overflow: hidden;
+    width: 250px;
 }
 
 
 .fileUpload input.guarda {
+    border-radius: 5px;
     cursor: pointer;
-    opacity: 0 !important;
+    margin: 7px 20px 7px 1px;
+    padding: 9px;
+    width: 240px;
+    border-color: black;
+}
+
+.arch{
+    width: 198px !important;
 }
 /*.guarda{
 background: transparent;
@@ -413,6 +422,7 @@ h4.paddingLeft{
     padding-top: 15px;
     text-transform: uppercase;
     width: 70%;
+    text-align: left;
 }
 
 .headerMod h4{
@@ -717,9 +727,9 @@ text-align: center;
 .profesor .fileUpload {
     background: rgba(0, 0, 0, 0) url("../css/img/boton_examinar_profe.png") no-repeat;
     height: 55px;
-    margin-left: 82px;
+    margin-left: 67px;
     overflow: hidden;
-    width: 210px;
+    width: 251px;
 }
     
 

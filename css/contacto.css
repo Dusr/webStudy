@@ -122,3 +122,7 @@ fieldset p{
 .fila_form #select-option {
     width: 350px;
 }
+
+.inner-block{
+   padding:0; 
+}

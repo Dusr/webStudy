@@ -3,37 +3,37 @@
 ********************************/
 
 html, body, p, div, h1, h2, h3, h4, a, img, ul, li, ol, span, header, nav, footer, section, article, object, video {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: 0;
-  color: #333;
-  border: none;
-  background: transparent;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    color: #333;
+    border: none;
+    background: transparent;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, img{
-  display: block;
+    display: block;
 }
 
 body {
-  background: #FFFFFF;
+    background: #FFFFFF;
 }
 
 html, body {
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 img a, a img {
-  border: none;
+    border: none;
 }
 
 img{
@@ -44,7 +44,7 @@ img{
 }
 
 ul, ol {
-  list-style: none outside none;
+    list-style: none outside none;
 }
 
 /********************************
@@ -52,17 +52,17 @@ ul, ol {
 ********************************/
 
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .row:after {
-  clear: both;
-  content: '';
-  display: block;
-  height: 0;
-  position: relative;
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    position: relative;
 }
 
 /********************************
@@ -71,7 +71,7 @@ ul, ol {
 
 /*Cabecera*/
 header {
-   /* background: none repeat scroll 0 0 #fff;*/
+    /* background: none repeat scroll 0 0 #fff;*/
     display: inline-block;
     float: left;
     margin: 0 auto;
@@ -112,7 +112,7 @@ header {
     .top-block, .inner-block,
     .inner-block-especial,
     .inner-block-alternative {
-       width: 90%;
+        width: 90%;
     }
 }
 
@@ -145,7 +145,7 @@ footer {
 }
 
 .fondo_gris {
-   /*background: none repeat scroll 0 0 #dde1e1;*/
+    /*background: none repeat scroll 0 0 #dde1e1;*/
 }
 
 /********************************
@@ -186,6 +186,7 @@ h2 {
 
 h3 {
     font-size: 1.8em;
+    text-align: center;
 }
 
 h4 {    
@@ -198,8 +199,8 @@ h4 {
 p, li {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 0.9375em; /*15px*/
-    line-height: 1.125;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
     color: #666666;
 }
 
@@ -265,7 +266,7 @@ a:hover {
 }
 
 .caja_redes_sociales_texto span {
-   
+
     display: block;
     font-size: 11px;
     height: 35px;
@@ -310,7 +311,7 @@ a:hover {
 .caja_redes_sociales ul li a.ico_like:hover img, .caja_redes_sociales ul li a.ico_like:focus img {
     top: -37px;
 }
- /*Facebook*/
+/*Facebook*/
 .caja_redes_sociales a.ico_facebook {
     display: block;
     height: 37px;
@@ -352,9 +353,9 @@ a:hover {
 ********************************/
 
 nav {
- background: none repeat scroll 0 50% #333;
+    background: none repeat scroll 0 50% #333;
     float: left;
-   /* overflow: hidden;*/
+    /* overflow: hidden;*/
     width: 100%;
 }
 
@@ -414,10 +415,10 @@ nav.menu_principal ul li.menuLogin{
 nav.menu_principal .menuLogin a {
     background: url("../css/img/ico_candado.png") no-repeat scroll 0 0 transparent;
     display: inline-block;    
-  
+
     margin-left: 5px;
     padding: 0 5px 0 45px;
-    
+
 }
 
 
@@ -425,31 +426,31 @@ nav.menu_principal .menuLogin a {
 *  Colores de la navegación
 ********************************/
 nav.menu_principal ul > li.item-1:hover, nav.menu_principal ul > li.item-1.activo {
-  background: none repeat scroll 0 0 #a4a2a2;
+    background: none repeat scroll 0 0 #a4a2a2;
 }
 
 nav.menu_principal ul > li.item-2:hover, nav.menu_principal ul > li.item-2.activo {
-  background: none repeat scroll 0 0 #6699cc;
+    background: none repeat scroll 0 0 #6699cc;
 }
 
 nav.menu_principal ul > li.item-3:hover, nav.menu_principal ul > li.item-3.activo {
-  background: none repeat scroll 0 0 #993333;
+    background: none repeat scroll 0 0 #993333;
 }
 
 nav.menu_principal ul > li.item-4:hover, nav.menu_principal ul > li.item-4.activo {
-  background: none repeat scroll 0 0 #999933;
+    background: none repeat scroll 0 0 #999933;
 }
 
 nav.menu_principal ul > li.item-5:hover, nav.menu_principal ul > li.item-5.activo {
-  background: none repeat scroll 0 0 #cc99cc;
+    background: none repeat scroll 0 0 #cc99cc;
 }
 
 nav.menu_principal ul > li.item-6:hover, nav.menu_principal ul > li.item-6.activo {
-  background: none repeat scroll 0 0 #cc6666;
+    background: none repeat scroll 0 0 #cc6666;
 }
 
 nav.menu_principal ul > li.menuLogin:hover, nav.menu_principal ul > li.menuLogin.activo {
-  background: none repeat scroll 0 0 #66cccc;
+    background: none repeat scroll 0 0 #66cccc;
 }
 
 
@@ -484,14 +485,14 @@ nav.menu_principal ul ul.dropdown-menu li a{
 *  MENU SECUNDARIO NUESTROS CURSOS
 ********************************/
 .menu_principal ul li ul {
-  height: auto;
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  padding: 1% 0 3% 12%;
-  position: absolute;
-  width: 94%;
-  z-index: 999999;
+    height: auto;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 1% 0 3% 12%;
+    position: absolute;
+    width: 94%;
+    z-index: 999999;
 } 
 
 nav.menu_principal .submenu_principal {
@@ -500,7 +501,7 @@ nav.menu_principal .submenu_principal {
 }
 
 nav.menu_principal ul li a + ul.submenu_principal {
-  display: none; 
+    display: none; 
 }
 
 nav.menu_principal ul li ul li {
@@ -692,11 +693,13 @@ nav.menu_principal .submenu_principal li p{
 
 .info-box {
     background-color: #ffffff;    
+  
 }
 
 .info-box >.row {
     display: table;
     padding: 40px 45px;
+    
 }
 
 /********************************
@@ -769,7 +772,7 @@ input[type="submit"] {
     border: 2px solid #000;
     color: #666;
     display: block;
-     padding: 10px;
+    padding: 10px;
     font-weight: bold;
     text-transform: uppercase;
     width: 200px;
@@ -855,16 +858,34 @@ p.centrado {
     border-right: 1px solid #fff;
     padding-bottom: 10px;
 }
-.cajaEstadisticas ul li.column_derecha{    
-    width: 70%;    
+.cajaEstadisticas .column_derecha{    
+    color:grey;
+    float: left;
+    margin-left: 20px;
 }
-.cajaEstadisticas ul li.column_derecha h2{    
+.cajaEstadisticas .column_derecha h2{    
     font-size: 1.3em;
     font-weight: bold;
     text-transform: uppercase;
+    color:grey;
 }
-.cajaEstadisticas ul li.colum_izq{    
-    width: 30%;    
+.cajaEstadisticas .column_derecha p{   
+    color:grey;
+    margin-left: 27px;
+    margin-top: -4px;
+}
+.cajaEstadisticas .colum_izq{    
+   
+    float: left;
+    margin-left: -104px;
+}
+
+.news{
+    margin-left: 261px;
+}
+
+.cajaEstadisticas {
+    margin-left: 90px;
 }
 
 .cajaEstadisticas ul li h3 {
@@ -885,29 +906,36 @@ p.centrado {
 }
 
 .cajaEstadisticas .caja_newsletter_select .boton {
-    border:2px solid #fff;
-     border-radius: 5px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: grey;
     cursor: pointer;
-    width: 50%;
-    margin: 0 auto;
     display: block;
-    padding: 6px;
+    font-weight: bold;
+    margin: 18px auto 0 308px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
     text-align: center;
-    color:#fff;
     text-transform: uppercase;
+    width: 50%;
 }
 .cajaEstadisticas .caja_newsletter_select .boton:hover {    
-    color:#000;
-    background: #fff;
-    
+    color:white;
+    background: grey;
+
 }
 
 /**** BLOQUE DE NUESTROS CURSOS******/
 .main.inner-block .info-box h2 {
-    text-transform: uppercase;
-    font-weight: bold;
+    border-bottom: 3px solid grey;
+    color:grey;
     font-size: 1.3em;
-    margin: 20px 0 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .cursoPresentacion {
@@ -970,6 +998,9 @@ p.centrado {
     background-color: #666;
     padding: 5%;
     text-align: center;
+    border-radius: 5px;
+    opacity: 0.7;
+    height: 114px;
 }
 
 .cursoPresentacion .infoCurso .fechaCurso p, 
@@ -1000,8 +1031,13 @@ p.centrado {
     font-weight: bold;
     font-size: 1.3em;
     margin: 60px 0 20px;
+    border-bottom: 3px solid grey;
+    padding-bottom: 5px; 
+    color:grey;
+    margin-bottom: 50px;
 } 
 
+    
 .formularioIndex h3 , .asesoramientoDcha h3{
     font-size: 1em;
     text-transform: uppercase;
@@ -1073,13 +1109,13 @@ p.centrado {
 }
 
 .asesoramientoDcha .textoDown p {
-	color:#fff;
-	font-weight: bold;
+    color:#fff;
+    font-weight: bold;
 }
 
 /**** BLOQUE DE resultados de la busqueda******/
 table {
-   // display: none;
+    // display: none;
     border: 2px solid #ececec;
     border-spacing: 0;
     clear: both;
@@ -1109,7 +1145,7 @@ table caption {
 }
 
 table th {
-     border-bottom: 12px solid #ffffff;
+    border-bottom: 12px solid #ffffff;
     font-style: italic;
     height: 40px;
     padding: 0 5px;
@@ -1257,7 +1293,7 @@ table#buscador a {
 }
 
 .newsletter_form div.news_ok {
-   
+
     font-size: 13px;
     margin-top: 20px;
     text-align: center;

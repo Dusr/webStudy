@@ -322,7 +322,7 @@
                 <div class="menu_secundario profesor">
                     <div class="contenedor_menu_secundario">
                         <ul class="tabs">
-                            <li class="lado">
+                            <li class="ladop">
                                 
                             </li>
                             <li class="current">
@@ -334,7 +334,7 @@
                             <li class="">
                                 <a title="Notificaciones" href="perfilUsuario_cursoHecho.php">Notificaciones</a>
                             </li>
-                            <li class="lado">
+                            <li class="ladop">
                                 
                             </li>
                         </ul>
