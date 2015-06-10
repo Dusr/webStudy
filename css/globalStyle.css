@@ -843,45 +843,40 @@ p.centrado {
 }
 
 /*Caja de estadisticas */
-
-.cajaEstadisticas ul{
+.cajaEstadisticas ul {
     display: table;
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
+    border:2px solid #778899;
+    border-radius: 5px;
+}
+.cajaEstadisticas ul li {
+  display: table-cell;
+  height: auto;
+  padding-bottom: 10px;
+  width: 30%;
+  vertical-align: middle;
+}
+.cajaEstadisticas ul li.column_derecha {
+    width: 70%;
+}
+.cajaEstadisticas ul li.column_derecha h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cajaEstadisticas ul li p {
+    color: #666666;
+    font-size: 1em;
+    padding: 5px 0 10px;
+    text-align: center;
+}
+.cajaEstadisticas ul li.colum_izq {
+  width: 30%;
 }
 
-.cajaEstadisticas ul li{
-    display: table-cell;
-    width: 30%;
-    background: #5092c9;
-    height: auto;
-    border-right: 1px solid #fff;
-    padding-bottom: 10px;
-}
-.cajaEstadisticas .column_derecha{    
-    color:grey;
-    float: left;
-    margin-left: 20px;
-}
-.cajaEstadisticas .column_derecha h2{    
-    font-size: 1.3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    color:grey;
-}
-.cajaEstadisticas .column_derecha p{   
-    color:grey;
-    margin-left: 27px;
-    margin-top: -4px;
-}
-.cajaEstadisticas .colum_izq{    
-   
-    float: left;
-    margin-left: -104px;
-}
-
-.news{
-    margin-left: 261px;
+.cajaEstadisticas .news {
+  font-size: 1.2em;
 }
 
 .cajaEstadisticas {
@@ -890,40 +885,27 @@ p.centrado {
 
 .cajaEstadisticas ul li h3 {
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     padding: 15px 0 10px 0;
 }
 
-.cajaEstadisticas ul li p {
-    font-size: 1em; /*15px*/
-    text-align: center;
-    color: #fff;
-    padding: 5px 0 10px 0;
-}
-.cajaEstadisticas .news {
-    font-size: 1.2em;
-}
-
 .cajaEstadisticas .caja_newsletter_select .boton {
-    border: 2px solid grey;
-    border-radius: 5px;
-    color: grey;
-    cursor: pointer;
-    display: block;
-    font-weight: bold;
-    margin: 18px auto 0 308px;
-    padding-bottom: 2px;
-    padding-right: 2px;
-    padding-top: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 50%;
+  border: 2px solid #B0C4DE;
+  border-radius: 5px;
+  color: #778899;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 50%;
+  font-weight: bold;
 }
-.cajaEstadisticas .caja_newsletter_select .boton:hover {    
-    color:white;
-    background: grey;
-
+.cajaEstadisticas .caja_newsletter_select .boton:hover {
+    background:#B0C4DE none repeat scroll 0 0;
+    color: #fff;
 }
 
 /**** BLOQUE DE NUESTROS CURSOS******/
@@ -1133,7 +1115,7 @@ table.resultados_tabla {
 }
 
 table caption {
-    background: none repeat scroll 0 0 #f9b300;
+    background: none repeat scroll 0 0 #FF7F50;
     color: #ffffff;
     font-size: 15px;
     font-weight: bold;
@@ -1154,12 +1136,12 @@ table th {
 }
 
 table tr {
-    background: none repeat scroll 0 0 #f1f2f4;
+    background: none repeat scroll 0 0 #F5F5DC;
     border-bottom: 2px solid #ececec;
 }
 
 table tr td {
-    border-bottom: 2px solid #ececec;
+    border-bottom: 2px solid #F0F8FF;
     min-width: 40px;
     padding: 10px 10px 10px 40px;
     vertical-align: middle;

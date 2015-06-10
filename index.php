@@ -185,15 +185,18 @@
             <!-- Bloque de estadisticas sobre la empresa -->
             <div class="main inner-block">             
 
-                <div class="cajaEstadisticas">
-                    <div class="column_derecha">
-                        <h2>Te ayudamos a encontrar tu camino</h2>
-                        <p class="textoInfo">Resolvemos problemas reales y nuestros alumnos vuelven.</p>
-                    </div> 
-                    <div class="colum_izq">
-                        <div class="caja_newsletter_select"><a data-role-id="newsletter" title="Suscribirse a nuestra newsletter" class="boton muestraPopup" href="#">Suscribirte</a></div>
-                    </div>
-
+               <div class="cajaEstadisticas">
+                    <ul>
+                        <li class="column_derecha">
+                           <h2>Te ayudamos a encontrar tu camino</h2>
+                            <p class="textoInfo">Resolvemos problemas reales y nuestros alumnos vuelven.</p>
+                        </li>
+                        
+                        <li class="colum_izq">
+<!--                            <p class="news">Suscríbete a nuestro boletín: </p>-->
+                            <div class="caja_newsletter_select"><a href="#" class="boton muestraPopup" title="Suscribirse a nuestra newsletter" data-role-id="newsletter">Suscribirte</a></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- Bloque de nuestros cursos -->
