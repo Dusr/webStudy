@@ -331,7 +331,7 @@ if (!isset($_SESSION['logged'])) {
                                         <li><strong>Alumno: </strong> <?php echo $filaNotificacion['login'] ?></li>
                                         <li><strong>Módulo: </strong><?php echo $filaNotificacion['titulo'] ?></li>
                                         <li><strong>Mensaje: </strong><?php echo $filaNotificacion['mensaje'] ?></li>
-                                        <li class="last"><a target="_blank" href="descargarArchivo.php?id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
+                                        <li class="last"><a target="_blank" href="descargarArchivo.php?nb=<?php echo $filaNotificacion['nb_archivo']?>&id=<?php echo $filaNotificacion['id'] ?>">Descargar</a></li>
                                         <li class="lastDos"><a href="borrarMsg.php?borrarMsg=<?php echo $filaNotificacion['id']; ?>" onclick="return confirm('¿Seguro que quieres borrar este mensaje?');">Borrar mensaje</a></li>
                                 </ul>
                                  <?php

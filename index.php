@@ -638,7 +638,7 @@ if (!isset($_POST['correo'])) {
                             </li>
                             <li class="last">
                                 <label for="correo">Email suscripción</label>
-                                <input type="text" id="correo" name="correo">
+                                <input type="text" id="correo" name="correo" required onblur="validarEmail(this);">
 
                             </li>
                         </ul>
